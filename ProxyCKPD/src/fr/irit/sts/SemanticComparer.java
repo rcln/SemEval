@@ -22,6 +22,7 @@ import fr.irit.sts.ckpd.NGramComparer;
 import fr.irit.sts.proxygenea.ProxyGeneaComparer;
 import fr.irit.sts.tools.GoogleTFFactory;
 import fr.irit.sts.tools.WordNet;
+import fr.lipn.sts.syntax.DepComparer;
 
 public class SemanticComparer {
 	public final static int PROXYGENEA1=0;
@@ -186,6 +187,10 @@ public class SemanticComparer {
 	    @SuppressWarnings("unchecked")
 	    BufferedReader reader = new BufferedReader(new FileReader(inputfile));
 	    String line;
+	    
+	    DepComparer.parse(inputfile+".lorg.deps.xml");
+	    
+	    int i=0;
 	    while((line=reader.readLine())!=null){
 	    	String [] sentences = line.split("\t");
 	    	//fix to set when there are points in sentences that may mislead the tagger
@@ -204,6 +209,7 @@ public class SemanticComparer {
 		   
 		    double sim=NGramComparer.compare(tSentence, tSentence1);
 		    double conceptsim=ProxyGeneaComparer.compare(tSentence, tSentence1);
+		    double depsim = DepComparer.getSimilarity(i, tSentence, tSentence1);
 		    
 		    if(VERBOSE) {
 			    System.err.println(sim+" CKPD similarity , ");
@@ -221,6 +227,8 @@ public class SemanticComparer {
 		    	double conf_score=100*(1.0-Math.abs(conceptsim-sim)); //TODO: confidence score? this is based on the difference between the separate scores
 		    	System.out.println(res+"\t"+conf_score); 
 		    }
+		    
+		    i++;
 	    }
 	    
 		
