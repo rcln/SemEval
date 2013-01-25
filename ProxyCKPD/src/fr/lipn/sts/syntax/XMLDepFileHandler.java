@@ -45,7 +45,7 @@ public class XMLDepFileHandler extends DefaultHandler {
 	  // call at element start
 	  public void startElement(String namespaceURI, String localName,
 	    String qualifiedName, Attributes attrs) throws SAXException {
-
+		 
 	    String eName = localName;
 	     if ("".equals(eName)) {
 	       eName = qualifiedName; // namespaceAware = false
@@ -71,6 +71,8 @@ public class XMLDepFileHandler extends DefaultHandler {
 	    	 else currentB.add(d);
 	    	 
 	     }
+	     
+	     elemStack.push(eName);
 	     
 	  }
 
