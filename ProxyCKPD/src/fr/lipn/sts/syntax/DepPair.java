@@ -41,8 +41,27 @@ public class DepPair {
 		
 	}
 	
-	//TODO: calculate dependency alignments (formula dep_sim)
-	
+	/**
+	 * This method sets the alignments for each dependen
+	 */
+	public void setAlignments(){
+		for(Dependency d : d1) {
+			int hp = d.head.getPosition()-1;
+			String label = d.label;
+			DepWord head = d.head;
+			DepWord tail = d.dependent;
+			//TODO: scorrere d2 ed assegnare i pesi a: label, head e dependent per ogni dep in d2
+			//il vettore di alignments poi si ordina e si prende il miglior risultato
+			//bisogna estrarre i synset per head e dependent
+			//levenshtein su label
+			
+			if(hp >= 0){
+				d.head.setPOS(tSentence.get(hp).tag());
+			}	
+			int tp = d.dependent.getPosition()-1;
+			d.dependent.setPOS(tSentence.get(tp).tag());
+		}
+	}
 	
 
 }

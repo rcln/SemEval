@@ -7,8 +7,8 @@ import java.util.Vector;
 
 import edu.mit.jwi.item.ISynsetID;
 import edu.stanford.nlp.ling.TaggedWord;
-import fr.irit.sts.SemanticComparer;
-import fr.irit.sts.tools.WordNet;
+import fr.lipn.sts.SemanticComparer;
+import fr.lipn.sts.tools.WordNet;
 
 public class ProxyGeneaComparer {
 
