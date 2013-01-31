@@ -2,8 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/users/buscaldi/shared/libs/JSAP-2.1.jar"/>
-	<classpathentry kind="lib" path="/users/buscaldi/shared/libs/edu.mit.jwi_2.2.3/edu.mit.jwi_2.2.3_jdk.jar"/>
-	<classpathentry kind="lib" path="/users/buscaldi/shared/libs/stanford-postagger-full-2012-07-09/stanford-postagger.jar"/>
+	<classpathentry kind="lib" path="lib/edu.mit.jwi_2.2.3_jdk.jar"/>
+	<classpathentry kind="lib" path="lib/JSAP-2.1.jar"/>
+	<classpathentry kind="lib" path="lib/stanford-postagger.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
