@@ -1,4 +1,4 @@
-package fr.irit.sts;
+package fr.lipn.sts;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -18,11 +18,11 @@ import com.martiansoftware.jsap.Switch;
 import edu.stanford.nlp.ling.HasWord;
 import edu.stanford.nlp.ling.TaggedWord;
 import edu.stanford.nlp.tagger.maxent.MaxentTagger;
-import fr.irit.sts.ckpd.NGramComparer;
 import fr.irit.sts.proxygenea.ProxyGeneaComparer;
-import fr.irit.sts.tools.GoogleTFFactory;
-import fr.irit.sts.tools.WordNet;
+import fr.lipn.sts.ckpd.NGramComparer;
 import fr.lipn.sts.syntax.DepComparer;
+import fr.lipn.sts.tools.GoogleTFFactory;
+import fr.lipn.sts.tools.WordNet;
 
 public class SemanticComparer {
 	public final static int PROXYGENEA1=0;

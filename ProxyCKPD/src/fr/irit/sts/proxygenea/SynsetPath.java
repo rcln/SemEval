@@ -4,7 +4,7 @@ import java.io.PrintStream;
 import java.util.Vector;
 
 import edu.mit.jwi.item.ISynsetID;
-import fr.irit.sts.tools.WordNet;
+import fr.lipn.sts.tools.WordNet;
 
 public class SynsetPath {
 	private Vector<String> path;

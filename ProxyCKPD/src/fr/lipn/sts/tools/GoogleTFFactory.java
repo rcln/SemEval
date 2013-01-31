@@ -1,4 +1,4 @@
-package fr.irit.sts.tools;
+package fr.lipn.sts.tools;
 
 import java.io.File;
 import java.io.IOException;

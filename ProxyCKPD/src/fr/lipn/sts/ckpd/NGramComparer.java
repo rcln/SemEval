@@ -1,4 +1,4 @@
-package fr.irit.sts.ckpd;
+package fr.lipn.sts.ckpd;
 
 import java.util.ArrayList;
 import java.util.HashSet;

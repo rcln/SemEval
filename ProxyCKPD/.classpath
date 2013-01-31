@@ -2,8 +2,14 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="lib/edu.mit.jwi_2.2.3_jdk.jar"/>
 	<classpathentry kind="lib" path="lib/JSAP-2.1.jar"/>
 	<classpathentry kind="lib" path="lib/stanford-postagger.jar"/>
+=======
+	<classpathentry kind="lib" path="/opt/libs/edu.mit.jwi_2.2.3/edu.mit.jwi_2.2.3_jdk.jar"/>
+	<classpathentry kind="lib" path="/opt/libs/JSAP-2.1.jar"/>
+	<classpathentry kind="lib" path="/opt/libs/stanford-postagger-full-2012-07-09/stanford-postagger.jar"/>
+>>>>>>> refs/remotes/choose_remote_name/2013
 	<classpathentry kind="output" path="bin"/>
 </classpath>

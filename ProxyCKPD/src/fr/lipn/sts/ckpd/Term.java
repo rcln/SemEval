@@ -1,7 +1,7 @@
-package fr.irit.sts.ckpd;
+package fr.lipn.sts.ckpd;
 
 import edu.stanford.nlp.ling.TaggedWord;
-import fr.irit.sts.tools.GoogleTFFactory;
+import fr.lipn.sts.tools.GoogleTFFactory;
 
 public class Term {
 	String text;

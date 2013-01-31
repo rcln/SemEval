@@ -1,4 +1,4 @@
-package fr.irit.sts.tools;
+package fr.lipn.sts.tools;
 
 import java.io.File;
 import java.io.IOException;
@@ -107,11 +107,42 @@ public class WordNet {
 	public static Vector<String> getHypernyms(ISynsetID syn){
 		ISynset ssyn = dict.getSynset(syn);
 		List<ISynsetID> hypernyms = ssyn.getRelatedSynsets(Pointer.HYPERNYM);
+		if(hypernyms.size()==0){
+			//try instances
+			hypernyms = ssyn.getRelatedSynsets(Pointer.HYPERNYM_INSTANCE);
+		}
 		Vector<String> result = new Vector<String>();
 		result.add(""+syn.getOffset()); //added to avoid cycles
 		if(hypernyms.size()>0){
 			ISynsetID hypeID = hypernyms.get(0); //don't deal with multiple inheritance for simplicity
 			Vector<String> inherited = getHypernyms(hypeID);
+			result.addAll(inherited);
+		}
+		
+		return result;
+	}
+	
+	/**
+	 * returns all holonym paths from a given synset
+	 * @param syn
+	 * @return
+	 */
+	public static Vector<String> getHolos(ISynsetID syn){
+		ISynset ssyn = dict.getSynset(syn);
+		List<ISynsetID> holos = ssyn.getRelatedSynsets(Pointer.HOLONYM_PART);
+		if(holos.size()==0){
+			//try parts
+			holos = ssyn.getRelatedSynsets(Pointer.HOLONYM_MEMBER);
+		}
+		if(holos.size()==0){
+			//try substance
+			holos = ssyn.getRelatedSynsets(Pointer.HOLONYM_SUBSTANCE);
+		}
+		Vector<String> result = new Vector<String>();
+		result.add(""+syn.getOffset()); //added to avoid cycles
+		if(holos.size()>0){
+			ISynsetID hypeID = holos.get(0); //don't deal with multiple inheritance for simplicity
+			Vector<String> inherited = getHolos(hypeID);
 			result.addAll(inherited);
 		}
 		
