@@ -11,5 +11,16 @@ public class Dependency {
 		this.dependent=new DepWord(dependent);
 	}
 	
+	public String toString(){
+		return label+"("+head.getWord()+"-"+head.getPOS()+", "+dependent.getWord()+"-"+dependent.getPOS()+")";
+	}
+	
+	public boolean equals(Object other){
+		return this.toString().equals((Dependency)other);
+	}
+	
+	public int hashCode(){
+		return this.toString().hashCode();
+	}
 	
 }

@@ -35,4 +35,26 @@ public class GoogleTFFactory {
 		}
 	}
 	
+	public static double getIC(String term){
+		try {
+			long nCount = fileSearcher.getFreq(term)+1;
+			double val =1.0d-(double)nCount/(double)GoogleTFFactory.MAX_FREQ;
+			return val;
+		} catch (IOException e) {
+			e.printStackTrace();
+			return 1.0d; //1 for unseen terms
+		}
+	}
+	
+	public static double getIDF(String term){
+		try {
+			long nCount = fileSearcher.getFreq(term)+1;
+			double val =Math.log10((double)GoogleTFFactory.MAX_FREQ)-Math.log10((double)nCount);
+			return val;
+		} catch (IOException e) {
+			e.printStackTrace();
+			return Math.log10((double)GoogleTFFactory.MAX_FREQ);
+		}
+	}
+	
 }

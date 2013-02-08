@@ -21,7 +21,8 @@ public class DepComparer {
 	public static double getSimilarity(int order, ArrayList<TaggedWord> tSentence, ArrayList<TaggedWord> tSentence1){
 		DepPair deps = parsedContent.elementAt(order);
 		deps.setPOStags(tSentence, tSentence1);
-		return 0d; //TODO: calcolare qui la similitudine tra le deps: risolvere l'allineamento tra le taggedSentences e il dependency graph
+		deps.setAlignments();
+		return deps.getDepScore();
 	}
 
 }

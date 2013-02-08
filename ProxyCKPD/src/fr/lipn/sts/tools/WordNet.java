@@ -53,7 +53,7 @@ public class WordNet {
 	}
 	
 	/**
-	 * returns all synsets corresponding to a given word
+	 * returns all noun synsets corresponding to a given word (if  
 	 * @param text
 	 * @param pos
 	 * @return
@@ -63,7 +63,9 @@ public class WordNet {
 		POS cpos;
 		if(pos.startsWith("N")) cpos = POS.NOUN;
 		else if(pos.startsWith("V")) cpos = POS.VERB;
-		else return synsets; //don't deal with adjectives and adverbs
+		else if(pos.startsWith("J")) cpos = POS.ADJECTIVE;
+		else if(pos.startsWith("R")) cpos = POS.ADVERB;
+		else return synsets; //don't deal with other stuff
 		
 		List<String> stems = stemmer.findStems(text, cpos);
 		IIndexWord idxWord = null;
@@ -75,13 +77,15 @@ public class WordNet {
 						List<IWordID> words = idxWord.getWordIDs();
 						for(IWordID wid : words){
 							ISynsetID isyn= wid.getSynsetID();
-							if(cpos==POS.VERB){ //try to get a derived noun
+							if(cpos==POS.VERB || cpos==POS.ADJECTIVE || cpos==POS.ADVERB){ //try to get a derived noun
 								IWord wd = dict.getWord(wid);
 								List<IWordID> related = wd.getRelatedWords(Pointer.DERIVATIONALLY_RELATED);
 								for(IWordID rel: related) {
-									ISynsetID irelsyn=rel.getSynsetID();
-									//ISynset syn = dict.getSynset(isyn);
-									synsets.add(irelsyn);
+									if(rel.getPOS()==POS.NOUN) {
+										ISynsetID irelsyn=rel.getSynsetID();
+										//ISynset syn = dict.getSynset(isyn);
+										synsets.add(irelsyn);
+									}
 								}
 							} else {
 								synsets.add(isyn);

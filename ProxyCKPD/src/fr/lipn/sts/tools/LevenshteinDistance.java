@@ -5,8 +5,7 @@ public class LevenshteinDistance {
             return Math.min(Math.min(a, b), c);
     }
 
-    public static int computeLevenshteinDistance(CharSequence str1,
-                    CharSequence str2) {
+    public static int computeLevenshteinDistance(CharSequence str1, CharSequence str2) {
             int[][] distance = new int[str1.length() + 1][str2.length() + 1];
 
             for (int i = 0; i <= str1.length(); i++)
@@ -24,5 +23,11 @@ public class LevenshteinDistance {
                                                                             : 1));
 
             return distance[str1.length()][str2.length()];
+    }
+    
+    public static float levenshteinSimilarity(CharSequence str1, CharSequence str2){
+    	int len = Math.max(str1.length(), str2.length());
+    	int d = computeLevenshteinDistance(str1, str2);
+    	return (1.0f-(float)d/(float)len);
     }
 }

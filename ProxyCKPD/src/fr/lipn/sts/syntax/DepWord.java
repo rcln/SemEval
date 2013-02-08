@@ -1,7 +1,5 @@
 package fr.lipn.sts.syntax;
 
-import edu.stanford.nlp.ling.TaggedWord;
-
 public class DepWord {
 	private String word;
 	private int position;
@@ -9,16 +7,26 @@ public class DepWord {
 	
 	public DepWord(String seq){
 		String [] items = seq.split("-");
+		
 		try{
 			this.word=items[0];
 			this.position=Integer.parseInt(items[1]);
 		} catch (Exception e) {
-			//format error
-			this.word="";
-			this.position=-1;
+			//format error: word is multi-word
+			int lastitem=items.length-1;
+			String tmp_li=items[lastitem].replace('\'', ' '); //to avoid the #number' format
+			this.position=Integer.parseInt(tmp_li);
+			StringBuffer tmpWord = new StringBuffer();
+			for(int i=0; i<lastitem; i++){
+				tmpWord.append(items[i]);
+				if(i<lastitem-1) tmpWord.append("-");
+			}
+			this.word=tmpWord.toString();
 		}
+		if(this.word.equals("ROOT")) POS="NN";
+		else POS=null;
 		
-		POS=null;
+		if(this.word.equals("") || this.word==null) System.err.println("error-seq: "+seq);
 	}
 	
 	public boolean isRoot(){
@@ -33,6 +41,9 @@ public class DepWord {
 		return position;
 	}
 	
+	public String getPOS(){
+		return this.POS;
+	}
 	public void setPOS(String pos){
 		this.POS=pos;
 	}

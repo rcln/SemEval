@@ -18,7 +18,7 @@ import com.martiansoftware.jsap.Switch;
 import edu.stanford.nlp.ling.HasWord;
 import edu.stanford.nlp.ling.TaggedWord;
 import edu.stanford.nlp.tagger.maxent.MaxentTagger;
-import fr.irit.sts.proxygenea.ProxyGeneaComparer;
+import fr.irit.sts.proxygenea.ConceptualComparer;
 import fr.lipn.sts.ckpd.NGramComparer;
 import fr.lipn.sts.syntax.DepComparer;
 import fr.lipn.sts.tools.GoogleTFFactory;
@@ -194,8 +194,8 @@ public class SemanticComparer {
 	    while((line=reader.readLine())!=null){
 	    	String [] sentences = line.split("\t");
 	    	//fix to set when there are points in sentences that may mislead the tagger
-	    	sentences[0] = sentences[0].replace('.', ' ');
-	    	sentences[1] = sentences[1].replace('.', ' ');
+	    	//sentences[0] = sentences[0].replace('.', ' ');
+	    	//sentences[1] = sentences[1].replace('.', ' ');
 	    	sentences[0].concat(".");
 	    	sentences[1].concat(".");
 	    	StringReader r0 = new StringReader(sentences[0]);
@@ -206,17 +206,19 @@ public class SemanticComparer {
 		   
 		    List<List<HasWord>> tokenizedsentences1 = tagger.tokenizeText(r1);
 		    ArrayList<TaggedWord> tSentence1=tagger.tagSentence(tokenizedsentences1.get(0));
-		   
+		    
 		    double sim=NGramComparer.compare(tSentence, tSentence1);
-		    double conceptsim=ProxyGeneaComparer.compare(tSentence, tSentence1);
+		    double conceptsim=ConceptualComparer.compare(tSentence, tSentence1);
 		    double depsim = DepComparer.getSimilarity(i, tSentence, tSentence1);
 		    
 		    if(VERBOSE) {
+		    	System.err.println(sentences[0]);
+			    System.err.println(sentences[1]);
+			    System.err.println(":");
 			    System.err.println(sim+" CKPD similarity , ");
 			    System.err.println(conceptsim+" conceptual similarity between :");
+			    System.err.println("Dependency-based similarity: "+depsim);
 			    System.err.println("weight: "+5.0*(Math.sqrt(conceptsim*sim)));
-			    System.err.println(sentences[0]);
-			    System.err.println(sentences[1]);
 			    System.err.println("--------------");
 		    } else {
 		    	double res;

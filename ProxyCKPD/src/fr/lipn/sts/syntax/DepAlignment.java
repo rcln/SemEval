@@ -1,20 +1,25 @@
 package fr.lipn.sts.syntax;
 
 public class DepAlignment implements Comparable<DepAlignment> {
-	Dependency d1;
-	Dependency d2;
-	Double score;
+	private Dependency d;
+	private Double score;
 	
-	public DepAlignment(Dependency d1, Dependency d2, double score){
-		this.d1=d1;
-		this.d2=d2;
+	public DepAlignment(Dependency d, double score){
+		this.d=d;
 		this.score = new Double(score);
 	}
 
 	@Override
 	public int compareTo(DepAlignment o) {
-		return this.score.compareTo(o.score);
+		return -this.score.compareTo(o.score);
 	}
 	
+	public Dependency getDependency(){
+		return this.d;
+	}
+	
+	public double getScoreValue(){
+		return this.score.doubleValue();
+	}
 	
 }

@@ -6,18 +6,13 @@ import java.util.Vector;
 import edu.mit.jwi.item.ISynsetID;
 import fr.lipn.sts.tools.WordNet;
 
-public class SynsetPath {
-	private Vector<String> path;
-	private ISynsetID syn;
-	
-	public SynsetPath(ISynsetID syn){
-		this.path = WordNet.getHypernyms(syn);
-		this.syn=syn;
-	}
+public abstract class SynsetPath {
+	protected Vector<String> path;
+	protected ISynsetID syn;
 	
 	public boolean comparableTo(SynsetPath p){
 		for(String s : this.path){
-			if(p.contains(s)) return true;
+			if(p.contains(s) && p.getClass().equals(this.getClass()) ) return true;
 		}
 		return false;
 	}
