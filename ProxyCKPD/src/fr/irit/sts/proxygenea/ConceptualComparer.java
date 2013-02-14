@@ -153,7 +153,7 @@ public class ConceptualComparer {
 		return cur;
 	}
 	/**
-	 * Compares two DepWords
+	 * Compares two DepWords (includes antonym check)
 	 * @param a
 	 * @param b
 	 * @return
@@ -169,7 +169,16 @@ public class ConceptualComparer {
 		String bpos = b.getPOS();
 		s2_syns.addAll(WordNet.getSynsets(btext, bpos));
 		
+		float maxSim=0f;
 		if(s1_syns.size() > 0 && s2_syns.size() > 0) {
+			//check antonyms
+			for(ISynsetID isid : s1_syns){
+				for(ISynsetID isid2 : s2_syns){
+					if(WordNet.checkAntonym(isid, isid2)) {
+						return 0; //antonyms have 0 similarity TODO: check if this is useful or not
+					}
+				}
+			}
 			HashSet<HyperPath> paths_1= new HashSet<HyperPath>();
 			for(ISynsetID syn : s1_syns){
 				HyperPath sp = new HyperPath(syn);
@@ -182,7 +191,7 @@ public class ConceptualComparer {
 				paths_2.add(sp);
 			}
 			
-			float maxSim=0f;
+			
 			for(HyperPath p1 : paths_1) {
 				for(HyperPath p2 : paths_2){
 					if(p1.comparableTo(p2)){
@@ -194,10 +203,10 @@ public class ConceptualComparer {
 				}
 			}
 			
-			return maxSim;
-		} else {
-			return LevenshteinDistance.levenshteinSimilarity(text, btext);
 		}
+		
+		if(maxSim == 0) return LevenshteinDistance.levenshteinSimilarity(text, btext);
+		else return maxSim;
 		
 	}
 	

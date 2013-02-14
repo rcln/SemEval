@@ -14,7 +14,7 @@ public class DepWord {
 		} catch (Exception e) {
 			//format error: word is multi-word
 			int lastitem=items.length-1;
-			String tmp_li=items[lastitem].replace('\'', ' '); //to avoid the #number' format
+			String tmp_li=(items[lastitem].replace('\'', ' ')).trim(); //to avoid the #number' format
 			this.position=Integer.parseInt(tmp_li);
 			StringBuffer tmpWord = new StringBuffer();
 			for(int i=0; i<lastitem; i++){
@@ -26,7 +26,7 @@ public class DepWord {
 		if(this.word.equals("ROOT")) POS="NN";
 		else POS=null;
 		
-		if(this.word.equals("") || this.word==null) System.err.println("error-seq: "+seq);
+		//if(this.word.equals("") || this.word==null) System.err.println("error-seq: "+seq);
 	}
 	
 	public boolean isRoot(){
@@ -46,5 +46,9 @@ public class DepWord {
 	}
 	public void setPOS(String pos){
 		this.POS=pos;
+	}
+	
+	public String toString(){
+		return this.word+"-"+this.POS;
 	}
 }

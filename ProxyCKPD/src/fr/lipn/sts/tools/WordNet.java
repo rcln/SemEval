@@ -66,34 +66,39 @@ public class WordNet {
 		else if(pos.startsWith("J")) cpos = POS.ADJECTIVE;
 		else if(pos.startsWith("R")) cpos = POS.ADVERB;
 		else return synsets; //don't deal with other stuff
-		
-		List<String> stems = stemmer.findStems(text, cpos);
-		IIndexWord idxWord = null;
-		if(stems.size()>0){
-			for(String stem : stems){
-				idxWord = dict.getIndexWord(stem, cpos);
-				if(idxWord != null){
-					if(!idxWord.getLemma().equals("be") && !idxWord.getLemma().equals("have")) {
-						List<IWordID> words = idxWord.getWordIDs();
-						for(IWordID wid : words){
-							ISynsetID isyn= wid.getSynsetID();
-							if(cpos==POS.VERB || cpos==POS.ADJECTIVE || cpos==POS.ADVERB){ //try to get a derived noun
-								IWord wd = dict.getWord(wid);
-								List<IWordID> related = wd.getRelatedWords(Pointer.DERIVATIONALLY_RELATED);
-								for(IWordID rel: related) {
-									if(rel.getPOS()==POS.NOUN) {
-										ISynsetID irelsyn=rel.getSynsetID();
-										//ISynset syn = dict.getSynset(isyn);
-										synsets.add(irelsyn);
+		text=text.toLowerCase(); //FIXME: check that is ok
+		try {
+			List<String> stems = stemmer.findStems(text, cpos);
+			IIndexWord idxWord = null;
+			if(stems.size()>0){
+				for(String stem : stems){
+					idxWord = dict.getIndexWord(stem, cpos);
+					if(idxWord != null){
+						if(!idxWord.getLemma().equals("be") && !idxWord.getLemma().equals("have")) {
+							List<IWordID> words = idxWord.getWordIDs();
+							for(IWordID wid : words){
+								ISynsetID isyn= wid.getSynsetID();
+								if(cpos==POS.VERB || cpos==POS.ADJECTIVE || cpos==POS.ADVERB){ //try to get a derived noun
+									IWord wd = dict.getWord(wid);
+									List<IWordID> related = wd.getRelatedWords(Pointer.DERIVATIONALLY_RELATED);
+									for(IWordID rel: related) {
+										if(rel.getPOS()==POS.NOUN) {
+											ISynsetID irelsyn=rel.getSynsetID();
+											//ISynset syn = dict.getSynset(isyn);
+											synsets.add(irelsyn);
+										}
 									}
+								} else {
+									synsets.add(isyn);
 								}
-							} else {
-								synsets.add(isyn);
 							}
 						}
 					}
 				}
 			}
+		} catch (IllegalArgumentException e){
+			//If the WordNet stemmer is not able to return stems
+			return synsets;
 		}
 		
 		return synsets;
@@ -151,6 +156,19 @@ public class WordNet {
 		}
 		
 		return result;
+	}
+	
+	/**
+	 * Checks whether two synsets are antonyms or not
+	 * @param syn
+	 * @return
+	 */
+	public static boolean checkAntonym(ISynsetID syn, ISynsetID syn2){
+		ISynset ssyn = dict.getSynset(syn);
+		
+		List<ISynsetID> ants = ssyn.getRelatedSynsets(Pointer.ANTONYM);
+		if(ants.contains(syn2)) return true;
+		else return false;
 	}
 	
 	public static String getNameForSynset(ISynsetID syn){

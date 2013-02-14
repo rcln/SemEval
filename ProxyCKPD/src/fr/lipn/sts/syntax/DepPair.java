@@ -8,6 +8,7 @@ import java.util.Vector;
 
 import edu.stanford.nlp.ling.TaggedWord;
 import fr.irit.sts.proxygenea.ConceptualComparer;
+import fr.lipn.sts.SemanticComparer;
 import fr.lipn.sts.tools.GoogleTFFactory;
 import fr.lipn.sts.tools.LevenshteinDistance;
 
@@ -15,11 +16,13 @@ public class DepPair {
 	Vector<Dependency> d1;
 	Vector<Dependency> d2;
 	
-	HashMap<Dependency, Vector<DepAlignment>> alMap; //maps deps to a list of possible (scored) alignments
+	HashMap<Dependency, DepAlignment> alMapD1; //maps d1 deps to its best alignment
+	HashMap<Dependency, DepAlignment> alMapD2; //maps d2 deps """"
 	
 	public DepPair(Vector<Dependency> d1, Vector<Dependency> d2){
 		this.d1=d1; this.d2=d2;
-		alMap = new HashMap<Dependency, Vector<DepAlignment>>();
+		alMapD1 = new HashMap<Dependency, DepAlignment>();
+		alMapD2 = new HashMap<Dependency, DepAlignment>();
 	}
 	
 	private String findPOS(ArrayList<TaggedWord> tSentence, int position, String word){
@@ -91,7 +94,7 @@ public class DepPair {
 		
 	}
 	
-	private DepAlignment getBestDep(Dependency d, Vector<Dependency> d2){
+	private DepAlignment getBestDep(Dependency d, Vector<Dependency> dd2){
 		Vector<DepAlignment> tmpVA = new Vector<DepAlignment>();
 		String label = d.label;
 		DepWord head = d.head;
@@ -100,7 +103,7 @@ public class DepPair {
 		double headW=GoogleTFFactory.getIC(head.getWord());
 		double tailW=GoogleTFFactory.getIC(tail.getWord());
 		
-		for(Dependency dd : d2){
+		for(Dependency dd : dd2){
 			String dlabel = dd.label;
 			DepWord dhead = dd.head;
 			DepWord dtail = dd.dependent;
@@ -114,26 +117,20 @@ public class DepPair {
 			Double ld = new Double(LevenshteinDistance.levenshteinSimilarity(label, dlabel));
 			Double hsim = new Double(hw*ConceptualComparer.compare(head, dhead));
 			Double tailsim = new Double(dw*ConceptualComparer.compare(tail, dtail));
-			
-			Double score = ld * ((hsim + tailsim)/2); //other possible formulations: hsim*tailsim ; Math.sqrt(hsim+tailsim);
+			//System.err.println("H:Comparing "+head.toString()+" and "+dhead.toString()+" : "+hsim);
+			//System.err.println("T:Comparing "+tail.toString()+" and "+dtail.toString()+" : "+tailsim);
+			Double score = ld * ((hsim + tailsim)/2); //other possible formulations: 2hsim*tailsim/(hsim+tailsim) ; Math.sqrt(hsim*tailsim);
+			//Double score = ld * ((2*hsim*tailsim)/(hsim+tailsim));
 			
 			tmpVA.add(new DepAlignment(dd, score.doubleValue()));
 		}
 		
 		Collections.sort(tmpVA);
-		if(tmpVA.get(0).getScoreValue() > 0.5) alMap.put(d, tmpVA); //TODO: threshold > 0.5 ??
-		
-		return tmpVA.get(0);
-		
-		/*System.err.println("Dep1: "+d.toString()+" aligned: ");
-		for(DepAlignment da : tmpVA){
-			System.err.println(da.getDependency().toString()+" : score "+da.getScoreValue());
+		if(tmpVA.get(0).getScoreValue() > 0.1) {
+			return tmpVA.get(0);
+		} else {
+			return null;
 		}
-		System.err.println("--------------");*/
-		
-		//TODO: antonimi + sim holos
-		//TODO: Named Entities???
-
 	}
 	
 	/**
@@ -141,22 +138,18 @@ public class DepPair {
 	 */
 	public void setAlignments(){
 		
-		HashSet<Dependency> d2unaligned = new HashSet<Dependency>();
-		d2unaligned.addAll(d2);
 		for(Dependency d : d1) {
 			DepAlignment match = getBestDep(d, this.d2);
-			
-			System.err.println("Dep1: "+d.toString()+" aligned: "+match.getDependency().toString()+" score: "+match.getScoreValue());
+			if(match != null) alMapD1.put(d, match);
+			//if(SemanticComparer.VERBOSE) System.err.println("Dep1: "+d.toString()+" aligned: "+match.getDependency().toString()+" score: "+match.getScoreValue());
 			
 		}
 		
-		d2unaligned.removeAll(alMap.keySet()); //set aligned dependencies
-		
 		//now try to align deps in d2 who haven't been aligned
-		for(Dependency u : d2unaligned){
+		for(Dependency u : d2){
 			DepAlignment match = getBestDep(u, this.d1);
-			
-			System.err.println("Dep2: "+u.toString()+" aligned: "+match.getDependency().toString()+" score: "+match.getScoreValue());
+			if(match != null) alMapD2.put(u, match);
+			//if(SemanticComparer.VERBOSE) System.err.println("Dep2: "+u.toString()+" aligned: "+match.getDependency().toString()+" score: "+match.getScoreValue());
 		}
 	}
 	
@@ -165,12 +158,26 @@ public class DepPair {
 	 * @return
 	 */
 	public double getDepScore(){
-		double sum=0d;
-		double N = (double)alMap.keySet().size();
-		for(Dependency k : alMap.keySet()){
-			sum+=alMap.get(k).elementAt(0).getScoreValue();
+		//calculate the best score out of two
+		double sum1=0d, sum2=0d;
+		double N1 = (double) d1.size();
+		double N2 = (double) d2.size();
+		
+		for(Dependency k : alMapD1.keySet()){
+			if(SemanticComparer.VERBOSE) System.err.println("S1 Alignment: "+k.toString()+" <-> "+alMapD1.get(k).getDependency().toString()+" score: "+alMapD1.get(k).getScoreValue());
+			sum1+=alMapD1.get(k).getScoreValue();
 		}
-		return sum/N;
+		double score_1=sum1/N1;
+		if(SemanticComparer.VERBOSE) System.err.println("S1 Score: "+score_1+"\t(N:"+N1+")");
+		
+		for(Dependency u : alMapD2.keySet()){
+			if(SemanticComparer.VERBOSE) System.err.println("S2 Alignment: "+u.toString()+" <-> "+alMapD2.get(u).getDependency().toString()+" score: "+alMapD2.get(u).getScoreValue());
+			sum2+=alMapD2.get(u).getScoreValue();
+		}
+		double score_2=sum2/N2;
+		if(SemanticComparer.VERBOSE) System.err.println("S2 Score: "+score_2+"\t(N:"+N2+")");
+		
+		return Math.max(score_1, score_2);
 	}
 	
 

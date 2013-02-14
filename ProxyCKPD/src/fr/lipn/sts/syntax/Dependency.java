@@ -16,7 +16,7 @@ public class Dependency {
 	}
 	
 	public boolean equals(Object other){
-		return this.toString().equals((Dependency)other);
+		return this.toString().equals(((Dependency)other).toString());
 	}
 	
 	public int hashCode(){
