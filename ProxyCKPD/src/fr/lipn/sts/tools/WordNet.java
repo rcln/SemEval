@@ -21,7 +21,7 @@ import edu.mit.jwi.morph.WordnetStemmer;
 
 public class WordNet {
 	private static IDictionary dict;
-	private static WordnetStemmer stemmer;
+	public static WordnetStemmer stemmer;
 	private static String wnhome="Z:/tools/WN3.0";
 	
 	public static void init(){
@@ -198,6 +198,13 @@ public class WordNet {
 		buf.deleteCharAt(buf.lastIndexOf(","));
 		buf.append(")");
 		return buf.toString();
+	}
+	/**
+	 * returns the current WordNet home directory
+	 * @return
+	 */
+	public static String getWNHome(){
+		return wnhome;
 	}
 	
 }

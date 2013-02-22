@@ -118,6 +118,8 @@ public class ConceptualComparer {
 				for(String target : bSenses.keySet()){
 					HashSet<HolonymPath> paths2 = bSenses.get(target);
 					for(HolonymPath p2 : paths2){
+						p1.print(System.err);
+						p2.print(System.err);
 						if(p1.comparableTo(p2)){
 							float w0 = compare(p1,p2);
 							if (w0 > maxSim) {

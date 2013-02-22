@@ -26,6 +26,7 @@ import edu.stanford.nlp.ling.CoreLabel;
 import fr.irit.sts.proxygenea.ConceptualComparer;
 import fr.lipn.sts.ckpd.NGramComparer;
 import fr.lipn.sts.ner.NERComparer;
+import fr.lipn.sts.semantic.JWSComparer;
 import fr.lipn.sts.syntax.DepComparer;
 import fr.lipn.sts.tools.GoogleTFFactory;
 import fr.lipn.sts.tools.LevenshteinDistance;
@@ -260,6 +261,7 @@ public class SemanticComparer {
 		    double NERsim=NERComparer.compare(cSentence, cSentence1);
 		    double sim=NGramComparer.compare(tSentence, tSentence1);
 		    double conceptsim=ConceptualComparer.compare(tSentence, tSentence1);
+		    double wnsim=JWSComparer.compare(tSentence, tSentence1);
 		    double depsim = DepComparer.getSimilarity(i, tSentence, tSentence1);
 		    double editsim = LevenshteinDistance.levenshteinSimilarity(sentences[0], sentences[1]);
 		    double cosinesim = TfIdfComparer.compare(tSentence, tSentence1);
@@ -271,6 +273,7 @@ public class SemanticComparer {
 			    System.err.println(":");
 			    System.err.println("CKPD (n-gram) similarity: "+5.0 *sim);
 			    System.err.println("Conceptual (WordNet) similarity: "+5.0 *conceptsim);
+			    System.err.println("Conceptual (Jiang-Conrath) similarity: "+5.0 *wnsim);
 			    System.err.println("Dependency-based (syntactic) similarity: "+5.0 *depsim);
 			    System.err.println("Edit distance similarity: "+5.0 *editsim);
 			    System.err.println("Cosine distance (tf.idf) similarity: "+5.0 *cosinesim);
@@ -292,7 +295,7 @@ public class SemanticComparer {
 		    		} else {
 		    			System.out.print("0.0 ");
 		    		}
-		    		System.out.println("1:"+sim+" 2:"+conceptsim+" 3:"+depsim+" 4:"+editsim+" 5:"+cosinesim+" 6:"+NERsim);
+		    		System.out.println("1:"+sim+" 2:"+conceptsim+" 3:"+depsim+" 4:"+editsim+" 5:"+cosinesim+" 6:"+NERsim+" 7:"+wnsim);
 		    		//System.out.println("1:"+sim+" 2:"+conceptsim);
 		    		//System.out.println("1:"+sim+" 2:"+conceptsim+" 3:"+depsim);
 		    	}
