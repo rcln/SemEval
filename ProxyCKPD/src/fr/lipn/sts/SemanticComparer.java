@@ -38,7 +38,10 @@ public class SemanticComparer {
 	public final static int PROXYGENEA2=1;
 	public final static int PROXYGENEA3=2;
 	public final static int WU_PALMER=3;
+	public final static int LIN=4;
+	public final static int JIANG_CONRATH=5;
 	public static int STRUCTURAL_MEASURE=PROXYGENEA3;
+	public static int IC_MEASURE=JIANG_CONRATH; //measure used for IC-weighted comparison (Lin or Jiang-Conrath)
 	
 	public final static int PRODUCT=0;
 	public final static int GEO_MEAN=1;
@@ -50,6 +53,9 @@ public class SemanticComparer {
 	public static boolean TRAIN_MODE=false;
 	
 	public static boolean VERBOSE=false;
+	
+	
+	
 	/**
 	 * @param args
 	 * @throws IOException 

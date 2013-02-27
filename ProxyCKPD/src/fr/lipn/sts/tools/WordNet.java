@@ -1,11 +1,16 @@
 package fr.lipn.sts.tools;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Vector;
+import java.util.zip.GZIPInputStream;
 
 import edu.mit.jwi.Dictionary;
 import edu.mit.jwi.IDictionary;
@@ -23,6 +28,9 @@ public class WordNet {
 	private static IDictionary dict;
 	public static WordnetStemmer stemmer;
 	private static String wnhome="Z:/tools/WN3.0";
+	private static String icFile="res/ic-bnc.dat";
+	private static HashMap <String, Double> icMap;
+	private static double maxIC=0d;
 	
 	public static void init(){
 		//String wnhome = System . getenv (" WNHOME ");
@@ -33,6 +41,37 @@ public class WordNet {
 			dict = new Dictionary ( url);
 			dict.open ();
 			stemmer = new WordnetStemmer(dict);
+			
+			//now init Resnik information content
+			icMap=new HashMap<String, Double>();
+			File f = new File(icFile);
+			BufferedReader reader = new BufferedReader(new InputStreamReader((new FileInputStream(f))));
+			String line;
+			while ((line = reader.readLine()) != null) {
+				if(line.startsWith("wnver::")) continue;
+				
+				String [] toks = line.trim().split(" ");
+				String offset_str =toks[0].substring(0, toks[0].length()-1);
+				Integer offset = Integer.parseInt(offset_str);
+				char pos_chr = toks[0].charAt(toks[0].length()-1);
+				POS pos=null;
+				switch(pos_chr) {
+					case 'n' : pos=POS.NOUN; break;
+					case 'v' : pos=POS.VERB; break;
+					case 'a' : pos=POS.ADJECTIVE; break;
+					case 'r' : pos=POS.ADVERB; break;
+					default: pos=POS.NOUN;
+				}
+				
+				ISynsetID sid = new SynsetID(offset.intValue(), pos);
+				Double score = Double.parseDouble(toks[1]);
+				
+				if(score > maxIC) maxIC=score;
+				
+				icMap.put(sid.toString(), score);
+		    }
+			
+			reader.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.exit(-1);
@@ -207,4 +246,17 @@ public class WordNet {
 		return wnhome;
 	}
 	
+	public static double getIC(ISynsetID syn){
+		double res=0f;
+		Double v =icMap.get(syn.toString());
+		//System.err.println(syn+", icMap val:"+v);
+		if(v!=null) res=v.doubleValue();
+		
+		return res;
+		//return res/maxIC; //added normalisation
+	}
+	
+	public static double getMaxIC(){
+		return maxIC;
+	}
 }

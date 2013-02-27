@@ -41,4 +41,8 @@ public abstract class SynsetPath {
 	public int size(){
 		return path.size();
 	}
+
+	public ISynsetID getSyn() {
+		return syn;
+	}
 }
