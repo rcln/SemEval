@@ -25,6 +25,7 @@ import edu.stanford.nlp.ling.CoreLabel;
 
 import fr.irit.sts.proxygenea.ConceptualComparer;
 import fr.lipn.sts.ckpd.NGramComparer;
+import fr.lipn.sts.ir.IRComparer;
 import fr.lipn.sts.ner.NERComparer;
 import fr.lipn.sts.semantic.JWSComparer;
 import fr.lipn.sts.syntax.DepComparer;
@@ -270,6 +271,7 @@ public class SemanticComparer {
 		    double wnsim=JWSComparer.compare(tSentence, tSentence1);
 		    double depsim = DepComparer.getSimilarity(i, tSentence, tSentence1);
 		    double editsim = LevenshteinDistance.levenshteinSimilarity(sentences[0], sentences[1]);
+		    double IRsim = IRComparer.compare(sentences[0], sentences[1]);
 		    double cosinesim = TfIdfComparer.compare(tSentence, tSentence1);
 		    
 		    if(VERBOSE) {
@@ -284,6 +286,7 @@ public class SemanticComparer {
 			    System.err.println("Edit distance similarity: "+5.0 *editsim);
 			    System.err.println("Cosine distance (tf.idf) similarity: "+5.0 *cosinesim);
 			    System.err.println("NER overlap : "+5.0 *NERsim);
+			    System.err.println("IR-based similarity : "+5.0 *IRsim);
 			    //System.err.println("weight: "+5.0*(Math.sqrt(conceptsim*sim)));
 			    System.err.println("--------------");
 		    } else {
@@ -301,7 +304,7 @@ public class SemanticComparer {
 		    		} else {
 		    			System.out.print("0.0 ");
 		    		}
-		    		System.out.println("1:"+sim+" 2:"+conceptsim+" 3:"+depsim+" 4:"+editsim+" 5:"+cosinesim+" 6:"+NERsim+" 7:"+wnsim);
+		    		System.out.println("1:"+sim+" 2:"+conceptsim+" 3:"+depsim+" 4:"+editsim+" 5:"+cosinesim+" 6:"+NERsim+" 7:"+wnsim+" 8:"+IRsim);
 		    		//System.out.println("1:"+sim+" 2:"+conceptsim);
 		    		//System.out.println("1:"+sim+" 2:"+conceptsim+" 3:"+depsim);
 		    	}

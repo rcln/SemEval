@@ -72,7 +72,8 @@ public class ConceptualComparer {
 					cnt++;
 			}
 		}
-		sumWeight=sumWeight/(float)cnt;
+		
+		if(sumWeight > 0) sumWeight=sumWeight/(float)cnt; //NOTE: added if to avoid NaN
 		
 		return sumWeight;
 	}
@@ -221,7 +222,7 @@ public class ConceptualComparer {
 				p1.print(System.err);
 				p2.print(System.err);
 			}
-			return 0f; //FIXME: it happened once but it's not clear why since we already checked the comparability
+			return 0f;
 		}
 		float cd = (float)lcs.depth();
 		float l1 = (float)p1.size();
