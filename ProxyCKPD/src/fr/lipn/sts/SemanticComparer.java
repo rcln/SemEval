@@ -26,6 +26,7 @@ import edu.stanford.nlp.ling.CoreLabel;
 import fr.irit.sts.proxygenea.ConceptualComparer;
 import fr.lipn.sts.ckpd.NGramComparer;
 import fr.lipn.sts.ir.IRComparer;
+import fr.lipn.sts.ir.RBOComparer;
 import fr.lipn.sts.ner.NERComparer;
 import fr.lipn.sts.semantic.JWSComparer;
 import fr.lipn.sts.syntax.DepComparer;
@@ -272,9 +273,11 @@ public class SemanticComparer {
 		    double depsim = DepComparer.getSimilarity(i, tSentence, tSentence1);
 		    double editsim = LevenshteinDistance.levenshteinSimilarity(sentences[0], sentences[1]);
 		    double IRsim = IRComparer.compare(sentences[0], sentences[1]);
+		    //double RBOsim = RBOComparer.compare(sentences[0], sentences[1]); //RBO measure for IR comparison
 		    double cosinesim = TfIdfComparer.compare(tSentence, tSentence1);
 		    
 		    if(VERBOSE) {
+		    	System.err.println("Pair # "+(i+1));
 		    	System.err.println(sentences[0]);
 			    System.err.println(sentences[1]);
 			    System.err.println("GS score: "+gsLabels.elementAt(i));
@@ -287,10 +290,11 @@ public class SemanticComparer {
 			    System.err.println("Cosine distance (tf.idf) similarity: "+5.0 *cosinesim);
 			    System.err.println("NER overlap : "+5.0 *NERsim);
 			    System.err.println("IR-based similarity : "+5.0 *IRsim);
-			    //System.err.println("weight: "+5.0*(Math.sqrt(conceptsim*sim)));
 			    System.err.println("--------------");
+			    
 		    } else {
 		    	if(!LIBSVM_OUTPUT){
+		    		
 		    		double res;
 			    	if(COMBINATION_MODE==GEO_MEAN) res = 5.0 * Math.sqrt(conceptsim*sim);
 			    	else if(COMBINATION_MODE==SEM_ONLY) res = 5.0 * conceptsim;
@@ -298,15 +302,18 @@ public class SemanticComparer {
 			    	else res = 5.0*conceptsim*sim;
 			    	double conf_score=100*(1.0-Math.abs(conceptsim-sim)); //TODO: confidence score? this is based on the difference between the separate scores
 			    	System.out.println(res+"\t"+conf_score);
+			    	
 		    	} else {
 		    		if(TRAIN_MODE){
 		    			System.out.print(gsLabels.elementAt(i)+" ");
 		    		} else {
 		    			System.out.print("0.0 ");
 		    		}
+		    		double gsval=Double.parseDouble(gsLabels.elementAt(i));
+		    		//System.out.println("Pair # "+(i+1)+" wn:"+Math.abs(conceptsim-gsval)+" deps:"+Math.abs(depsim-gsval)+" jc:"+Math.abs(wnsim-gsval));
 		    		System.out.println("1:"+sim+" 2:"+conceptsim+" 3:"+depsim+" 4:"+editsim+" 5:"+cosinesim+" 6:"+NERsim+" 7:"+wnsim+" 8:"+IRsim);
-		    		//System.out.println("1:"+sim+" 2:"+conceptsim);
-		    		//System.out.println("1:"+sim+" 2:"+conceptsim+" 3:"+depsim);
+		    		//System.out.println("1:"+IRsim);
+		    		
 		    	}
 		    	
 		    }

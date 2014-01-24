@@ -65,6 +65,6 @@ public class TfIdfComparer {
 		
 		double den = Math.sqrt(d1)*Math.sqrt(d2);
 		
-		return num/den;
+		return (num/den);
 	}
 }
