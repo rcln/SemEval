@@ -38,7 +38,7 @@ public class NERComparer {
 	     	}
         }
 		
-		if(s1Map.size()==0 && s1Map.size()==0) return 1.0d;
+		if(s1Map.size()==0 && s1Map.size()==0) return 1.0d; //NOTE: should return 0 instead? TEST IT
 		
 		int overlap_A=0;
 		int totalsize_A=0;

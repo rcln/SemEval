@@ -22,11 +22,12 @@ import edu.stanford.nlp.ling.HasWord;
 import edu.stanford.nlp.ling.TaggedWord;
 import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 import edu.stanford.nlp.ling.CoreLabel;
-
 import fr.irit.sts.proxygenea.ConceptualComparer;
 import fr.lipn.sts.ckpd.NGramComparer;
 import fr.lipn.sts.ir.IRComparer;
 import fr.lipn.sts.ir.RBOComparer;
+import fr.lipn.sts.ner.DBPediaChunkBasedAnnotator;
+import fr.lipn.sts.ner.DBPediaComparer;
 import fr.lipn.sts.ner.NERComparer;
 import fr.lipn.sts.semantic.JWSComparer;
 import fr.lipn.sts.syntax.DepComparer;
@@ -231,6 +232,8 @@ public class SemanticComparer {
 	    GoogleTFFactory.init(dictFile);
 	    WordNet.init(wnRoot);
 	    
+	    DBPediaChunkBasedAnnotator chunkannotator = new DBPediaChunkBasedAnnotator("/tempo/corpora/DBPedia/indexed");
+	    
 	    Vector<String> gsLabels = new Vector<String>();
 	    if(TRAIN_MODE){
 	    	BufferedReader gsReader = new BufferedReader(new FileReader(gsFile));
@@ -266,6 +269,7 @@ public class SemanticComparer {
 		    List<List<CoreLabel>> cSentence = classifier.classify(sentences[0]);
 		    List<List<CoreLabel>> cSentence1 = classifier.classify(sentences[1]);
 		    
+		    double DBPsim=DBPediaComparer.compare(sentences[0], sentences[1], chunkannotator);
 		    double NERsim=NERComparer.compare(cSentence, cSentence1);
 		    double sim=NGramComparer.compare(tSentence, tSentence1);
 		    double conceptsim=ConceptualComparer.compare(tSentence, tSentence1);
@@ -290,6 +294,7 @@ public class SemanticComparer {
 			    System.err.println("Cosine distance (tf.idf) similarity: "+5.0 *cosinesim);
 			    System.err.println("NER overlap : "+5.0 *NERsim);
 			    System.err.println("IR-based similarity : "+5.0 *IRsim);
+			    System.err.println("DBPedia overlap : "+5.0 *DBPsim);
 			    System.err.println("--------------");
 			    
 		    } else {
