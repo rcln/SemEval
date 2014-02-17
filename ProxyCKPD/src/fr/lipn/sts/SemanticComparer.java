@@ -294,7 +294,7 @@ public class SemanticComparer {
 			    System.err.println("Cosine distance (tf.idf) similarity: "+5.0 *cosinesim);
 			    System.err.println("NER overlap : "+5.0 *NERsim);
 			    System.err.println("IR-based similarity : "+5.0 *IRsim);
-			    System.err.println("DBPedia overlap : "+5.0 *DBPsim);
+			    System.err.println("DBPedia similarity : "+5.0 *DBPsim);
 			    System.err.println("--------------");
 			    
 		    } else {
