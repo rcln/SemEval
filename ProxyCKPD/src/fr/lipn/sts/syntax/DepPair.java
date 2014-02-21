@@ -20,6 +20,10 @@ public class DepPair {
 	HashMap<Dependency, DepAlignment> alMapD2; //maps d2 deps """"
 	
 	public DepPair(Vector<Dependency> d1, Vector<Dependency> d2){
+		
+		//allowedLSet=new HashSet<String>();
+		//for(String s : allowedLabelList) allowedLSet.add(s);
+		
 		this.d1=d1; this.d2=d2;
 		alMapD1 = new HashMap<Dependency, DepAlignment>();
 		alMapD2 = new HashMap<Dependency, DepAlignment>();
@@ -119,12 +123,21 @@ public class DepPair {
 			Double tailsim = new Double(dw*ConceptualComparer.compare(tail, dtail));
 			//System.err.println("H:Comparing "+head.toString()+" and "+dhead.toString()+" : "+hsim);
 			//System.err.println("T:Comparing "+tail.toString()+" and "+dtail.toString()+" : "+tailsim);
-			Double score = ld * ((hsim + tailsim)/2); //other possible formulations: 2hsim*tailsim/(hsim+tailsim) ; Math.sqrt(hsim*tailsim);
+			Double score;
+			if((label.equals("not") || dlabel.equals("not")) && !label.equals(dlabel)) {
+				//add penalization if strong similarity on head and tail
+				if(hsim > 0.5 && tailsim > 0.5) score = 0d;
+				else score = ld * ((hsim + tailsim)/2);
+			} else {
+				score = ld * ((hsim + tailsim)/2);
+			}
+			//other possible formulations: 2hsim*tailsim/(hsim+tailsim) ; Math.sqrt(hsim*tailsim);
 			//Double score = ld * ((2*hsim*tailsim)/(hsim+tailsim));
 			
 			tmpVA.add(new DepAlignment(dd, score.doubleValue()));
 		}
-		
+
+		if(tmpVA.size() == 0) return null; //no deps aligned
 		Collections.sort(tmpVA);
 		if(tmpVA.get(0).getScoreValue() > 0.1) {
 			return tmpVA.get(0);

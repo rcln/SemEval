@@ -67,7 +67,7 @@ public class NERComparer {
 		}
 		double score_B= (double)overlap_B/(double)totalsize_B;
 		
-		if(totalsize_A > 0 && totalsize_B > 0) return (double)(2*overlap_A)/(double)(totalsize_A+totalsize_B); //Math.max(score_A, score_B);
+		if(totalsize_A > 0 && totalsize_B > 0) return (double)(2*overlap_A*overlap_B)/(double)(totalsize_A+totalsize_B);
 		else return 0d;
 	}
 

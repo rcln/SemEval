@@ -35,6 +35,7 @@ import fr.lipn.sts.tools.GoogleTFFactory;
 import fr.lipn.sts.tools.LevenshteinDistance;
 import fr.lipn.sts.tools.TfIdfComparer;
 import fr.lipn.sts.tools.WordNet;
+import fr.lipn.sts.twitter.TwitterComparer;
 
 public class SemanticComparer {
 	public final static int PROXYGENEA1=0;
@@ -279,7 +280,15 @@ public class SemanticComparer {
 		    double IRsim = IRComparer.compare(sentences[0], sentences[1]);
 		    //double RBOsim = RBOComparer.compare(sentences[0], sentences[1]); //RBO measure for IR comparison
 		    double cosinesim = TfIdfComparer.compare(tSentence, tSentence1);
+		    /*
+		    TwitterComparer.init();
+		    TwitterComparer.compare(sentences[0], sentences[1], chunkannotator);
+		    */
 		    
+		    //sentence lengths
+		    /*double t0 = Math.log(sentences[0].length());
+		    double t1 = Math.log(sentences[1].length());
+		    */
 		    if(VERBOSE) {
 		    	System.err.println("Pair # "+(i+1));
 		    	System.err.println(sentences[0]);
@@ -314,10 +323,8 @@ public class SemanticComparer {
 		    		} else {
 		    			System.out.print("0.0 ");
 		    		}
-		    		double gsval=Double.parseDouble(gsLabels.elementAt(i));
-		    		//System.out.println("Pair # "+(i+1)+" wn:"+Math.abs(conceptsim-gsval)+" deps:"+Math.abs(depsim-gsval)+" jc:"+Math.abs(wnsim-gsval));
-		    		System.out.println("1:"+sim+" 2:"+conceptsim+" 3:"+depsim+" 4:"+editsim+" 5:"+cosinesim+" 6:"+NERsim+" 7:"+wnsim+" 8:"+IRsim);
-		    		//System.out.println("1:"+IRsim);
+		    		//System.out.println("1:"+sim+" 2:"+conceptsim+" 3:"+depsim+" 4:"+editsim+" 5:"+cosinesim+" 6:"+NERsim+" 7:"+wnsim+" 8:"+IRsim);
+		    		System.out.println("1:"+sim+" 2:"+conceptsim+" 3:"+depsim+" 4:"+editsim+" 5:"+cosinesim+" 6:"+NERsim+" 7:"+wnsim+" 8:"+IRsim+" 9:"+DBPsim);
 		    		
 		    	}
 		    	
