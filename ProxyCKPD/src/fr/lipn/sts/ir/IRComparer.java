@@ -21,7 +21,7 @@ import org.apache.lucene.util.Version;
 import fr.lipn.sts.SemanticComparer;
 
 public class IRComparer {
-	private static String index = "/tempo/corpora/AQUAINT_indexed";
+	private static String index = "/tempo/indexes/AQUAINT_indexed";
 	
 	private final static int K=70;
 	
