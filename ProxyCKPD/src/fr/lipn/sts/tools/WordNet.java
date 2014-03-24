@@ -25,7 +25,7 @@ import edu.mit.jwi.item.SynsetID;
 import edu.mit.jwi.morph.WordnetStemmer;
 
 public class WordNet {
-	private static IDictionary dict;
+	public static IDictionary dict;
 	public static WordnetStemmer stemmer;
 	private static String wnhome="Z:/tools/WN3.0";
 	private static String icFile="res/ic-bnc.dat";
@@ -92,12 +92,52 @@ public class WordNet {
 	}
 	
 	/**
-	 * returns all noun synsets corresponding to a given word (if  
+	 * returns all synsets corresponding to a given word/POS  
 	 * @param text
 	 * @param pos
 	 * @return
 	 */
 	public static HashSet<ISynsetID> getSynsets(String text, String pos){
+		HashSet<ISynsetID> synsets = new HashSet<ISynsetID>();
+		POS cpos;
+		if(pos.startsWith("N")) cpos = POS.NOUN;
+		else if(pos.startsWith("V")) cpos = POS.VERB;
+		else if(pos.startsWith("J")) cpos = POS.ADJECTIVE;
+		else if(pos.startsWith("R")) cpos = POS.ADVERB;
+		else return synsets; //don't deal with other stuff
+		text=text.toLowerCase(); //FIXME: check that is ok
+		try {
+			List<String> stems = stemmer.findStems(text, cpos);
+			IIndexWord idxWord = null;
+			if(stems.size()>0){
+				for(String stem : stems){
+					idxWord = dict.getIndexWord(stem, cpos);
+					if(idxWord != null){
+						if(!idxWord.getLemma().equals("be") && !idxWord.getLemma().equals("have")) {
+							List<IWordID> words = idxWord.getWordIDs();
+							for(IWordID wid : words){
+								ISynsetID isyn= wid.getSynsetID();
+								synsets.add(isyn);
+							}
+						}
+					}
+				}
+			}
+		} catch (IllegalArgumentException e){
+			//If the WordNet stemmer is not able to return stems
+			return synsets;
+		}
+		
+		return synsets;
+	}
+	
+	/**
+	 * returns all noun synsets corresponding to a given word (if  
+	 * @param text
+	 * @param pos
+	 * @return
+	 */
+	public static HashSet<ISynsetID> getNounSynsets(String text, String pos){
 		HashSet<ISynsetID> synsets = new HashSet<ISynsetID>();
 		POS cpos;
 		if(pos.startsWith("N")) cpos = POS.NOUN;

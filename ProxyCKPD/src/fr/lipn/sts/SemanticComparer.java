@@ -24,6 +24,8 @@ import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 import edu.stanford.nlp.ling.CoreLabel;
 import fr.irit.sts.proxygenea.ConceptualComparer;
 import fr.lipn.sts.ckpd.NGramComparer;
+import fr.lipn.sts.geo.BlueMarble;
+import fr.lipn.sts.geo.GeographicScopeComparer;
 import fr.lipn.sts.ir.IRComparer;
 import fr.lipn.sts.ir.RBOComparer;
 import fr.lipn.sts.ner.DBPediaChunkBasedAnnotator;
@@ -232,8 +234,9 @@ public class SemanticComparer {
 	    AbstractSequenceClassifier<CoreLabel> classifier = CRFClassifier.getClassifierNoExceptions(NERmodelfile);
 	    GoogleTFFactory.init(dictFile);
 	    WordNet.init(wnRoot);
+	    BlueMarble.init();
 	    
-	    DBPediaChunkBasedAnnotator chunkannotator = new DBPediaChunkBasedAnnotator("/tempo/corpora/DBPedia/indexed");
+	    DBPediaChunkBasedAnnotator chunkannotator = new DBPediaChunkBasedAnnotator("/tempo/indexes/DBPedia_indexed");
 	    
 	    Vector<String> gsLabels = new Vector<String>();
 	    if(TRAIN_MODE){
@@ -280,6 +283,8 @@ public class SemanticComparer {
 		    double IRsim = IRComparer.compare(sentences[0], sentences[1]);
 		    //double RBOsim = RBOComparer.compare(sentences[0], sentences[1]); //RBO measure for IR comparison
 		    double cosinesim = TfIdfComparer.compare(tSentence, tSentence1);
+		    double geosim = GeographicScopeComparer.compare(tSentence, tSentence1);
+		    
 		    /*
 		    TwitterComparer.init();
 		    TwitterComparer.compare(sentences[0], sentences[1], chunkannotator);
@@ -295,6 +300,7 @@ public class SemanticComparer {
 			    System.err.println(sentences[1]);
 			    System.err.println("GS score: "+gsLabels.elementAt(i));
 			    System.err.println(":");
+			    System.err.println("Geographic Scope similarity: "+5.0 *geosim);
 			    System.err.println("CKPD (n-gram) similarity: "+5.0 *sim);
 			    System.err.println("Conceptual (WordNet) similarity: "+5.0 *conceptsim);
 			    System.err.println("Conceptual (Jiang-Conrath) similarity: "+5.0 *wnsim);

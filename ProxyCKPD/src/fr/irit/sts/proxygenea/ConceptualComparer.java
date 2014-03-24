@@ -22,7 +22,7 @@ public class ConceptualComparer {
 			HashSet<ISynsetID> s1_syns = new HashSet<ISynsetID>();
 			String text=tw.word();
 			String pos =tw.tag();
-			s1_syns.addAll(WordNet.getSynsets(text, pos));
+			s1_syns.addAll(WordNet.getNounSynsets(text, pos));
 			HashSet<HyperPath> paths_1= new HashSet<HyperPath>();
 			for(ISynsetID syn : s1_syns){
 				HyperPath sp = new HyperPath(syn);
@@ -36,7 +36,7 @@ public class ConceptualComparer {
 			HashSet<ISynsetID> s2_syns = new HashSet<ISynsetID>();
 			String text=tw.word();
 			String pos =tw.tag();
-			s2_syns.addAll(WordNet.getSynsets(text, pos));
+			s2_syns.addAll(WordNet.getNounSynsets(text, pos));
 			HashSet<HyperPath> paths_2= new HashSet<HyperPath>();
 			for(ISynsetID syn : s2_syns){
 				HyperPath sp = new HyperPath(syn);
@@ -86,7 +86,7 @@ public class ConceptualComparer {
 			HashSet<ISynsetID> s1_syns = new HashSet<ISynsetID>();
 			String text=tw.word();
 			String pos =tw.tag();
-			s1_syns.addAll(WordNet.getSynsets(text, pos));
+			s1_syns.addAll(WordNet.getNounSynsets(text, pos));
 			HashSet<HolonymPath> paths_1= new HashSet<HolonymPath>();
 			for(ISynsetID syn : s1_syns){
 				HolonymPath sp = new HolonymPath(syn);
@@ -100,7 +100,7 @@ public class ConceptualComparer {
 			HashSet<ISynsetID> s2_syns = new HashSet<ISynsetID>();
 			String text=tw.word();
 			String pos =tw.tag();
-			s2_syns.addAll(WordNet.getSynsets(text, pos));
+			s2_syns.addAll(WordNet.getNounSynsets(text, pos));
 			HashSet<HolonymPath> paths_2= new HashSet<HolonymPath>();
 			for(ISynsetID syn : s2_syns){
 				HolonymPath sp = new HolonymPath(syn);
@@ -165,12 +165,12 @@ public class ConceptualComparer {
 		HashSet<ISynsetID> s1_syns = new HashSet<ISynsetID>();
 		String text=a.getWord();
 		String pos =a.getPOS();
-		s1_syns.addAll(WordNet.getSynsets(text, pos));
+		s1_syns.addAll(WordNet.getNounSynsets(text, pos));
 		
 		HashSet<ISynsetID> s2_syns = new HashSet<ISynsetID>();
 		String btext = b.getWord();
 		String bpos = b.getPOS();
-		s2_syns.addAll(WordNet.getSynsets(btext, bpos));
+		s2_syns.addAll(WordNet.getNounSynsets(btext, bpos));
 		
 		float maxSim=0f;
 		if(s1_syns.size() > 0 && s2_syns.size() > 0) {

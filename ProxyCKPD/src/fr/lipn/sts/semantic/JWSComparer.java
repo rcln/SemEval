@@ -22,7 +22,7 @@ public class JWSComparer {
 			HashSet<ISynsetID> s1_syns = new HashSet<ISynsetID>();
 			String text=tw.word();
 			String pos =tw.tag();
-			s1_syns.addAll(WordNet.getSynsets(text, pos));
+			s1_syns.addAll(WordNet.getNounSynsets(text, pos));
 			HashSet<HyperPath> paths_1= new HashSet<HyperPath>();
 			for(ISynsetID syn : s1_syns){
 				HyperPath sp = new HyperPath(syn);
@@ -36,7 +36,7 @@ public class JWSComparer {
 			HashSet<ISynsetID> s2_syns = new HashSet<ISynsetID>();
 			String text=tw.word();
 			String pos =tw.tag();
-			s2_syns.addAll(WordNet.getSynsets(text, pos));
+			s2_syns.addAll(WordNet.getNounSynsets(text, pos));
 			HashSet<HyperPath> paths_2= new HashSet<HyperPath>();
 			for(ISynsetID syn : s2_syns){
 				HyperPath sp = new HyperPath(syn);
