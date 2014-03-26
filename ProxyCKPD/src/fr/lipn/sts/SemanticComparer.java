@@ -283,7 +283,7 @@ public class SemanticComparer {
 		    double IRsim = IRComparer.compare(sentences[0], sentences[1]);
 		    //double RBOsim = RBOComparer.compare(sentences[0], sentences[1]); //RBO measure for IR comparison
 		    double cosinesim = TfIdfComparer.compare(tSentence, tSentence1);
-		    double geosim = GeographicScopeComparer.compare(tSentence, tSentence1);
+		    double geosim = GeographicScopeComparer.compare(tSentence, tSentence1, cSentence, cSentence1);
 		    
 		    /*
 		    TwitterComparer.init();
@@ -330,7 +330,7 @@ public class SemanticComparer {
 		    			System.out.print("0.0 ");
 		    		}
 		    		//System.out.println("1:"+sim+" 2:"+conceptsim+" 3:"+depsim+" 4:"+editsim+" 5:"+cosinesim+" 6:"+NERsim+" 7:"+wnsim+" 8:"+IRsim);
-		    		System.out.println("1:"+sim+" 2:"+conceptsim+" 3:"+depsim+" 4:"+editsim+" 5:"+cosinesim+" 6:"+NERsim+" 7:"+wnsim+" 8:"+IRsim+" 9:"+DBPsim);
+		    		System.out.println("1:"+sim+" 2:"+conceptsim+" 3:"+depsim+" 4:"+editsim+" 5:"+cosinesim+" 6:"+NERsim+" 7:"+wnsim+" 8:"+IRsim+" 9:"+DBPsim+" 10:"+geosim);
 		    		
 		    	}
 		    	

@@ -66,6 +66,7 @@ public class BlueMarble {
 	}
 	
 	public static void init() {
+		//GeoWN.init();
 		worldmap = new HashMap<String, HashSet<Location>>();
 		try {
 			File fXmlFile = new File("res/bluemarble_1.3.xml");

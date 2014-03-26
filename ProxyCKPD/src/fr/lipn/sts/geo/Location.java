@@ -1,6 +1,7 @@
 package fr.lipn.sts.geo;
 
 public class Location {
+	String offset; //WordNet id
 	String gnid; //geonames id
 	double lat;
 	double lon;
@@ -12,6 +13,13 @@ public class Location {
 	}
 	
 	public Location(String gnid, String lat, String lon){
+		this.gnid=gnid;
+		this.lat=Double.parseDouble(lat);
+		this.lon=Double.parseDouble(lon);
+	}
+	
+	public Location(String offset, String gnid, String lat, String lon){
+		this.offset=offset;
 		this.gnid=gnid;
 		this.lat=Double.parseDouble(lat);
 		this.lon=Double.parseDouble(lon);
