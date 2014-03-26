@@ -33,6 +33,8 @@ import edu.upc.freeling.Ukb;
 import edu.upc.freeling.Util;
 import fr.irit.sts.proxygenea.ConceptualComparer;
 import fr.lipn.sts.ckpd.NGramComparer;
+import fr.lipn.sts.geo.BlueMarble;
+import fr.lipn.sts.geo.GeographicScopeComparer;
 import fr.lipn.sts.ir.IRComparer;
 import fr.lipn.sts.ir.RBOComparer;
 import fr.lipn.sts.ner.DBPediaChunkBasedAnnotator;
@@ -240,6 +242,7 @@ public class SpanishSTSComparer {
 	    
 	    GoogleTFFactory.init(dictFile);
 	    WordNet.init(wnRoot);
+	    BlueMarble.init();
 	    
 	    Vector<String> gsLabels = new Vector<String>();
 	    if(TRAIN_MODE){
@@ -337,7 +340,7 @@ public class SpanishSTSComparer {
 	    		} else {
 	    			System.out.print("0.0 ");
 	    		}
-	    		System.out.println("1:0.0 2:0.0 3:0.0 4:0.0 5:0.0 6:0.0 7:0.0");
+		    	if(!VERBOSE) System.out.println("1:0.0 2:0.0 3:0.0 4:0.0 5:0.0 6:0.0 7:0.0 8:0.0");
 	    		continue;
 		    }
 		    if(li2.hasNext()) s2=li2.next();
@@ -348,7 +351,7 @@ public class SpanishSTSComparer {
 	    		} else {
 	    			System.out.print("0.0 ");
 	    		}
-	    		System.out.println("1:0.0 2:0.0 3:0.0 4:0.0 5:0.0 6:0.0 7:0.0");
+		    	if(!VERBOSE) System.out.println("1:0.0 2:0.0 3:0.0 4:0.0 5:0.0 6:0.0 7:0.0 8:0.0");
 	    		continue;
 		    }
 		    
@@ -358,18 +361,20 @@ public class SpanishSTSComparer {
 		    
 		    double conceptsim=ConceptualComparer.compare(s1, s2);
 		    double wnsim=JWSComparer.compare(s1, s2);
+		    double geosim=GeographicScopeComparer.compare(s1, s2);
+		    
 		    //double depsim = DepComparer.getSimilarity(i, tSentence, tSentence1);
 		    double editsim = LevenshteinDistance.levenshteinSimilarity(sentences[0], sentences[1]);
 		    double IRsim = IRComparer.compare(sentences[0], sentences[1]);
-		    //double RBOsim = RBOComparer.compare(sentences[0], sentences[1]); //RBO measure for IR comparison
 		    double cosinesim = TfIdfComparer.compare(s1, s2);
 		    
 		    if(VERBOSE) {
 		    	System.err.println("Pair # "+(i+1));
 		    	System.err.println(sentences[0]);
 			    System.err.println(sentences[1]);
-			    System.err.println("GS score: "+gsLabels.elementAt(i));
+			    if(gsLabels.size()> 0) System.err.println("GS score: "+gsLabels.elementAt(i));
 			    System.err.println(":");
+			    System.err.println("Geosim score: "+5.0*geosim);
 			    System.err.println("CKPD (n-gram) similarity: "+5.0 *sim);
 			    System.err.println("Conceptual (WordNet) similarity: "+5.0 *conceptsim);
 			    System.err.println("Conceptual (Jiang-Conrath) similarity: "+5.0 *wnsim);
@@ -399,7 +404,7 @@ public class SpanishSTSComparer {
 		    			System.out.print("0.0 ");
 		    		}
 		    		//System.out.println("1:"+sim+" 2:"+conceptsim+" 3:"+depsim+" 4:"+editsim+" 5:"+cosinesim+" 6:"+NERsim+" 7:"+wnsim+" 8:"+IRsim+" 9:"+DBPsim);
-		    		System.out.println("1:"+sim+" 2:"+conceptsim+" 3:"+editsim+" 4:"+cosinesim+" 5:"+NERsim+" 6:"+wnsim+" 7:"+IRsim);
+		    		System.out.println("1:"+sim+" 2:"+conceptsim+" 3:"+editsim+" 4:"+cosinesim+" 5:"+NERsim+" 6:"+wnsim+" 7:"+IRsim+" 8:"+geosim);
 		    	}
 		    	
 		    }
