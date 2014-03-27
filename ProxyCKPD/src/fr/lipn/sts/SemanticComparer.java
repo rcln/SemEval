@@ -32,6 +32,7 @@ import fr.lipn.sts.ner.DBPediaChunkBasedAnnotator;
 import fr.lipn.sts.ner.DBPediaComparer;
 import fr.lipn.sts.ner.NERComparer;
 import fr.lipn.sts.semantic.JWSComparer;
+import fr.lipn.sts.semantic.SpectralComparer;
 import fr.lipn.sts.syntax.DepComparer;
 import fr.lipn.sts.tools.GoogleTFFactory;
 import fr.lipn.sts.tools.LevenshteinDistance;
@@ -284,6 +285,7 @@ public class SemanticComparer {
 		    //double RBOsim = RBOComparer.compare(sentences[0], sentences[1]); //RBO measure for IR comparison
 		    double cosinesim = TfIdfComparer.compare(tSentence, tSentence1);
 		    double geosim = GeographicScopeComparer.compare(tSentence, tSentence1, cSentence, cSentence1);
+		    double spectsim = SpectralComparer.compare(tSentence, tSentence1);
 		    
 		    /*
 		    TwitterComparer.init();
@@ -310,6 +312,7 @@ public class SemanticComparer {
 			    System.err.println("NER overlap : "+5.0 *NERsim);
 			    System.err.println("IR-based similarity : "+5.0 *IRsim);
 			    System.err.println("DBPedia similarity : "+5.0 *DBPsim);
+			    System.err.println("Spectral distance (the smaller better): "+spectsim);
 			    System.err.println("--------------");
 			    
 		    } else {
