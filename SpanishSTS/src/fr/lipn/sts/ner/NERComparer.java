@@ -12,7 +12,7 @@ import fr.lipn.sts.SpanishSTSComparer;
 import fr.lipn.sts.tools.LevenshteinDistance;
 
 public class NERComparer {
-	private static boolean FUZZY=true; //if FUZZY, the NEs are compared even if they are not the same using edit distance
+	private static boolean FUZZY=false; //if FUZZY, the NEs are compared even if they are not the same using edit distance
 	
 	public static double compare(ListSentence cSentences, ListSentence cSentences1) {
 		HashMap<String, HashSet<String>> s1Map = new HashMap<String, HashSet<String>>();

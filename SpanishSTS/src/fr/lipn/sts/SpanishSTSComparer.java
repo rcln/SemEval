@@ -285,8 +285,11 @@ public class SpanishSTSComparer {
 
 	    	sentences[0]=sentences[0].concat(" .");
 	    	sentences[1]=sentences[1].concat(" .");
-	    	    
-	        //Extract the tokens from the line of text.
+	    	
+	    	sentences[0]=sentences[0].replaceAll("\"", "");
+	    	sentences[1]=sentences[1].replaceAll("\"", "");
+	        
+	    	//Extract the tokens from the line of text.
 	        ListWord l1 = tk.tokenize( sentences[0] );
 	        ListWord l2 = tk.tokenize( sentences[1] );
 	        

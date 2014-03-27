@@ -50,8 +50,9 @@ public class GeographicScopeComparer {
           Word w = wIt.next();
           String tag = w.getTag();
           if(tag.startsWith("NP00SP0")) {
-        	  off1.addAll(getLocsforNE(w.getForm()));
-			  if(SpanishSTSComparer.VERBOSE) System.err.println("got geoinfo for leader "+w.getForm());
+        	  HashSet<String> locs = getLocsforNE(w.getForm());
+        	  off1.addAll(locs);
+			  if(SpanishSTSComparer.VERBOSE && locs.size()>0) System.err.println("got geoinfo for leader "+w.getForm());
           }
           //System.out.print(w.getForm() + " " + w.getLemma() + " " + w.getTag() );
         }
@@ -62,8 +63,9 @@ public class GeographicScopeComparer {
           String tag = w.getTag();
           if(tag.startsWith("NP00SP0")) {
         	  if(tag.startsWith("NP00SP0")) {
-            	  off2.addAll(getLocsforNE(w.getForm()));
-    			  if(SpanishSTSComparer.VERBOSE) System.err.println("got geoinfo for leader "+w.getForm());
+        		  HashSet<String> locs = getLocsforNE(w.getForm());
+            	  off2.addAll(locs);
+    			  if(SpanishSTSComparer.VERBOSE && locs.size()>0) System.err.println("got geoinfo for leader "+w.getForm());
               }
           }
         }				          
