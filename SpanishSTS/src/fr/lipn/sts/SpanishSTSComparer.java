@@ -41,6 +41,7 @@ import fr.lipn.sts.ner.DBPediaChunkBasedAnnotator;
 import fr.lipn.sts.ner.DBPediaComparer;
 import fr.lipn.sts.ner.NERComparer;
 import fr.lipn.sts.semantic.JWSComparer;
+import fr.lipn.sts.semantic.SpectralComparer;
 import fr.lipn.sts.syntax.DepComparer;
 import fr.lipn.sts.tools.GoogleTFFactory;
 import fr.lipn.sts.tools.LevenshteinDistance;
@@ -370,6 +371,7 @@ public class SpanishSTSComparer {
 		    double editsim = LevenshteinDistance.levenshteinSimilarity(sentences[0], sentences[1]);
 		    double IRsim = IRComparer.compare(sentences[0], sentences[1]);
 		    double cosinesim = TfIdfComparer.compare(s1, s2);
+		    double specsim = SpectralComparer.compare(s1, s2);
 		    
 		    if(VERBOSE) {
 		    	System.err.println("Pair # "+(i+1));
@@ -386,6 +388,7 @@ public class SpanishSTSComparer {
 			    System.err.println("Cosine distance (tf.idf) similarity: "+5.0 *cosinesim);
 			    System.err.println("NER overlap : "+5.0 *NERsim);
 			    System.err.println("IR-based similarity : "+5.0 *IRsim);
+			    System.err.println("Spectral distance : "+specsim);
 			    //System.err.println("DBPedia similarity : "+5.0 *DBPsim);
 			    System.err.println("--------------");
 			    
@@ -407,7 +410,7 @@ public class SpanishSTSComparer {
 		    			System.out.print("0.0 ");
 		    		}
 		    		//System.out.println("1:"+sim+" 2:"+conceptsim+" 3:"+depsim+" 4:"+editsim+" 5:"+cosinesim+" 6:"+NERsim+" 7:"+wnsim+" 8:"+IRsim+" 9:"+DBPsim);
-		    		System.out.println("1:"+sim+" 2:"+conceptsim+" 3:"+editsim+" 4:"+cosinesim+" 5:"+NERsim+" 6:"+wnsim+" 7:"+IRsim+" 8:"+geosim);
+		    		System.out.println("1:"+sim+" 2:"+conceptsim+" 3:"+editsim+" 4:"+cosinesim+" 5:"+NERsim+" 6:"+wnsim+" 7:"+IRsim+" 8:"+geosim+" 9:"+specsim);
 		    	}
 		    	
 		    }
