@@ -1,0 +1,55 @@
+journal d'optimisation de la svm pour semeval 2014
+25 février 2014
+Nadi, Jorge
+-------------------
+
+BUT: améliiorer la performance du model d'apprentissage utilisé en SEmeval 2013 en partitionant le corpus d'entré et en entraînant plusieurs models, d'après les caractéristiques ou les corpus d'entrée
+
+à court terme: 
+--organiser les données
+--être capable d'entrainer avec 2012 et tester avec 2013. 
+  +entrainer le svn-features de davide avec tout le corpus et calculer la correlation
+  +entrainer le svn-features de davide avec des morceaux du corpus et calculer la correlation
+  +recueillir les features de 2013-test et 2012-test de davide
+  
+  1) ¿cuántas esquemas de entrenamiento tenemos?
+     2012 train vs 2012 test
+     2012 train + 2012 test vs 2013 test
+     2012 train + 2012 test + 2013 test vs unseen data
+  1.5) Crear los juegos de datos para Nadi:
+       data
+		datos de la campaña
+       analysis
+		datos para el svn de aprendizaje
+
+		Juego 1) Reproducción de la campaña del 2012
+		      1a) Todos los corpus juntos
+		      1b) Los corpus separados por fuente
+		      1c) Los corpus separados por otro criterio ajeno a la fuente
+		      1d) Los corpus separados por otro criterio adicional a la separación por fuente
+		
+
+		Juego 2) Reproducción de la campaña del 2013
+		      1a) Todos los corpus juntos
+		      1b) Los corpus separados por fuente
+		      1c) Los corpus separados por otro criterio ajeno a la fuente
+		      1d) Los corpus separados por otro criterio adicional a la separación por fuente
+
+		Experiencias: 
+		     Entrenar clasificadores para las opc
+		
+  2) simular la partición de un corpus total y el entrenamiento de múltiples modelos
+
+  3) simular la partición de un corpus parcial y el entrenamiento de múltiples modelos
+
+
+
+-------------------
+répertoires
+
++data: données d'entraînement de Semeval 2013
++analysis: phrases analysés avec les 8 features de Davide
++models: modèles de svn 
++test: résultats
+
+
