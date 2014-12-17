@@ -1,4 +1,5 @@
-SEMEVAL_HOME=/home/jgflores/experimentos/SemEval/sopa.2015/SemEval/dat
+#!/bin/sh
+export SEMEVAL_HOME=/home/jgflores/experimentos/SemEval/sopa.2015/SemEval/
 ./run.semantic.comparer.with.train.sh $SEMEVAL_HOME/testbed//data/2014/train/STS.2012.test.input.MSRpar.txt $SEMEVAL_HOME/testbed//data/2014/train/STS.2012.test.gs.MSRpar.txt > $SEMEVAL_HOME/testbed/analysis/2015/training/results/STS.2012.test.input.MSRpar.dat 2>$SEMEVAL_HOME/testbed/analysis/2015/training/logs/STS.2012.test.input.MSRpar.log
 ./run.semantic.comparer.with.train.sh $SEMEVAL_HOME/testbed//data/2014/train/STS.2012.test.input.MSRvid.txt $SEMEVAL_HOME/testbed//data/2014/train/STS.2012.test.gs.MSRvid.txt > $SEMEVAL_HOME/testbed/analysis/2015/training/results/STS.2012.test.input.MSRvid.dat 2>$SEMEVAL_HOME/testbed/analysis/2015/training/logs/STS.2012.test.input.MSRvid.log
 ./run.semantic.comparer.with.train.sh $SEMEVAL_HOME/testbed//data/2014/train/STS.2012.test.input.SMTeuroparl.txt $SEMEVAL_HOME/testbed//data/2014/train/STS.2012.test.gs.SMTeuroparl.txt > $SEMEVAL_HOME/testbed/analysis/2015/training/results/STS.2012.test.input.SMTeuroparl.dat 2>$SEMEVAL_HOME/testbed/analysis/2015/training/logs/STS.2012.test.input.SMTeuroparl.log
