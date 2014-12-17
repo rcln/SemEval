@@ -1,6 +1,6 @@
-#!/bin/sh
-export SEMEVAL_HOME=/local_home/lipn/SemEval/
-./run.semantic.comparer.with.train.sh $SEMEVAL_HOME/testbed//data/2014/train/STS.2013.test.input.FNWN.txt $SEMEVAL_HOME/testbed//data/2014/train/STS.2013.test.gs.FNWN.txt
-./run.semantic.comparer.with.train.sh $SEMEVAL_HOME/testbed//data/2014/train/STS.2013.test.input.headlines.txt $SEMEVAL_HOME/testbed//data/2014/train/STS.2013.test.gs.headlines.txt
-./run.semantic.comparer.with.train.sh $SEMEVAL_HOME/testbed//data/2014/train/STS.2013.test.input.OnWN.txt $SEMEVAL_HOME/testbed//data/2014/train/STS.2013.test.gs.OnWN.txt
-./run.semantic.comparer.with.train.sh $SEMEVAL_HOME/testbed//data/2014/train/STS.2013.test.input.SMT.txt $SEMEVAL_HOME/testbed//data/2014/train/STS.2013.test.gs.SMT.txt
+#!/bin/sh2>$SEMEVAL_HOME/testbed/analysis/2015/training/logs/STS.201
+export SEMEVAL_HOME=/local_home/lipn/SemEval
+./run.semantic.comparer.with.train.sh $SEMEVAL_HOME/testbed//data/2014/train/STS.2013.test.input.FNWN.txt $SEMEVAL_HOME/testbed//data/2014/train/STS.2013.test.gs.FNWN.txt > $SEMEVAL_HOME/testbed/analysis/2015/training/results/STS.2013.test.input.FNWN.dat 2>$SEMEVAL_HOME/testbed/analysis/2015/training/logs/STS.2013.test.input.FNWN.log
+./run.semantic.comparer.with.train.sh $SEMEVAL_HOME/testbed//data/2014/train/STS.2013.test.input.headlines.txt $SEMEVAL_HOME/testbed//data/2014/train/STS.2013.test.gs.headlines.txt > $SEMEVAL_HOME/testbed/analysis/2015/training/results/STS.2013.test.input.headlines.dat 2>$SEMEVAL_HOME/testbed/analysis/2015/training/logs/STS.2013.test.input.headlines.log
+./run.semantic.comparer.with.train.sh $SEMEVAL_HOME/testbed//data/2014/train/STS.2013.test.input.OnWN.txt $SEMEVAL_HOME/testbed//data/2014/train/STS.2013.test.gs.OnWN.txt > $SEMEVAL_HOME/testbed/analysis/2015/training/results/STS.2013.test.input.OnWN.dat 2>$SEMEVAL_HOME/testbed/analysis/2015/training/logs/STS.2013.test.input.OnWN.log
+./run.semantic.comparer.with.train.sh $SEMEVAL_HOME/testbed//data/2014/train/STS.2013.test.input.SMT.txt $SEMEVAL_HOME/testbed//data/2014/train/STS.2013.test.gs.SMT.txt > $SEMEVAL_HOME/testbed/analysis/2015/training/results/STS.2013.test.input.SMT.dat 2>$SEMEVAL_HOME/testbed/analysis/2015/training/logs/STS.2013.test.input.SMT.log
