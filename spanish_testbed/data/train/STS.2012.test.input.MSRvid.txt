@@ -1,0 +1,750 @@
+Un hombre con un sombrero duro está bailando.	Un hombre que llevaba un sombrero duro está bailando.
+Un avión está despegando.	Un avión está despegando.
+Un niño pequeño es montando a caballo.	Un niño es montando a caballo.
+Un hombre está alimentando un ratón a una serpiente.	El hombre está alimentando un ratón a la serpiente.
+Un hombre toca una flauta grande.	Un hombre toca una flauta.
+Un hombre está extendiendo una pizza de queso shreded.	Un hombre está esparciendo queso rallado sobre la pizza cruda.
+Tres hombres están jugando al ajedrez.	Dos hombres están jugando al ajedrez.
+Una mujer está tocando la guitarra.	Un hombre está tocando la guitarra.
+Una mujer está tocando la flauta.	Un hombre toca una flauta.
+Un hombre toca el violonchelo.	Un hombre sentado toca el violonchelo.
+Una mujer es cortar una cebolla.	Un hombre es cortes de cebolla.
+Algunos hombres están luchando.	Dos hombres están luchando.
+Un hombre está fumando.	Un hombre va a patinar.
+El hombre está tocando el piano.	El hombre está tocando la guitarra.
+Un hombre está tocando una guitarra y canto.	Una mujer está tocando una guitarra acústica y canto.
+Un hombre está borrando un tablero de tiza.	El hombre es borrar el tablero de tiza.
+Una persona está lanzando un gato en el techo.	Una persona lanza un gato en el techo.
+El hombre golpeó al otro hombre con un palo.	El hombre había azotado al otro hombre con un palo.
+Una mujer recoge y sostiene un canguro bebé.	Una mujer recoge y sostiene un canguro bebé en sus brazos.
+Un hombre toca una flauta.	Un hombre toca una flauta de bambú.
+Una persona está doblando un trozo de papel.	Alguien está doblando un trozo de papel.
+Un hombre se está ejecutando en la carretera.	Un perro panda se está ejecutando en la carretera.
+Un perro está tratando de tocino de su espalda.	Un perro está tratando de comer el pan en su espalda.
+Una mujer está embarazada de un niño.	Una mujer lleva a su bebé.
+Una chica es peinar su cabello.	Una chica cepilla el pelo.
+El oso polar se desliza sobre la nieve.	Un oso polar se desliza a través de la nieve.
+Una mujer está escribiendo.	Una mujer está nadando.
+Tres hombres están tocando guitarras.	Tres hombres están en el escenario tocando guitarras.
+Un gato se frota contra la cara del bebé.	Un gato está frotando contra un bebé.
+El hombre es montando a caballo.	Un hombre está cabalgando en un caballo.
+Un hombre vierte el aceite en una olla.	Un hombre vierte el vino en una olla.
+Un hombre toca una guitarra.	Una chica está tocando una guitarra.
+Un oso panda se desliza por un tobogán.	Las diapositivas de un panda abajo una diapositiva.
+Un grupo de hombres jugar fútbol en la playa.	Un grupo de muchachos están jugando fútbol en la playa.
+Una mujer está comiendo algo.	Una mujer está comiendo carne.
+Una mujer pela una patata.	Una mujer es pelar una papa.
+Una mujer pela una patata.	Una mujer es pelar una papa.
+Gente jugando cricket.	Los hombres están jugando a cricket.
+El niño se cayó de su bicicleta.	Un niño se cae de su bicicleta.
+Un hombre toca una guitarra.	Un hombre toca una flauta.
+La mujer está tocando la flauta.	Una mujer toca una flauta.
+El puma persigue el oso.	Un puma persigue un oso.
+Un conejo está huyendo de un águila.	Una liebre está huyendo de un águila.
+El hombre corta un árbol con un hacha.	Un hombre corta un árbol con un hacha.
+La mujer está friendo una chuleta de cerdo empanada.	Una mujer está cocinando una chuleta de cerdo empanada.
+Una mujer está midiendo el tobillo de otra mujer.	Una mujer mide el tobillo de otra mujer.
+Una chica es volar una cometa.	Una chica corriente es volar una cometa.
+Un hombre está montando un toro mecánico.	Un hombre montó un toro mecánico.
+El hombre está tocando la guitarra.	Un hombre toca una guitarra.
+El hombre está tocando la guitarra.	Un hombre toca una guitarra.
+Una mujer está bailando y cantando con otras mujeres.	Una mujer está bailando y cantando en la lluvia.
+Un hombre es encontrar algo.	Una mujer es algo maquetado.
+Un hombre está cortando un bollo.	Un hombre es cortar una cebolla.
+Un hombre vierte el aceite en una sartén.	Un hombre vierte el aceite en una sartén.
+Un león está jugando con la gente.	Un león está jugando con dos hombres.
+Un perro paseos en un monopatín.	Un perro está montando una patineta.
+Alguien talla una estatua.	Un hombre talla una estatua.
+Una mujer es cortar una cebolla.	Un hombre es cortar una cebolla.
+Una mujer de cáscara de camarón.	Una mujer está pelando gambas.
+Una mujer es freír pescado.	Una mujer es cocinar pescado.
+La niña cantó en un micrófono.	La señora cantó en el micrófono.
+Una mujer está tocando una guitarra eléctrica.	Una mujer está tocando una guitarra.
+Un tigre bebé está jugando con una pelota.	Un bebé está jugando con una muñeca.
+Un hombre está cortando un pepino.	Un hombre es cortar un pepino.
+Una persona es cortar un tomate.	Una persona es rebanar carne.
+Una persona corta una cebolla.	Una persona es cortar una cebolla.
+Un hombre toca el arpa.	Un hombre está tocando un teclado.
+Un hombre está subiendo una cuerda.	Un hombre sube una cuerda.
+Un hombre está tocando el piano.	Una mujer es tocar el violín.
+Una mujer está tocando la flauta.	Un hombre toca la guitarra.
+Un hombre es cortar una patata.	Un hombre está cortando las zanahorias.
+Un niño está tocando la guitarra.	Un niño toca una guitarra.
+Un niño está tocando la guitarra.	Un hombre toca una guitarra.
+Un hombre está tocando la guitarra.	Un niño toca una guitarra.
+Cortes de cebolla es una mujer.	Una mujer es corte tofu.
+Un niño está jugando un teclado.	Un niño está jugando tablero dominante.
+Un hombre está montando una bicicleta eléctrica.	Un hombre es andar en bicicleta.
+Un hombre toca una guitarra.	Un hombre toca una guitarra eléctrica.
+Un perro lame a un bebé.	Un perro lame a un bebé.
+Los gatitos están comiendo alimentos.	Los gatitos están comiendo de los platos.
+Una mujer es cortar una cebolla.	Un hombre es corte y cebolla.
+Un hombre toca la guitarra.	Un hombre toca los tambores.
+Un hombre toca los tambores.	Un hombre toca la guitarra.
+Una mujer es cortar un pimiento.	Una mujer es cortar un pimiento rojo.
+Un hombre toca los tambores.	Un hombre toca el tambor.
+Una mujer en un caballo.	Una mujer es montando a caballo.
+Un hombre está comiendo un plátano por un árbol.	Un hombre está comiendo un plátano.
+Un gato está jugando un tablero dominante.	Un hombre está jugando dos teclados.
+Un hombre está hablando.	Un hombre es escupir.
+Un hombre corta un árbol con un hacha.	Un hombre de corta un árbol con un hacha.
+Un niño juega con un teléfono de juguete.	Un niño juega con un teléfono de juguete.
+Una mujer es cocinar los huevos.	Una mujer está cocinando algo.
+Un hombre está tocando la guitarra.	Una mujer está tocando la guitarra.
+Un hombre está en una motocicleta.	Un hombre es montando a caballo.
+Un hombre está en una motocicleta.	Un hombre es montando a caballo.
+Un hombre toca una guitarra.	Un hombre toca la trompeta.
+Un hombre toca una guitarra.	Un hombre toca la trompeta.
+Un hombre toca una guitarra.	Un hombre toca la trompeta.
+Un animal es masticando algo.	Un animal es masticar un llavero.
+Una ardilla está dando vueltas en círculos.	Una ardilla corre alrededor en círculos.
+Un hombre es cortar una cebolla.	Un hombre corta una cebolla.
+Un hombre y una mujer se besan.	Un beso de hombre y mujer.
+Un hombre es entrar en un coche.	Un hombre se mete un coche en un garaje.
+Un hombre está ciclando.	Un hombre está hablando.
+Un hombre está bailando.	Un hombre está hablando.
+Un hombre es tocar la guitarra y cantar.	Un hombre toca la guitarra.
+Una persona es corte setas.	Una persona es setas de corte con un cuchillo.
+Un hombre está cortando abierto un pez.	Un hombre está cortando un pez.
+Un cachorro de Tigre está haciendo un sonido.	Un tigre está caminando.
+Una persona es cortar las cebollas.	Una persona está pelando una cebolla.
+Un hombre está tocando el piano.	Un hombre toca la trompeta.
+Una mujer es pelar una papa.	Una mujer está pelando una manzana.
+Un pankda come bambú.	Un oso panda está comiendo un bambú.
+Una persona está pelando una cebolla.	Una persona es pelar una berenjena.
+Un mono empuja a otro mono.	El mono empujó el otro mono.
+Una ardilla corre alrededor en círculos.	Una ardilla se mueve en círculos.
+Un hombre está atando los cordones.	Un hombre lazos de su zapato.
+Un niño está cantando y tocando el piano.	Un niño está tocando el piano.
+Un perro está comiendo sandía.	Un perro está comiendo un trozo de sandía.
+Una mujer es cortar el brócoli.	Una mujer es cortar el brócoli con un cuchillo.
+Un hombre es pelar una papa.	Un hombre había pelado una patata.
+Una mujer está tocando una guitarra.	Un hombre toca una guitarra.
+Un hombre toca una flauta.	Un hombre está tocando la guitarra.
+Una mujer es cortar tomate.	Un hombre es cortar la cebolla.
+Un hombre es cortar un tomate.	Un hombre está cortando un bollo.
+Un hombre nada bajo el agua.	Una mujer está nadando bajo el agua.
+Un hombre y una mujer están hablando.	Un hombre y una mujer está comiendo.
+Un hombre toca una guitarra.	Un hombre está tocando un teclado.
+Un bebé panda va por un tobogán.	Las diapositivas de un panda abajo una diapositiva.
+Un pequeño perro persigue una bola de la yoga.	Un perro está persiguiendo una pelota.
+Los hombres están jugando a cricket.	Los hombres están jugando al baloncesto.
+Un hombre cabalga apagado en una motocicleta.	Un hombre está montada en una motocicleta.
+Un hombre toca una guitarra.	Un hombre está cantando y tocando una guitarra.
+El hombre habló por teléfono.	El hombre está hablando por teléfono.
+Un hombre está cantando y tocando una guitarra.	Un hombre toca una guitarra.
+Un hombre es la pesca.	Un hombre está ejerciendo.
+Un hombre está levitando.	Un hombre está hablando.
+Un hombre ataca a una mujer.	Un hombre golpea a una mujer.
+Dos chicos están volviendo.	Dos bahías están bailando.
+Un hombre está conduciendo un coche.	Un hombre es montando a caballo.
+Un hombre juega al fútbol.	Un hombre toca la flauta.
+Un hombre está cabalgando en un caballo.	Una chica es montando a caballo.
+Un hombre es andar en bicicleta.	Un mono es andar en bicicleta.
+Un hombre es cortar papas.	Una mujer está pelando patatas.
+Una mujer es pelar una papa.	Un hombre es cortar la patata.
+Un hombre toca una guitarra.	Someoen está tocando la guitarra.
+Una mujer es corte tofu.	Una mujer es cortar una cebolla.
+Una chica es montando a caballo.	Una chica es andar en bicicleta.
+Una mujer es cortar un puerro.	Una mujer es cortar el jengibre.
+El hombre cortó un plato de papel.	Un hombre es cortar un plato de papel.
+La mujer es peinar su cabello.	La mujer es cortar las hierbas.
+El hombre está tocando la guitarra.	Un hombre toca la flauta.
+Un hombre está tocando el piano.	El hombre está tocando el violín.
+Un hombre está levantando pesas en un garaje.	Un hombre está levantando pesas.
+Una mujer es cortar para arriba un poco de carne.	Una mujer es empanar carne.
+Un hombre está jugando en su teclado.	Un hombre toca un teclado de piano.
+Dos cebras juegan en un campo abierto.	Dos cebras están jugando en un campo.
+La señora cortada la cebolla verde.	La señora a cortar una cebolla verde.
+Alguien está sitring los tallarines en el agua.	Una mujer es hervir los tallarines en el agua.
+Un animal está mordiendo un dedo personas.	Un Nycticebus está mordiendo un dedo personas.
+Lionel Richie está bailando en el techo.	Lionel Ritchie danzas mientras esté parado en el techo.
+Un hombre está tocando un piano.	Una persona está tocando el piano.
+Un hombre es cortar una patata.	Un hombre es cortar una patata.
+Una mujer está tocando la flauta.	Una mujer toca una flauta.
+Un niño está revisando un calendario.	Un niño está mirando un calendario.
+Una mujer es cortar una cebolla.	Una mujer es picar cebollas.
+Un hombre está tocando la guitarra.	Un hombre toca una guitarra.
+Una mujer está usando una máquina de coser.	Una mujer es una máquina de coser.
+Una mujer está volteando panqueques.	Un chef de dibujos animados es voltear panqueques.
+Un hombre es cortar una cebolla.	Una mujer es cortar una calabaza.
+Un hombre está bailando.	Un hombre y una mujer bailando.
+Un hombre está en una motocicleta.	Una mujer es montando a caballo.
+Un hombre se está ejecutando en la carretera.	Está conduciendo un coche.
+Una mujer está leyendo.	Una mujer es amasar.
+Una mujer está cortando ajos.	Una mujer es cortar una cebolla.
+Un hombre está cabalgando en un caballo.	Un hombre está hablando por teléfono.
+Un hombre es andar en bicicleta.	Un hombre está cabalgando en un caballo.
+Un hombre está llorando.	Una mujer está bailando.
+Una mujer está bailando.	Un hombre está comiendo.
+Un hombre está tocando un piano.	Un hombre toca una flauta.
+Un hombre toca una flauta.	Un hombre está tocando un piano.
+Un hombre está hablando.	Un hombre se está cocinando.
+Un hombre está girando.	Un hombre está bailando.
+Un niño está cantando y tocando una guitarra.	Un hombre está cantando y tocando la guitarra.
+Un mono se balancea de las extremidades.	Un mono se balancea de árbol en árbol.
+La gente bajó del tren.	La gente bajó del tren en la estación.
+La señora quebró un huevo en un cuenco.	El hombre está rompiendo los huevos en un tazón.
+Un perro es saltar en un trampolín.	Un perro se refleja en un trampolín.
+Un niño está tocando un instrumento.	Un hombre toca la trompeta.
+Una banda está actuando en un escenario.	Una banda toca en el escenario.
+Una mujer toca la guitarra.	Un hombre canta y toca la guitarra.
+Una mujer está recogiendo una lata.	Una mujer es cortar un tomate.
+Un hombre está subiendo una cuerda.	Un hombre trepa por una cuerda.
+Un hombre está levantando un auto.	Un hombre es un muro de escalada.
+Los elefantes están caminando por un sendero.	Una manada de elefantes están caminando por un sendero.
+Un hombre y una mujer están conduciendo por la calle en un jeep.	Un hombre y una mujer están conduciendo por la carretera en un vehículo al aire libre.
+El hombre sin camisa se sentó en una silla.	Un hombre sin camisa está sentado en una silla.
+Una tortuga está nadando en el agua.	Una tortuga está caminando bajo el agua.
+Dos mujeres están luchando.	Dos mujeres están luchando en el suelo.
+El cachorro juega con una pelota de tenis azul.	Un cachorro está jugando con una pelota de tenis.
+Un kangroo es comer algo.	Está comiendo un canguro.
+Un gato está tocando un piano.	Un hombre toca una guitarra.
+El hombre cortó una alfombra con un cuchillo.	Un hombre es alfombra de corte con un cuchillo.
+Una mujer está montando una patineta motorizada por un camino.	Un hombre está montando una moto scooter.
+Alguien está cortando un vegetal.	Alguien es cortar un tomate.
+Una mujer está bailando.	Un hombre está hablando.
+Un hombre toca una guitarra.	Un hombre toca la guitarra.
+Un perro lame a Baba de un bebé.	Un perro lame a un bebé.
+Un hombre está remando en un bote.	Un hombre es cortar un tomate.
+Una mujer joven está poniendo pegatinas en toda su cara.	Una mujer es aplicar las etiquetas engomadas en su cara.
+Un hombre corta patatas.	Un hombre de rodajas de patatas.
+Un hombre sentado en el suelo toca una guitarra.	Un hombre sentado en el suelo de una habitación está rasgando una guitarra.
+Una mujer está cortando a ajo.	La mujer es picar ajo.
+Un cachorro juega con un recipiente de plástico.	El perro está jugando con un recipiente de plástico.
+Un animal corre en círculos.	Una ardilla corre en círculos.
+Un hombre camina lentamente a través de un puente de cuerda.	Un niño está caminando a través de un puente.
+Un hombre toca la guitarra.	Un hombre sentado en una habitación está tocando la guitarra.
+Un hombre toca la flauta.	Un hombre toca una flauta.
+Un hombre toca el violín.	Un hombre está tocando el violín.
+Un hombre toca el piano.	Un hombre está tocando un piano.
+Un hombre está comiendo comida.	Un hombre está comiendo algo.
+Una mujer grietas dos huevos en un tazón de vidrio.	Una mujer pasa un huevo en un cuenco.
+Un hombre toca una pelota de baloncesto.	Un hombre está tocando un piano.
+Un hombre es cortar un pez.	Un hombre de agallas de un pez.
+Dos hombres están empacando maletas en el maletero de un coche.	Los hombres están poniendo las maletas en el maletero del coche.
+Un niño camina por un pasillo.	Una niña está caminando por un pasillo.
+Un hombre vierte el aceite en algunos tomates.	El hombre derramó aceite sobre los tomates cortados.
+Un hombre está cortando algo.	Un hombre está cortando un bollo.
+Un avión está aterrizando.	Un avión de animación está aterrizando.
+Una mujer está envolviendo el queso de soja.	Una mujer está ganando dinero.
+Un hombre es remar en una canoa.	Un hombre toca el arpa.
+Un hombre y una mujer caminan juntos por el bosque.	Un hombre y una mujer están caminando brazo en brazo a través de una zona boscosa.
+Un gato está comiendo palomitas.	Un gato está comiendo maíz en la mazorca.
+La mujer recogida el canguro.	Una mujer recoge un canguro bebé.
+Peces nadan.	Un pez nada.
+Dos mujeres mezclan en un procesador de alimentos.	Dos mujeres hacen algo en una licuadora.
+Un panda está subiendo.	Un hombre está subiendo una cuerda.
+Una persona es surfear una ola grande.	Una persona es el surf.
+Un hombre toca una guitarra.	Un hombre está apuñalando a un objetivo.
+Un hombre toca una flauta en una banda.	Un hombre toca una guitarra.
+El hombre unta mantequilla en el pan.	Un hombre está propagando mantequilla sobre pan.
+Una persona es hervir los tallarines.	Una mujer es hervir los tallarines en el agua.
+Un hombre está comiendo una comida.	Un hombre está comiendo un pedazo de pan.
+Un grupo de danza de la gente en una colina.	Un grupo de personas bailan.
+Un hombre toca una guitarra.	Un hombre está comiendo pasta.
+Un hombre está bailando afuera.	Un hombre toca la flauta.
+Una mujer está alimentando a un hombre.	Una mujer es mezcla de carne.
+Un hombre está poniendo una sartén en el horno.	Una mujer es cortar una cebolla.
+Un hombre está pateando ollas de agua.	Un hombre está recogiendo flores.
+Una mujer sentada en un escritorio.	Una mujer está montando un burro.
+Médicos transportan a un paciente en una camilla.	Un médico precipita a un paciente en una camilla.
+Un hombre está cortando un tubo con una tijera.	Un hombre es alfombra de corte con un cuchillo.
+Una mujer toca una flauta en el escenario.	La mujer está tocando la flauta.
+Una mujer bailando bajo la lluvia.	Una danza de mujer bajo la lluvia afuera.
+Dos pandas bebé están jugando.	Dos pandas están poniendo juntos.
+Los niños están bailando en el escenario.	Algunas personas están bailando en el escenario.
+Un bebé se ríe.	Un bebé riendo y riendo.
+Un hombre toca una guitarra.	Un niño está tocando un piano.
+Una mujer está tomando un baño.	Una mujer es montando a caballo.
+Un hombre está doblando papel.	Una mujer es cortar un pimiento.
+Tres mujeres están bailando.	El hombre está bailando.
+Un hombre toca una guitarra.	Un hombre toca el piano.
+Los gatos están jugando con el otro.	Dos gatos están peleando unos con otros.
+Una persona está escribiendo.	Una persona está escribiendo con un lápiz.
+Una mujer es rebanar carne.	Una mujer está cantando en el escenario.
+Una mujer está tomando una foto.	Un hombre toca una guitarra.
+Un hombre mezcla de verduras en una olla.	Una persona agita verduras en una olla.
+Un hombre se está ejecutando.	Un hombre está siguiendo un camino.
+La mujer está rodando en masa.	Una mujer es flouring y balanceo de masa.
+Una mujer está agregando especias en una carne.	Mujer es agregarle azúcar a la carne.
+Una mujer está agregando aceite sobre peces.	Una mujer está vertiendo agua en peces.
+Un joven está sosteniendo una guitarra.	Un niño toca una guitarra.
+Se está ejecutando un guepardo.	Un guepardo corre a través de un campo.
+El hombre está comiendo pizza.	Un hombre está comiendo un trozo de pizza.
+Un orangután es un autobús.	Un mono está montando en un autobús.
+Un hombre y una mujer hablan en un restaurante.	Un hombre y una mujer están montando en bicicleta.
+Una mujer está hablando por un teléfono celular.	Un hombre y una mujer están hablando por teléfono.
+Un hombre toca una guitarra.	Un hombre está limpiando una puerta de vidrio.
+Una chica cantando y tocando una guitarra.	Un joven está cantando y tocando la guitarra.
+Un hombre toca una guitarra.	Un hombre está cantando y tocando la guitarra.
+El hombre es montando a caballo.	Una mujer está usando una azada.
+Un hombre toca una guitarra.	Un hombre está conduciendo un coche.
+Una chica se comunica con lenguaje de signos.	Una joven está usando lenguaje de señas.
+Una mujer está haciendo ejercicios de peso.	Una mujer está haciendo su cabello.
+Un hombre está dentro de un automóvil.	Un anciano está metiendo en un coche rojo.
+Una gran bola verde golpea una patata encima.	Una gran bola verde golpea una patata.
+Un hombre está perforando un agujero en una tabla.	Alguien está perforando un agujero en un trozo de madera.
+Un gato está tocando teclados.	Un gato está tocando un piano.
+Dos perros nadan en una piscina.	Los perros están nadando en una piscina.
+Un hombre es apropiado silenciador de una pistola.	Un hombre está agregando un silenciador para un arma.
+El hombre usa un helicóptero para picar la cebolla.	El hombre usó una máquina para cortar una patata.
+Una mujer rodajas de queso de soja.	Una mujer es corte tofu.
+Una manada de ciervos están cruzando la calle.	Una manada de caribú están cruzando una carretera.
+La persona es el caballo.	Un hombre es montando a caballo.
+Alguien está alimentando un animal.	Alguien está tocando un piano.
+Alguien está maquetado de ceboola.	Alguien está montando un caballo.
+Alguien está mezclando los bifes.	Alguien va a coser.
+Un gallo pica en un ratón muerto.	Un pollo es picoteando un ratón muerto.
+Una mujer sostiene un canguro.	Una mujer recoge un canguro.
+Un hombre está jugando con las ranas	Un gato está jugando con una cámara.
+Dos hombres están hablando.	Dos hombres están tocando la guitarra.
+Dos niñas están hablando por teléfono.	Una niña está caminando por la calle.
+Un hombre es manzana de corte por su mano.	Un hombre es alfombra de corte con un cuchillo.
+Un hombre extiende de manteca en un gran pedazo de pan.	Un hombre está untando mantequilla en una rebanada de pan de ajo.
+Un hombre está corriendo por una cuerda floja.	Un hombre se está ejecutando en cuerda.
+Alguien agita a Chile en un hervidor de agua.	Alguien revuelve una olla de Chile con una cuchara.
+La mujer está rompiendo los huevos en un tazón.	La señora rompió los huevos crudos en un recipiente.
+Un hombre es cortar el césped.	Una mujer es cortar un limón.
+Un hombre está abriendo una puerta.	Un hombre es cortar una cebolla.
+Un hombre está abriendo una puerta.	Un hombre toca una guitarra.
+Un hombre es cortar un tomate.	Un hombre es montando a caballo.
+Un hombre es cortar una patata en trozos.	Un hombre es cortar una patata.
+La mujer es cortar pulpo cocido.	Una mujer es cortando el pulpo.
+Un hombre es el papel de corte con una espada.	Una mujer es cortar un tomate.
+Está pegando a un hombre a través de tableros.	Un perro corre a través del agua.
+Una mujer pone harina en un pedazo de carne.	Una mujer es poner harina en un poco de carne.
+Un hombre está bailando.	Un hombre está comiendo pan.
+Alguien está tocando un piano.	Un hombre toca una guitarra.
+Dos zorros están comiendo de un plato en un patio de ladrillo.	Zorros están comiendo de un plato.
+Un niño está jugando un teclado.	Un niño está tocando el piano.
+Una persona toca un teclado.	Alguien está tocando un teclado.
+Un niño estudia un calendario.	Un niño está mirando un calendario.
+Un hombre va a disparar un arma.	Un hombre es escupir.
+Alguien es cortar una cebolla.	Someoen es pelar una papa.
+Un hombre está hablando por teléfono.	Un hombre está cantando a una mujer.
+Un hombre está nadando.	Una mujer es rebanar carne.
+La bailarina es bailar.	Un hombre está bailando.
+Un hombre toca la guitarra.	Un hombre toca una guitarra acústica.
+Una mujer es cortar una calabaza.	Una mujer está montando un elefante.
+Una mujer está bailando.	Una mujer es amasar.
+Una mujer está bailando.	Una mujer está tocando el violín.
+Una mujer es romper huevos en un tazón.	Una mujer está colocando pinchos en un rack.
+Un coche se está moviendo a través de una carretera.	Está conduciendo un coche.
+Una mujer es cortar algunos tomates.	Una mujer es cortar una patata.
+Alguien es engrasar una sartén.	Smeone se establece.
+Un hombre está tocando la guitarra.	Un hombre está drenando pasta.
+Una mujer está bebiendo vodka.	Una mujer está ejerciendo.
+Una mujer es el esquí acuático.	Una mujer es rebanar pescado.
+Un hombre está tocando un teclado electrónico.	Un hombre toca una flauta.
+Una mujer es cortar carne en trozos.	Una mujer es cortando un poco de carne.
+Un hombre toca una guitarra.	Un hombre está comiendo un plátano.
+Un hombre toca una flauta.	Un hombre está en una moto.
+Un hombre es aclarado un bistec.	Un hombre toca una guitarra.
+Un hombre está tocando el piano.	Un hombre tocaba la guitarra.
+Un hombre vende artículos.	Un hombre está limpiando la casa.
+Un hombre está saltando en el agua.	Un hombre es el papel de corte.
+Una mujer está recogiendo una lata.	Un hombre toca una guitarra.
+Un hombre está saltando un muro.	Un hombre salta sobre una pared corta.
+Carrera los corredores alrededor de la pista.	Los corredores compiten en una carrera.
+Un hombre está pateando un balón de fútbol.	Un hombre es un tazón para mezclar.
+Una mujer está friendo algo.	Una mujer es montando a caballo.
+Un gato está lamiendo un tonto.	Una mujer está rebanando pepino.
+Una mujer bailando por un incendio.	Una mujer está tomando un baño.
+Un hombre pone tres trozos de carne en una cacerola.	Un hombre está poniendo carne en una sartén.
+Un hombre toca una guitarra.	Un tipo es tocar un instrumento.
+El hombre está cortando un pez abierto.	Un hombre es cortar una patata.
+Una mujer es cortar una cebolla.	Una mujer está limpiando un jardín.
+Se derrite mantequilla en una sartén.	Un hombre derrite la mantequilla en una sartén.
+Algunos hombres son aserrado.	Los hombres son serrar troncos.
+Tres niños están bailando.	Los niños están bailando.
+Una mujer está jugando con un hombre.	Un hombre está tocando el piano.
+El hombre está conduciendo un coche blanco.	Un hombre va a dar una entrevista.
+Un joven está tocando el piano.	Una mujer está pelando un langostino.
+Un coche es conducido por el camino.	Una chica va andando por un camino.
+Una mujer está mezclando los bifes.	Una mujer es mezcla de alimentos en un recipiente.
+Un hombre conducía su coche.	Un hombre está conduciendo un coche.
+Un auto realiza un espacio.	Un coche está dejando un carril bloqueado.
+Alguien es triturar hojas de col con un cuchillo.	Alguien es cortar algunas hojas de repollo.
+Un hombre pone un poco de queso en una pizza.	El hombre espolvoreado con queso en la pizza.
+El muchacho está tocando el piano.	Un niño toca un piano.
+El hombre está besando y abrazando a la mujer.	Un hombre está abrazando y besando a una mujer.
+El hombre tocó su guitarra.	Un hombre toca una guitarra.
+Un lento lori pasea.	Un animal es caminando.
+Un hombre es montando a caballo.	Un hombre está tocando un teclado.
+Un hombre camina sobre una cuerda.	Un hombre está en una plataforma de mo.
+Un niño pequeño es aspirar el piso.	Un niño está aspirando.
+Una chica toca una flauta.	Una banda toca en un escenario.
+Gente paso de un tren.	Un grupo de gente bajarse de un tren.
+Una mujer es una máquina de coser.	Una mujer es empanar carne.
+Un perro se ve en la piscina.	Un perro está caminando alrededor de una piscina.
+Un hombre está preparando un pedazo de pan.	Un hombre es aplicar mantequilla al pan.
+Una mujer está aplicando delineador de ojos a su párpado usando un lápiz de ojos.	Una mujer está aplicando cosméticos a su párpado.
+Un hombre es tomates corte en pedazos.	Una mujer es cortar algunas verduras.
+Un tren se está moviendo.	Un hombre está haciendo yoga.
+Tres niñas adolescentes bailaban en la sala.	Algunos adolescentes están bailando para la cámara.
+Un león está caminando.	Un león está caminando en un corral.
+Un hombre disparando un coche.	Un hombre es cortar una patata.
+Un hombre está haciendo una cama.	Una mujer está tocando una guitarra.
+Un caballo negro está corriendo.	El caballo está corriendo.
+Alguien es cortar una cebolla.	Una mujer es cortar cebolla.
+Una mujer es deveining camarón.	Un hombre está bailando en la lluvia.
+Un hombre es montando a caballo.	Una mujer está lavando un congelador.
+Un hombre toca un teclado.	Una persona toca el teclado.
+Un hombre camina por un sendero.	Un hombre camina por una cuerda floja.
+Un hombre es cortar una patata.	Una mujer es cortar un jalepeno.
+Un perro ladra en un baile.	Un perro nada después de una pelota de tenis.
+Una mujer está jugando en el océano.	Una mujer prepara camarones a cocinar.
+Un niño huye de girando en una caña de pescar un pez.	Un niño está corriendo una caña de pescar.
+Un hombre está caminando por un sendero a través del desierto.	Un hombre está caminando por una carretera.
+Un anciano está hablando en un podio.	Un hombre está dando un discurso en el podio.
+Una persona toca un teclado electrónico.	Un niño toca el teclado.
+Un hombre montado en un caballo en cámara lenta.	Un hombre está cabalgando en un caballo.
+Una persona es cortar algunos burrata queso.	La persona es cortar queso.
+El hombre está disparando un rifle automático.	Un hombre va a disparar un arma.
+Un conejo está jugando con un conejo de juguete.	Un conejito está jugando con un conejo de peluche.
+Un avión se monta en una carretera.	Un avión se mueve a lo largo de una pista de aterrizaje.
+Un hombre está aplastando el ajo con el dorso de un cuchillo.	Una mujer es rebanar carne con un cuchillo.
+Una mujer está presentando sus uñas con una lima de esmeril.	Una mujer está alimentando a su bebé con una botella.
+Un hombre está montando una patineta.	Una mujer es cortar una patata.
+Una mujer está tomando una ducha.	Un hombre está montando un caballo blanco.
+Un hombre está bailando.	Un hombre es montando a caballo.
+Un hombre sostiene una hoja.	Un mono está luchando contra a un hombre.
+Una mujer está pelando gambas.	Un hombre es exprimir el agua.
+Un hombre está remando en un bote.	Un hombre va a disparar un arma.
+Un hombre está colgando de una cuerda atada al techo.	Un hombre se balancea sobre una cuerda.
+Una mujer es montando a caballo en la playa.	Un hombre lleva a otro hombre en su espalda.
+Un hombre es un animal pequeño en una mano.	Un hombre muestra un pequeño mono.
+Una persona está doblando un pedazo de papel cuadrado.	Un hombre está doblando papel.
+Una persona está friendo carne en una sartén.	Una persona está sosteniendo un zorrillo.
+Un hombre dispara a un hombre.	Un hombre con una pistola disparó a otro hombre.
+Un hombre toca la guitarra.	El hombre cantaba y tocaba la guitarra.
+Un hombre está sentado y fumando.	Un hombre está fumando un cigarrillo.
+Un chimpancé es lastimar a una mujer.	Un hombre está conduciendo un coche.
+La mujer está pelando gambas.	El hombre tiene un lémur.
+Un tipo es jugar hackysack	Un hombre está tocando un teclado.
+Un hombre toca una guitarra.	Una mujer es montando a caballo.
+Un hombre está rompiendo el cemento en el pecho de otro hombre.	Un hombre rompe bloques en otro hombre.
+Dos cebras están jugando.	Las cebras están socializando.
+Una mujer está cortando mantequilla.	Una mujer rodajas de queso de soja.
+Algunos hombres están tocando guitarras.	Tres hombres están tocando guitarras y cantando juntos.
+Los elefantes rocían agua sobre sí mismos.	Los elefantes se rocíe con agua.
+Un hombre está hablando con otras mujeres en la playa.	Un hombre está caminando por la calle.
+Un perro se sentó en el mostrador de una tienda.	El perro está parado en el mostrador.
+Alguien perfora un agujero en una tira de madera con un taladro eléctrico.	Un hombre perfora un agujero en un trozo de madera.
+La mujer es picar cebollas.	Una mujer bailando en la estación de tren.
+Un hombre está parado frente a la ventana y mirando fuera.	Un hombre está mirando por la ventana.
+Un zorrillo está buscando aquí y allá.	Un zorrillo Mira a la cámara.
+Una mujer es cortar algunas verduras.	La mujer es picar ajo.
+Un tejón es excavar un hoyo.	Un tejón está cavando la tierra.
+Una mujer es esquí acuático en el lago.	Un hombre toca una flauta.
+Una chica está tocando un violín.	Un bebé riendo y riendo.
+Un helicóptero aterrizará en un helipuerto.	Un helicóptero aterriza.
+Una mujer es cortar un pollo.	Una mujer es rebanar carne.
+Una mujer es cortar un pepino.	Un hombre toca una guitarra.
+Una mujer monta un elefante frente a un público adorador.	Una mujer monta un elefante.
+Un cachorro se desliza hacia atrás a lo largo de la planta.	Un cachorro se empuja hacia atrás.
+Un chef está preparando algo de comida.	Un chef preparó una comida.
+Una mujer separa los dientes de ajo.	Una mujer está rompiendo una cabeza de ajo en el clavo.
+Un perro se ve en la piscina.	Un perro está caminando a lo largo del borde de una piscina.
+Una mujer mezcla un tratamiento de belleza en un vaso.	Una mujer mezcla una crema en un vaso con una cuchara.
+Un hombre es un dibujo.	Una persona está dibujando.
+El hombre habló a una chica en la cámara de internet.	Un adolescente habla a una chica con una webcam.
+Un hombre es tocar la guitarra y cantar.	Un hombre canta con una guitarra.
+Una tortuga camina sobre la tierra.	Una gran tortuga se arrastra en la hierba.
+La señora quebró un huevo para la batidora.	La señora rebanar la carne.
+Una mujer está recogiendo tomates.	Una mujer es verter la masa en un recipiente.
+Un hombre está mirando un monitor de computadora.	Un hombre está usando una computadora portátil.
+El niño es conducir un triciclo.	Una mujer está montando una moto de agua.
+Dos hombres compiten en un neumático rodando carrera.	Dos personas volcó neumáticos de tractor en una carrera.
+Una mujer abre una ventana.	Un hombre está lleno.
+Una persona es cortar una carne.	Una persona montando un toro mecánico
+Un hombre toca un violín.	Una mujer está usando una máquina de coser.
+Cinco gatitos están comiendo de cinco platos.	Los gatitos están comiendo alimentos en bandejas.
+Personas bailan afuera.	Un grupo de personas bailan.
+Una mujer es cortar atún.	Una mujer es cortar el pescado crudo.
+El hombre está usando una cámara para clavar un clavo.	Alguien se acuesta con una lente de cámara contra un clavo.
+El bebé salió por la puerta.	Un bebé está arrastrándose por el suelo.
+Un hombre toca el teclado.	Una persona está tocando un piano.
+Un hombre tocando la guitarra.	Una mujer está pintando sus labios.
+Un hombre está oliendo dos pizzas.	Una mujer está alimentando a un hombre.
+Una mujer está presentando sus uñas.	Un hombre está pelando una zanahoria.
+Un mono tira de la cola de un perro.	Un mono está provocando un perro en el zoológico.
+Un perro se encuentra en su espalda en un piso de madera.	Un perro está tirado en el piso.
+Un hombre toca una flauta.	Un perro ladra a una mosca.
+Una mujer está friendo algo en la sartén.	Un hombre está tocando su guitarra.
+Un niño está lleno en una casa de perro.	Un niño toca una flauta de madera.
+Un hombre pone condimento en un cuenco de agua.	El hombre agregado condimento al agua en un tazón.
+Una anciana vierte el aceite en una sartén.	Un hombre atado está poniendo en el agua.
+Un rinoceronte bebé está caminando alrededor de su pluma con su madre.	Un rinoceronte bebé está siguiendo un rinoceronte adulto.
+Una mujer es cortar una cebolla.	Una mujer es cortar parcialmente en mitad de una cebolla.
+La mujer recogida el canguro.	Una mujer está embarazada de un canguro.
+Un perro muerde en una lata.	Un perro abre una lata de comida.
+Una mujer es deshuesado un pez.	Un hombre coge un pez.
+Un hombre está cortando el césped.	Un hombre está rompiendo concreto.
+Un gato está mirando la televisión.	Un hombre está cortando un permiso.
+El niño está atrapado en la puerta de la perrera.	Un niño está atrapado en una casa de perro.
+La gente del tirón a una piscina.	Los hombres están cayendo en una piscina.
+Una mujer está nadando bajo el agua.	Un hombre está cortando zanahorias.
+El hombre usó una espada para cortar una botella de plástico.	Un hombre le cortó una botella de plástico con una espada.
+Una mujer nada bajo el agua.	Una mujer está nadando.
+Un hombre toca una guitarra.	Una mujer está bailando.
+Una máquina está afilando un lápiz.	La máquina de afeita el extremo del lápiz.
+Un avión está volando en el aire.	Un avión de South African Airways está volando en un cielo azul.
+Un oso está huyendo de dos perros.	Un oso está luchando contra los lobos.
+Una mujer está descansando en una balsa flotante.	Una mujer se relaja en un tubo interno.
+Un hombre está limpiando un pez en un mostrador de la cocina.	Un hombre toca una flauta.
+Un hombre está muriendo en una sala de operaciones.	Un hombre está besando a una mujer en etapa.
+Un hombre sostiene una hoja.	Una mujer está viendo la televisión.
+Una persona es montando a caballo.	Una mujer es cortar papas.
+Una mujer es cortando el pulpo.	Un hombre toca la guitarra.
+Un hombre está rompiendo jarras de agua.	Una mujer está pelando ajo.
+Un hombre toca una guitarra.	Una mujer es corte vegetal.
+Una niña está comiendo un pastelito.	Un hombre es cortar un pepino.
+La niña jugó sobre el césped con un perro y una bola.	Un niño juega con un perro y pelota.
+Una persona está cortando hojas de cilantro.	Una mujer es cortar algunas hojas verdes.
+Paseo de la gente y remar en una balsa.	Cuatro personas están flotando en una balsa.
+Un hombre está presionando los botones de microondas.	Un hombre se enciende el horno de microondas.
+Una chica es montando a caballo.	La chica trotó el caballo.
+La señora cortó una patata.	Un hombre es cortar una patata.
+Un mono es tocar la batería.	Un gorila toca la batería.
+El misil explotó.	Un cohete explotó.
+Un perro está jugando en la nieve.	Un perro está manoseando a una mosca en la alfombra antes de él.
+Una mujer bailando con otras mujeres.	Una mujer es desmenuzar pollo.
+Un niño empuja una furgoneta.	Una persona es cortar un tomate.
+Batman y Robin volar en helicóptero sobre el agua.	Un helicóptero sobrevuela el agua.
+Un niño está haciendo algunos pasos de baile.	Un niño es verter algo de una jarra.
+Una mujer es abrir un refresco y beberla.	Una mujer es montada en un elefante.
+Un hombre está reuniendo las piezas del altavoz.	Un hombre toca la guitarra.
+Una mujer vierte el aceite en una sartén de una botella de plástico mientras está hablando.	Una mujer mayor vierte el aceite en una sartén en el horno.
+El perro caminaba por el borde de la piscina.	Un perro está caminando a lo largo de una piscina.
+Se pone mantequilla en un tazón.	Una mantequilla de corte de hombre en un tazón.
+Un hombre es abrir una caja y tomando un papel.	Una mujer es pelar una papa.
+Los mapaches están comiendo.	Un hombre está comiendo.
+Alguien se cayó de un caballo.	Un hombre consigue embarazado de un caballo.
+Una mujer es cortar algunas hierbas.	Una mujer es picar cilantro.
+Una mujer pela una manzana.	Un hombre aparece caballitos en moto.
+Un hombre está tomando clases de matemáticas.	Un hombre es aclarado un bistec.
+Los animales están jugando en el agua.	Dos hombres están jugando ping-pong.
+Un hombre montado en un caballo y saltar sobre los obstáculos.	Un hombre está pateando un balón de fútbol.
+Una persona está haciendo trucos de lápiz con la mano.	Una persona es cortar las zanahorias por la mitad.
+La persona prendió fuego a las cámaras.	Una persona es golpe prendieran fuego a las cámaras.
+El hombre está cortando la cinta de la caja.	Un hombre es abrir una caja.
+La señora puso la shimp ensartada en el agua caliente.	La señora frito la carne rebozada en aceite bien caliente.
+Una mujer está bailando.	Una mujer toca el clarinete.
+Un hombre está pescando en el río.	Un hombre está cantando mientras caminaba por la acera.
+Un hombre es andar en bicicleta.	Una mujer está bailando en la calle.
+Un hombre está haciendo flexiones.	Una mujer es cortar un pulpo.
+Un hombre está tocando la guitarra.	Una mujer es cortar un cerdo.
+Una mujer está cabalgando en un caballo.	Un hombre se dispara armas.
+El muchacho está tocando el piano.	Una banda toca en el escenario.
+Una persona se basa en una gran pantalla táctil.	Un hombre está dibujando en una pizarra digital.
+El cocinero está amasando la harina.	Una mujer es amasar la masa de tortilla.
+El niño está cantando y tocando la guitarra.	Un bebé está tocando una guitarra.
+Una mujer es pulverizándose su cara.	La mujer está interviniendo sus dedos sobre la mesa.
+Los hombres que jugaron a seguir al líder en el césped.	El rinoceronte rozó en el césped.
+Una mujer es romper huevos.	Un hombre está hablando con una mujer.
+Una mujer es pelar una papa.	Un león está caminando.
+Una mujer está disparando un rifle.	Un hombre está realizando acrobacias.
+Una mujer Pela ajos con sus manos.	La mujer es cortar las hierbas.
+Los osos polares se pelearon por la matanza.	Los osos polares están peleando unos con otros.
+Una mujer es montando a caballo a lo largo de un perímetro.	Un perro está montando una patineta.
+Una mujer está poniendo a su bebé en un cubo de basura.	La mujer está metiendo los agujeros en la patata.
+Una mujer pone una guirnalda sobre los hombros de un hombre.	Un hombre vierte agua sobre la cabeza de los pilotos.
+Una anciana tiembla la mano con un hombre.	Un hombre y una mujer de la mano.
+Un hombre está haciendo truco con las cartas de juego.	Un hombre está realizando un truco de cartas.
+La mujer es esquí acuático.	Una mujer es Estela embarcando en un lago.
+Los árboles están doblando en tormenta.	Los árboles son golpeados por vientos muy duros.
+El gato lame una botella.	Un gato juega con una pequeña botella.
+Un hombre y una mujer está montando en un coche.	Una mujer está friendo camarón.
+Un hombre está moviendo una rama de árbol.	La mujer es tocar el violín.
+Un gato es abalanzándose sobre una cama elástica.	Un hombre es cortar un tomate.
+Un hombre toca un piano.	Una mujer es tocar el violín.
+Una persona vierte el aceite en una sartén.	Una persona es picar una cebolla.
+Una persona es cortar una cebolla.	Una persona corta de jengibre.
+El animal está comiendo.	Una mujer está bailando.
+Un hombre y una mujer están comiendo en una mesa.	Una pareja están comiendo y hablando.
+La mujer paseaba a su perro.	Una mujer pasea su perro por la calle.
+Una mujer está cabalgando en un caballo.	Un hombre se está convirtiendo en tablas en ira.
+Un hombre se acuesta con madera a la pared.	Un hombre está dando un masaje a una mujer.
+Una chica toca una flauta.	Una niña juega un instrumento de viento.
+Un grupo de personas cantan.	Algunas personas están cantando.
+El gato bebe leche.	Un gato está lamiendo de un plato de leche.
+Una persona es pelar una papa con un pelador de papas.	Un hombre es tomates cortar con un cuchillo.
+Un bebé pequeño está tocando una guitarra.	Un niño se sienta en la cama, canta y toca una guitarra.
+Una chica hace del párpado.	Una mujer es la aplicación de sombra de ojos.
+Una mujer es picar cebolla.	Un hombre está haciendo un truco de cartas.
+Dos hombres están luchando.	Dos hombres luchan usando una forma de artes marciales.
+Un hombre y una mujer caminan por el bosque.	El hombre y la mujer están caminando.
+Un niño está jugando un juego de computadora.	Un niño está jugando en un equipo portátil.
+Dos mujeres están bailando y cantando frente a una multitud.	Las mujeres están cantando y bailando.
+Los hombres están saltando al agua desde un puente.	Hombres saltan en un río.
+El oficial militar de ladrar a los reclutas.	Un oficial está hablando a los reclutas.
+El hombre está poniendo pollo en el recipiente.	Un hombre está poniendo los alimentos en una caja.
+Un hombre está atando en una máquina de taquígrafos.	el hombre usó una taquigrafía.
+Una mujer le agrega pasta a una olla de agua.	Una mujer es hacer fideos.
+Una mujer está tumbado en una manta sobre una roca y leyendo un libro.	Una mujer sentada cantando y tocando la guitarra también.
+Dos cachorros están jugando con el otro.	Algunos hombres están jugando al fútbol.
+Un hombre se está ejecutando en un campo.	Un hombre trepa por una cuerda.
+Un hombre abrazando a alguien.	Un hombre está tomando una foto.
+Alguien está vertiendo bifes en una olla.	Un hombre pone verduras en una olla.
+Un hombre es condimento zanahorias.	Una mujer es cortar ajo.
+Una pareja camina.	Algunos hombres son aserrado.
+Dos hombres empujaron los carros a través del bosque.	Dos hombres están empujando carritos.
+Una persona toca una guitarra.	El hombre tocó su guitarra.
+Una persona es agregar alimentos en una sartén.	Una mujer pone el arroz en una cacerola.
+Un grupo de pingüinos está caminando.	Una gran cantidad de pingüinos se dirigen hacia el océano.
+Un hombre toca una guitarra.	Alguien está manejando un bollo.
+Un perro es saltar en un trampolín.	Un niño toca una guitarra.
+Un hombre está sacudiendo un recipiente sobre el fregadero de la cocina.	Un hombre está vaciando un recipiente de plástico.
+Un hombre toca una pelota de fútbol.	Un hombre está maniobrando un balón con los pies.
+Un hombre camina con un caballo.	Un hombre lleva un caballo alrededor por su vestido.
+Papel se cortan con unas tijeras.	Se está cortando un trozo de papel.
+La señora pela las papas.	Una mujer es pelar una papa.
+Una persona cáscara de camarón.	La señora pela los camarones.
+Un hombre toca una guitarra.	Un hombre intenta leer el periódico.
+Un hombre haciendo una cama en un hotel.	Un hombre tiene un animal.
+Una mujer es cortar el tofu.	Una mujer es cortar un bloque de tofu en pequeños cubos.
+Una mujer está pelando algunos peces.	Una mujer está vertiendo una mezcla amarilla en una sartén.
+El perro tiró los perros de cola y luego su pierna.	Un mono tiró un perros cola.
+Una mujer gana dos huevos en un tazón.	Una persona está mezclando los ingredientes en un tazón.
+Gente jugando béisbol.	El jugador de cricket golpea la bola.
+Una persona es sopa hirviendo.	Una mujer está poniendo los huevos en una cacerola.
+Un hombre es saltar la cuerda exterior.	Una mujer es cortar un pepino.
+Una persona está cortando cebollas.	Un hámster está cantando.
+Una mujer sostiene un canguro.	Un hombre con un sombrero canta una canción.
+Alguien escribió en un teclado.	Alguien está escribiendo.
+Los jugadores de fútbol están pateando una pelota de fútbol en la meta.	Un jugador de fútbol marca un gol.
+Una mujer está cocinando algo.	Una mujer está vertiendo los ingredientes en una sartén.
+Una mujer está nadando en la playa.	Una mujer salpicaduras alrededor en las olas del océano.
+Un hombre está embarazada de otro hombre.	Un hombre rocía a otro hombre con agua de una manguera.
+La mujer pone en un plato de pasta.	Una mujer es sacar algún tipo de pegamento pegajoso de un tazón de fuente.
+Un hombre está aguantando y hablando de gris que tubo camiseta.	Un hombre está mostrando una camiseta.
+Tres jóvenes correr, saltan y patear fuera una máquina de coca-cola.	Tres hombres están saltando un muro.
+Alguien vierte aceite de oliva en un recipiente con trozos de tomate.	El hombre derramó aceite sobre las rodajas de tomate.
+Un hombre toca la guitarra.	El hombre tocó su guitarra con un amigo.
+Alguien está hirviendo en una olla de okra.	Alguien vierte aceite de oliva en un recipiente con trozos de tomate.
+Una persona es pelar una papa.	Un gato lame una botella pequeña.
+Un gato está saltando en una caja.	Un joven está hablando con una hoja.
+Una joven asiática está aplicando delineador de ojos.	Una chica se pone maquillaje del ojo.
+La mujer es condimentar el aceite.	Una mujer es verter los ingredientes en un tazón.
+Un gato se desliza hacia abajo debajo de un sofá.	Un gato está arrastrándose bajo un pedazo de muebles en su espalda.
+Una mujer baila mientras un hombre toca el teclado.	Una mujer bailando en un escenario.
+Un chef está limpiando un plato de sopa.	Un hombre está limpiando el borde de un cuenco.
+Una explosión está en auge en el desierto.	Un arma nuclear explota en un desierto.
+Una mujer de rodajas de limón.	Un hombre está hablando por un micrófono.
+Un hombre con sobrepeso es saltar a la comba.	Un joven está bailando.
+Un gato está caminando alrededor de una casa.	Una mujer está pelando patatas.
+La señora rompió dos huevos crudos.	La mujer está rompiendo los huevos en un tazón.
+Un hombre aguza un lápiz usando un cuchillo.	Una mujer bailando bajo la lluvia.
+Juguetes de plástico están flotando en el agua.	Las damas están realizando un baile.
+Una mujer está bailando.	Un hombre rompe un palo.
+La tortuga siguió el pescado.	Una tortuga a la caza de peces.
+La mujer es pencilling sombra en los ojos.	La chica está utilizando un lápiz de ojos en su párpado.
+Un hombre está atando los cordones.	Un perro depende de a hombros de los ciclistas.
+Una bailarina de ballet está actuando en el escenario.	El castor es ser acariciado.
+Una mujer es rebanar carne con un cuchillo.	Un hombre se está extendiendo a masa.
+Un perro se ejecuta en el suelo.	Una chica está interviniendo sus uñas.
+Una mujer está hablando con su conejo mascota como ella lo acaricia.	Una mujer pasea su perro a astro turf.
+Un mono es tocar la batería.	Alguien disfrazado de gorila está jugando una serie de tambores.
+Un hombre acaricia un atado a perro.	Un hombre está mostrando su perro a la cámara.
+Una mujer camina sobre un terreno abierto con un perro como algunos otros perros seguirlos.	Un hombre camina con varios perros.
+Una mujer es picar ajo.	Una persona es un disco de limpieza.
+Un hombre dispara una canasta.	Un hombre toca una guitarra.
+Los elefantes se están bañando.	Dos mujeres están cantando.
+Los dos equipos están jugando al fútbol.	Diferentes conjuntos de equipos están jugando al fútbol en un campo.
+Una rata como criatura está oliendo alrededor.	Un animal camina sobre la tierra.
+Un hombre está montando un caballo blanco en un campo cerrado.	Alguien está montando un caballo.
+Dos timbres de Sumo están peleando unos con otros.	Un hombre monta un juguete de agua en el agua.
+Una mujer oriental es cortar una zanahoria en trozos delgados.	Una mujer es cortar una zanahoria.
+Un hombre yace en el suelo y tiene como objetivo un rifle.	Un hombre está extendiendo la mantequilla en una tortilla.
+El hombre cortó una cebolla.	Un hombre está bailando.
+Una pareja apuntan hacia el océano.	Un hombre y mujer se ejecuta juntos, cogidos de la mano.
+Un grupo de personas bailan.	Las mujeres bailan afuera.
+Un hombre está tocando la guitarra.	Un niño está hablando con un perro gigante.
+Una mujer mezcla verduras.	Una mujer es añadir ingredientes a una sartén.
+Una mujer vierte la mezcla en un bol y mezcla.	Una mujer está preparando un huevo en una sartén.
+Una mujer es cortar un huevo duro.	Una persona es cortar el huevo cocido en trozos.
+Dos robots comparten un beso.	Un robot masculino y femenino están besando.
+Un gato está intentando tocar un perro.	El gato burlaban el perro tocando su cabeza.
+Una mujer pone cosméticos en su párpado.	La mujer es pencilling sombra en los ojos.
+El rinoceronte rozó en el césped.	Un rinoceronte es pastando en un campo.
+El hombre condujo su auto roja pequeño en el tráfico.	El perro corrió en el agua en la playa.
+Un hombre es cortar pan.	Un hombre está haciendo trucos con una pelota de fútbol.
+Un hombre y una mujer están montando en un coche.	Una mujer que conducía un coche está hablando con el hombre sentado a su lado.
+Un hombre es cortar pedazos de mantequilla en un tazón.	Se agrega trozos de mantequilla en la batidora.
+Un gato sujetó rápidamente un niño en la cabeza.	Un gato y un niño jugar juntos.
+Un gato está jugando en una caja.	El perro está jugando con el piso limpiador.
+Un hombre pone ajo algunas rebanadas de pan.	Un hombre asperja condimento en varios split y panes con mantequilla.
+La pareja bailó en la iglesia.	Una pareja baila lento.
+El oso panda se ponen en los registros.	Un panda está recostado.
+Un hombre está acariciando un cocodrilo en la boca.	Una persona está dejando verduras picadas en una olla en la estufa.
+Una persona comprueba un arroz con leche.	Un caballo está corriendo.
+Una chica está bailando en una jaula.	Una cebolla es ser picada.
+Cinco hombres saltan a una piscina.	Un grupo de nadadores caer en una piscina.
+Una mujer agita dos huevos en un tazón de vidrio.	Una joven va a cantar en un escenario.
+El hombre está tocando los tambores.	Un hombre se vierte el limpiador en el fregadero.
+Un gato es un robot.	Un hombre está comiendo pan.
+Un hombre es cortar un pimiento.	Una persona corta un pimiento verde grande aparte.
+Una mujer habla en lenguaje de señas.	Una mujer especias algunos pescados y mariscos.
+Un niño está lleno en una casa de perro.	Un gato está jugando en el piso.
+La chica voló su cometa mientras ella corrió hasta una colina.	Una chica pierde su cometa.
+Una mujer es colocar los alimentos en una olla de agua caliente.	Una mujer está friendo carne.
+Un pequeño mono camina a través del agua.	Un mono es vadear a través de un pantano.
+Un hombre es andar en bicicleta.	Un oso panda está comiendo.
+Un joven está cantando y tocando el piano.	El hombre está escribiendo una carta.
+Un niño se quita las gafas de sol.	Un niño está gritando.
+Una chica está tocando un piano.	Un niño está haciendo push ups.
+La señora agitó los huevos crudos en el recipiente.	Una mujer está vertiendo los ojos en un recipiente.
+Un guepardo corre detrás de su presa.	Un guepardo persigue presa en un campo.
+La dama en rodajas un tomate.	Alguien es cortar un tomate.
+Alguien tiene un erizo.	Una cebolla está siendo cortada.
+Una mujer pela una patata.	Una mujer está asando piñas.
+Un gato está jugando en el piso.	Un hombre es cortar ajo.
+Un niño está tocando violín en el escenario.	Una persona está mezclando una olla.
+Una vaca está comiendo hierba.	Un perro es bajando una colina con una chica.
+Un gato está bebiendo un vaso de agua.	Un camión va por una colina.
+Una persona es poner sal y pimienta en un pedazo de carne de cerdo.	Un joven está sentado en un piano.
+El hombre se sentó en su silla y miraba.	La niña está poniendo su cabello en una cola de caballo.
+Una mujer es cortado en rodajas una patata.	Una mujer corta el tofu en pedacitos.
+El hombre agita la salsa para el pollo.	El hombre agita aceite.
+Un bebé gatea felizmente.	Un bebé estornudó y había miedo a otro bebé.
+Una persona está friendo una carne en la sartén.	Un hombre es cortar un vegetal.
+Un hombre está mirando por la ventana.	Una mujer está nadando en el agua.
+Un hombre sentado está tocando la guitarra.	Un hombre está tocando una guitarra acústica y cantando en un micrófono.
+Un perro ladra un juguete.	El perro ladró en el juguete electrónico.
+Una mujer es cortar una cebolla con un cuchillo.	Un hombre prepara un plato.
+Un hombre saltar la cuerda	Un hombre está hablando.
+Una mujer es pelar una naranja.	Una mujer corta un pequeño trozo de cáscara de limón.
+Un jinete es correr y saltar de su caballo.	Una mujer salta vallas sobre un caballo.
+Un niño está jugando un teclado.	Un niño está sentado en una habitación tocando el piano por la lámpara.
+Un hombre está ciclando.	Un niño es andar en bicicleta.
+Dos hombres están luchando.	El hombre está ejerciendo.
+Un hombre toca una flauta de madera mientras otros hombres juegan bongó.	Un hombre toca una flauta.
+Alguien está golpeando a un huevo.	Una mujer revuelve los huevos en un tazón.
+Una persona acaricia a un mono.	Un hombre sostiene un Nycticebus.
+Un hombre es cortar una patata.	Una mujer toca una guitarra eléctrica.
+Una mujer es cortar el jengibre.	Una persona está sosteniendo dos Loris bebé.
+Dos conejos de dibujos animados se besan.	Un conejo está besando a otro conejo.
+El erizo masticado en la toalla.	Un erizo está mordiendo en una manta.
+Un hombre está preparando un pedazo de pan.	Un Nycticebus colgando de una cuerda.
+Un hombre arrastra un ciervo muerto.	Un hombre está saltando al agua desde un acantilado.
+Un gato se lame.	Un hombre es cortar una cebolla blanca con un rebanador mandolina.
+Una mujer corta algunas verduras.	Una mujer es colocar alimentos ensartados en una olla.
+Un hombre está preparando una serpiente para cocinar.	El hombre está cayendo pepinos en rodajas en el agua.
+Una mujer está propagando mostaza en un panecillo.	Un gatito está jugando con el dedo de una mujer.
+Un pequeño cerdo de guinea es la roedura y comer un pedazo de zanahoria en el piso.	Un conejillo de Indias come una zanahoria.
+Cuatro chicos están parado frente el auto en llamas.	Cuatro jóvenes de pie inmóvil como un auto explota detrás de ellos.
+La señora cortó la cola y el cuerpo de un camarón.	Una mujer está limpiando un camarón.
+Un hombre está fumando.	El hombre se sentó en su traje y ahumado.
+Alguien tocó el gatito masticando una cadena.	Alguien es el papel de corte.
+Una mujer le agrega salsa a algunos alimentos.	Una persona es hojas de corte.
+Carne se pone en un sartén.	Una mujer está poniendo a un bebé en un cesto de basura.
+Un bebé elefante es comiendo un pequeño árbol.	Una niña vendiendo una moto.
+Un hombre toca una guitarra acústica.	Una mujer y un perro caminan juntos.
+Tres niños están comiendo su comida.	El ciervo saltó por encima de la valla.
+Un submarino va a través del agua.	Un bebé está durmiendo.
+Un hombre se está ejecutando en una calle.	Un hombre toca la guitarra.
+Una persona es cortar una cebolla.	Un gato está cagando en un inodoro.
+Un tejón está cavando en la tierra.	Un hombre está moviendo grandes rocas.
+Una mujer es cortar gran pepper.	Un perro está moviendo su boca.
