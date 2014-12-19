@@ -1,0 +1,73 @@
+Adding annotator tokenize
+Adding annotator ssplit
+edu.stanford.nlp.pipeline.AnnotatorImplementations:ssplit.isOneSentence=true
+
+Adding annotator pos
+Reading POS tagger model from edu/stanford/nlp/models/pos-tagger/spanish/spanish-distsim.tagger ... done [1.1 sec].
+Adding annotator lemma
+Adding annotator ner
+Loading classifier from edu/stanford/nlp/models/ner/spanish.ancora.distsim.s512.crf.ser.gz ... done [3.5 sec].
+Adding annotator parse
+Loading parser from serialized file edu/stanford/nlp/models/lexparser/spanishPCFG.ser.gz ...done [0.5 sec].
+Init Google1T frequency counter...
+Initializing Blue Marble...
+done.
+Adding annotator tokenize
+TokenizerAnnotator: No tokenizer type provided. Defaulting to PTBTokenizer.
+Adding annotator ssplit
+edu.stanford.nlp.pipeline.AnnotatorImplementations:
+Adding annotator pos
+Reading POS tagger model from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... done [0.7 sec].
+Adding annotator lemma
+Adding annotator parse
+Loading parser from serialized file edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz ...done [0.5 sec].
+java.lang.NullPointerException
+	at java.io.File.<init>(File.java:277)
+	at fr.lipn.sts.ner.DBPediaChunkBasedAnnotator.annotate(DBPediaChunkBasedAnnotator.java:117)
+	at fr.lipn.sts.ner.DBPediaSimilarity.compare(DBPediaSimilarity.java:21)
+	at fr.lipn.sts.SemanticComparer.main(SemanticComparer.java:176)
+java.lang.NullPointerException
+	at java.io.File.<init>(File.java:277)
+	at fr.lipn.sts.ner.DBPediaChunkBasedAnnotator.annotate(DBPediaChunkBasedAnnotator.java:117)
+	at fr.lipn.sts.ner.DBPediaSimilarity.compare(DBPediaSimilarity.java:22)
+	at fr.lipn.sts.SemanticComparer.main(SemanticComparer.java:176)
+java.lang.NullPointerException
+	at java.io.File.<init>(File.java:277)
+	at fr.lipn.sts.ner.DBPediaChunkBasedAnnotator.annotate(DBPediaChunkBasedAnnotator.java:117)
+	at fr.lipn.sts.ner.DBPediaSimilarity.compare(DBPediaSimilarity.java:21)
+	at fr.lipn.sts.SemanticComparer.main(SemanticComparer.java:176)
+java.lang.NullPointerException
+	at java.io.File.<init>(File.java:277)
+	at fr.lipn.sts.ner.DBPediaChunkBasedAnnotator.annotate(DBPediaChunkBasedAnnotator.java:117)
+	at fr.lipn.sts.ner.DBPediaSimilarity.compare(DBPediaSimilarity.java:22)
+	at fr.lipn.sts.SemanticComparer.main(SemanticComparer.java:176)
+java.lang.NullPointerException
+	at java.io.File.<init>(File.java:277)
+	at fr.lipn.sts.ner.DBPediaChunkBasedAnnotator.annotate(DBPediaChunkBasedAnnotator.java:117)
+	at fr.lipn.sts.ner.DBPediaSimilarity.compare(DBPediaSimilarity.java:21)
+	at fr.lipn.sts.SemanticComparer.main(SemanticComparer.java:176)
+java.lang.NullPointerException
+	at java.io.File.<init>(File.java:277)
+	at fr.lipn.sts.ner.DBPediaChunkBasedAnnotator.annotate(DBPediaChunkBasedAnnotator.java:117)
+	at fr.lipn.sts.ner.DBPediaSimilarity.compare(DBPediaSimilarity.java:22)
+	at fr.lipn.sts.SemanticComparer.main(SemanticComparer.java:176)
+Exception in thread "main" java.lang.NullPointerException
+	at edu.stanford.nlp.tagger.maxent.ExtractorSpanishStrippedVerb.extract(ExtractorFramesRare.java:1626)
+	at edu.stanford.nlp.tagger.maxent.Extractor.extract(Extractor.java:153)
+	at edu.stanford.nlp.tagger.maxent.TestSentence.getExactHistories(TestSentence.java:465)
+	at edu.stanford.nlp.tagger.maxent.TestSentence.getHistories(TestSentence.java:440)
+	at edu.stanford.nlp.tagger.maxent.TestSentence.getHistories(TestSentence.java:428)
+	at edu.stanford.nlp.tagger.maxent.TestSentence.getExactScores(TestSentence.java:377)
+	at edu.stanford.nlp.tagger.maxent.TestSentence.getScores(TestSentence.java:372)
+	at edu.stanford.nlp.tagger.maxent.TestSentence.scoresOf(TestSentence.java:713)
+	at edu.stanford.nlp.sequences.ExactBestSequenceFinder.bestSequence(ExactBestSequenceFinder.java:91)
+	at edu.stanford.nlp.sequences.ExactBestSequenceFinder.bestSequence(ExactBestSequenceFinder.java:31)
+	at edu.stanford.nlp.tagger.maxent.TestSentence.runTagInference(TestSentence.java:322)
+	at edu.stanford.nlp.tagger.maxent.TestSentence.testTagInference(TestSentence.java:312)
+	at edu.stanford.nlp.tagger.maxent.TestSentence.tagSentence(TestSentence.java:135)
+	at edu.stanford.nlp.tagger.maxent.MaxentTagger.tagSentence(MaxentTagger.java:998)
+	at edu.stanford.nlp.pipeline.POSTaggerAnnotator.doOneSentence(POSTaggerAnnotator.java:147)
+	at edu.stanford.nlp.pipeline.POSTaggerAnnotator.annotate(POSTaggerAnnotator.java:110)
+	at edu.stanford.nlp.pipeline.AnnotationPipeline.annotate(AnnotationPipeline.java:67)
+	at edu.stanford.nlp.pipeline.StanfordCoreNLP.annotate(StanfordCoreNLP.java:847)
+	at fr.lipn.sts.SemanticComparer.main(SemanticComparer.java:167)
