@@ -1,0 +1,268 @@
+---------------------------------------------
+-rw-r--r-- 1 jgflores golem 1151013 Dec 18 23:58 /local_home/lipn/SemEval/spanish_testbed//analysis/logs/STS.2012.test.input.MSRpar.2.log
+RESULTS .dat LINE COUNT::
+750 /local_home/lipn/SemEval/spanish_testbed//analysis/results/STS.2012.test.input.MSRpar.2.dat
+ORIGINAL .txt LINE COUNT::
+750 /local_home/lipn/SemEval/spanish_testbed//data/train/STS.2012.test.input.MSRpar.txt
+FIRST LINE::
+4.400 1:0.344706124407459 2:0.0 3:0.5574061112047366 4:0.39669424295425415 5:0.3410535491449676 6:1.0 7:0.0 8:0.47492637573727015 9:0.0 10:0.05789959271227226 13:0.25477707006369427 14:0.3684210777282715 15:0.558823529412 16:1.0
+LAST LINE::
+2.500 1:0.19244193304964433 2:0.0 3:0.5092158624203719 4:0.37777775526046753 5:0.21969515260710784 6:1.0 7:0.0 8:0.9557880186891111 9:1.0 10:0.18749892807569174 13:0.10980392156862745 14:0.24000000953674316 15:0.294573643411 16:31.0
+TOTAL ERRORS::
+6222
+NullPointerException ERRORS::
+2402
+ArrayIndexOutOfBoundsException ERRORS::
+3820
+---------------------------------------------
+---------------------------------------------
+-rw-r--r-- 1 jgflores golem 1111 Dec 19 00:00 /local_home/lipn/SemEval/spanish_testbed//analysis/logs/STS.2012.test.input.MSRvid.2.log
+RESULTS .dat LINE COUNT::
+750 /local_home/lipn/SemEval/spanish_testbed//analysis/results/STS.2012.test.input.MSRvid.2.dat
+ORIGINAL .txt LINE COUNT::
+750 /local_home/lipn/SemEval/spanish_testbed//data/train/STS.2012.test.input.MSRvid.txt
+FIRST LINE::
+5.000 1:0.8675501512765359 2:1.0 3:0.7490765636732191 4:0.7924528121948242 5:0.8383263707518375 6:1.0 7:0.12007269854759858 8:1.0 9:1.0 10:0.344770417464205 13:0.7777777777777778 14:0.7777777910232544 15:1.06666666667 16:8.0
+LAST LINE::
+0.000 1:0.005184257220057094 2:0.0 3:0.3217740308438121 4:0.25 5:1.4105724580611324E-4 6:1.0 7:0.0 8:0.0 9:1.0 10:0.0 13:0.0 14:0.1428571343421936 15:0.142857142857 16:1.0
+TOTAL ERRORS::
+0
+NullPointerException ERRORS::
+0
+ArrayIndexOutOfBoundsException ERRORS::
+0
+---------------------------------------------
+---------------------------------------------
+-rw-r--r-- 1 jgflores golem 82719 Dec 19 01:19 /local_home/lipn/SemEval/spanish_testbed//analysis/logs/STS.2012.test.input.SMTeuroparl.2.log
+RESULTS .dat LINE COUNT::
+459 /local_home/lipn/SemEval/spanish_testbed//analysis/results/STS.2012.test.input.SMTeuroparl.2.dat
+ORIGINAL .txt LINE COUNT::
+459 /local_home/lipn/SemEval/spanish_testbed//data/train/STS.2012.test.input.SMTeuroparl.txt
+FIRST LINE::
+4.500 1:0.2771918454096826 2:0.5102040767669678 3:0.48940176119525053 4:0.39534884691238403 5:0.2750517506544448 6:1.0 7:1.9395029136100263E-8 8:1.0 9:1.0 10:0.2958121592367107 13:0.2692307692307692 14:0.1538461446762085 15:0.41958041958 16:14.0
+LAST LINE::
+3.833 1:0.3684839361759043 2:0.0 3:0.5812335911292318 4:0.6222221851348877 5:0.4537976478222496 6:1.0 7:0.0 8:0.9819496273182121 9:1.0 10:0.38654664971808683 13:0.32941176470588235 14:0.5 15:0.568181818182 16:16.0
+TOTAL ERRORS::
+1112
+NullPointerException ERRORS::
+1112
+ArrayIndexOutOfBoundsException ERRORS::
+0
+---------------------------------------------
+---------------------------------------------
+-rw-r--r-- 1 jgflores golem 63471 Dec 19 02:09 /local_home/lipn/SemEval/spanish_testbed//analysis/logs/STS.2012.test.input.surprise.OnWN.2.log
+RESULTS .dat LINE COUNT::
+750 /local_home/lipn/SemEval/spanish_testbed//analysis/results/STS.2012.test.input.surprise.OnWN.2.dat
+ORIGINAL .txt LINE COUNT::
+750 /local_home/lipn/SemEval/spanish_testbed//data/train/STS.2012.test.input.surprise.OnWN.txt
+FIRST LINE::
+5.000 1:0.5404084056531624 2:0.0 3:0.7698846890489027 4:0.5869565010070801 5:0.3966231659814083 6:1.0 7:0.0 8:1.0 9:1.0 10:0.22621906250000018 13:0.38461538461538464 14:-0.16666662693023682 15:1.12941176471 16:11.0
+LAST LINE::
+3.750 1:0.2898584755842221 2:0.0 3:0.40329620708241204 4:0.5151515007019043 5:0.36406013606540477 6:1.0 7:0.0 8:0.5712191885666371 9:1.0 10:0.15871297089495082 13:0.14285714285714285 14:0.5714285373687744 15:0.415584415584 16:15.0
+TOTAL ERRORS::
+372
+NullPointerException ERRORS::
+102
+ArrayIndexOutOfBoundsException ERRORS::
+270
+---------------------------------------------
+---------------------------------------------
+-rw-r--r-- 1 jgflores golem 2480959 Dec 19 02:42 /local_home/lipn/SemEval/spanish_testbed//analysis/logs/STS.2012.test.input.surprise.SMTnews.2.log
+RESULTS .dat LINE COUNT::
+399 /local_home/lipn/SemEval/spanish_testbed//analysis/results/STS.2012.test.input.surprise.SMTnews.2.dat
+ORIGINAL .txt LINE COUNT::
+399 /local_home/lipn/SemEval/spanish_testbed//data/train/STS.2012.test.input.surprise.SMTnews.txt
+FIRST LINE::
+4.000 1:0.3483841396482196 2:0.0 3:0.5230768897278737 4:0.5813953876495361 5:0.337223120447789 6:1.0 7:0.0 8:1.0 9:1.0 10:0.17654823336109557 13:0.16666666666666666 14:0.4444444179534912 15:0.486111111111 16:9.0
+LAST LINE::
+3.500 1:0.6090300495660574 2:0.0 3:0.6851385292166805 4:0.7599999904632568 5:0.7697080229668404 6:1.0 7:0.0 8:0.9735902713785854 9:1.0 10:0.22708959335063106 13:0.509090909090909 14:0.7272727489471436 15:0.663157894737 16:8.0
+TOTAL ERRORS::
+0
+NullPointerException ERRORS::
+0
+ArrayIndexOutOfBoundsException ERRORS::
+0
+---------------------------------------------
+---------------------------------------------
+-rw-r--r-- 1 jgflores golem 189321 Dec 19 04:08 /local_home/lipn/SemEval/spanish_testbed//analysis/logs/STS.2012.train.input.MSRpar.2.log
+RESULTS .dat LINE COUNT::
+750 /local_home/lipn/SemEval/spanish_testbed//analysis/results/STS.2012.train.input.MSRpar.2.dat
+ORIGINAL .txt LINE COUNT::
+750 /local_home/lipn/SemEval/spanish_testbed//data/train/STS.2012.train.input.MSRpar.txt
+FIRST LINE::
+4.000 1:0.5422236073496747 2:0.7654321193695068 3:0.745414926814971 4:0.6190476417541504 5:0.6504060181733762 6:0.0 7:0.08958248873922776 8:0.9382372770057836 9:1.0 10:0.16451954842195418 13:0.4281437125748503 14:0.5517241358757019 15:0.613333333333 16:38.0
+LAST LINE::
+3.250 1:0.4882883803611667 2:0.0 3:0.7539292706195064 4:0.5694444179534912 5:0.7308367692539851 6:1.0 7:0.0 8:0.9198618463363092 9:0.0 10:0.09893573846061439 13:0.43944636678200694 14:0.4285714030265808 15:0.583333333333 16:42.0
+TOTAL ERRORS::
+4054
+NullPointerException ERRORS::
+1160
+ArrayIndexOutOfBoundsException ERRORS::
+2894
+---------------------------------------------
+---------------------------------------------
+-rw-r--r-- 1 jgflores golem 14974 Dec 19 04:26 /local_home/lipn/SemEval/spanish_testbed//analysis/logs/STS.2012.train.input.MSRvid.2.log
+RESULTS .dat LINE COUNT::
+750 /local_home/lipn/SemEval/spanish_testbed//analysis/results/STS.2012.train.input.MSRvid.2.dat
+ORIGINAL .txt LINE COUNT::
+750 /local_home/lipn/SemEval/spanish_testbed//data/train/STS.2012.train.input.MSRvid.txt
+FIRST LINE::
+5.000 1:1.0 2:1.0 3:0.9391361448731829 4:1.0 5:1.0000000000000002 6:1.0 7:0.1857733621129557 8:1.0 9:1.0 10:0.9999631024565799 13:1.0 14:1.0 15:1.0 16:0.0
+LAST LINE::
+0.800 1:0.005531321994120709 2:0.0 3:0.2270249719631615 4:0.19999998807907104 5:1.4807291469155155E-4 6:1.0 7:0.0 8:0.0 9:1.0 10:0.0 13:0.0 14:0.1428571343421936 15:0.179487179487 16:5.0
+TOTAL ERRORS::
+27
+NullPointerException ERRORS::
+0
+ArrayIndexOutOfBoundsException ERRORS::
+27
+---------------------------------------------
+---------------------------------------------
+-rw-r--r-- 1 jgflores golem 223846 Dec 19 07:34 /local_home/lipn/SemEval/spanish_testbed//analysis/logs/STS.2012.train.input.SMTeuroparl.2.log
+RESULTS .dat LINE COUNT::
+734 /local_home/lipn/SemEval/spanish_testbed//analysis/results/STS.2012.train.input.SMTeuroparl.2.dat
+ORIGINAL .txt LINE COUNT::
+734 /local_home/lipn/SemEval/spanish_testbed//data/train/STS.2012.train.input.SMTeuroparl.txt
+FIRST LINE::
+4.200 1:0.452291559953812 2:1.0 3:0.7660328019361294 4:0.6206896305084229 5:0.5713582009561678 6:0.8213022855556167 7:0.10533223473873793 8:0.9795787204368349 9:1.0 10:0.41767651140656614 13:0.453448275862069 14:0.5135135054588318 15:0.670995670996 16:16.0
+LAST LINE::
+0.800 1:0.4318018774264511 2:1.0 3:0.5659755618934739 4:0.4333333373069763 5:0.2741976279734857 6:1.0 7:0.20958977527774392 8:0.924265319084512 9:1.0 10:0.01908921875279397 13:0.3 14:0.3999999761581421 15:0.654545454545 16:12.0
+TOTAL ERRORS::
+5069
+NullPointerException ERRORS::
+2078
+ArrayIndexOutOfBoundsException ERRORS::
+2991
+---------------------------------------------
+---------------------------------------------
+-rw-r--r-- 1 jgflores golem 1111 Dec 19 07:39 /local_home/lipn/SemEval/spanish_testbed//analysis/logs/STS.2013.test.input.FNWN.2.log
+RESULTS .dat LINE COUNT::
+189 /local_home/lipn/SemEval/spanish_testbed//analysis/results/STS.2013.test.input.FNWN.2.dat
+ORIGINAL .txt LINE COUNT::
+189 /local_home/lipn/SemEval/spanish_testbed//data/train/STS.2013.test.input.FNWN.txt
+FIRST LINE::
+0.6 1:0.010848084577226118 2:0.0 3:0.3510812165391029 4:0.09210526943206787 5:0.011163479943407254 6:1.0 7:0.0 8:0.0 9:1.0 10:0.0 13:0.0 14:0.018181800842285156 15:0.0 16:271.0
+LAST LINE::
+1.2 1:0.024212685481740305 2:0.0 3:0.4955208372143556 4:0.12598425149917603 5:0.06794991842370214 6:1.0 7:0.0 8:0.0 9:1.0 10:0.0 13:0.005563282336578581 14:0.05555558204650879 15:0.00461787116139 16:324.0
+TOTAL ERRORS::
+0
+NullPointerException ERRORS::
+0
+ArrayIndexOutOfBoundsException ERRORS::
+0
+---------------------------------------------
+---------------------------------------------
+-rw-r--r-- 1 jgflores golem 257289 Dec 19 09:01 /local_home/lipn/SemEval/spanish_testbed//analysis/logs/STS.2013.test.input.headlines.2.log
+RESULTS .dat LINE COUNT::
+750 /local_home/lipn/SemEval/spanish_testbed//analysis/results/STS.2013.test.input.headlines.2.dat
+ORIGINAL .txt LINE COUNT::
+750 /local_home/lipn/SemEval/spanish_testbed//data/train/STS.2013.test.input.headlines.txt
+FIRST LINE::
+2.6 1:0.20946563581827132 2:0.6428571343421936 3:0.4424033759651649 4:0.4729729890823364 5:0.10816019992831671 6:1.0 7:0.19328417085290184 8:0.9663429669984519 9:0.0 10:0.18918655985019142 13:0.047619047619047616 14:-0.2857142686843872 15:0.541353383459 16:23.0
+LAST LINE::
+1.2 1:0.24315774161725012 2:1.0 3:0.35503340467562694 4:0.3287671208381653 5:0.22136246999923784 6:0.23151184493635685 7:0.14309023821248634 8:0.0 9:1.0 10:0.0 13:0.044444444444444446 14:-0.10000002384185791 15:0.327272727273 16:5.0
+TOTAL ERRORS::
+688
+NullPointerException ERRORS::
+210
+ArrayIndexOutOfBoundsException ERRORS::
+478
+---------------------------------------------
+---------------------------------------------
+-rw-r--r-- 1 jgflores golem 64175 Dec 19 09:34 /local_home/lipn/SemEval/spanish_testbed//analysis/logs/STS.2013.test.input.OnWN.2.log
+RESULTS .dat LINE COUNT::
+561 /local_home/lipn/SemEval/spanish_testbed//analysis/results/STS.2013.test.input.OnWN.2.dat
+ORIGINAL .txt LINE COUNT::
+561 /local_home/lipn/SemEval/spanish_testbed//data/train/STS.2013.test.input.OnWN.txt
+FIRST LINE::
+0.8 1:0.37831037297625936 2:0.7222222089767456 3:0.7290290340941845 4:0.604651153087616 5:0.4295125591679956 6:1.0 7:0.16112768966248325 8:0.0 9:1.0 10:4.7918536926173537E-4 13:0.20833333333333334 14:0.375 15:0.738916256158 16:2.0
+LAST LINE::
+3.8 1:0.2420095924892615 2:1.0 3:0.6285545050979243 4:0.2894737124443054 5:0.38087488987303103 6:1.0 7:0.1399669759691578 8:1.0 9:1.0 10:0.26535227038220105 13:0.0 14:0.10000002384185791 15:0.238095238095 16:13.0
+TOTAL ERRORS::
+0
+NullPointerException ERRORS::
+0
+ArrayIndexOutOfBoundsException ERRORS::
+0
+---------------------------------------------
+---------------------------------------------
+-rw-r--r-- 1 jgflores golem 1853928 Dec 19 12:20 /local_home/lipn/SemEval/spanish_testbed//analysis/logs/STS.2013.test.input.SMT.2.log
+RESULTS .dat LINE COUNT::
+750 /local_home/lipn/SemEval/spanish_testbed//analysis/results/STS.2013.test.input.SMT.2.dat
+ORIGINAL .txt LINE COUNT::
+750 /local_home/lipn/SemEval/spanish_testbed//data/train/STS.2013.test.input.SMT.txt
+FIRST LINE::
+3.8 1:0.2883500983569755 2:0.7658730149269104 3:0.6954048042146872 4:0.23893803358078003 5:0.469230092543321 6:0.5269841203713844 7:0.09030728740807632 8:0.9309684781629285 9:1.0 10:0.12120170181731028 13:0.16583747927031509 14:0.11904764175415039 15:0.516208706391 16:13.0
+LAST LINE::
+4.2 1:0.22370923019830033 2:0.0 3:0.473990373678623 4:0.3235294222831726 5:0.39663083884883954 6:1.0 7:0.0 8:0.8973763563303406 9:1.0 10:0.025982073530491086 13:0.1773049645390071 14:0.0 15:0.264705882353 16:53.0
+TOTAL ERRORS::
+8573
+NullPointerException ERRORS::
+722
+ArrayIndexOutOfBoundsException ERRORS::
+7851
+---------------------------------------------
+---------------------------------------------
+-rw-r--r-- 1 jgflores golem 1081 Dec 19 12:23 /local_home/lipn/SemEval/spanish_testbed//analysis/logs/STS.2014.input.local2.sentences.2.log
+RESULTS .dat LINE COUNT::
+0 /local_home/lipn/SemEval/spanish_testbed//analysis/results/STS.2014.input.local2.sentences.2.dat
+ORIGINAL .txt LINE COUNT::
+100 /local_home/lipn/SemEval/spanish_testbed//data/train/STS.2014.input.local2.sentences.txt
+FIRST LINE::
+LAST LINE::
+TOTAL ERRORS::
+0
+NullPointerException ERRORS::
+0
+ArrayIndexOutOfBoundsException ERRORS::
+0
+---------------------------------------------
+---------------------------------------------
+-rw-r--r-- 1 jgflores golem 23107 Dec 19 12:28 /local_home/lipn/SemEval/spanish_testbed//analysis/logs/STS.2014.input.local.pairs-journals.2.log
+RESULTS .dat LINE COUNT::
+106 /local_home/lipn/SemEval/spanish_testbed//analysis/results/STS.2014.input.local.pairs-journals.2.dat
+ORIGINAL .txt LINE COUNT::
+105 /local_home/lipn/SemEval/spanish_testbed//data/train/STS.2014.input.local.pairs-journals.txt
+FIRST LINE::
+0,333333333 1:0.0 2:0.0 3:0.2638876029642616 4:0.24358975887298584 5:0.0 6:1.0 7:0.0 8:0.0 9:1.0 10:0.0 13:0.0 14:-1.2222223281860352 15:0.0 16:26.0
+LAST LINE::
+0 1:0.15074902279332408 2:0.0 3:0.38101000499987886 4:0.23750001192092896 5:0.053734069730231517 6:1.0 7:0.0 8:0.0 9:1.0 10:0.0 13:0.08333333333333333 14:-0.6666666269302368 15:0.163043478261 16:39.0
+TOTAL ERRORS::
+76
+NullPointerException ERRORS::
+76
+ArrayIndexOutOfBoundsException ERRORS::
+0
+---------------------------------------------
+---------------------------------------------
+-rw-r--r-- 1 jgflores golem 1080 Dec 19 12:31 /local_home/lipn/SemEval/spanish_testbed//analysis/logs/STS.2014.input.local.sentences.2.log
+RESULTS .dat LINE COUNT::
+0 /local_home/lipn/SemEval/spanish_testbed//analysis/results/STS.2014.input.local.sentences.2.dat
+ORIGINAL .txt LINE COUNT::
+101 /local_home/lipn/SemEval/spanish_testbed//data/train/STS.2014.input.local.sentences.txt
+FIRST LINE::
+LAST LINE::
+TOTAL ERRORS::
+0
+NullPointerException ERRORS::
+0
+ArrayIndexOutOfBoundsException ERRORS::
+0
+---------------------------------------------
+---------------------------------------------
+-rw-r--r-- 1 jgflores golem 3196516 Dec 19 16:18 /local_home/lipn/SemEval/spanish_testbed//analysis/logs/STS.2014.test.input.news.2.log
+RESULTS .dat LINE COUNT::
+361 /local_home/lipn/SemEval/spanish_testbed//analysis/results/STS.2014.test.input.news.2.dat
+ORIGINAL .txt LINE COUNT::
+480 /local_home/lipn/SemEval/spanish_testbed//data/train/STS.2014.test.input.news.txt
+FIRST LINE::
+2.8 1:0.1330002644375741 2:0.8657407164573669 3:0.48172765161527037 4:0.32446807622909546 5:0.19180691064940147 6:0.0 7:0.10539055003244813 8:0.8034264676632247 9:1.0 10:8.921694700942863E-4 13:0.09872029250457039 14:0.12820512056350708 15:0.241558441558 16:7.0
+LAST LINE::
+2.2 1:0.3109599471693823 2:0.08163265138864517 3:0.5806341151481751 4:0.2879999876022339 5:0.30734476103765507 6:0.6806428982616224 7:3.473773827251526E-10 8:0.8669258164839324 9:1.0 10:0.19806793669342498 13:0.1937984496124031 14:-0.05555558204650879 15:0.427777777778 16:29.0
+TOTAL ERRORS::
+9504
+NullPointerException ERRORS::
+998
+ArrayIndexOutOfBoundsException ERRORS::
+8506
+---------------------------------------------
