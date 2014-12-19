@@ -1,0 +1,163 @@
+1:
+-rw-r--r-- 1 jgflores golem 1151013 Dec 18 23:58 STS.2012.test.input.MSRpar.2.log
+ wc  STS.2012.test.input.MSRpar.2.dat
+   750  11250 184975 STS.2012.test.input.MSRpar.2.dat
+
+first line: 
+4.400 1:0.344706124407459 2:0.0 3:0.5574061112047366 4:0.39669424295425415 5:0.3410535491449676 6:1.0 7:0.0 8:0.47492637573727015 9:0.0 10:0.05789959271227226 13:0.25477707006369427 14:0.3684210777282715 15:0.558823529412 16:1.0
+
+last line:
+2.500 1:0.19244193304964433 2:0.0 3:0.5092158624203719 4:0.37777775526046753 5:0.21969515260710784 6:1.0 7:0.0 8:0.9557880186891111 9:1.0 10:0.18749892807569174 13:0.10980392156862745 14:0.24000000953674316 15:0.294573643411 16:31.0
+
+2492 errors:
+java.lang.NullPointerException
+        at fr.lipn.sts.tools.WordNet.getNounSynsets(WordNet.java:350)
+        at fr.lipn.sts.tools.WordNet.getNounSynsets(WordNet.java:160)
+        at fr.lipn.sts.semantic.proxygenea.ConceptualSimilarity.sim(ConceptualSimilarity.java:176)
+        at fr.lipn.sts.syntax.DepPair.getBestDep(DepPair.java:121)
+        at fr.lipn.sts.syntax.DepPair.setAlignments(DepPair.java:154)
+        at fr.lipn.sts.syntax.DepBasedSimilarity.compare(DepBasedSimilarity.java:122)
+        at fr.lipn.sts.SemanticComparer_es.main(SemanticComparer_es.java:179)
+
+3820 errors:
+java.lang.ArrayIndexOutOfBoundsException: 100
+        at fr.lipn.sts.tools.WordNet.getNounSynsets(WordNet.java:383)
+        at fr.lipn.sts.tools.WordNet.getNounSynsets(WordNet.java:160)
+        at fr.lipn.sts.semantic.proxygenea.ConceptualSimilarity.compare(ConceptualSimilarity.java:42)
+        at fr.lipn.sts.SemanticComparer_es.main(SemanticComparer_es.java:177)
+2:
+-rw-r--r-- 1 jgflores golem    1111 Dec 19 00:00 STS.2012.test.input.MSRvid.2.log
+wc ../results/STS.2012.test.input.MSRvid.2.dat
+   750  11250 161503 ../results/STS.2012.test.input.MSRvid.2.dat
+
+first line
+5.000 1:0.8675501512765359 2:1.0 3:0.7490765636732191 4:0.7924528121948242 5:0.8383263707518375 6:1.0 7:0.12007269854759858 8:1.0 9:1.0 10:0.344770417464205 13:0.7777777777777778 14:0.7777777910232544 15:1.06666666667 16:8.0
+
+last line
+0.000 1:0.005184257220057094 2:0.0 3:0.3217740308438121 4:0.25 5:1.4105724580611324E-4 6:1.0 7:0.0 8:0.0 9:1.0 10:0.0 13:0.0 14:0.1428571343421936 15:0.142857142857 16:1.0
+
+no errors
+
+3: 
+-rw-r--r-- 1 jgflores golem   82719 Dec 19 01:19 STS.2012.test.input.SMTeuroparl.2.log
+results/STS.2012.test.input.SMTeuroparl.2.dat
+  459  6885 95420 results/STS.2012.test.input.SMTeuroparl.2.dat
+
+first line
+4.500 1:0.2771918454096826 2:0.5102040767669678 3:0.48940176119525053 4:0.39534884691238403 5:0.2750517506544448 6:1.0 7:1.9395029136100263E-8 8:1.0 9:1.0 10:0.2958121592367107 13:0.2692307692307692 14:0.1538461446762085 15:0.41958041958 16:14.0
+
+last line
+3.833 1:0.3684839361759043 2:0.0 3:0.5812335911292318 4:0.6222221851348877 5:0.4537976478222496 6:1.0 7:0.0 8:0.9819496273182121 9:1.0 10:0.38654664971808683 13:0.32941176470588235 14:0.5 15:0.568181818182 16:16.0
+
+1112 errors
+java.lang.NullPointerException
+        at fr.lipn.sts.tools.WordNet.getNounSynsets(WordNet.java:350)
+        at fr.lipn.sts.tools.WordNet.getNounSynsets(WordNet.java:160)
+        at fr.lipn.sts.semantic.proxygenea.ConceptualSimilarity.sim(ConceptualSimilarity.java:176)
+        at fr.lipn.sts.syntax.DepPair.getBestDep(DepPair.java:121)
+        at fr.lipn.sts.syntax.DepPair.setAlignments(DepPair.java:154)
+        at fr.lipn.sts.syntax.DepBasedSimilarity.compare(DepBasedSimilarity.java:122)
+        at fr.lipn.sts.SemanticComparer_es.main(SemanticComparer_es.java:179)
+
+4: 
+-rw-r--r-- 1 jgflores golem   63471 Dec 19 02:09 STS.2012.test.input.surprise.OnWN.2.log
+wc STS.2012.test.input.surprise.OnWN.2.dat
+   750  11250 154632 STS.2012.test.input.surprise.OnWN.2.dat
+
+first line
+5.000 1:0.5404084056531624 2:0.0 3:0.7698846890489027 4:0.5869565010070801 5:0.3966231659814083 6:1.0 7:0.0 8:1.0 9:1.0 10:0.22621906250000018 13:0.38461538461538464 14:-0.16666662693023682 15:1.12941176471 16:11.0
+
+last line
+3.750 1:0.2898584755842221 2:0.0 3:0.40329620708241204 4:0.5151515007019043 5:0.36406013606540477 6:1.0 7:0.0 8:0.5712191885666371 9:1.0 10:0.15871297089495082 13:0.14285714285714285 14:0.5714285373687744 15:0.415584415584 16:15.0
+
+102 errors
+java.lang.NullPointerException
+        at fr.lipn.sts.tools.WordNet.getNounSynsets(WordNet.java:350)
+        at fr.lipn.sts.tools.WordNet.getNounSynsets(WordNet.java:160)
+        at fr.lipn.sts.semantic.proxygenea.ConceptualSimilarity.sim(ConceptualSimilarity.java:171)
+        at fr.lipn.sts.syntax.DepPair.getBestDep(DepPair.java:122)
+        at fr.lipn.sts.syntax.DepPair.setAlignments(DepPair.java:154)
+        at fr.lipn.sts.syntax.DepBasedSimilarity.compare(DepBasedSimilarity.java:122)
+        at fr.lipn.sts.SemanticComparer_es.main(SemanticComparer_es.java:179)
+
+270 errors
+java.lang.ArrayIndexOutOfBoundsException: 100
+        at fr.lipn.sts.tools.WordNet.getSynsets(WordNet.java:459)
+        at fr.lipn.sts.tools.WordNet.getSynsets(WordNet.java:119)
+        at fr.lipn.sts.geo.GeographicScopeSimilarity.compare(GeographicScopeSimilarity.java:55)
+        at fr.lipn.sts.SemanticComparer_es.main(SemanticComparer_es.java:185)
+
+
+5:
+-rw-r--r-- 1 jgflores golem  189321 Dec 19 04:08 STS.2012.train.input.MSRpar.2.log
+wc  STS.2012.train.input.MSRpar.2.dat
+   750  11250 185237 STS.2012.train.input.MSRpar.2.dat
+
+first line
+4.000 1:0.5422236073496747 2:0.7654321193695068 3:0.745414926814971 4:0.6190476417541504 5:0.6504060181733762 6:0.0 7:0.08958248873922776 8:0.9382372770057836 9:1.0 10:0.16451954842195418 13:0.4281437125748503 14:0.5517241358757019 15:0.613333333333 16:38.0
+
+last line
+3.250 1:0.4882883803611667 2:0.0 3:0.7539292706195064 4:0.5694444179534912 5:0.7308367692539851 6:1.0 7:0.0 8:0.9198618463363092 9:0.0 10:0.09893573846061439 13:0.43944636678200694 14:0.4285714030265808 15:0.583333333333 16:42.0
+
+1160 errors
+java.lang.NullPointerException
+        at fr.lipn.sts.tools.WordNet.getNounSynsets(WordNet.java:350)
+        at fr.lipn.sts.tools.WordNet.getNounSynsets(WordNet.java:160)
+        at fr.lipn.sts.semantic.proxygenea.ConceptualSimilarity.sim(ConceptualSimilarity.java:176)
+        at fr.lipn.sts.syntax.DepPair.getBestDep(DepPair.java:122)
+        at fr.lipn.sts.syntax.DepPair.setAlignments(DepPair.java:154)
+        at fr.lipn.sts.syntax.DepBasedSimilarity.compare(DepBasedSimilarity.java:122)
+        at fr.lipn.sts.SemanticComparer_es.main(SemanticComparer_es.java:179)
+
+5:
+-rw-r--r-- 1 jgflores golem   14974 Dec 19 04:26 STS.2012.train.input.MSRvid.2.log
+wc STS.2012.train.input.MSRvid.2.dat
+   750  11250 163022 STS.2012.train.input.MSRvid.2.dat
+
+first line
+5.000 1:1.0 2:1.0 3:0.9391361448731829 4:1.0 5:1.0000000000000002 6:1.0 7:0.1857733621129557 8:1.0 9:1.0 10:0.9999631024565799 13:1.0 14:1.0 15:1.0 16:0.0
+
+last line
+0.800 1:0.005531321994120709 2:0.0 3:0.2270249719631615 4:0.19999998807907104 5:1.4807291469155155E-4 6:1.0 7:0.0 8:0.0 9:1.0 10:0.0 13:0.0 14:0.1428571343421936 15:0.179487179487 16:5.0
+
+27 errors
+java.lang.ArrayIndexOutOfBoundsException: 100
+        at fr.lipn.sts.tools.WordNet.getNounSynsets(WordNet.java:383)
+        at fr.lipn.sts.tools.WordNet.getNounSynsets(WordNet.java:160)
+        at fr.lipn.sts.semantic.proxygenea.ConceptualSimilarity.compare(ConceptualSimilarity.java:42)
+        at fr.lipn.sts.SemanticComparer_es.main(SemanticComparer_es.java:177)
+
+
+6:
+-rw-r--r-- 1 jgflores golem  223846 Dec 19 07:34 STS.2012.train.input.SMTeuroparl.2.log
+wc STS.2012.train.input.SMTeuroparl.2.dat
+   734  11010 175876 STS.2012.train.input.SMTeuroparl.2.dat
+
+first line
+4.200 1:0.452291559953812 2:1.0 3:0.7660328019361294 4:0.6206896305084229 5:0.5713582009561678 6:0.8213022855556167 7:0.10533223473873793 8:0.9795787204368349 9:1.0 10:0.41767651140656614 13:0.453448275862069 14:0.5135135054588318 15:0.670995670996 16:16.0
+
+last line
+0.800 1:0.4318018774264511 2:1.0 3:0.5659755618934739 4:0.4333333373069763 5:0.2741976279734857 6:1.0 7:0.20958977527774392 8:0.924265319084512 9:1.0 10:0.01908921875279397 13:0.3 14:0.3999999761581421 15:0.654545454545 16:12.0
+
+2991 errors
+java.lang.ArrayIndexOutOfBoundsException: 100
+        at fr.lipn.sts.tools.WordNet.getNounSynsets(WordNet.java:383)
+        at fr.lipn.sts.tools.WordNet.getNounSynsets(WordNet.java:160)
+        at fr.lipn.sts.semantic.proxygenea.ConceptualSimilarity.compare(ConceptualSimilarity.java:42)
+        at fr.lipn.sts.SemanticComparer_es.main(SemanticComparer_es.java:177)
+
+2078 errors
+java.lang.NullPointerException
+        at fr.lipn.sts.tools.WordNet.getNounSynsets(WordNet.java:350)
+        at fr.lipn.sts.tools.WordNet.getNounSynsets(WordNet.java:160)
+        at fr.lipn.sts.semantic.proxygenea.ConceptualSimilarity.sim(ConceptualSimilarity.java:171)
+        at fr.lipn.sts.syntax.DepPair.getBestDep(DepPair.java:122)
+        at fr.lipn.sts.syntax.DepPair.setAlignments(DepPair.java:154)
+        at fr.lipn.sts.syntax.DepBasedSimilarity.compare(DepBasedSimilarity.java:122)
+        at fr.lipn.sts.SemanticComparer_es.main(SemanticComparer_es.java:179)
+
+7: 
+
+
+
+
