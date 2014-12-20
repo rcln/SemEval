@@ -1,0 +1,6 @@
+./run.semantic.comparer.with.train.sh $ENGLISH_TESTBED//data/2014/train/STS.2014.test.input.deft-forum.txt $ENGLISH_TESTBED//data/2014/train/STS.2014.test.gs.deft-forum.txt >
+./run.semantic.comparer.with.train.sh $ENGLISH_TESTBED//data/2014/train/STS.2014.test.input.deft-news.txt $ENGLISH_TESTBED//data/2014/train/STS.2014.test.gs.deft-news.txt >
+./run.semantic.comparer.with.train.sh $ENGLISH_TESTBED//data/2014/train/STS.2014.test.input.headlines.txt $ENGLISH_TESTBED//data/2014/train/STS.2014.test.gs.headlines.txt >
+./run.semantic.comparer.with.train.sh $ENGLISH_TESTBED//data/2014/train/STS.2014.test.input.images.txt $ENGLISH_TESTBED//data/2014/train/STS.2014.test.gs.images.txt >
+./run.semantic.comparer.with.train.sh $ENGLISH_TESTBED//data/2014/train/STS.2014.test.input.OnWN.txt $ENGLISH_TESTBED//data/2014/train/STS.2014.test.gs.OnWN.txt >
+./run.semantic.comparer.with.train.sh $ENGLISH_TESTBED//data/2014/train/STS.2014.test.input.tweet-news.txt $ENGLISH_TESTBED//data/2014/train/STS.2014.test.gs.tweet-news.txt >
