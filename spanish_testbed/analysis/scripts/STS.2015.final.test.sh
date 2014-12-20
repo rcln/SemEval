@@ -1,0 +1,2 @@
+./run.semantic.comparer.es.sh $SPANISH_TESTBED/data/test/STS.input.newswire.txt > $SPANISH_TESTBED/analysis/2015/results/STS.input.newswire.dat 2>$SPANISH_TESTBED/analysis/2015/logs/STS.input.newswire.log
+./run.semantic.comparer.es.sh  $SPANISH_TESTBED/data/test/STS.input.wikipedia.txt  > $SPANISH_TESTBED/analysis/2015/results/STS.input.wikipedia.dat 2>$SPANISH_TESTBED/analysis/2015/logs/STS.input.wikipedia.log

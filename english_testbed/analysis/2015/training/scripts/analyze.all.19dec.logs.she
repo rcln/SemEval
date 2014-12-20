@@ -1,0 +1,12 @@
+sh analyze.log.sh STS.2012.test.input.MSRpar.txt
+sh analyze.log.sh STS.2012.test.input.MSRvid.txt
+sh analyze.log.sh STS.2012.test.input.SMTeuroparl.txt
+sh analyze.log.sh STS.2012.test.input.surprise.OnWN.txt
+sh analyze.log.sh STS.2012.test.input.surprise.SMTnews.txt
+sh analyze.log.sh STS.2012.train.input.MSRpar.txt
+sh analyze.log.sh STS.2012.train.input.MSRvid.txt
+sh analyze.log.sh STS.2012.train.input.SMTeuroparl.txt
+sh analyze.log.sh STS.2013.test.input.FNWN.txt
+sh analyze.log.sh STS.2013.test.input.headlines.txt
+sh analyze.log.sh STS.2013.test.input.OnWN.txt
+sh analyze.log.sh STS.2013.test.input.SMT.txt
