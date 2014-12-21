@@ -1,16 +1,16 @@
 #!/bin/bash
-path_head=$SPANISH_TESTBED/analysis
-dat_file=$path_head/results/$1.dat
-log_file=$path_head/logs/$1.log
+path_head=$ENGLISH_TESTBED/analysis
+dat_file=$path_head/2015/testing/results/$1.dat
+log_file=$path_head/2015/testing/logs/$1.log
 echo '---------------------------------------------'
 ls -all $log_file
 echo 'RESULTS .dat LINE COUNT::'
 wc -l $dat_file
 echo 'ORIGINAL .txt LINE COUNT::'
 if [ -n "$2" ]; then
-	txt_file=$SPANISH_TESTBED/data/train/$2
+	txt_file=$ENGLISH_TESTBED/data/2015/test/$2
 else
-	txt_file=$SPANISH_TESTBED/data/train/$1
+	txt_file=$ENGLISH_TESTBED/data/2015/test/$1
 fi
 wc -l $txt_file.txt
 echo 'FIRST LINE::'

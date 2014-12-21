@@ -21,3 +21,22 @@ edu.stanford.nlp.pipeline.AnnotatorImplementations:
 Adding annotator pos
 Adding annotator lemma
 Adding annotator parse
+Ignored an exception in QuantifiableEntityNormalizer: (result is that entities were not normalized)
+Tokens: http://en.wikipedia.org/wiki/History_of_Delhi#Early_history shows that the city was called Delhi -LRB- or Dilli -RRB- at least since the 12/13th century .
+java.lang.NullPointerException
+	at edu.stanford.nlp.ie.pascal.ISODateInstance.foundMiscYearPattern(ISODateInstance.java:1046)
+	at edu.stanford.nlp.ie.pascal.ISODateInstance.extractYear(ISODateInstance.java:979)
+	at edu.stanford.nlp.ie.pascal.ISODateInstance.extractFields(ISODateInstance.java:396)
+	at edu.stanford.nlp.ie.pascal.ISODateInstance.<init>(ISODateInstance.java:82)
+	at edu.stanford.nlp.ie.QuantifiableEntityNormalizer.normalizedDateString(QuantifiableEntityNormalizer.java:363)
+	at edu.stanford.nlp.ie.QuantifiableEntityNormalizer.normalizedDateString(QuantifiableEntityNormalizer.java:338)
+	at edu.stanford.nlp.ie.QuantifiableEntityNormalizer.processEntity(QuantifiableEntityNormalizer.java:1018)
+	at edu.stanford.nlp.ie.QuantifiableEntityNormalizer.addNormalizedQuantitiesToEntities(QuantifiableEntityNormalizer.java:1320)
+	at edu.stanford.nlp.ie.NERClassifierCombiner.classifyWithGlobalInformation(NERClassifierCombiner.java:132)
+	at edu.stanford.nlp.ie.AbstractSequenceClassifier.classifySentenceWithGlobalInformation(AbstractSequenceClassifier.java:322)
+	at edu.stanford.nlp.pipeline.NERCombinerAnnotator.doOneSentence(NERCombinerAnnotator.java:148)
+	at edu.stanford.nlp.pipeline.SentenceAnnotator.annotate(SentenceAnnotator.java:95)
+	at edu.stanford.nlp.pipeline.NERCombinerAnnotator.annotate(NERCombinerAnnotator.java:137)
+	at edu.stanford.nlp.pipeline.AnnotationPipeline.annotate(AnnotationPipeline.java:67)
+	at edu.stanford.nlp.pipeline.StanfordCoreNLP.annotate(StanfordCoreNLP.java:847)
+	at fr.lipn.sts.SemanticComparer.main(SemanticComparer.java:167)
