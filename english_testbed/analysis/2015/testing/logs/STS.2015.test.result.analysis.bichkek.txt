@@ -1,0 +1,85 @@
+---------------------------------------------
+-rw-r--r-- 1 garciaflores users 2945 déc.  21 02:05 /tempo/semeval.2015.iimas/SemEval/english_testbed//analysis/2015/testing/logs/STS.input.answers-forums.log
+RESULTS .dat LINE COUNT::
+2000 /tempo/semeval.2015.iimas/SemEval/english_testbed//analysis/2015/testing/results/STS.input.answers-forums.dat
+ORIGINAL .txt LINE COUNT::
+2000 /tempo/semeval.2015.iimas/SemEval/english_testbed//data/2015/test/STS.input.answers-forums.txt
+FIRST LINE::
+0.0 1:0.09623477369154454 2:0.7346023321151733 3:0.3809142751325926 4:0.3545454740524292 5:0.20965078149297073 6:1.0 7:0.37465923160052417 8:0.7625706361614147 9:1.0 10:7.699487549993386E-4 11:0.13231206520508335 12:0.0 13:0.08187134502923976 14:0.1818181872367859 15:0.5 16:30.0
+LAST LINE::
+0.0 1:0.034398815411739135 2:0.48069989681243896 3:0.15205841011326587 4:0.2280701994895935 5:0.006560489220913243 6:1.0 7:8.95770653396437E-8 8:0.0 9:1.0 10:0.0 11:0.2319008070890841 12:0.0 13:0.014388489208633094 14:-0.2222222089767456 15:0.153256704981 16:28.0
+TOTAL ERRORS::
+1
+NullPointerException ERRORS::
+1
+ArrayIndexOutOfBoundsException ERRORS::
+0
+---------------------------------------------
+---------------------------------------------
+-rw-r--r-- 1 garciaflores users 1108 déc.  20 22:36 /tempo/semeval.2015.iimas/SemEval/english_testbed//analysis/2015/testing/logs/STS.input.answers-students.log
+RESULTS .dat LINE COUNT::
+1500 /tempo/semeval.2015.iimas/SemEval/english_testbed//analysis/2015/testing/results/STS.input.answers-students.dat
+ORIGINAL .txt LINE COUNT::
+1500 /tempo/semeval.2015.iimas/SemEval/english_testbed//data/2015/test/STS.input.answers-students.txt
+FIRST LINE::
+0.0 1:0.1575562760978606 2:0.6560019850730896 3:0.28096235582822965 4:0.3205128312110901 5:0.2833803453807772 6:1.0 7:0.1650088980295882 8:0.849605205746502 9:0.0 10:0.05358851049247692 11:0.3512314321933646 12:0.9090215411074355 13:0.04597701149425287 14:0.125 15:0.111111111111 16:22.0
+LAST LINE::
+0.0 1:0.07215167066711829 2:0.3333333134651184 3:0.09999597112599475 4:0.21212118864059448 5:0.026463824573631188 6:1.0 7:2.6829272480729574E-8 8:0.0 9:1.0 10:0.0 11:0.0 12:0.0 13:0.0 14:0.1666666865348816 15:0.0 16:9.0
+TOTAL ERRORS::
+0
+NullPointerException ERRORS::
+0
+ArrayIndexOutOfBoundsException ERRORS::
+0
+---------------------------------------------
+---------------------------------------------
+-rw-r--r-- 1 garciaflores users 2060 déc.  20 21:19 /tempo/semeval.2015.iimas/SemEval/english_testbed//analysis/2015/testing/logs/STS.input.belief.log
+RESULTS .dat LINE COUNT::
+2000 /tempo/semeval.2015.iimas/SemEval/english_testbed//analysis/2015/testing/results/STS.input.belief.dat
+ORIGINAL .txt LINE COUNT::
+2000 /tempo/semeval.2015.iimas/SemEval/english_testbed//data/2015/test/STS.input.belief.txt
+FIRST LINE::
+0.0 1:0.1073029486972032 2:0.5190079212188721 3:0.28414319103098934 4:0.3243243098258972 5:0.10809607779064719 6:1.0 7:7.705709532437172E-8 8:0.0 9:1.0 10:0.0 11:0.0775848548231771 12:0.0 13:0.027777777777777776 14:0.125 15:0.277777777778 16:13.0
+LAST LINE::
+0.0 1:0.009031647270673735 2:0.0 3:0.16804646103887522 4:0.292682945728302 5:6.412137047370612E-4 6:1.0 7:0.0 8:0.0 9:1.0 10:0.0 11:0.3709081267982971 12:0.0 13:0.0 14:0.1111111044883728 15:0.111111111111 16:10.0
+TOTAL ERRORS::
+0
+NullPointerException ERRORS::
+0
+ArrayIndexOutOfBoundsException ERRORS::
+0
+---------------------------------------------
+---------------------------------------------
+-rw-r--r-- 1 garciaflores users 1108 déc.  20 14:26 /tempo/semeval.2015.iimas/SemEval/english_testbed//analysis/2015/testing/logs/STS.input.headlines.log
+RESULTS .dat LINE COUNT::
+1500 /tempo/semeval.2015.iimas/SemEval/english_testbed//analysis/2015/testing/results/STS.input.headlines.dat
+ORIGINAL .txt LINE COUNT::
+1500 /tempo/semeval.2015.iimas/SemEval/english_testbed//data/2015/test/STS.input.headlines.txt
+FIRST LINE::
+0.0 1:0.6809188521523893 2:0.953125 3:0.420552821163155 4:0.5964912176132202 5:0.6662389014787858 6:0.6131943297124294 7:0.4767142443881451 8:0.9536386276809057 9:1.0 10:0.4771166962747525 11:0.0 12:0.9666177374499885 13:0.3611111111111111 14:0.2222222089767456 15:1.14285714286 16:4.0
+LAST LINE::
+0.0 1:0.26960286890480745 2:0.711309552192688 3:0.3699860589039747 4:0.40816324949264526 5:0.29667659618570325 6:1.0 7:0.1455356006922303 8:0.9087606679644012 9:1.0 10:0.04850792696541902 11:0.0 12:0.8848415432544012 13:0.047619047619047616 14:0.1428571343421936 15:0.5 16:5.0
+TOTAL ERRORS::
+0
+NullPointerException ERRORS::
+0
+ArrayIndexOutOfBoundsException ERRORS::
+0
+---------------------------------------------
+---------------------------------------------
+-rw-r--r-- 1 garciaflores users 1108 déc.  20 12:36 /tempo/semeval.2015.iimas/SemEval/english_testbed//analysis/2015/testing/logs/STS.input.images.log
+RESULTS .dat LINE COUNT::
+1500 /tempo/semeval.2015.iimas/SemEval/english_testbed//analysis/2015/testing/results/STS.input.images.dat
+ORIGINAL .txt LINE COUNT::
+1500 /tempo/semeval.2015.iimas/SemEval/english_testbed//data/2015/test/STS.input.images.txt
+FIRST LINE::
+0.0 1:0.5421505168698906 2:0.8086671829223633 3:0.8482074246338652 4:0.8387097120285034 5:0.4465484384013226 6:1.0 7:0.5064560030761968 8:0.8655787802933519 9:1.0 10:0.21782294039724623 11:0.9999999999999998 12:0.7163847654313433 13:0.5357142857142857 14:0.75 15:0.606060606061 16:4.0
+LAST LINE::
+0.0 1:0.3305229464164709 2:0.8606060147285461 3:0.4839251813511234 4:0.5483871102333069 5:0.3280909369961986 6:1.0 7:0.3895384708743834 8:0.898398254960055 9:1.0 10:0.10718394507602909 11:0.0 12:0.9418627044797022 13:0.14285714285714285 14:0.5714285373687744 15:0.725806451613 16:5.0
+TOTAL ERRORS::
+0
+NullPointerException ERRORS::
+0
+ArrayIndexOutOfBoundsException ERRORS::
+0
+---------------------------------------------
