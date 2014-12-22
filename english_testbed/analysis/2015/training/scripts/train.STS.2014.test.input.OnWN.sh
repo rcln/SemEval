@@ -1,0 +1,1 @@
+./run.semantic.comparer.with.train.sh $ENGLISH_TESTBED//data/2014/train/STS.2014.test.input.OnWN.txt $ENGLISH_TESTBED//data/2014/train/STS.2014.test.gs.OnWN.txt > $ENGLISH_TESTBED/analysis/2015/training/results/STS.2014.test.input.OnWN.dat 2>$ENGLISH_TESTBED/analysis/2015/training/log/STS.2014.test.input.OnWN.log
