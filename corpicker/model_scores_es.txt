@@ -1,0 +1,40 @@
+Criterion: s > 0.015 and l > 0.5
+input/es/STS.input.newswire.txt es
+*mdl: STS.2014.test.input.news.txt.mdl s: 0.114787 l: 0.853104
+*mdl: STS.2012.test.input.MSRpar.txt.mdl s: 0.080538 l: 0.614943
+*mdl: STS.2012.train.input.MSRpar.txt.mdl s: 0.080393 l: 0.627480
+*mdl: STS.2013.test.input.SMT.txt.mdl s: 0.076229 l: 0.737130
+*mdl: STS.2014.test.input.wikipedia.txt.mdl s: 0.062561 l: 0.896134
+*mdl: STS.2012.train.input.SMTeuroparl.txt.mdl s: 0.050966 l: 0.858555
+*mdl: STS.2013.test.input.headlines.txt.mdl s: 0.048000 l: 0.517949
+mdl: STS.2012.test.input.surprise.OnWN.txt.mdl s: 0.032975 l: 0.403030
+mdl: STS.2013.test.input.FNWN.txt.mdl s: 0.031883 l: 0.469276
+mdl: STS.2013.test.input.OnWN.txt.mdl s: 0.025125 l: 0.372313
+mdl: STS.2012.test.input.surprise.SMTnews.txt.mdl s: 0.023268 l: 0.406876
+*mdl: STS.2014.input.local.pairs-journals.txt.mdl s: 0.016343 l: 0.563565
+*mdl: STS.2014.input.local.sentences.txt.mdl s: 0.016179 l: 0.748980
+mdl: STS.2012.test.input.MSRvid.txt.mdl s: 0.014600 l: 0.200922
+mdl: STS.2014.input.local2.sentences.txt.mdl s: 0.014475 l: 0.708060
+mdl: STS.2012.train.input.MSRvid.txt.mdl s: 0.014447 l: 0.202974
+mdl: STS.2012.test.input.SMTeuroparl.txt.mdl s: 0.011341 l: 0.365508
+mdl: STS.2014.train.input.li65.txt.mdl s: 0.007760 l: 0.456455
+
+input/es/STS.input.wikipedia.txt es
+*mdl: STS.2014.test.input.wikipedia.txt.mdl s: 0.087229 l: 0.970785
+*mdl: STS.2014.test.input.news.txt.mdl s: 0.058692 l: 0.742160
+*mdl: STS.2013.test.input.SMT.txt.mdl s: 0.056683 l: 0.847322
+*mdl: STS.2012.test.input.MSRpar.txt.mdl s: 0.048617 l: 0.706869
+*mdl: STS.2012.train.input.MSRpar.txt.mdl s: 0.046888 l: 0.721280
+*mdl: STS.2012.train.input.SMTeuroparl.txt.mdl s: 0.043528 l: 0.986898
+mdl: STS.2012.test.input.surprise.OnWN.txt.mdl s: 0.039232 l: 0.463278
+*mdl: STS.2013.test.input.FNWN.txt.mdl s: 0.037551 l: 0.539426
+mdl: STS.2013.test.input.OnWN.txt.mdl s: 0.031680 l: 0.427969
+*mdl: STS.2013.test.input.headlines.txt.mdl s: 0.026954 l: 0.595376
+mdl: STS.2012.test.input.surprise.SMTnews.txt.mdl s: 0.022638 l: 0.467699
+*mdl: STS.2014.input.local.sentences.txt.mdl s: 0.019957 l: 0.860943
+*mdl: STS.2014.input.local2.sentences.txt.mdl s: 0.017372 l: 0.813906
+mdl: STS.2012.train.input.MSRvid.txt.mdl s: 0.016216 l: 0.233316
+mdl: STS.2012.test.input.MSRvid.txt.mdl s: 0.015750 l: 0.230957
+mdl: STS.2012.test.input.SMTeuroparl.txt.mdl s: 0.011937 l: 0.420147
+mdl: STS.2014.input.local.pairs-journals.txt.mdl s: 0.011409 l: 0.647811
+mdl: STS.2014.train.input.li65.txt.mdl s: 0.010423 l: 0.524689

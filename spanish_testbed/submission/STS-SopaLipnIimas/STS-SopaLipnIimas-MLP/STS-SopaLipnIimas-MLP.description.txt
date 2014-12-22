@@ -1,0 +1,14 @@
+SOPA system with features including:
+-cosine
+-WordNet Wu-Palmer similarity (bag of synsets)
+-Levenshtein
+-n-gram similarities (CKPD, Sultan, Sphynx)
+-Syntactic dependencies similarity
+-IR-based similarities (indexed AQUAINT, UkWaC)
+-Named Entities overlap
+-sentence length
+
+Tools used:
+WordNet, Lucene, Sphynx, LibSVM, Weka
+
+This run uses a Multi Layer Perceptron Regression model with 6 hidden units

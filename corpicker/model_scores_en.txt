@@ -1,0 +1,101 @@
+Criterion: s > 0.02 and l > 0.5
+corpus weights:
+model for STS.input.answers-forums.txt
+*mdl: STS.2013.test.input.SMT.txt.mdl s: 0.059955 l: 0.671176
+*mdl: STS.2012.train.input.MSRpar.txt.mdl s: 0.051704 l: 0.851253
+*mdl: STS.2012.test.input.MSRpar.txt.mdl s: 0.050697 l: 0.868322
+*mdl: STS.2012.train.input.SMTeuroparl.txt.mdl s: 0.045162 l: 0.565196
+*mdl: STS.2014.test.input.deft-forum.txt.mdl s: 0.043412 l: 0.560966
+*mdl: STS.2012.test.input.surprise.OnWN.txt.mdl s: 0.042613 l: 0.793949
+*mdl: STS.2014.test.input.OnWN.txt.mdl s: 0.039202 l: 0.811066
+*mdl: STS.2013.test.input.FNWN.txt.mdl s: 0.033490 l: 0.913031
+*mdl: STS.2014.test.input.tweet-news.txt.mdl s: 0.031196 l: 0.776594
+*mdl: STS.2013.test.input.OnWN.txt.mdl s: 0.027433 l: 0.738897
+*mdl: STS.2014.test.input.deft-news.txt.mdl s: 0.023645 l: 0.984924
+mdl: STS.2012.test.input.MSRvid.txt.mdl s: 0.022526 l: 0.402610
+mdl: STS.2012.train.input.MSRvid.txt.mdl s: 0.021030 l: 0.406571
+(*)mdl: STS.2014.test.input.images.txt.mdl s: 0.020026 l: 0.554968
+mdl: STS.2012.test.input.surprise.SMTnews.txt.mdl s: 0.018333 l: 0.779267
+mdl: STS.2013.test.input.headlines.txt.mdl s: 0.018280 l: 0.908875
+mdl: STS.2014.test.input.headlines.txt.mdl s: 0.016634 l: 0.924979
+mdl: STS.2012.test.input.SMTeuroparl.txt.mdl s: 0.010427 l: 0.744111
+
+model for STS.input.answers-students.txt:
+*mdl: STS.2014.test.input.deft-forum.txt.mdl s: 0.038291 l: 0.577532
+*mdl: STS.2012.train.input.SMTeuroparl.txt.mdl s: 0.036412 l: 0.548983
+*mdl: STS.2013.test.input.SMT.txt.mdl s: 0.032545 l: 0.651923
+*mdl: STS.2013.test.input.FNWN.txt.mdl s: 0.031392 l: 0.939995
+*mdl: STS.2012.test.input.surprise.SMTnews.txt.mdl s: 0.027207 l: 0.802281
+*mdl: STS.2014.test.input.OnWN.txt.mdl s: 0.021662 l: 0.835019
+*mdl: STS.2012.test.input.surprise.OnWN.txt.mdl s: 0.021366 l: 0.817396
+*mdl: STS.2013.test.input.OnWN.txt.mdl s: 0.020848 l: 0.760718
+(*)mdl: STS.2014.test.input.deft-news.txt.mdl s: 0.019847 l: 0.956671
+(*)mdl: STS.2012.test.input.MSRpar.txt.mdl s: 0.019195 l: 0.843413
+mdl: STS.2012.test.input.SMTeuroparl.txt.mdl s: 0.018204 l: 0.766087
+mdl: STS.2012.train.input.MSRpar.txt.mdl s: 0.017082 l: 0.826834
+mdl: STS.2014.test.input.images.txt.mdl s: 0.016150 l: 0.571357
+mdl: STS.2014.test.input.tweet-news.txt.mdl s: 0.014258 l: 0.799529
+mdl: STS.2012.train.input.MSRvid.txt.mdl s: 0.013737 l: 0.418578
+mdl: STS.2012.test.input.MSRvid.txt.mdl s: 0.012460 l: 0.414500
+mdl: STS.2014.test.input.headlines.txt.mdl s: 0.008425 l: 0.952297
+mdl: STS.2013.test.input.headlines.txt.mdl s: 0.006297 l: 0.935716
+
+model for STS.input.belief.txt:
+*mdl: STS.2013.test.input.SMT.txt.mdl s: 0.075907 l: 0.584070
+*mdl: STS.2012.test.input.MSRpar.txt.mdl s: 0.063667 l: 0.755630
+*mdl: STS.2012.train.input.MSRpar.txt.mdl s: 0.060223 l: 0.740777
+(*)mdl: STS.2012.train.input.SMTeuroparl.txt.mdl s: 0.055985 l: 0.491844
+*mdl: STS.2014.test.input.deft-forum.txt.mdl s: 0.055793 l: 0.644626
+*mdl: STS.2012.test.input.surprise.OnWN.txt.mdl s: 0.042677 l: 0.912355
+*mdl: STS.2014.test.input.OnWN.txt.mdl s: 0.038904 l: 0.932024
+*mdl: STS.2014.test.input.tweet-news.txt.mdl s: 0.037286 l: 0.892411
+*mdl: STS.2014.test.input.deft-news.txt.mdl s: 0.036541 l: 0.857100
+*mdl: STS.2013.test.input.FNWN.txt.mdl s: 0.032852 l: 0.953111
+*mdl: STS.2013.test.input.OnWN.txt.mdl s: 0.031744 l: 0.849093
+*mdl: STS.2014.test.input.images.txt.mdl s: 0.024328 l: 0.637733
+*mdl: STS.2014.test.input.headlines.txt.mdl s: 0.024315 l: 0.940799
+*mdl: STS.2013.test.input.headlines.txt.mdl s: 0.022431 l: 0.957469
+*mdl: STS.2012.test.input.surprise.SMTnews.txt.mdl s: 0.021611 l: 0.895484
+mdl: STS.2012.test.input.MSRvid.txt.mdl s: 0.020652 l: 0.462654
+mdl: STS.2012.train.input.MSRvid.txt.mdl s: 0.020248 l: 0.467205
+mdl: STS.2012.test.input.SMTeuroparl.txt.mdl s: 0.013123 l: 0.855085
+
+model for STS.input.headlines.txt
+*mdl: STS.2014.test.input.headlines.txt.mdl s: 0.162202 l: 0.985750
+*mdl: STS.2013.test.input.headlines.txt.mdl s: 0.090610 l: 0.968587
+*mdl: STS.2012.train.input.MSRpar.txt.mdl s: 0.044289 l: 0.798774
+*mdl: STS.2012.test.input.MSRpar.txt.mdl s: 0.042101 l: 0.814790
+*mdl: STS.2014.test.input.tweet-news.txt.mdl s: 0.034253 l: 0.827616
+*mdl: STS.2013.test.input.SMT.txt.mdl s: 0.032072 l: 0.629798
+*mdl: STS.2014.test.input.deft-news.txt.mdl s: 0.025190 l: 0.924204
+*mdl: STS.2014.test.input.deft-forum.txt.mdl s: 0.020172 l: 0.597821
+mdl: STS.2012.train.input.SMTeuroparl.txt.mdl s: 0.018865 l: 0.530352
+mdl: STS.2012.test.input.surprise.OnWN.txt.mdl s: 0.018333 l: 0.846111
+mdl: STS.2014.test.input.OnWN.txt.mdl s: 0.016790 l: 0.864352
+mdl: STS.2013.test.input.OnWN.txt.mdl s: 0.012483 l: 0.787442
+mdl: STS.2014.test.input.images.txt.mdl s: 0.010940 l: 0.591429
+mdl: STS.2012.test.input.surprise.SMTnews.txt.mdl s: 0.010610 l: 0.830465
+mdl: STS.2012.train.input.MSRvid.txt.mdl s: 0.008767 l: 0.433283
+mdl: STS.2013.test.input.FNWN.txt.mdl s: 0.008713 l: 0.973017
+mdl: STS.2012.test.input.MSRvid.txt.mdl s: 0.008647 l: 0.429061
+mdl: STS.2012.test.input.SMTeuroparl.txt.mdl s: 0.006530 l: 0.792999
+
+model for STS.input.images.txt
+*mdl: STS.2014.test.input.images.txt.mdl s: 0.168639 l: 0.913750
+*mdl: STS.2012.test.input.MSRvid.txt.mdl s: 0.129308 l: 0.662895
+*mdl: STS.2012.train.input.MSRvid.txt.mdl s: 0.122778 l: 0.669416
+*mdl: STS.2012.test.input.surprise.OnWN.txt.mdl s: 0.029066 l: 0.764976
+*mdl: STS.2014.test.input.OnWN.txt.mdl s: 0.027610 l: 0.748832
+*mdl: STS.2013.test.input.OnWN.txt.mdl s: 0.024420 l: 0.821971
+(*)mdl: STS.2012.train.input.MSRpar.txt.mdl s: 0.021797 l: 0.517010
+mdl: STS.2013.test.input.SMT.txt.mdl s: 0.021090 l: 0.407640
+(*)mdl: STS.2012.test.input.MSRpar.txt.mdl s: 0.020708 l: 0.527376
+mdl: STS.2014.test.input.deft-forum.txt.mdl s: 0.018515 l: 0.923626
+mdl: STS.2012.train.input.SMTeuroparl.txt.mdl s: 0.016748 l: 0.343273
+mdl: STS.2013.test.input.FNWN.txt.mdl s: 0.015759 l: 0.665204
+mdl: STS.2014.test.input.deft-news.txt.mdl s: 0.012579 l: 0.598195
+mdl: STS.2014.test.input.headlines.txt.mdl s: 0.010748 l: 0.656611
+mdl: STS.2014.test.input.tweet-news.txt.mdl s: 0.010670 l: 0.782071
+mdl: STS.2013.test.input.headlines.txt.mdl s: 0.010033 l: 0.668246
+mdl: STS.2012.test.input.surprise.SMTnews.txt.mdl s: 0.009841 l: 0.779388
+mdl: STS.2012.test.input.SMTeuroparl.txt.mdl s: 0.007182 l: 0.816211
