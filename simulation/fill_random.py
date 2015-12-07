@@ -51,11 +51,16 @@ if __name__ == "__main__":
         fn=open(filename,'w')
         for pair in phrases:
             num=random.random()
+
+            #### STARS Code to label phrases
             print >> fn, "{0:1.1f}".format(num*5)
+            #### ENDS code to label phrases
+
         filenames_sys.append(filename)
 
-    for corpus,res in  eval_all(opts.cmd,os.path.join(opts.DIR,'test'),filenames_sys):
-        print "{0:<40}:{1:4.1f}".format(corpus,res)
+    for corpus,res in eval_all(opts.cmd,os.path.join(opts.DIR,'test'),
+                filenames_sys):
+        print "{0:<40}: {1:<1.4f}".format(corpus,abs(res))
    
         
 

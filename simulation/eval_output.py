@@ -36,7 +36,7 @@ if __name__ == "__main__":
 
     total=[]
     for corpus,res in  eval_all(opts.cmd,opts.GSDIR,filenames_sys):
-        print "{0:<40}:{1:1.4f}".format(corpus,res)
+        print "{0:<40}: {1:<1.4f}".format(corpus,abs(res))
 
         
 

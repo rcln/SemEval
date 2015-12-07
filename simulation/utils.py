@@ -62,6 +62,7 @@ def eval(cmd,filename_gs,filename_sys):
 
 
 def infer_test_file(dirname_gs,filename_sys):
+    print dirname_gs, filename_sys
     bits=filename_sys.rsplit('/',1)
     bits=bits[1].split('.')
     year=dirname_gs.rsplit('/',2)
