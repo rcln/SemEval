@@ -5,6 +5,7 @@ import re
 import tempfile
 from subprocess import Popen, PIPE, STDOUT
 import numpy as np
+from sklearn.svm import SVR
 
 re_file=re.compile('.*\.input\..*\.txt$')
 re_gs=re.compile('.*\.gs\..*\.txt$')
@@ -58,7 +59,7 @@ def eval(cmd,filename_gs,filename_sys):
     print " ".join(cmd)
     p = Popen(cmd,  stdout=PIPE, stderr=PIPE)
     stdout, stderr = p.communicate()
-    res=stdout.replace('Pearson: ','').strip()
+    res=stdout.replace('Pearson: ','').strip()    
     return float(res)
 
 
@@ -66,8 +67,7 @@ def infer_test_file(dirname_gs,filename_sys):
     filename=os.path.basename(filename_sys)
     bits=filename.split('.')
     h,t=os.path.split(dirname_gs)
-    year,t=os.path.split(h)
-    h,year=os.path.split(year)
+    h,year=os.path.split(h)
     filename_gs=os.path.join(dirname_gs,
                 bits[0]+'.'+year+'.gs.'+bits[2]+'.txt'
         )
@@ -91,3 +91,23 @@ def eval_all(cmd,dirname_gs,filenames):
         ##res.append(('All',eval(cmd, file_gs.name, file_sys.name)))
         res.append(('Mean',np.mean(total)))
     return res
+
+
+def train_model(train_gs, train_output):
+    svr_lin = SVR(kernel='linear', C=1e3)
+
+    score_gs=[]
+    score_out=[]
+    for x in train_gs.keys():
+        if train_gs.has_key(x) and train_output.has_key(x):
+            print x
+            score_gs.extend(train_gs[x])
+            score_out.extend(train_output[x])
+
+    print len(score_gs)
+    print ">"*30
+    print len(score_out)
+
+    svr_lin.fit([[x] for x in score_out], score_gs)
+    
+    return svr_lin
