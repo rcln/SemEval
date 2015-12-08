@@ -8,8 +8,38 @@ from utils import *
 from collections import Counter
 from gensim.models.word2vec import Word2Vec
 from scipy.spatial.distance import cosine
+import requests
+import json
+import pickle
+import nltk, re, pprint
+from nltk import word_tokenize
 
 verbose = lambda *a: None 
+
+
+def distances_phrases_sum(phr1,phr2):
+    acc1=np.zeros(300)
+    nacc1=0
+    acc2=np.zeros(300)
+    nacc2=0
+    for word in word_tokenize(phr1):
+        try:
+            acc1+=model[word]
+            nacc1+=1
+        except KeyError:
+            pass
+    for word in word_tokenize(phr2):
+        try:
+            acc2+=model[word]
+            nacc2+=1
+        except KeyError:
+            pass
+    if nacc1>0 and nacc2>0:
+        return cosine(acc1/nacc1,acc2/nacc2)
+    else:
+        return 0.0
+
+
 
 if __name__ == "__main__":
     #Las opciones de línea de comando
@@ -18,7 +48,7 @@ if __name__ == "__main__":
             action="store", help="Directory with year to replicate")
     p.add_argument("OUTPUT",default=None,
             action="store", help="Directory for output")
-    p.add_argument("--model",default='data/GoogleNews-vectors-negative300.bin', type=str,
+    p.add_argument("--model",default='data/model.data', type=str,
                 action="store", dest="model",
                 help="Word2vec model to use")
     p.add_argument("--year",default='2015', type=str,
@@ -38,19 +68,34 @@ if __name__ == "__main__":
         def verbose(*args):
             print " ".join([str(a) for a in args])
 
+    verbose("Loading model",opts.model)
+    with open(opts.model,'rb') as idxf:
+        model = pickle.load(idxf)
 
     train_data=[]
     verbose('Starting training')
     train_data=load_all_phrases(os.path.join(opts.DIR,'train'))
     verbose('Total train phrases',sum([len(d) for n,d in train_data]))
+    train_gs = dict(load_all_gs(os.path.join(opts.DIR,'train')))
+    verbose('Total train gs',sum([len(d) for n,d in train_gs.iteritems()]))
+
+    ## Compute for train data
+    train_output={}
+    for (filename, phrases) in train_data:
+        filename_old=filename.replace('input', 'gs')
+        train_output[filename_old]=[]
+        for phr1,phr2 in phrases:
+            num=distances_phrases_sum(phr1,phr2)
+            train_output[filename_old].append(num)
+
+    ## Train model    
+    verbose('Training model')
+    svr = train_model(train_gs, train_output,args={'kernel':'rbf'})
+
 
     verbose('Starting testing')
     test_data=load_all_phrases(os.path.join(opts.DIR,'test'))
     verbose('Total test phrases',sum([len(d) for n,d in test_data]))
-
-    print opts.model
-    model = Word2Vec.load_word2vec_format(opts.model, binary=True)
-
 
     filenames_sys=[]
     distances=[]
@@ -59,32 +104,11 @@ if __name__ == "__main__":
         filename=os.path.join(opts.OUTPUT,bits[0]+'.output.'+bits[3]+'.txt')
         fn=open(filename,'w')
         for phr1,phr2 in phrases:
-            acc1=np.zeros(300)
-            nacc1=0
-            acc2=np.zeros(300)
-            nacc2=0
-            for word in phr1.split():
-                try:
-                    acc1+=model[word]
-                    nacc1+=1
-                except KeyError:
-                    pass
-            for word in phr2.split():
-                try:
-                    acc2+=model[word]
-                    nacc2+=1
-                except KeyError:
-                    pass
-            if nacc1>0 and nacc2>0:
-                dist=cosine(acc1/nacc1,acc2/nacc2)
-                distances.append(dist)
-            else:
-                distances.append(0.0)
-            print dist
-            print >> fn, "{0:1.1f}".format(dist*5)
-                    
+            num=distances_phrases_sum(phr1,phr2)
+            num=svr.predict(num)
+            verbose(num)
+            print >> fn, "{0:1.1f}".format(num[0])
 
-    print "Maxima distancia", max(distances)
     for corpus,res in eval_all(opts.cmd,os.path.join(opts.DIR,'test'),
                 filenames_sys):
         print "{0:<40}: {1:<1.4f}".format(corpus,abs(res))

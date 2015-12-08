@@ -29,8 +29,8 @@ def get():
     for word in words:
         try:
             vecs.append(model[word].tolist())
-        except KeyError:
-            vecs.append(np.zeros(300).tolist())
+        except:
+            vecs.append([0.0 for x in range(300)])
     return json.dumps({"vectors":vecs,'words':words},ensure_ascii=False) 
     
 

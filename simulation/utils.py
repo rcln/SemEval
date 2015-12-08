@@ -93,8 +93,8 @@ def eval_all(cmd,dirname_gs,filenames):
     return res
 
 
-def train_model(train_gs, train_output):
-    svr_lin = SVR(kernel='linear', C=1e3)
+def train_model(train_gs, train_output,args={'kernel':'linear'}):
+    svr_lin = SVR(**args)
 
     score_gs=[]
     score_out=[]
@@ -104,6 +104,7 @@ def train_model(train_gs, train_output):
             score_gs.extend(train_gs[x])
             score_out.extend(train_output[x])
 
+    score_out=np.nan_to_num(score_out)
     print len(score_gs)
     print ">"*30
     print len(score_out)
