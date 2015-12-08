@@ -54,7 +54,8 @@ def load_all_gs(dirname):
 
 
 def eval(cmd,filename_gs,filename_sys):
-    cmd=cmd+[filename_gs,filename_sys]
+    cmd=cmd+[filename_gs,filename_sys]    
+    print " ".join(cmd)
     p = Popen(cmd,  stdout=PIPE, stderr=PIPE)
     stdout, stderr = p.communicate()
     res=stdout.replace('Pearson: ','').strip()
@@ -62,12 +63,13 @@ def eval(cmd,filename_gs,filename_sys):
 
 
 def infer_test_file(dirname_gs,filename_sys):
-    print dirname_gs, filename_sys
-    bits=filename_sys.rsplit('/',1)
-    bits=bits[1].split('.')
-    year=dirname_gs.rsplit('/',2)
+    filename=os.path.basename(filename_sys)
+    bits=filename.split('.')
+    h,t=os.path.split(dirname_gs)
+    year,t=os.path.split(h)
+    h,year=os.path.split(year)
     filename_gs=os.path.join(dirname_gs,
-                bits[0]+'.'+year[1]+'.gs.'+bits[2]+'.txt'
+                bits[0]+'.'+year+'.gs.'+bits[2]+'.txt'
         )
     return filename_gs
 
@@ -75,10 +77,10 @@ def infer_test_file(dirname_gs,filename_sys):
 def eval_all(cmd,dirname_gs,filenames):
     res=[]
     total=[]
-    with tempfile.NamedTemporaryFile() as file_gs, tempfile.NamedTemporaryFile() as file_sys: 
+    with tempfile.NamedTemporaryFile() as file_gs, tempfile.NamedTemporaryFile() as file_sys:             
         for filename_sys in filenames:
             filename_gs = infer_test_file(dirname_gs,filename_sys)
-            res.append((filename_sys.rsplit('/',1)[1],eval(cmd,filename_gs,filename_sys)))
+            res.append((os.path.basename(filename_sys),eval(cmd,filename_gs,filename_sys)))
             total.append(res[-1][1])
             with open(filename_sys) as infile:
                 for line in infile:
@@ -86,6 +88,6 @@ def eval_all(cmd,dirname_gs,filenames):
             with open(filename_gs) as infile:
                 for line in infile:
                     file_gs.write(line)
-        res.append(('All',eval(cmd, file_gs.name, file_sys.name)))
+        ##res.append(('All',eval(cmd, file_gs.name, file_sys.name)))
         res.append(('Mean',np.mean(total)))
     return res
