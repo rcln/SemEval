@@ -7,6 +7,9 @@ from subprocess import Popen, PIPE, STDOUT
 import numpy as np
 from sklearn.svm import SVR
 import codecs
+import nltk, re, pprint
+from nltk import word_tokenize
+
 
 re_file=re.compile('.*\.input\..*\.txt$')
 re_gs=re.compile('.*\.gs\..*\.txt$')
@@ -93,7 +96,7 @@ def eval_all(cmd,dirname_gs,filenames):
     return res
 
 
-def train_model(train_gs, train_output,args={'kernel':'linear'}):
+def train_model_srv(train_gs, train_output,args={'kernel':'linear'}):
     svr_lin = SVR(**args)
 
     score_gs=[]
@@ -108,3 +111,6 @@ def train_model(train_gs, train_output,args={'kernel':'linear'}):
     svr_lin.fit([[x] for x in score_out], score_gs)
     
     return svr_lin
+
+def preprocessing_nltk_tokenise(phrase):
+    return word_tokenize(phrase)
