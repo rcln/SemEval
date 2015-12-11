@@ -6,6 +6,7 @@ import tempfile
 from subprocess import Popen, PIPE, STDOUT
 import numpy as np
 from sklearn.svm import SVR
+import codecs
 
 re_file=re.compile('.*\.input\..*\.txt$')
 re_gs=re.compile('.*\.gs\..*\.txt$')
@@ -15,7 +16,7 @@ def load_phrases_from_file(dirname,filename):
     if not re_file.match(filename):
         return []
 
-    with open(os.path.join(dirname,filename)) as data:
+    with codecs.open(os.path.join(dirname,filename),encoding='utf-8') as data:
         for line in data:
             bits=line.strip().split('\t')
             if len(bits)==2:
@@ -56,7 +57,6 @@ def load_all_gs(dirname):
 
 def eval(cmd,filename_gs,filename_sys):
     cmd=cmd+[filename_gs,filename_sys]    
-    print " ".join(cmd)
     p = Popen(cmd,  stdout=PIPE, stderr=PIPE)
     stdout, stderr = p.communicate()
     res=stdout.replace('Pearson: ','').strip()    
@@ -100,14 +100,10 @@ def train_model(train_gs, train_output,args={'kernel':'linear'}):
     score_out=[]
     for x in train_gs.keys():
         if train_gs.has_key(x) and train_output.has_key(x):
-            print x
             score_gs.extend(train_gs[x])
             score_out.extend(train_output[x])
 
     score_out=np.nan_to_num(score_out)
-    print len(score_gs)
-    print ">"*30
-    print len(score_out)
 
     svr_lin.fit([[x] for x in score_out], score_gs)
     

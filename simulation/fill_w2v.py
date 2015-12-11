@@ -6,7 +6,6 @@ import os
 import random
 from utils import * 
 from collections import Counter
-from gensim.models.word2vec import Word2Vec
 from scipy.spatial.distance import cosine
 import requests
 import json
@@ -35,7 +34,8 @@ def distances_phrases_sum(phr1,phr2):
         except KeyError:
             pass
     if nacc1>0 and nacc2>0:
-        return cosine(acc1/nacc1,acc2/nacc2)
+        dist= cosine(acc1/nacc1,acc2/nacc2)
+        return np.nan_to_num(dist)
     else:
         return 0.0
 
@@ -73,11 +73,15 @@ if __name__ == "__main__":
         model = pickle.load(idxf)
 
     train_data=[]
-    verbose('Starting training')
+    verbose('Loading training')
     train_data=load_all_phrases(os.path.join(opts.DIR,'train'))
     verbose('Total train phrases',sum([len(d) for n,d in train_data]))
     train_gs = dict(load_all_gs(os.path.join(opts.DIR,'train')))
     verbose('Total train gs',sum([len(d) for n,d in train_gs.iteritems()]))
+
+    verbose('Loading testing')
+    test_data=load_all_phrases(os.path.join(opts.DIR,'test'))
+    verbose('Total test phrases',sum([len(d) for n,d in test_data]))
 
     ## Compute for train data
     train_output={}
@@ -93,10 +97,6 @@ if __name__ == "__main__":
     svr = train_model(train_gs, train_output,args={'kernel':'rbf'})
 
 
-    verbose('Starting testing')
-    test_data=load_all_phrases(os.path.join(opts.DIR,'test'))
-    verbose('Total test phrases',sum([len(d) for n,d in test_data]))
-
     filenames_sys=[]
     distances=[]
     for (filename, phrases) in test_data:
@@ -106,8 +106,8 @@ if __name__ == "__main__":
         for phr1,phr2 in phrases:
             num=distances_phrases_sum(phr1,phr2)
             num=svr.predict(num)
-            verbose(num)
             print >> fn, "{0:1.1f}".format(num[0])
+        filenames_sys.append(filename)
 
     for corpus,res in eval_all(opts.cmd,os.path.join(opts.DIR,'test'),
                 filenames_sys):
