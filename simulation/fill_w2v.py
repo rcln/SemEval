@@ -34,7 +34,9 @@ def distance(model,phr1,phr2):
     if opts.phrasevector=="none":
         pass
     if opts.phrasevector=="sum":
+        # [Pseudo: 4.a.ii ] Sumar vectores frase uno
         vec1=vector_sum(model,phr1)
+        # [Pseudo: 4.a.iii ] Sumar vectores frase dos
         vec2=vector_sum(model,phr2)
     # PARA AGREGAR UNA OPCION DE CALCULO DE VECTOR MÁS SEGUIR
     # if opts.phrasevector=="nombre":
@@ -43,17 +45,15 @@ def distance(model,phr1,phr2):
     
 
     # Segundo se calcula la medida de distancia
+    # [Pseudo: 4.a.iv ] Calcular distancia
     if opts.distance=="cosine":
         num=distances_cosine(vec1,vec2)
-        num=np.nan_to_num(num)
     # PARA AGREGAR UNA DISTANCIA MÁS SEGUIR
     # if opts.distance=="nombre"
     #   num=nombre_funcion_en_distances_semeval(model,phr1,phr2)
 
+    num=np.nan_to_num(num)
     return num
-
-
-
 
 if __name__ == "__main__":
     #Las opciones de línea de comando
@@ -94,12 +94,7 @@ if __name__ == "__main__":
         def verbose(*args):
             print " ".join([str(a) for a in args])
 
-    # Se carga el modelo
-    verbose("Loading model",opts.model)
-    with open(opts.model,'rb') as idxf:
-        model = pickle.load(idxf)
-
-    # Se cargan datos de prueba
+    # [Pseudo: 1] Se cargan datos de entrenamiento 
     train_data=[]
     verbose('Loading training')
     train_data=load_all_phrases(os.path.join(opts.DIR,'train'))
@@ -107,22 +102,35 @@ if __name__ == "__main__":
     train_gs = dict(load_all_gs(os.path.join(opts.DIR,'train')))
     verbose('Total train gs',sum([len(d) for n,d in train_gs.iteritems()]))
 
-    # Se cargan datos de evaluación
+    # [Pseudo: 2] Se cargan datos de prueba
     verbose('Loading testing')
     test_data=load_all_phrases(os.path.join(opts.DIR,'test'))
     verbose('Total test phrases',sum([len(d) for n,d in test_data]))
 
+    # [Pseudo: 3 ] Se cargan vectores por palabras
+    verbose("Loading model",opts.model)
+    with open(opts.model,'rb') as idxf:
+        model = pickle.load(idxf)
+
+
     ## Se itera sobre corpus, frases
     train_output={}
+
+    # [Pseudo: 4 ] Por cada corpus de entrenamiento 
     for (filename, phrases) in train_data:
         filename_old=filename.replace('input', 'gs')
         train_output[filename_old]=[]
+        # [Pseudo: 4.a ] Por cada frase de corpos de entrenamiento
         for phr1,phr2 in phrases:
+            # [Pseudo: 4.a.i ] Preprocesamiento
             phr1,phr2=preprocessing(phr1,phr2)
+            # [Pseudo: 4.a.ii ] Sumar vectores frase uno
+            # [Pseudo: 4.a.iii ] Sumar vectores frase dos
+            # [Pseudo: 4.a.iv ] Calcular distancia
             num=distance(model,phr1,phr2)
             train_output[filename_old].append(num)
 
-    ## Se entrena modelo
+    # [Pseudo: 5 ] Entrenar regresor
     verbose('Training model')
     if opts.method=="svr":
         method = train_model_srv(train_gs, train_output,args={'kernel':'rbf'})
@@ -134,18 +142,26 @@ if __name__ == "__main__":
 
     filenames_sys=[]
     distances=[]
+    # [Pseudo: 6 ] Por cada corpus de prueba
     for (filename, phrases) in test_data:
         bits=filename.split('.')
         filename=os.path.join(opts.OUTPUT,bits[0]+'.output.'+bits[3]+'.txt')
         fn=open(filename,'w')
+        # [Pseudo:66.a ] Por cada frase de corpos de prueba
         for phr1,phr2 in phrases:
+            # [Pseudo: 6.a.i ] Preprocesamiento
             phr1,phr2=preprocessing(phr1,phr2)
+            # [Pseudo: 6.a.ii ] Sumar vectores frase uno
+            # [Pseudo: 6.a.iii ] Sumar vectores frase dos
+            # [Pseudo: 6.a.iv ] Calcular distancia
             num=distance(model,phr1,phr2)
             # Se mapea resultado de distancia a score semeval 
             num=method.predict(num)
             print >> fn, "{0:1.1f}".format(num[0])
         filenames_sys.append(filename)
 
+    
+    # [Pseudo: 7 ] Evaluar
     for corpus,res in eval_all(opts.cmd,os.path.join(opts.DIR,'test'),
                 filenames_sys):
         print "{0:<40}: {1:<1.4f}".format(corpus,abs(res))
