@@ -73,6 +73,7 @@ if __name__ == "__main__":
                     continue
                 else:
                     try:
+        if opts.use_local_model:
                         DATA[word]=model[word]
                     except KeyError:
                         DATA[word]=np.zeros(300)
