@@ -1,0 +1,75 @@
+------------- README --------------------------------
+--------- Author: AlOrozco53 ------------------------
+
+-----------------------------------------------------
+
+-- Repo download and installation:
+
+Please follow the instructions in the given order:
+
+(OPTIONAL) If you don't have python-pip installed, execute the following:
+
+$ sudo apt-get install python-pip
+
+(OPTIONAL) If you don't have NLTK installed, execute the following:
+
+$ sudo pip install -U nltk
+$ python
+>>> import nltk
+>>> nltk.download()
+
+A dialog box should appear. Click on 'Models' tab; then under the 'Identifier' tab,
+click on 'punkt'. Click on the 'Download' button and wait until the download finishes.
+Close the dialog box and run the following to quit python:
+
+>>> quit()
+
+
+1) Repo download (via command line):
+
+Run the following commands:
+
+$ mkdir semeval
+$ cd semeval
+$ git init
+$ git remote add origin https://github.com/rcln/SemEval.git
+$ git pull origin master
+
+2) NumPy & SciPy installation (via command line), with required packages:
+
+$ sudo apt-get install python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose
+
+3) Install scikit-learn:
+
+$ pip install -U scikit-learn
+
+
+-----------------------------------------------------
+
+-- To successfully run fill_w2v.py simulation, execute the following
+   (inside 'semeval' directory created during the download process):
+
+1) Create directory to store outputs (run it just once):
+
+$ mkdir output
+
+2) Let <data_dir> = english_testbed/data/<year> , where <year> is the year of the data
+   desired to be executed.
+
+
+4) Finally, run the code as following:
+
+$ python simulation/fill_w2v.py english_testbed/data/<year>/ output/ --year <year>
+
+The year argument can be omitted if <year> == 2015.
+
+Suggestion: Run the following to visualize all the possible arguments:
+
+$ python simulation/fill_w2v.py -h
+
+-----------------------------------------------------
+
+-- Repo update. Inside the 'semeval' directory, run:
+
+$ git fetch
+$ git pull origin master
