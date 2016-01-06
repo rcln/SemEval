@@ -70,7 +70,7 @@ if __name__ == "__main__":
         filename_old=filename.replace('input', 'gs')
         train_output[filename_old]=[]
         for phr1,phr2 in phrases:
-            words1= preprocessing(model,phr1,phr2,opts)
+            words1,words2= preprocessing(phr1,phr2,opts)
             for word in words1:
                 if DATA.has_key(word):
                     continue
@@ -79,7 +79,6 @@ if __name__ == "__main__":
                         DATA[word]=model[word]
                     except KeyError:
                         DATA[word]=np.zeros(300)+0.25
-            words2= word_tokenize(phr2)
             for word in words2:
                 if DATA.has_key(word):
                     continue
@@ -100,8 +99,8 @@ if __name__ == "__main__":
         filename_old=filename.replace('input', 'gs')
         train_output[filename_old]=[]
         for phr1,phr2 in phrases:
-            words= word_tokenize(phr1)
-            for word in words:
+            words1,words2= preprocessing(phr1,phr2,opts)
+            for word in words1:
                 if DATA.has_key(word):
                     continue
                 else:
@@ -109,8 +108,7 @@ if __name__ == "__main__":
                         DATA[word]=model[word]
                     except KeyError:
                         DATA[word]=np.zeros(300)+0.25
-            words= word_tokenize(phr2)
-            for word in words:
+            for word in words2:
                 if DATA.has_key(word):
                     continue
                 else:
