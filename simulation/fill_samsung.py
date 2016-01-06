@@ -97,10 +97,11 @@ if __name__ == "__main__":
             # [Pseudo: 4.a.ii ] Sumar vectores frase uno
             # [Pseudo: 4.a.iii ] Sumar vectores frase dos
             # [Pseudo: 4.a.iv ] Calcular distancia
-            num=distance(model,phr1,phr2,opts)
             alignment=word_alignment(model,phr1,phr2,opts)
             verbose2(alignment)
-            verbose2(alignment2words(alignment,phr1,phr2))
+            phr1=[w for w,w2,d in alignment if w2]
+            phr2=[w2 for w,w2,d in alignment if w2]
+            num=distance(model,phr1,phr2,opts)
             train_output[filename_old].append(num)
 
     # [Pseudo: 5 ] Entrenar regresor
@@ -127,6 +128,10 @@ if __name__ == "__main__":
             # [Pseudo: 6.a.ii ] Sumar vectores frase uno
             # [Pseudo: 6.a.iii ] Sumar vectores frase dos
             # [Pseudo: 6.a.iv ] Calcular distancia
+            alignment=word_alignment(model,phr1,phr2,opts)
+            verbose2(alignment)
+            phr1=[w for w,w2,d in alignment if w2]
+            phr2=[w2 for w,w2,d in alignment if w2]
             num=distance(model,phr1,phr2,opts)
             # Se mapea resultado de distancia a score semeval 
             num=method.predict(num)
