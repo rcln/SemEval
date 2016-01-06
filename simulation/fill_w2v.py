@@ -15,21 +15,38 @@ import requests
 import json
 import pickle
 verbose = lambda *a: None 
+verbose2 = lambda *a: None 
+re_words=re.compile(r'\W')
 
-
-def preprocessing(phr1,phr2):
+def preprocessing(phr1,phr2,opts={}):
+    verbose2('Preprocessing...')
+    verbose2('Phrase 1:',phr1)
+    verbose2('Phrase 2:',phr2)
     if opts.preprocessing=="nltk-tokenise":
         phr1=preprocessing_nltk_tokenise(phr1)
         phr2=preprocessing_nltk_tokenise(phr2)
+    if opts.preprocessing=="nltk-tokenise-filter":
+        phr1=preprocessing_nltk_tokenise(phr1)
+        phr1=[w for w in phr1 if not re_words.match(w)
+                                and len(w)>0]
+        phr2=preprocessing_nltk_tokenise(phr2)
+        phr2=[w for w in phr2 if not re_words.match(w)
+                                and len(w)>0]
+    if opts.preprocessing=="re":
+        phr1=re_words.split(phr1.lower())
+        phr1=[w for w in phr1 if len(w)>0]
+        phr2=re_words.split(phr2.lower())
+        phr2=[w for w in phr2 if len(w)>0]
     # PARA AGREGAR UNA OPCION DE PREPROCESADO MÁS SEGUIR
     # if opts.preprocessing=="nombre":
     #   phr1=nombre_funcion_en_utils(phr1)
     #   phr2=nombre_funcion_en_utils(phr2)
-    
+    verbose2('Tokens phrase 1:',phr1)
+    verbose2('Tokens phrase 2:',phr2)
     return phr1,phr2
 
 
-def distance(model,phr1,phr2):
+def distance(model,phr1,phr2,opts={}):
     # primero se calcula los vectores
     if opts.phrasevector=="none":
         pass
@@ -88,11 +105,21 @@ if __name__ == "__main__":
     p.add_argument("-v", "--verbose",
                 action="store_true", dest="verbose",
                 help="Verbose mode [Off]")
+    p.add_argument("-vv", "--verbose-extra",
+                action="store_true", dest="verbose2",
+                help="Verbose mode [Off]")
+ 
     opts = p.parse_args()
 
     if opts.verbose:
         def verbose(*args):
             print " ".join([str(a) for a in args])
+
+    if opts.verbose2:
+        def verbose2(*args):
+            print " ".join([str(a) for a in args])
+
+
 
     # [Pseudo: 1] Se cargan datos de entrenamiento 
     train_data=[]
@@ -123,11 +150,11 @@ if __name__ == "__main__":
         # [Pseudo: 4.a ] Por cada frase de corpos de entrenamiento
         for phr1,phr2 in phrases:
             # [Pseudo: 4.a.i ] Preprocesamiento
-            phr1,phr2=preprocessing(phr1,phr2)
+            phr1,phr2=preprocessing(phr1,phr2,opts)
             # [Pseudo: 4.a.ii ] Sumar vectores frase uno
             # [Pseudo: 4.a.iii ] Sumar vectores frase dos
             # [Pseudo: 4.a.iv ] Calcular distancia
-            num=distance(model,phr1,phr2)
+            num=distance(model,phr1,phr2,opts)
             train_output[filename_old].append(num)
 
     # [Pseudo: 5 ] Entrenar regresor
@@ -150,11 +177,11 @@ if __name__ == "__main__":
         # [Pseudo:66.a ] Por cada frase de corpos de prueba
         for phr1,phr2 in phrases:
             # [Pseudo: 6.a.i ] Preprocesamiento
-            phr1,phr2=preprocessing(phr1,phr2)
+            phr1,phr2=preprocessing(phr1,phr2,opts)
             # [Pseudo: 6.a.ii ] Sumar vectores frase uno
             # [Pseudo: 6.a.iii ] Sumar vectores frase dos
             # [Pseudo: 6.a.iv ] Calcular distancia
-            num=distance(model,phr1,phr2)
+            num=distance(model,phr1,phr2,opts)
             # Se mapea resultado de distancia a score semeval 
             num=method.predict(num)
             print >> fn, "{0:1.1f}".format(num[0])

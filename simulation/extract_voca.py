@@ -11,8 +11,8 @@ from scipy.spatial.distance import cosine
 import requests
 import json
 import nltk, re, pprint
-from nltk import word_tokenize
 import pickle 
+from fill_w2v import preprocessing
 
 verbose = lambda *a: None 
 
@@ -33,6 +33,9 @@ if __name__ == "__main__":
     p.add_argument("--model",default='data/GoogleNews-vectors-negative300.bin', type=str,
                 action="store", dest="model",
                 help="Word2vec model to use")
+    p.add_argument("--preprocessing",default='nltk-tokenise', type=str,
+                action="store", dest="preprocessing",
+                help="Preprocessing to do on the phrases")
     p.add_argument("--year",default='2015', type=str,
                 action="store", dest="year",
                 help="Year to evaluate")
@@ -67,25 +70,24 @@ if __name__ == "__main__":
         filename_old=filename.replace('input', 'gs')
         train_output[filename_old]=[]
         for phr1,phr2 in phrases:
-            words= word_tokenize(phr1)
-            for word in words:
-                if DATA.has_key(word):
-                    continue
-                else:
-                    try:
-        if opts.use_local_model:
-                        DATA[word]=model[word]
-                    except KeyError:
-                        DATA[word]=np.zeros(300)
-            words= word_tokenize(phr2)
-            for word in words:
+            words1= preprocessing(model,phr1,phr2,opts)
+            for word in words1:
                 if DATA.has_key(word):
                     continue
                 else:
                     try:
                         DATA[word]=model[word]
                     except KeyError:
-                        DATA[word]=np.zeros(300)
+                        DATA[word]=np.zeros(300)+0.25
+            words2= word_tokenize(phr2)
+            for word in words2:
+                if DATA.has_key(word):
+                    continue
+                else:
+                    try:
+                        DATA[word]=model[word]
+                    except KeyError:
+                        DATA[word]=np.zeros(300)+0.25
                                         
 
 
@@ -106,7 +108,7 @@ if __name__ == "__main__":
                     try:
                         DATA[word]=model[word]
                     except KeyError:
-                        DATA[word]=np.zeros(300)
+                        DATA[word]=np.zeros(300)+0.25
             words= word_tokenize(phr2)
             for word in words:
                 if DATA.has_key(word):
@@ -115,7 +117,7 @@ if __name__ == "__main__":
                     try:
                         DATA[word]=model[word]
                     except KeyError:
-                        DATA[word]=np.zeros(300)
+                        DATA[word]=np.zeros(300)+0.25
  
     
     with open("model.data",'wb') as idxf:

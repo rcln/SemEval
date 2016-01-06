@@ -53,11 +53,7 @@ $ pip install -U scikit-learn
 
 $ mkdir output
 
-2) Let <data_dir> = english_testbed/data/<year> , where <year> is the year of the data
-   desired to be executed.
-
-
-4) Finally, run the code as following:
+2) Finally, run the code as following:
 
 $ python simulation/fill_w2v.py english_testbed/data/<year>/ output/ --year <year>
 

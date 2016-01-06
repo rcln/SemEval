@@ -8,9 +8,9 @@ def vector_sum(model,phr):
     for word in phr:
         try:
             acc1+=model[word]
-            nacc1+=1
-        except KeyError:
-            pass
+        except:
+            acc1+=np.zeros(300)+0.25
+        nacc1+=1
     if nacc1>0:
         return acc1/nacc1
     else:

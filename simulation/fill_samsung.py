@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8
 
-
 # SE IMPORTAN LAS LIBRERIAS
 import argparse
 import time
@@ -10,50 +9,15 @@ import random
 from utils import * 
 from collections import Counter
 from distances_semeval import *
+from fill_w2v import *
 from scipy.spatial.distance import cosine
 import requests
 import json
 import pickle
+import re
+from aligments import *
 verbose = lambda *a: None 
 
-
-def preprocessing(phr1,phr2):
-    if opts.preprocessing=="nltk-tokenise":
-        phr1=preprocessing_nltk_tokenise(phr1)
-        phr2=preprocessing_nltk_tokenise(phr2)
-    # PARA AGREGAR UNA OPCION DE PREPROCESADO MÁS SEGUIR
-    # if opts.preprocessing=="nombre":
-    #   phr1=nombre_funcion_en_utils(phr1)
-    #   phr2=nombre_funcion_en_utils(phr2)
-    
-    return phr1,phr2
-
-
-def distance(model,phr1,phr2):
-    # primero se calcula los vectores
-    if opts.phrasevector=="none":
-        pass
-    if opts.phrasevector=="sum":
-        # [Pseudo: 4.a.ii ] Sumar vectores frase uno
-        vec1=vector_sum(model,phr1)
-        # [Pseudo: 4.a.iii ] Sumar vectores frase dos
-        vec2=vector_sum(model,phr2)
-    # PARA AGREGAR UNA OPCION DE CALCULO DE VECTOR MÁS SEGUIR
-    # if opts.phrasevector=="nombre":
-    #   VEC1=nombre_funcion_en_utils(phr1)
-    #   VEC2=nombre_funcion_en_utils(phr2)
-    
-
-    # Segundo se calcula la medida de distancia
-    # [Pseudo: 4.a.iv ] Calcular distancia
-    if opts.distance=="cosine":
-        num=distances_cosine(vec1,vec2)
-    # PARA AGREGAR UNA DISTANCIA MÁS SEGUIR
-    # if opts.distance=="nombre"
-    #   num=nombre_funcion_en_distances_semeval(model,phr1,phr2)
-
-    num=np.nan_to_num(num)
-    return num
 
 if __name__ == "__main__":
     #Las opciones de línea de comando
@@ -88,10 +52,17 @@ if __name__ == "__main__":
     p.add_argument("-v", "--verbose",
                 action="store_true", dest="verbose",
                 help="Verbose mode [Off]")
+    p.add_argument("-vv", "--verbose-extra",
+                action="store_true", dest="verbose2",
+                help="Verbose mode [Off]")
     opts = p.parse_args()
 
     if opts.verbose:
         def verbose(*args):
+            print " ".join([str(a) for a in args])
+
+    if opts.verbose2:
+        def verbose2(*args):
             print " ".join([str(a) for a in args])
 
     # [Pseudo: 1] Se cargan datos de entrenamiento 
@@ -112,7 +83,6 @@ if __name__ == "__main__":
     with open(opts.model,'rb') as idxf:
         model = pickle.load(idxf)
 
-
     ## Se itera sobre corpus, frases
     train_output={}
 
@@ -123,11 +93,14 @@ if __name__ == "__main__":
         # [Pseudo: 4.a ] Por cada frase de corpos de entrenamiento
         for phr1,phr2 in phrases:
             # [Pseudo: 4.a.i ] Preprocesamiento
-            phr1,phr2=preprocessing(phr1,phr2)
+            phr1,phr2=preprocessing(phr1,phr2,opts)
             # [Pseudo: 4.a.ii ] Sumar vectores frase uno
             # [Pseudo: 4.a.iii ] Sumar vectores frase dos
             # [Pseudo: 4.a.iv ] Calcular distancia
-            num=distance(model,phr1,phr2)
+            num=distance(model,phr1,phr2,opts)
+            alignment=word_alignment(model,phr1,phr2,opts)
+            verbose2(alignment)
+            verbose2(alignment2words(alignment,phr1,phr2))
             train_output[filename_old].append(num)
 
     # [Pseudo: 5 ] Entrenar regresor
@@ -150,11 +123,11 @@ if __name__ == "__main__":
         # [Pseudo:66.a ] Por cada frase de corpos de prueba
         for phr1,phr2 in phrases:
             # [Pseudo: 6.a.i ] Preprocesamiento
-            phr1,phr2=preprocessing(phr1,phr2)
+            phr1,phr2=preprocessing(phr1,phr2,opts)
             # [Pseudo: 6.a.ii ] Sumar vectores frase uno
             # [Pseudo: 6.a.iii ] Sumar vectores frase dos
             # [Pseudo: 6.a.iv ] Calcular distancia
-            num=distance(model,phr1,phr2)
+            num=distance(model,phr1,phr2,opts)
             # Se mapea resultado de distancia a score semeval 
             num=method.predict(num)
             print >> fn, "{0:1.1f}".format(num[0])
