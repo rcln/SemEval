@@ -10,6 +10,7 @@ import random
 from utils import * 
 from collections import Counter
 from distances_semeval import *
+from fill_w2v import *
 from scipy.spatial.distance import cosine
 import requests
 import json
@@ -19,44 +20,44 @@ import sys
 verbose = lambda *a: None 
 
 
-def preprocessing(phr1,phr2):
-    if opts.preprocessing=="nltk-tokenise":
-        phr1=preprocessing_nltk_tokenise(phr1)
-        phr2=preprocessing_nltk_tokenise(phr2)
-    # PARA AGREGAR UNA OPCION DE PREPROCESADO MÁS SEGUIR
-    # if opts.preprocessing=="nombre":
-    #   phr1=nombre_funcion_en_utils(phr1)
-    #   phr2=nombre_funcion_en_utils(phr2)
-    
-    return phr1,phr2
+#def preprocessing(phr1,phr2):
+#    if opts.preprocessing=="nltk-tokenise":
+#        phr1=preprocessing_nltk_tokenise(phr1)
+#        phr2=preprocessing_nltk_tokenise(phr2)
+#    # PARA AGREGAR UNA OPCION DE PREPROCESADO MÁS SEGUIR
+#    # if opts.preprocessing=="nombre":
+#    #   phr1=nombre_funcion_en_utils(phr1)
+#    #   phr2=nombre_funcion_en_utils(phr2)
+#    
+#    return phr1,phr2
 
 
-def distance(model,phr1,phr2):
-    # primero se calcula los vectores
-    if opts.phrasevector=="none":
-        pass
-    if opts.phrasevector=="sum":
-        # [Pseudo: 4.a.ii ] Sumar vectores frase uno
-        vec1=vector_sum(model,phr1)
-        # [Pseudo: 4.a.iii ] Sumar vectores frase dos
-        vec2=vector_sum(model,phr2)
-    # PARA AGREGAR UNA OPCION DE CALCULO DE VECTOR MÁS SEGUIR
-    # if opts.phrasevector=="nombre":
-    #   VEC1=nombre_funcion_en_utils(phr1)
-    #   VEC2=nombre_funcion_en_utils(phr2)
-    
-
-    # Segundo se calcula la medida de distancia
-    # [Pseudo: 4.a.iv ] Calcular distancia
-    if opts.distance=="cosine":
-        num=1-distances_cosine(vec1,vec2)
-    # PARA AGREGAR UNA DISTANCIA MÁS SEGUIR
-    # if opts.distance=="nombre"
-    #   num=nombre_funcion_en_distances_semeval(model,phr1,phr2)
-
-    num=np.nan_to_num(num)
-    return num
-
+#def distance(model,phr1,phr2):
+#    # primero se calcula los vectores
+#    if opts.phrasevector=="none":
+#        pass
+#    if opts.phrasevector=="sum":
+#        # [Pseudo: 4.a.ii ] Sumar vectores frase uno
+#        vec1=vector_sum(model,phr1)
+#        # [Pseudo: 4.a.iii ] Sumar vectores frase dos
+#        vec2=vector_sum(model,phr2)
+#    # PARA AGREGAR UNA OPCION DE CALCULO DE VECTOR MÁS SEGUIR
+#    # if opts.phrasevector=="nombre":
+#    #   VEC1=nombre_funcion_en_utils(phr1)
+#    #   VEC2=nombre_funcion_en_utils(phr2)
+#    
+#
+#    # Segundo se calcula la medida de distancia
+#    # [Pseudo: 4.a.iv ] Calcular distancia
+#    if opts.distance=="cosine":
+#        num=1-distances_cosine(vec1,vec2)
+#    # PARA AGREGAR UNA DISTANCIA MÁS SEGUIR
+#    # if opts.distance=="nombre"
+#    #   num=nombre_funcion_en_distances_semeval(model,phr1,phr2)
+#
+#    num=np.nan_to_num(num)
+#    return num
+#
 def align(model,phr1,phr2):
     if opts.align_method=="localmax":
         return align_localmax(model,phr1,phr2)
@@ -253,7 +254,7 @@ if __name__ == "__main__":
             counter=counter+1
             print_progress(counter, count_phrases)
             # [Pseudo: 4.a.i ] Preprocesamiento
-            phr1,phr2=preprocessing(phr1,phr2)
+            phr1,phr2=preprocessing(phr1,phr2,opts)
             # [Pseudo: 4.a.ii ] Sumar vectores frase uno
             # [Pseudo: 4.a.iii ] Sumar vectores frase dos
             # [Pseudo: 4.a.iv ] Calcular distancia
@@ -290,7 +291,7 @@ if __name__ == "__main__":
             counter=counter+1
             print_progress(counter, count_phrases)
             # [Pseudo: 6.a.i ] Preprocesamiento
-            phr1,phr2=preprocessing(phr1,phr2)
+            phr1,phr2=preprocessing(phr1,phr2,opts)
             # [Pseudo: 6.a.ii ] Sumar vectores frase uno
             # [Pseudo: 6.a.iii ] Sumar vectores frase dos
             # [Pseudo: 6.a.iv ] Calcular distancia

@@ -78,7 +78,7 @@ if __name__ == "__main__":
                     try:
                         DATA[word]=model[word]
                     except KeyError:
-                        DATA[word]=np.zeros(300)+0.25
+                        DATA[word]=np.zeros(300)+0.025
             for word in words2:
                 if DATA.has_key(word):
                     continue
@@ -86,7 +86,7 @@ if __name__ == "__main__":
                     try:
                         DATA[word]=model[word]
                     except KeyError:
-                        DATA[word]=np.zeros(300)+0.25
+                        DATA[word]=np.zeros(300)+0.025
                                         
 
 
@@ -107,7 +107,7 @@ if __name__ == "__main__":
                     try:
                         DATA[word]=model[word]
                     except KeyError:
-                        DATA[word]=np.zeros(300)+0.25
+                        DATA[word]=np.zeros(300)+0.025
             for word in words2:
                 if DATA.has_key(word):
                     continue
@@ -115,7 +115,7 @@ if __name__ == "__main__":
                     try:
                         DATA[word]=model[word]
                     except KeyError:
-                        DATA[word]=np.zeros(300)+0.25
+                        DATA[word]=np.zeros(300)+0.025
  
     
     with open("model.data",'wb') as idxf:

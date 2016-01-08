@@ -154,8 +154,10 @@ if __name__ == "__main__":
             # [Pseudo: 4.a.ii ] Sumar vectores frase uno
             # [Pseudo: 4.a.iii ] Sumar vectores frase dos
             # [Pseudo: 4.a.iv ] Calcular distancia
-            num=distance(model,phr1,phr2,opts)
-            train_output[filename_old].append(num)
+            num1=distance(model,phr1,phr2,opts)
+            num2=distance(model,phr2,phr1,opts)
+            res=(num1+num2)/(len(phr1)+len(phr2))
+            train_output[filename_old].append(res)
 
     # [Pseudo: 5 ] Entrenar regresor
     verbose('Training model')
@@ -181,9 +183,11 @@ if __name__ == "__main__":
             # [Pseudo: 6.a.ii ] Sumar vectores frase uno
             # [Pseudo: 6.a.iii ] Sumar vectores frase dos
             # [Pseudo: 6.a.iv ] Calcular distancia
-            num=distance(model,phr1,phr2,opts)
+            num1=distance(model,phr1,phr2,opts)
+            num2=distance(model,phr2,phr1,opts)
+            res=(num1+num2)/(len(phr1)+len(phr2))
             # Se mapea resultado de distancia a score semeval 
-            num=method.predict(num)
+            num=method.predict(res)
             print >> fn, "{0:1.1f}".format(num[0])
         filenames_sys.append(filename)
 
