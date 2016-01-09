@@ -125,22 +125,17 @@ def align_localmax(model,phr1,phr2):
     aligns = []
     for word1 in words1:
         distances=[]
-        vec1=[]
-        vec2=[]
         try:
-            vec1=model[word1]
+            model[word1]
         except:
             continue
         for word2 in words2:
             try:
-                vec2=model[word2]
+                model[word2]
             except:
                 distances.append(0.0) # preserve indexes 
                 continue
-            if opts.distance=="cosine":
-                num=1-distances_cosine(vec1,vec2) # cosine distance for word2vec
-            else:
-                num=model.similarity(word1,word2)                
+            num=similarity(model,[word1],[word2],opts) # cosine distance for word2vec
             distances.append(np.nan_to_num(num))
             # print "{0} {1}: {2}".format(repr(word1),repr(word2),num)
 

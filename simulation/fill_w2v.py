@@ -15,6 +15,7 @@ import requests
 import json
 import pickle
 from nltk.corpus import stopwords
+from scipy.spatial.distance import *
 stop = stopwords.words('english')
 verbose = lambda *a: None 
 verbose2 = lambda *a: None 
@@ -68,14 +69,26 @@ def distance(model,phr1,phr2,opts={}):
 
     # Segundo se calcula la medida de distancia
     # [Pseudo: 4.a.iv ] Calcular distancia
-    if opts.distance=="cosine":
-        num=distances_cosine(vec1,vec2)
+    # Default cosine
+    num=cosine(vec1,vec2)
+    if opts.distance=="correlation":
+        num=correlation(vec1,vec2)
+    if opts.distance=="euclidean":
+        num=euclidean(vec1,vec2)
+    if opts.distance=="seuclidean":
+        num=euclidean(vec1,vec2)
+ 
     # PARA AGREGAR UNA DISTANCIA MÁS SEGUIR
     # if opts.distance=="nombre"
     #   num=nombre_funcion_en_distances_semeval(model,phr1,phr2)
 
     num=np.nan_to_num(num)
     return num
+
+
+def similarity(model,phr1,phr2,opts={}):
+    return 1-distance(model,phr1,phr2,opts)
+
 
 if __name__ == "__main__":
     #Las opciones de línea de comando
@@ -99,6 +112,9 @@ if __name__ == "__main__":
     p.add_argument("--model",default='data/model.data', type=str,
                 action="store", dest="model",
                 help="Filename of the model to use (it is a python dictionary)")
+    p.add_argument("--no-stopwords",
+                action="store_true", dest="nostop",default=False,
+                help="Not to use stopwords [Off]")
     p.add_argument("--year",default='2015', type=str,
                 action="store", dest="year",
                 help="Year to evaluate")

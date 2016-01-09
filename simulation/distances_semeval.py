@@ -1,4 +1,3 @@
-from scipy.spatial.distance import cosine
 import numpy as np
 
 # Calculates de distance by summing all word vectors
@@ -16,7 +15,6 @@ def vector_sum(model,phr):
     else:
         return np.zeros(300)
 
-# Calculates de distance by summing all word vectors
-def distances_cosine(vec1,vec2):
-    return cosine(vec1,vec2)
+
+
 

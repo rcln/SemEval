@@ -44,6 +44,9 @@ if __name__ == "__main__":
     p.add_argument("--year",default='2015', type=str,
                 action="store", dest="year",
                 help="Year to evaluate")
+    p.add_argument("--no-stopwords",
+                action="store_true", dest="nostop",default=False,
+                help="Not to use stopwords [Off]")
     p.add_argument("--script-eval",default=[
         "perl",
         "english_testbed/data/2015/evaluate/correlation-noconfidence.pl"],
