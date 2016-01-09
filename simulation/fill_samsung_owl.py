@@ -18,6 +18,7 @@ import pickle
 import numpy as np
 import sys
 verbose = lambda *a: None 
+verbose2 = lambda *a: None 
 
 
 #def preprocessing(phr1,phr2):
@@ -195,8 +196,14 @@ if __name__ == "__main__":
         "english_testbed/data/2015/evaluate/correlation-noconfidence.pl"],
                 action="store", dest="cmd",
                 help="Verbose mode [Off]")
+    p.add_argument("--no-stopwords",
+                action="store_true", dest="nostop",default=False,
+                help="Not to use stopwords [Off]")
     p.add_argument("-v", "--verbose",
                 action="store_true", dest="verbose",
+                help="Verbose mode [Off]")
+    p.add_argument("-vv", "--verbose-extra",
+                action="store_true", dest="verbose2",
                 help="Verbose mode [Off]")
 
     # ALIGNMENT ------
@@ -218,6 +225,11 @@ if __name__ == "__main__":
     if opts.verbose:
         def verbose(*args):
             print " ".join([str(a) for a in args])
+
+    if opts.verbose2:
+        def verbose2(*args):
+            print " ".join([str(a) for a in args])
+
 
     # [Pseudo: 1] Se cargan datos de entrenamiento 
     train_data=[]

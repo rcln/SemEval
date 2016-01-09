@@ -14,6 +14,8 @@ from scipy.spatial.distance import cosine
 import requests
 import json
 import pickle
+from nltk.corpus import stopwords
+stop = stopwords.words('english')
 verbose = lambda *a: None 
 verbose2 = lambda *a: None 
 re_words=re.compile(r'\W')
@@ -41,6 +43,9 @@ def preprocessing(phr1,phr2,opts={}):
     # if opts.preprocessing=="nombre":
     #   phr1=nombre_funcion_en_utils(phr1)
     #   phr2=nombre_funcion_en_utils(phr2)
+    if not opts.nostop:
+        phr1=[w for w in phr1 if not w in stop]
+        phr2=[w for w in phr2 if not w in stop]
     verbose2('Tokens phrase 1:',phr1)
     verbose2('Tokens phrase 2:',phr2)
     return phr1,phr2
@@ -102,6 +107,9 @@ if __name__ == "__main__":
         "english_testbed/data/2015/evaluate/correlation-noconfidence.pl"],
                 action="store", dest="cmd",
                 help="Verbose mode [Off]")
+    p.add_argument("--no-stop-words",
+                action="store_true", dest="nostop",default=False,
+                help="Not to use stopwords [Off]")
     p.add_argument("-v", "--verbose",
                 action="store_true", dest="verbose",
                 help="Verbose mode [Off]")
@@ -154,10 +162,8 @@ if __name__ == "__main__":
             # [Pseudo: 4.a.ii ] Sumar vectores frase uno
             # [Pseudo: 4.a.iii ] Sumar vectores frase dos
             # [Pseudo: 4.a.iv ] Calcular distancia
-            num1=distance(model,phr1,phr2,opts)
-            num2=distance(model,phr2,phr1,opts)
-            res=(num1+num2)/(len(phr1)+len(phr2))
-            train_output[filename_old].append(res)
+            num=distance(model,phr1,phr2,opts)
+            train_output[filename_old].append(num)
 
     # [Pseudo: 5 ] Entrenar regresor
     verbose('Training model')
@@ -183,11 +189,9 @@ if __name__ == "__main__":
             # [Pseudo: 6.a.ii ] Sumar vectores frase uno
             # [Pseudo: 6.a.iii ] Sumar vectores frase dos
             # [Pseudo: 6.a.iv ] Calcular distancia
-            num1=distance(model,phr1,phr2,opts)
-            num2=distance(model,phr2,phr1,opts)
-            res=(num1+num2)/(len(phr1)+len(phr2))
+            num=distance(model,phr1,phr2,opts)
             # Se mapea resultado de distancia a score semeval 
-            num=method.predict(res)
+            num=method.predict(num)
             print >> fn, "{0:1.1f}".format(num[0])
         filenames_sys.append(filename)
 
