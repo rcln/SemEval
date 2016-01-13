@@ -83,7 +83,7 @@ def distance(model,phr1,phr2,opts={}):
     #   num=nombre_funcion_en_distances_semeval(model,phr1,phr2)
 
     num=np.nan_to_num(num)
-    return num
+    return [num]
 
 
 def similarity(model,phr1,phr2,opts={}):
@@ -132,7 +132,12 @@ if __name__ == "__main__":
     p.add_argument("-vv", "--verbose-extra",
                 action="store_true", dest="verbose2",
                 help="Verbose mode [Off]")
- 
+    p.add_argument("--filter_train",default='.',
+                action="store", dest="filter_train",type=str,
+                help="Regular expression to filter the train")
+    p.add_argument("--filter_test",default='.',
+                action="store", dest="filter_test",type=str,
+                help="Regular expression to filter the test")
     opts = p.parse_args()
 
     if opts.verbose:
@@ -148,14 +153,14 @@ if __name__ == "__main__":
     # [Pseudo: 1] Se cargan datos de entrenamiento 
     train_data=[]
     verbose('Loading training')
-    train_data=load_all_phrases(os.path.join(opts.DIR,'train'))
+    train_data=load_all_phrases(os.path.join(opts.DIR,'train'),filter=opts.filter_train)
     verbose('Total train phrases',sum([len(d) for n,d in train_data]))
     train_gs = dict(load_all_gs(os.path.join(opts.DIR,'train')))
     verbose('Total train gs',sum([len(d) for n,d in train_gs.iteritems()]))
 
     # [Pseudo: 2] Se cargan datos de prueba
     verbose('Loading testing')
-    test_data=load_all_phrases(os.path.join(opts.DIR,'test'))
+    test_data=load_all_phrases(os.path.join(opts.DIR,'test'),filter=opts.filter_test)
     verbose('Total test phrases',sum([len(d) for n,d in test_data]))
 
     # [Pseudo: 3 ] Se cargan vectores por palabras

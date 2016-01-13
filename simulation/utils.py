@@ -41,9 +41,12 @@ def load_gs_from_file(dirname,filename):
     return gs
 
 
-def load_all_phrases(dirname):
+def load_all_phrases(dirname,filter="*"):
     all_phrases=[]
+    filter_dirs=re.compile(filter)
     for filename in os.listdir(dirname):
+        if not filter_dirs.search(filename):
+            continue
         phrases=load_phrases_from_file(dirname,filename)
         if len(phrases)>0:
             all_phrases.append((filename,phrases))
@@ -108,7 +111,7 @@ def train_model_srv(train_gs, train_output,args={'kernel':'linear'}):
 
     score_out=np.nan_to_num(score_out)
 
-    svr_lin.fit([[x] for x in score_out], score_gs)
+    svr_lin.fit([x for x in score_out], score_gs)
     
     return svr_lin    
 

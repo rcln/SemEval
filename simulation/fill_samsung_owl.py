@@ -115,12 +115,13 @@ def sts_bidirectional(model,phr1,phr2):
         score2 = score2 / 2*len(aligns)
 
     # print "STS-->" + str(score1+score2)
-    return score1+score2
+    return [score1,score2,score1+score2]
 
 # align words using local maximum (i.e. for each word1 get max similarity in words2)
 def align_localmax(model,phr1,phr2):
     words1 = phr1;
     words2 = phr2;
+    words2_ = [w for w in words2]
 
     aligns = []
     for word1 in words1:
@@ -129,7 +130,7 @@ def align_localmax(model,phr1,phr2):
             model[word1]
         except:
             continue
-        for word2 in words2:
+        for word2 in words2_:
             try:
                 model[word2]
             except:
@@ -137,7 +138,7 @@ def align_localmax(model,phr1,phr2):
                 continue
             num=similarity(model,[word1],[word2],opts) # cosine distance for word2vec
             distances.append(np.nan_to_num(num))
-            # print "{0} {1}: {2}".format(repr(word1),repr(word2),num)
+            #print "{0} {1}: {2}".format(repr(word1),repr(word2),num)
 
         if distances: # not empty            
             idx=np.argmax(distances)
@@ -151,10 +152,12 @@ def align_localmax(model,phr1,phr2):
 
 
             if(isaligned):
-                aligns.append([word1, words2[idx], distances[idx]])
+                aligns.append([word1, words2_[idx], distances[idx]])
                 # remove aligned target word
-                words2.pop(idx)    
-
+                words2_.pop(idx)    
+    #print "Phrase 1:", phr1
+    #print "Phrase 2:", phr2
+    #print "Aligns  :", aligns
     return aligns
 
 def print_progress(counter, count_phrases):
@@ -186,6 +189,12 @@ if __name__ == "__main__":
     p.add_argument("--year",default='2015', type=str,
                 action="store", dest="year",
                 help="Year to evaluate")
+    p.add_argument("--filter_train",default='.',
+                action="store", dest="filter_train",type=str,
+                help="Regular expression to filter the train")
+    p.add_argument("--filter_test",default='.',
+                action="store", dest="filter_test",type=str,
+                help="Regular expression to filter the test")
     p.add_argument("--script-eval",default=[
         "perl",
         "english_testbed/data/2015/evaluate/correlation-noconfidence.pl"],
@@ -229,14 +238,14 @@ if __name__ == "__main__":
     # [Pseudo: 1] Se cargan datos de entrenamiento 
     train_data=[]
     verbose('Loading training')
-    train_data=load_all_phrases(os.path.join(opts.DIR,'train'))
+    train_data=load_all_phrases(os.path.join(opts.DIR,'train'),filter=opts.filter_train)
     verbose('Total train phrases',sum([len(d) for n,d in train_data]))
     train_gs = dict(load_all_gs(os.path.join(opts.DIR,'train')))
     verbose('Total train gs',sum([len(d) for n,d in train_gs.iteritems()]))
 
     # [Pseudo: 2] Se cargan datos de prueba
     verbose('Loading testing')
-    test_data=load_all_phrases(os.path.join(opts.DIR,'test'))
+    test_data=load_all_phrases(os.path.join(opts.DIR,'test'),filter=opts.filter_test)
     verbose('Total test phrases',sum([len(d) for n,d in test_data]))
 
     # [Pseudo: 3 ] Se cargan vectores por palabras
