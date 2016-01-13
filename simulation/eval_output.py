@@ -35,12 +35,5 @@ if __name__ == "__main__":
             in os.listdir(opts.SYSDIR) if filename.endswith('.txt')]
 
     total=[]
-    for corpus,res in  eval_all(opts.cmd,opts.GSDIR,filenames_sys):
+    for corpus,res in  eval_all_local(opts.cmd,opts.GSDIR,filenames_sys, 1.5):
         print "{0:<40}: {1:<1.4f}".format(corpus,abs(res))
-
-        
-
-    
-
-    
-

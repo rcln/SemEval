@@ -9,6 +9,7 @@ from sklearn.svm import SVR
 import codecs
 import nltk, re, pprint
 from nltk import word_tokenize
+from math import sqrt
 
 
 re_file=re.compile('.*\.input\..*\.txt$')
@@ -58,13 +59,12 @@ def load_all_gs(dirname):
     return all_gs
 
 
-def eval(cmd,filename_gs,filename_sys):
-    cmd=cmd+[filename_gs,filename_sys]    
+def eval(cmd,filename_gs,filename_sys):    
+    cmd=cmd+[filename_gs,filename_sys] 
     p = Popen(cmd,  stdout=PIPE, stderr=PIPE)
     stdout, stderr = p.communicate()
     res=stdout.replace('Pearson: ','').strip()    
     return float(res)
-
 
 def infer_test_file(dirname_gs,filename_sys):
     filename=os.path.basename(filename_sys)
@@ -114,3 +114,142 @@ def train_model_srv(train_gs, train_output,args={'kernel':'linear'}):
 
 def preprocessing_nltk_tokenise(phrase):
     return word_tokenize(phrase)
+
+
+def eval_all_local(cmd,dirname_gs,filenames,standout_threshold):
+    res=[]
+    total=[]
+    with tempfile.NamedTemporaryFile() as file_gs, tempfile.NamedTemporaryFile() as file_sys:             
+        for filename_sys in filenames:
+            filename_gs = infer_test_file(dirname_gs,filename_sys)
+            res.append((os.path.basename(filename_sys),eval_local(cmd,filename_gs,filename_sys)))
+            total.append(res[-1][1])
+            analyze_pairs(filename_gs,filename_sys, standout_threshold)
+            with open(filename_sys) as infile:
+                for line in infile:
+                    file_sys.write(line)
+            with open(filename_gs) as infile:
+                for line in infile:
+                    file_gs.write(line)
+        ##res.append(('All',eval(cmd, file_gs.name, file_sys.name)))
+        print res
+        res.append(('Mean',np.mean(total)))
+    return res
+
+def eval_local(cmd,file_gs, file_sys):
+    filtered=[]
+    a=[]
+    b=[]
+    c=[]
+
+    i_gs=0
+    i=0
+    with open(file_gs) as gs:
+        for score in gs:
+            if len(score.strip())==0:
+                filtered.append(1)
+            else:
+                filtered.append(0)
+                a.append(float(score))
+                i+=1
+                # print str(i) + "-I->" + score.strip()
+            i_gs+=1
+        
+    i_gs=0
+    j=0 
+    with open(file_sys) as sys:
+        for score in sys:
+            if not filtered[i_gs] :
+                b.append(float(score))
+                c.append(float(100.00))
+                j+=1                
+                # print str(j) + "-O->" + score.strip()
+            i_gs+=1
+
+    if j>0:
+        sumw=0
+
+        sumwy=0;
+        for x in xrange(1,10):
+            pass
+        for y in xrange(0, i-1):
+            sumwy = sumwy + (100 * a[y])
+            sumw = sumw + 100
+        meanyw = sumwy/sumw
+
+        sumwx=0
+        for x in xrange(0, i-1):        
+            sumwx = sumwx + (c[x] * b[x])       
+        meanxw = sumwx/sumw
+
+        sumwxy = 0
+        for x in xrange(0, i-1):        
+            sumwxy = sumwxy + c[x]*(b[x] - meanxw)*(a[x] - meanyw)      
+        covxyw = sumwxy/sumw
+
+        sumwxx = 0
+        for x in xrange(0, i-1):        
+            sumwxx = sumwxx + c[x]*(b[x] - meanxw)*(b[x] - meanxw)
+        covxxw = sumwxx/sumw
+
+        sumwyy = 0
+        for x in xrange(0, i-1):        
+            sumwyy = sumwyy + c[x]*(a[x] - meanyw)*(a[x] - meanyw)  
+        covyyw = sumwyy/sumw
+
+        corrxyw = covxyw/sqrt(covxxw*covyyw)
+        
+        return float("{0:.4f}".format(corrxyw))
+
+
+# standout_threshold = if negative stand out phrase pairs which scores differences are lesser than ..
+# standout_threshold = if positive stand out phrase pairs which scores differences are bigger than ..
+def analyze_pairs(file_gs, file_sys, standout_threshold):
+    if standout_threshold==0.0:
+        return
+
+    filtered=[]
+    a=[]
+    b=[]
+    c=[]
+    idx=[]
+
+    i_gs=0
+    i=0
+    with open(file_gs) as gs:
+        for score in gs:
+            if len(score.strip())==0:
+                filtered.append(1)
+            else:
+                filtered.append(0)
+                a.append(float(score))
+                idx.append(i_gs)
+                i+=1
+                # print str(i) + "-I->" + score.strip()
+            i_gs+=1
+        
+    i_gs=0
+    j=0 
+    with open(file_sys) as sys:
+        for score in sys:
+            if not filtered[i_gs] :
+                b.append(float(score))
+                c.append(float(100.00))
+                j+=1                
+                # print str(j) + "-O->" + score.strip()
+            i_gs+=1
+
+    if j>0:        
+        for x in xrange(0, i-1):
+            report=0
+            diff=abs(a[x]-b[x])            
+            if standout_threshold>0.0:
+                if diff > abs(standout_threshold):
+                    report=1
+            else:
+                if diff < abs(standout_threshold):
+                    report=1
+
+            if report:
+                txt = str(idx[x]) + "-->" + str(a[x]) + "<>" + str(b[x])
+                print txt

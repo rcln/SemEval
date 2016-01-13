@@ -17,6 +17,8 @@ import json
 import pickle
 import numpy as np
 import sys
+from nltk.corpus import wordnet
+
 verbose = lambda *a: None 
 verbose2 = lambda *a: None 
 
