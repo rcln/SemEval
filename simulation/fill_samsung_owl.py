@@ -22,6 +22,7 @@ from nltk.corpus import wordnet
 verbose = lambda *a: None 
 verbose2 = lambda *a: None 
 
+global_aligns=[]
 
 #def preprocessing(phr1,phr2):
 #    if opts.preprocessing=="nltk-tokenise":
@@ -63,7 +64,10 @@ verbose2 = lambda *a: None
 #
 def align(model,phr1,phr2):
     if opts.align_method=="localmax":
-        return align_localmax(model,phr1,phr2)
+        align=align_localmax(model,phr1,phr2)
+        if opts.logxphrase:
+            global_aligns.append(align)
+        return align
     else:
         sys.exit("Error: invalid alignment method")
 
@@ -226,6 +230,10 @@ if __name__ == "__main__":
                 action="store", dest="ooc_penalty",
                 help="Out of Context penalization, default 1.0")
 
+    p.add_argument("--logxphrase",
+                action="store_true", dest="logxphrase",default=False,
+                help="Produce Log for each phrase.. used for analyze outliers [Off]")    
+
     opts = p.parse_args()
 
     if opts.verbose:
@@ -276,6 +284,8 @@ if __name__ == "__main__":
             # [Pseudo: 4.a.ii ] Sumar vectores frase uno
             # [Pseudo: 4.a.iii ] Sumar vectores frase dos
             # [Pseudo: 4.a.iv ] Calcular distancia
+            if opts.logxphrase:
+                global_aligns=[]
             num=sts(model,phr1,phr2)
             train_output[filename_old].append(num)
             # max_sentences = max_sentences - 1
@@ -304,6 +314,8 @@ if __name__ == "__main__":
         bits=filename.split('.')
         filename=os.path.join(opts.OUTPUT,bits[0]+'.output.'+bits[3]+'.txt')
         fn=open(filename,'w')
+        if opts.logxphrase:
+            flog=open(filename[:-3]+"log", "w")
         # [Pseudo:66.a ] Por cada frase de corpos de prueba
         for phr1,phr2 in phrases:
             counter=counter+1
@@ -313,10 +325,14 @@ if __name__ == "__main__":
             # [Pseudo: 6.a.ii ] Sumar vectores frase uno
             # [Pseudo: 6.a.iii ] Sumar vectores frase dos
             # [Pseudo: 6.a.iv ] Calcular distancia
-            num=sts(model,phr1,phr2)
+            if opts.logxphrase:
+                global_aligns=[]
+            num_raw=sts(model,phr1,phr2)
             # Se mapea resultado de distancia a score semeval 
-            num=method.predict(num)
+            num=method.predict(num_raw)
             print >> fn, "{0:1.1f}".format(num[0])
+            if opts.logxphrase:
+                print >> flog, "{0:1.1f}|{1}|{2}|{3}|{4}".format(num[0], num_raw, phr1, phr2, global_aligns)
         filenames_sys.append(filename)
 
     
