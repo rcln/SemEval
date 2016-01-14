@@ -6,6 +6,7 @@ import os
 import random
 from utils import * 
 from collections import Counter
+from fill_samsung_owl import *
 
 verbose = lambda *a: None 
 
@@ -59,8 +60,15 @@ if __name__ == "__main__":
     p.add_argument("--oocpenalty",default=1.0, type=float,
                 action="store", dest="ooc_penalty",
                 help="Out of Context penalization, default 1.0")
+    p.add_argument("--standout_threshold", type=float,
+                action="store", dest="standout_threshold",default=0.0,
+                help="Threshold to stand out phrase pairs (positive = pairs with score difference > than; negative = score difference < than) [0.0]")
+    p.add_argument("--logxphrase",
+                action="store_true", dest="logxphrase",default=False,
+                help="Produce Log for each phrase.. used for analyze outliers [Off]")    
 
-  
+
+
     opts = p.parse_args()
 
     if opts.verbose:
@@ -71,14 +79,6 @@ if __name__ == "__main__":
     filenames_sys=[os.path.join(opts.SYSDIR,filename) for filename 
             in os.listdir(opts.SYSDIR) if filename.endswith('.txt')]
 
-    total=[]
-    for val in eval_all(opts.cmd,opts.GSDIR,filenames_sys,
-            opts=opts):
-        pass
+    eval_all(opts.cmd,opts.GSDIR,filenames_sys,
+            opts=opts)
    
-        
-
-    
-
-    
-

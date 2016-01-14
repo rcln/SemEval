@@ -87,7 +87,8 @@ def distance(model,phr1,phr2,opts={}):
 
 
 def similarity(model,phr1,phr2,opts={}):
-    return 1-distance(model,phr1,phr2,opts)
+    num = distance(model,phr1,phr2,opts)
+    return 1-num
 
 
 if __name__ == "__main__":
