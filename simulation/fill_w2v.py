@@ -83,7 +83,7 @@ def distance(model,phr1,phr2,opts={}):
     #   num=nombre_funcion_en_distances_semeval(model,phr1,phr2)
 
     num=np.nan_to_num(num)
-    return [num]
+    return num
 
 
 def similarity(model,phr1,phr2,opts={}):
@@ -184,7 +184,7 @@ if __name__ == "__main__":
             # [Pseudo: 4.a.iii ] Sumar vectores frase dos
             # [Pseudo: 4.a.iv ] Calcular distancia
             num=distance(model,phr1,phr2,opts)
-            train_output[filename_old].append(num)
+            train_output[filename_old].append([num])
 
     # [Pseudo: 5 ] Entrenar regresor
     verbose('Training model')
@@ -212,16 +212,14 @@ if __name__ == "__main__":
             # [Pseudo: 6.a.iv ] Calcular distancia
             num=distance(model,phr1,phr2,opts)
             # Se mapea resultado de distancia a score semeval 
-            num=method.predict(num)
+            num=method.predict([num])
             print >> fn, "{0:1.1f}".format(num[0])
         filenames_sys.append(filename)
 
     
     # [Pseudo: 7 ] Evaluar
-    for corpus,res in eval_all(opts.cmd,os.path.join(opts.DIR,'test'),
-                filenames_sys):
-        print "{0:<40}: {1:<1.4f}".format(corpus,abs(res))
-   
+    eval_all(opts.cmd,os.path.join(opts.DIR,'test'),
+                filenames_sys,opts=opts)
 
         
 
