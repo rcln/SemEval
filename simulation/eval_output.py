@@ -25,6 +25,11 @@ if __name__ == "__main__":
     p.add_argument("-v", "--verbose",
                 action="store_true", dest="verbose",
                 help="Verbose mode [Off]")
+
+    p.add_argument("--standout_threshold", type=float,
+                action="store", dest="standout_threshold",default=0.0,
+                help="Threshold to stand out phrase pairs (positive = pairs with score difference > than; negative = score difference < than) [0.0]")
+
     opts = p.parse_args()
 
     if opts.verbose:
@@ -36,5 +41,5 @@ if __name__ == "__main__":
             in os.listdir(opts.SYSDIR) if filename.endswith('.txt')]
 
     total=[]
-    for corpus,res in  eval_all_local(opts.cmd,opts.GSDIR,filenames_sys, 1.5):
+    for corpus,res in  eval_all_local(opts.cmd,opts.GSDIR,filenames_sys, opts.standout_threshold):
         print "{0:<40}: {1:<1.4f}".format(corpus,abs(res))

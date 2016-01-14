@@ -9,6 +9,7 @@ from sklearn.svm import SVR
 import codecs
 import nltk, re, pprint
 from nltk import word_tokenize
+import os.path
 from math import sqrt
 
 
@@ -127,7 +128,8 @@ def eval_all_local(cmd,dirname_gs,filenames,standout_threshold):
             filename_gs = infer_test_file(dirname_gs,filename_sys)
             res.append((os.path.basename(filename_sys),eval_local(cmd,filename_gs,filename_sys)))
             total.append(res[-1][1])
-            analyze_pairs(filename_gs,filename_sys, standout_threshold)
+            if standout_threshold != 0.0:
+                analyze_pairs(filename_gs,filename_sys, standout_threshold)
             with open(filename_sys) as infile:
                 for line in infile:
                     file_sys.write(line)
@@ -216,6 +218,7 @@ def analyze_pairs(file_gs, file_sys, standout_threshold):
     b=[]
     c=[]
     idx=[]
+    logs=[]
 
     i_gs=0
     i=0
@@ -233,16 +236,30 @@ def analyze_pairs(file_gs, file_sys, standout_threshold):
         
     i_gs=0
     j=0 
-    with open(file_sys) as sys:
-        for score in sys:
-            if not filtered[i_gs] :
-                b.append(float(score))
-                c.append(float(100.00))
-                j+=1                
-                # print str(j) + "-O->" + score.strip()
-            i_gs+=1
+    file_log=file_sys[:-3]+"log"
+    if os.path.isfile(file_log):
+        with open(file_sys) as sys, open(file_log) as flog:
+            for score, log in zip(sys, flog):
+                if not filtered[i_gs] :
+                    b.append(float(score))
+                    c.append(float(100.00))
+                    logs.append(log)
+                    j+=1                
+                    # print str(j) + "-O->" + score.strip()
+                i_gs+=1        
+    else:
+        with open(file_sys) as sys:
+            for score in sys:
+                if not filtered[i_gs] :
+                    b.append(float(score))
+                    c.append(float(100.00))
+                    j+=1                
+                    # print str(j) + "-O->" + score.strip()
+                i_gs+=1
 
-    if j>0:        
+    if j>0:
+        print "\n\n\n************ Analizing file :: {0} **************\n\n\n".format(file_sys)
+        outliers=0
         for x in xrange(0, i-1):
             report=0
             diff=abs(a[x]-b[x])            
@@ -254,5 +271,13 @@ def analyze_pairs(file_gs, file_sys, standout_threshold):
                     report=1
 
             if report:
-                txt = str(idx[x]) + "-->" + str(a[x]) + "<>" + str(b[x])
+                # txt = str(idx[x]) + "-->" + str(a[x]) + "<>" + str(b[x])
+                outliers +=1
+                txt = str(a[x])
+                if logs:
+                    txt +=  "-->" + logs[x]
                 print txt
+        if standout_threshold > 0.0:
+            print "[{0:1d}] phrase pairs with score differences > {1:1.1f}".format(outliers, standout_threshold)
+        else:
+            print "[{0:1d}] phrase pairs with score differences < {1:1.1f}".format(outliers, standout_threshold)

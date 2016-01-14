@@ -158,7 +158,7 @@ def align_localmax(model,phr1,phr2):
 
 
             if(isaligned):
-                aligns.append([word1, words2_[idx], distances[idx]])
+                aligns.append([word1, words2_[idx], float("{0:.4f}".format(distances[idx])) ])
                 # remove aligned target word
                 words2_.pop(idx)    
     #print "Phrase 1:", phr1
