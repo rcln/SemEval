@@ -62,25 +62,25 @@ global_aligns=[]
 #    num=np.nan_to_num(num)
 #    return num
 #
-def align(model,phr1,phr2):
+def align(model,phr1,phr2,opts={}):
     if opts.align_method=="localmax":
-        align=align_localmax(model,phr1,phr2)
+        align=align_localmax(model,phr1,phr2,opts)
         if opts.logxphrase:
             global_aligns.append(align)
         return align
     else:
         sys.exit("Error: invalid alignment method")
 
-def sts(model,phr1,phr2):
+def sts(model,phr1,phr2,opts={}):
     if opts.sts_method=="bidirectional":
-        return sts_bidirectional(model,phr1,phr2)
+        return sts_bidirectional(model,phr1,phr2,opts)
     if opts.sts_method=="simple":
-        return sts_simple(model,phr1,phr2)
+        return sts_simple(model,phr1,phr2,opts)
     else:
         sys.exit("Error: invalid STS method")
 
-def sts_simple(model,phr1,phr2):
-    aligns = align(model,phr1,phr2)
+def sts_simple(model,phr1,phr2,opts={}):
+    aligns = align(model,phr1,phr2,opts)
     
     # Loop aligns and compute distance
     score = 0;
@@ -95,9 +95,9 @@ def sts_simple(model,phr1,phr2):
 
     return score
 
-def sts_bidirectional(model,phr1,phr2):
+def sts_bidirectional(model,phr1,phr2,opts={}):
     # align dir 1
-    aligns = align(model,phr1,phr2)    
+    aligns = align(model,phr1,phr2,opts)    
     score1 = 0;
     for w1,w2,dist in aligns:
         score1=score1+dist    
@@ -121,7 +121,7 @@ def sts_bidirectional(model,phr1,phr2):
             score2 = score2 - (ooc * opts.ooc_penalty)
         score2 = score2 / 2*len(aligns2)
 
-    penalties=check_in_wordnet([aligns, aligns2])    
+    penalties=check_in_wordnet([aligns, aligns2])
     total_penalty=0
     for pen in penalties:
         total_penalty+=sum(pen)
@@ -133,7 +133,7 @@ def sts_bidirectional(model,phr1,phr2):
     return [(score1-total_penalty),(score2-total_penalty),(score1+score2-total_penalty)]
 
 # align words using local maximum (i.e. for each word1 get max similarity in words2)
-def align_localmax(model,phr1,phr2):
+def align_localmax(model,phr1,phr2,opts):
     words1 = phr1;
     words2 = phr2;
     words2_ = [w for w in words2]
@@ -295,7 +295,7 @@ if __name__ == "__main__":
             # [Pseudo: 4.a.iv ] Calcular distancia
             if opts.logxphrase:
                 global_aligns=[]
-            num=sts(model,phr1,phr2)
+            num=sts(model,phr1,phr2,opts=opts)
             train_output[filename_old].append(num)
             # max_sentences = max_sentences - 1
             # if max_sentences<=0:
@@ -336,7 +336,7 @@ if __name__ == "__main__":
             # [Pseudo: 6.a.iv ] Calcular distancia
             if opts.logxphrase:
                 global_aligns=[]
-            num_raw=sts(model,phr1,phr2)
+            num_raw=sts(model,phr1,phr2,opts)
             # Se mapea resultado de distancia a score semeval 
             num=method.predict(num_raw)
             print >> fn, "{0:1.1f}".format(num[0])
@@ -346,9 +346,8 @@ if __name__ == "__main__":
 
     
     # [Pseudo: 7 ] Evaluar
-    for corpus,res in eval_all(opts.cmd,os.path.join(opts.DIR,'test'),
-                filenames_sys):
-        print "{0:<40}: {1:<1.4f}".format(corpus,abs(res))
+    eval_all(opts.cmd,os.path.join(opts.DIR,'test'),
+                filenames_sys,opts=opts)
    
 
         

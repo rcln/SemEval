@@ -9,6 +9,9 @@ from sklearn.svm import SVR
 import codecs
 import nltk, re, pprint
 from nltk import word_tokenize
+from itertools import izip
+from fill_w2v import *
+from fill_samsung_owl import *
 import os.path
 from math import sqrt
 from nltk.corpus import wordnet as wn
@@ -47,7 +50,7 @@ def load_gs_from_file(dirname,filename):
     return gs
 
 
-def load_all_phrases(dirname,filter="*"):
+def load_all_phrases(dirname,filter="."):
     all_phrases=[]
     filter_dirs=re.compile(filter)
     for filename in os.listdir(dirname):
@@ -85,23 +88,77 @@ def infer_test_file(dirname_gs,filename_sys):
     return filename_gs
 
 
-def eval_all(cmd,dirname_gs,filenames):
+def eval_all(cmd,dirname_gs,filenames,opts={}):
     res=[]
     total=[]
+    if opts.verbose:
+        with open(opts.model,'rb') as idxf:
+            model = pickle.load(idxf)
+    filter_dirs=re.compile(opts.filter_test)
     with tempfile.NamedTemporaryFile() as file_gs, tempfile.NamedTemporaryFile() as file_sys:             
         for filename_sys in filenames:
+            if not filter_dirs.search(filename_sys):
+                    continue
             filename_gs = infer_test_file(dirname_gs,filename_sys)
-            res.append((os.path.basename(filename_sys),eval(cmd,filename_gs,filename_sys)))
-            total.append(res[-1][1])
+            eval_res=eval(cmd,filename_gs,filename_sys)
+            print u"{0:<40}: {1:<1.4f}".format(os.path.basename(filename_sys),eval_res)
+            total.append(eval_res)
             with open(filename_sys) as infile:
                 for line in infile:
                     file_sys.write(line)
             with open(filename_gs) as infile:
                 for line in infile:
                     file_gs.write(line)
-        ##res.append(('All',eval(cmd, file_gs.name, file_sys.name)))
-        res.append(('Mean',np.mean(total)))
+            try:
+                opts.diff
+                if verbose:
+                    analyse(filename_sys,filename_gs,model,opts=opts)
+            except AttributeError:
+                pass
+        print u"{0:<40}: {1:<1.4f}".format('All',eval(cmd, file_gs.name, file_sys.name))
+        print u"{0:<40}: {1:<1.4f}".format('Mean',np.mean(total))
     return res
+
+def analyse(filename_sys,filename_gs,model,opts={}):
+    res=[]
+    dirname_gs,basename_gs=os.path.split(filename_gs)
+    phrases=load_phrases_from_file(
+        dirname_gs,
+        basename_gs.replace('gs','input')
+    )
+    with open(filename_sys) as fsys, open(filename_gs) as fgs:
+        for idx,(line1,line2) in enumerate(izip(fsys,fgs)):
+            line1=line1.strip()
+            line2=line2.strip()
+            if len(line2)>0:
+                gs=float(line2)
+            else:
+                gs=0.0
+            if len(line1)>0:
+                sys=float(line1)
+            else:
+                sys=0.0
+
+            if abs(gs-sys)> opts.diff:
+                phrs=phrases[idx]
+                phr1,phr2=preprocessing(phrs[0],phrs[1],opts=opts)
+                num=sts(model,phr1,phr2,opts=opts)
+                print u"SYS:", sys, u"GS:", gs
+                print u"DISTANCE",", ".join([str(x) for x in num]) 
+                print u"Phrase 1:",phrs[0]
+                print u"Phrase 2:",phrs[1]
+                print u"Align  1:"
+                aligns=align(model,phr1,phr2,opts=opts)
+                for a in aligns:
+                    print u"  {0:<30}, {1:<30} :  {2:<1.4f}".format(*a)
+                print u"Align  2:"
+                aligns=align(model,phr2,phr1,opts=opts)
+                for a in aligns:
+                    print u"  {0:<30}, {1:<30} :  {2:<1.4f}".format(*a)
+                print u"--"
+
+    return res
+
 
 
 def train_model_srv(train_gs, train_output,args={'kernel':'linear'}):    
