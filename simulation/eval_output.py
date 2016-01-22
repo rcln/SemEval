@@ -15,7 +15,7 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser('stats.py')
     p.add_argument("GSDIR",default=None,
             action="store", help="GS directory")
-    p.add_argument("SYSDIR",default=None,
+    p.add_argument("SYSDIR",default=None,sky
             action="store", help="SYS directory")
     p.add_argument("--script-eval",default=[
         "perl",

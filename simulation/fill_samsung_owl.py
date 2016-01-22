@@ -107,21 +107,30 @@ def sts_bidirectional(model,phr1,phr2):
             ooc = len(phr1)-len(aligns)
             score1 = score1 - (ooc * opts.ooc_penalty)
         score1 = score1 / 2*len(aligns)
+    
 
     # align dir 2
-    aligns = align(model,phr2,phr1)    
+    aligns2 = align(model,phr2,phr1)    
     score2 = 0;
-    for w1,w2,dist in aligns:
+    for w1,w2,dist in aligns2:
         score2=score2+dist    
-    if aligns: 
+    if aligns2: 
         # print "S2->" + str(score2)
         if(opts.ooc_penalty > 0): # Out of Context penalization
-            ooc = len(phr2)-len(aligns)
+            ooc = len(phr2)-len(aligns2)
             score2 = score2 - (ooc * opts.ooc_penalty)
-        score2 = score2 / 2*len(aligns)
+        score2 = score2 / 2*len(aligns2)
+
+    penalties=check_in_wordnet([aligns, aligns2])    
+    total_penalty=0
+    for pen in penalties:
+        total_penalty+=sum(pen)
+    # print "total_penalty=" + str(total_penalty)
 
     # print "STS-->" + str(score1+score2)
-    return [score1,score2,score1+score2]
+    # print [score1,score2,score1+score2, -total_penalty]
+    # return [score1,score2,score1+score2, -total_penalty]
+    return [(score1-total_penalty),(score2-total_penalty),(score1+score2-total_penalty)]
 
 # align words using local maximum (i.e. for each word1 get max similarity in words2)
 def align_localmax(model,phr1,phr2):

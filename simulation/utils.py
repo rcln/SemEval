@@ -11,10 +11,14 @@ import nltk, re, pprint
 from nltk import word_tokenize
 import os.path
 from math import sqrt
+from nltk.corpus import wordnet as wn
+from nltk import pos_tag
 
 
 re_file=re.compile('.*\.input\..*\.txt$')
 re_gs=re.compile('.*\.gs\..*\.txt$')
+
+dsc_list=["animal.n.01", "country.n.02", "vehicle.n.01", "weekday.n.01", "chromatic_color.n.01"]
 
 def load_phrases_from_file(dirname,filename):
     phrases=[]
@@ -281,3 +285,63 @@ def analyze_pairs(file_gs, file_sys, standout_threshold):
             print "[{0:1d}] phrase pairs with score differences > {1:1.1f}".format(outliers, standout_threshold)
         else:
             print "[{0:1d}] phrase pairs with score differences < {1:1.1f}".format(outliers, standout_threshold)
+
+
+# receive one or more alignments (each an array of arrays [w1, w2, score])
+def check_in_wordnet(alignments):
+    
+    penalties=[]
+    for alignment in alignments:        
+        alignment_penalty=[]
+        for wordalign in alignment:
+            if wordalign[2]<1.0: # it is not the same word
+                isAntonym=False
+                isDsc=False
+                # w1_syn=None
+                # w1_pos=pos_tag([wordalign[0]])
+                # if w1_pos[0][1]=='NN':
+                #     w1_syn=wn.synsets(w1_pos[0][0], pos=wn.NOUN)
+                # elif w1_pos[0][1][:2]=='VB':
+                #     w1_syn=wn.synsets(w1_pos[0][0], pos=wn.VERB)
+                w1_syn=wn.synsets(wordalign[0], pos=wn.NOUN)
+                w2_syn=wn.synsets(wordalign[1], pos=wn.NOUN)
+
+                if w1_syn and w2_syn:
+                    if w1_syn[0].name()==w2_syn[0].name(): # synonyms
+                        continue
+                    else:                    
+                        # print str(wordalign) + "-->" + w1_syn[0].name()
+                        #check if w2 is antonym  (first synset is used)           
+                        for l in w1_syn[0].lemmas():
+                            if l.antonyms():                        
+                                for ant in l.antonyms():
+                                    # print "<--"+ant.name()
+                                    if ant.name() == wordalign[1]:
+                                        isAntonym=True #w2 is antonym of w1
+                                        break
+                            # if antonym already found stop search
+                            if isAntonym:
+                                # print wordalign
+                                # print "-----ANTONYM"                                
+                                break
+                    
+                        if not isAntonym:
+                            #check if common hypernym is in DSC candidates
+                            commonParent=w1_syn[0].lowest_common_hypernyms(w2_syn[0])
+                            if commonParent:
+                                for path in commonParent[0].hypernym_paths():
+                                    for hyper in path:
+                                        if hyper.name() in dsc_list:
+                                            isDsc=True
+                                            # print str(wordalign) + "-->" + w1_syn[0].name()  + "-->" + w2_syn[0].name() +"-->"+ commonParent[0].name()
+                                            # print "------DSC"
+                if isAntonym:
+                    alignment_penalty.append(1.0)
+                elif isDsc:
+                    alignment_penalty.append(0.5)
+                else:
+                    alignment_penalty.append(0.0)
+
+        penalties.append(alignment_penalty)
+
+    return penalties
