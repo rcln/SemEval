@@ -69,9 +69,7 @@ if __name__ == "__main__":
     for (filename, phrases) in train_data:
         filename_old=filename.replace('input', 'gs')
         train_output[filename_old]=[]
-        for phr1,phr2 in phrases:
-            ophr1=phr1
-            ophr2=phr2
+        for idx,(phr1,phr2) in enumerate(phrases):
             phr1=codecs.encode(phr1,'utf-8','ignore')
             phr2=codecs.encode(phr2,'utf-8','ignore')
             phr1=''.join([i if ord(i) < 128 else ' ' for i in phr1])
@@ -84,11 +82,9 @@ if __name__ == "__main__":
             #phr2=phr2.replace(u'’','')
             #phr2=phr2.replace(u'´','')
             #phr1=phr1.replace(u'´','')
-            print filename, phr1,phr2
-            align_=align(phr1,phr2)
-            DATA[(ophr1,ophr2)]=align_
-            align_=align(phr2,phr1)
-            DATA[(ophr2,ophr1)]=align_
+            align1=align(phr1,phr2)
+            align2=align(phr1,phr2)
+            DATA[(filename,idx)]=(align1,align2)
                                        
 
 
@@ -100,24 +96,21 @@ if __name__ == "__main__":
     for (filename, phrases) in test_data:
         filename_old=filename.replace('input', 'gs')
         train_output[filename_old]=[]
-        for phr1,phr2 in phrases:
+        for idx,(phr1,phr2) in enumerate(phrases):
             print filename, phr1,phr2
             phr1=codecs.encode(phr1,'utf-8','ignore')
             phr2=codecs.encode(phr2,'utf-8','ignore')
             phr1=''.join([i if ord(i) < 128 else ' ' for i in phr1])
             phr2=''.join([i if ord(i) < 128 else ' ' for i in phr2])
-            #phr1=phr1.replace(u'ñ','')
-            #phr2=phr2.replace(u'ñ','')
             #phr1=phr1.replace(u'euros','')
             #phr2=phr2.replace(u'euros','')
             #phr1=phr2.replace(u'’','')
             #phr2=phr2.replace(u'’','')
             #phr1=phr1.replace(u'´','')
             #phr2=phr2.replace(u'´','')
-            align_=align(phr1,phr2)
-            DATA[(phr1,phr2)]=align_
-            align_=align(phr2,phr1)
-            DATA[(phr2,phr1)]=align_
+            align1=align(phr1,phr2)
+            align2=align(phr2,phr1)
+            DATA[(filename,idx)]=(align1,align2)
                                    
     with open("align.data",'wb') as idxf:
             pickle.dump(DATA, idxf, pickle.HIGHEST_PROTOCOL)
