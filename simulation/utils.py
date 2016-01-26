@@ -70,11 +70,12 @@ def load_all_gs(dirname):
     return all_gs
 
 
-def eval(cmd,filename_gs,filename_sys):    
-    cmd=cmd+[filename_gs,filename_sys] 
+def eval(cmd,filename_gs,filename_sys):        
+    cmd=cmd+[filename_gs,filename_sys]     
     p = Popen(cmd,  stdout=PIPE, stderr=PIPE)
     stdout, stderr = p.communicate()
     res=stdout.replace('Pearson: ','').strip()    
+    # print "-->" + res
     return float(res)
 
 def infer_test_file(dirname_gs,filename_sys):
@@ -98,7 +99,7 @@ def eval_all(cmd,dirname_gs,filenames,opts={}):
     with tempfile.NamedTemporaryFile() as file_gs, tempfile.NamedTemporaryFile() as file_sys:             
         for filename_sys in filenames:
             if not filter_dirs.search(filename_sys):
-                    continue
+                continue
             filename_gs = infer_test_file(dirname_gs,filename_sys)
             eval_res=eval(cmd,filename_gs,filename_sys)
             print u"{0:<40}: {1:<1.4f}".format(os.path.basename(filename_sys),eval_res)
@@ -115,7 +116,7 @@ def eval_all(cmd,dirname_gs,filenames,opts={}):
                     analyse(filename_sys,filename_gs,model,opts=opts)
             except AttributeError:
                 pass
-        print u"{0:<40}: {1:<1.4f}".format('All',eval(cmd, file_gs.name, file_sys.name))
+        # print u"{0:<40}: {1:<1.4f}".format('All',eval(cmd, file_gs.name, file_sys.name))
         print u"{0:<40}: {1:<1.4f}".format('Mean',np.mean(total))
     return res
 
@@ -167,12 +168,12 @@ def train_model_srv(train_gs, train_output,args={'kernel':'linear'}):
     score_gs=[]
     score_out=[]
     for x in train_gs.keys():
-        if train_gs.has_key(x) and train_output.has_key(x):
+        if train_gs.has_key(x) and train_output.has_key(x):            
             score_gs.extend(train_gs[x])
             score_out.extend(train_output[x])
 
     score_out=np.nan_to_num(score_out)
-
+   
     svr_lin.fit([x for x in score_out], score_gs)
     
     return svr_lin    

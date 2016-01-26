@@ -18,6 +18,7 @@ import pickle
 import numpy as np
 import sys
 from nltk.corpus import wordnet
+from array import *
 
 verbose = lambda *a: None 
 verbose2 = lambda *a: None 
@@ -71,13 +72,107 @@ def align(model,phr1,phr2,opts={}):
     else:
         sys.exit("Error: invalid alignment method")
 
-def sts(model,phr1,phr2,opts={}):
+def sts(model,phr1,phr2,key,aligns_model,opts={}):    
+    scores=[]
+    if aligns_model:
+        scores.extend( sts_external_alignment(phr1,phr2,key,aligns_model,model,opts) )
     if opts.sts_method=="bidirectional":
-        return sts_bidirectional(model,phr1,phr2,opts)
-    if opts.sts_method=="simple":
-        return sts_simple(model,phr1,phr2,opts)
+        scores.extend( sts_bidirectional(model,phr1,phr2,opts) )
+    elif opts.sts_method=="simple":
+        scores.extend( sts_simple(model,phr1,phr2,opts) )
     else:
         sys.exit("Error: invalid STS method")
+        
+    return scores
+
+def sts_external_alignment(phr1,phr2,key,aligns_model,w2v_model,opts={}):        
+
+    # print key
+    try:
+        lr,rl = aligns_model[key]
+    except:
+        verbose(str(key) + "-->NO ALIGNMENT FOUND")
+        return [0.00,0.00,0.00]
+        
+    alignments = [lr,rl]
+    # LEFT-RIGTH [LR] alignment
+    score=0
+    scores=array('f')
+    num_alignments=0
+    idx_alignment=-1
+    for alignment in alignments:
+        idx_alignment+=1
+        alignment_score=0
+        alignment_score_wn=0
+        num_wn_scores=0
+        if alignment:
+            if alignment[1] and len(alignment[1])>0:
+                num_alignments+=1                
+                for pair in alignment[1]:
+                    sim = score_alignment(pair, w2v_model, opts)
+                    verbose2(str(pair) +"-->" + str(sim))
+                    alignment_score += sim
+                    if opts.wn_distance:
+                        wn_sim = score_alignment_wn(pair,opts)
+                        if wn_sim:
+                            num_wn_scores+=1                            
+                            alignment_score_wn += wn_sim
+
+                alignment_score=alignment_score/len(alignment[1]) # normalize
+                scores.append(alignment_score)
+
+                if opts.wn_distance:
+                    if num_wn_scores==0:
+                        num_wn_scores=1
+                    alignment_score_wn=alignment_score_wn/num_wn_scores # normalize
+                    scores.append(alignment_score_wn)
+            else:
+                verbose(str(key) + "-->EMPTY ALIGNMENT [" + str(idx_alignment)+"]")
+                scores.append(0.00)
+                if opts.wn_distance:
+                    scores.append(0.00)
+        else:            
+            verbose(str(key) + "-->NO ALIGNMENT[" + str(idx_alignment)+"]")
+            scores.append(0.00)
+            if opts.wn_distance:
+                scores.append(0.00)            
+
+        score+=alignment_score
+
+    if num_alignments==0:
+        num_alignments=1
+    score = score/num_alignments # se divide entre numero de alineamientos que contribyeron
+    scores.append(alignment_score)
+
+
+    verbose2(str(key) + "==>" + str(scores))
+    # print str(key) + "==>" + str(scores)
+    return scores
+
+
+def score_alignment(aligned_pair, w2v_model, opts={}):
+    score=0    
+    w1=aligned_pair[0]
+    w2=aligned_pair[1]    
+
+    sim=similarity(w2v_model,[w1.lower()],[w2.lower()],opts) # cosine distance for word2vec
+    score+=sim
+    return score
+
+def score_alignment_wn(aligned_pair, opts={}):
+    w1=aligned_pair[0]
+    w2=aligned_pair[1]
+    w1_syn=wn.synsets(w1, pos=wn.NOUN)
+    w2_syn=wn.synsets(w2, pos=wn.NOUN)    
+    if w1_syn and w2_syn:        
+        sim = w1_syn[0].path_similarity(w2_syn[0], simulate_root=True)        
+    else:
+        return None
+
+    if not sim:
+        return None
+
+    return sim
 
 def sts_simple(model,phr1,phr2,opts={}):
     aligns = align(model,phr1,phr2,opts)
@@ -101,7 +196,7 @@ def sts_bidirectional(model,phr1,phr2,opts={}):
     score1 = 0;
     for w1,w2,dist in aligns:
         score1=score1+dist    
-    if aligns: 
+    if aligns:
         # print "S1->" + str(score1)
         if(opts.ooc_penalty > 0): # Out of Context penalization
             ooc = len(phr1)-len(aligns)
@@ -110,7 +205,7 @@ def sts_bidirectional(model,phr1,phr2,opts={}):
     
 
     # align dir 2
-    aligns2 = align(model,phr2,phr1)    
+    aligns2 = align(model,phr2,phr1, opts)    
     score2 = 0;
     for w1,w2,dist in aligns2:
         score2=score2+dist    
@@ -131,6 +226,7 @@ def sts_bidirectional(model,phr1,phr2,opts={}):
     # print [score1,score2,score1+score2, -total_penalty]
     # return [score1,score2,score1+score2, -total_penalty]
     return [(score1-total_penalty),(score2-total_penalty),(score1+score2-total_penalty)]
+
 
 # align words using local maximum (i.e. for each word1 get max similarity in words2)
 def align_localmax(model,phr1,phr2,opts):
@@ -225,6 +321,14 @@ if __name__ == "__main__":
                 action="store_true", dest="verbose2",
                 help="Verbose mode [Off]")
 
+    #data/align.data
+    p.add_argument("--alignments-model",default='', type=str,
+                action="store", dest="aligns_model_path",
+                help="Filename of alignments to use (it is a python dictionary)")
+    p.add_argument("--include-wn-distance",
+                action="store_true", dest="wn_distance",default=False,
+                help="True = include WordNet distance for alignments") 
+
     # ALIGNMENT ------
     p.add_argument("--stsmethod",default='bidirectional', type=str,
                 action="store", dest="sts_method",
@@ -272,6 +376,12 @@ if __name__ == "__main__":
     with open(opts.model,'rb') as idxf:
         model = pickle.load(idxf)
 
+    # se carga alineaciones externas
+    aligns_model=None
+    if opts.aligns_model_path:
+        verbose("Loading external alignments",opts.aligns_model_path)
+        with open(opts.aligns_model_path,'rb') as idxf:
+            aligns_model = pickle.load(idxf)
 
     ## Se itera sobre corpus, frases
     train_output={}    
@@ -285,21 +395,25 @@ if __name__ == "__main__":
         filename_old=filename.replace('input', 'gs')
         train_output[filename_old]=[]
         # [Pseudo: 4.a ] Por cada frase de corpos de entrenamiento
+        phrIdx=-1
         for phr1,phr2 in phrases:
+            phrIdx+=1        
             counter=counter+1
             print_progress(counter, count_phrases)
             # [Pseudo: 4.a.i ] Preprocesamiento
+            key=(filename,phrIdx)
             phr1,phr2=preprocessing(phr1,phr2,opts)
             # [Pseudo: 4.a.ii ] Sumar vectores frase uno
             # [Pseudo: 4.a.iii ] Sumar vectores frase dos
             # [Pseudo: 4.a.iv ] Calcular distancia
             if opts.logxphrase:
                 global_aligns=[]
-            num=sts(model,phr1,phr2,opts=opts)
+
+            num=sts(model,phr1,phr2,key,aligns_model, opts)
             train_output[filename_old].append(num)
             # max_sentences = max_sentences - 1
             # if max_sentences<=0:
-                # sys.exit("PRUEBAS")
+                # sys.exit("PRUEBAS")            
 
     # [Pseudo: 5 ] Entrenar regresor
     verbose('Training model')
@@ -318,6 +432,7 @@ if __name__ == "__main__":
     for (filename, phrases) in test_data:
         print ""
         print "Test -- " + filename
+        filename_old=filename
         count_phrases = len(phrases)
         counter=0
         bits=filename.split('.')
@@ -326,19 +441,24 @@ if __name__ == "__main__":
         if opts.logxphrase:
             flog=open(filename[:-3]+"log", "w")
         # [Pseudo:66.a ] Por cada frase de corpos de prueba
+        phrIdx=-1
         for phr1,phr2 in phrases:
+            phrIdx+=1
             counter=counter+1
             print_progress(counter, count_phrases)
             # [Pseudo: 6.a.i ] Preprocesamiento
+            h,t=os.path.split(filename_old)
+            key=(t,phrIdx)
             phr1,phr2=preprocessing(phr1,phr2,opts)
             # [Pseudo: 6.a.ii ] Sumar vectores frase uno
             # [Pseudo: 6.a.iii ] Sumar vectores frase dos
             # [Pseudo: 6.a.iv ] Calcular distancia
             if opts.logxphrase:
                 global_aligns=[]
-            num_raw=sts(model,phr1,phr2,opts)
+            num_raw=sts(model,phr1,phr2,key,aligns_model,opts)
             # Se mapea resultado de distancia a score semeval 
-            num=method.predict(num_raw)
+            # num_raw_reshaped=np.reshape(num_raw, -1, len(num_raw))
+            num=method.predict([num_raw])
             print >> fn, "{0:1.1f}".format(num[0])
             if opts.logxphrase:
                 print >> flog, "{0:1.1f}|{1}|{2}|{3}|{4}".format(num[0], num_raw, phr1, phr2, global_aligns)
@@ -349,6 +469,7 @@ if __name__ == "__main__":
     eval_all(opts.cmd,os.path.join(opts.DIR,'test'),
                 filenames_sys,opts=opts)
    
+    # eval_all_local(opts.cmd,os.path.join(opts.DIR,'test'), filenames_sys,0.0)
 
         
 
