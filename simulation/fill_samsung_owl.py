@@ -139,13 +139,13 @@ def sts_external_alignment(phr1,phr2,key,aligns_model,w2v_model,opts={}):
 
         score+=alignment_score
 
-    if num_alignments==0:
-        num_alignments=1
-    score = score/num_alignments # se divide entre numero de alineamientos que contribyeron
-    scores.append(alignment_score)
+    # if num_alignments==0:
+    #     num_alignments=1
+    # score = score/num_alignments # se divide entre numero de alineamientos que contribyeron
+    # scores.append(alignment_score)
 
 
-    verbose2(str(key) + "==>" + str(scores))
+    verbose2("Align_Ext-" + str(key) + "==>" + str(scores))
     # print str(key) + "==>" + str(scores)
     return scores
 
@@ -193,39 +193,52 @@ def sts_simple(model,phr1,phr2,opts={}):
 def sts_bidirectional(model,phr1,phr2,opts={}):
     # align dir 1
     aligns = align(model,phr1,phr2,opts)    
-    score1 = 0;
+    score1 = 0.0;
     for w1,w2,dist in aligns:
-        score1=score1+dist    
+        score1=score1+dist
+        # print "w2vA-->" + repr(w1) + "--" + repr(w2) + "==" + str(dist)
     if aligns:
-        # print "S1->" + str(score1)
         if(opts.ooc_penalty > 0): # Out of Context penalization
             ooc = len(phr1)-len(aligns)
-            score1 = score1 - (ooc * opts.ooc_penalty)
-        score1 = score1 / 2*len(aligns)
+            score1 = score1 - abs(ooc * opts.ooc_penalty)
+        score1 = score1 / (2*len(aligns))
     
 
     # align dir 2
     aligns2 = align(model,phr2,phr1, opts)    
-    score2 = 0;
+    score2 = 0.0;
     for w1,w2,dist in aligns2:
-        score2=score2+dist    
+        score2=score2+dist        
+        # print "w2vB-->" + repr(w1) + "--" + repr(w2) + "==" + str(dist)
     if aligns2: 
         # print "S2->" + str(score2)
         if(opts.ooc_penalty > 0): # Out of Context penalization
             ooc = len(phr2)-len(aligns2)
-            score2 = score2 - (ooc * opts.ooc_penalty)
-        score2 = score2 / 2*len(aligns2)
+            score2 = score2 - abs(ooc * opts.ooc_penalty)
+        score2 = score2 / (2*len(aligns2))
 
-    penalties=check_in_wordnet([aligns, aligns2])
-    total_penalty=0
-    for pen in penalties:
-        total_penalty+=sum(pen)
+    penalties=check_in_wordnet([aligns, aligns2])    
+    total_penalty1=sum(penalties[0])
+    total_penalty2=sum(penalties[1])
+    # for pen in penalties:
+    #     total_penalty+=sum(pen)
+
+
     # print "total_penalty=" + str(total_penalty)
 
     # print "STS-->" + str(score1+score2)
     # print [score1,score2,score1+score2, -total_penalty]
     # return [score1,score2,score1+score2, -total_penalty]
-    return [(score1-total_penalty),(score2-total_penalty),(score1+score2-total_penalty)]
+    res = [(score1-total_penalty1),(score2-total_penalty2),((score1+score2)-(total_penalty1+total_penalty2))]
+
+    # no negative components
+    for x in xrange(0,len(res)-1):
+        if res[x]<0.0:
+            res[x]=0.0
+
+    sep=" "
+    verbose2("Align_Bi-" + sep.join(phr1) +  "-" + sep.join(phr2) + "==>" + str(res))
+    return res
 
 
 # align words using local maximum (i.e. for each word1 get max similarity in words2)
