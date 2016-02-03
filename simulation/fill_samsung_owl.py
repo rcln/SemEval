@@ -20,6 +20,17 @@ import sys
 from nltk.corpus import wordnet
 from array import *
 
+# [OWL 20160202]
+import string
+from nltk.corpus import stopwords
+stopwds = stopwords.words('english')
+punctuation = set(string.punctuation)
+punctuation.add('´´')
+punctuation.add('\'\'')
+
+from scipy.stats import spearmanr
+
+
 verbose = lambda *a: None 
 verbose2 = lambda *a: None 
 
@@ -74,14 +85,29 @@ def align(model,phr1,phr2,opts={}):
 
 def sts(model,phr1,phr2,key,aligns_model,opts={}):    
     scores=[]
+
+    
+    verbose2(' '.join(phr1) +  "\n" + ' '.join(phr2) + "\n" + ("-"*10))
+    
     if aligns_model:
-        scores.extend( sts_external_alignment(phr1,phr2,key,aligns_model,model,opts) )
+        partial = sts_external_alignment(phr1,phr2,key,aligns_model,model,opts)
+        scores.extend(partial)
+
+        verbose2("Align_EXT-->" + str(partial))
     if opts.sts_method=="bidirectional":
-        scores.extend( sts_bidirectional(model,phr1,phr2,opts) )
+        partial = sts_bidirectional(model,phr1,phr2,opts)
+        scores.extend( partial )
+
+        verbose2("Align_BID-->" + str(partial) )
     elif opts.sts_method=="simple":
-        scores.extend( sts_simple(model,phr1,phr2,opts) )
+        partial = sts_simple(model,phr1,phr2,opts)
+        scores.extend( partial )
+
+        verbose2("Align_SIM-->" + str(partial))
     else:
         sys.exit("Error: invalid STS method")
+
+    verbose2("\n\n")
         
     return scores
 
@@ -101,16 +127,21 @@ def sts_external_alignment(phr1,phr2,key,aligns_model,w2v_model,opts={}):
     num_alignments=0
     idx_alignment=-1
     for alignment in alignments:
+
+    
         idx_alignment+=1
         alignment_score=0
         alignment_score_wn=0
         num_wn_scores=0
         if alignment:
+            # [OWL 20160202] discard punctuation alignment
+            alignment[1] = [x for x in alignment[1] if x[0] not in punctuation and x[1] not in punctuation]
+
             if alignment[1] and len(alignment[1])>0:
                 num_alignments+=1                
                 for pair in alignment[1]:
                     sim = score_alignment(pair, w2v_model, opts)
-                    verbose2(str(pair) +"-->" + str(sim))
+                    # verbose2(str(pair) +"-->" + str(sim))
                     alignment_score += sim
                     if opts.wn_distance:
                         wn_sim = score_alignment_wn(pair,opts)
@@ -119,6 +150,10 @@ def sts_external_alignment(phr1,phr2,key,aligns_model,w2v_model,opts={}):
                             alignment_score_wn += wn_sim
 
                 alignment_score=alignment_score/len(alignment[1]) # normalize
+                # [OWL 20160202] penalize shifts in alignment order
+                if opts.penalize_shift:
+                    alignment_score= alignment_score*(spearmanr(alignment[0])[0])
+                #---
                 scores.append(alignment_score)
 
                 if opts.wn_distance:
@@ -145,8 +180,7 @@ def sts_external_alignment(phr1,phr2,key,aligns_model,w2v_model,opts={}):
     # scores.append(alignment_score)
 
 
-    verbose2("Align_Ext-" + str(key) + "==>" + str(scores))
-    # print str(key) + "==>" + str(scores)
+    # verbose2("Align_Ext-" + str(key) + "==>" + str(scores))
     return scores
 
 
@@ -236,8 +270,8 @@ def sts_bidirectional(model,phr1,phr2,opts={}):
         if res[x]<0.0:
             res[x]=0.0
 
-    sep=" "
-    verbose2("Align_Bi-" + sep.join(phr1) +  "-" + sep.join(phr2) + "==>" + str(res))
+    # sep=" "
+    # verbose2("Align_Bi-" + sep.join(phr1) +  "-" + sep.join(phr2) + "==>" + str(res))
     return res
 
 
@@ -283,6 +317,10 @@ def align_localmax(model,phr1,phr2,opts):
     #print "Phrase 2:", phr2
     #print "Aligns  :", aligns
     return aligns
+
+def remove_punctuation(text):
+    return ''.join(x for x in text if x not in punct)        
+
 
 def print_progress(counter, count_phrases):
     sys.stdout.write("[%d / %d]   \r" % (counter, count_phrases) )
@@ -355,6 +393,10 @@ if __name__ == "__main__":
     p.add_argument("--oocpenalty",default=1.0, type=float,
                 action="store", dest="ooc_penalty",
                 help="Out of Context penalization, default 1.0")
+    # [OWL 20160202]
+    p.add_argument("--penalize-shift",default=False,
+                action="store_true", dest="penalize_shift",
+                help="Penalize shifted order in external alignment by Spearman rank order correlation (default False) ")    
 
     p.add_argument("--logxphrase",
                 action="store_true", dest="logxphrase",default=False,

@@ -68,15 +68,16 @@ def distance(model,phr1,phr2,opts={}):
     
 
     # Segundo se calcula la medida de distancia
-    # [Pseudo: 4.a.iv ] Calcular distancia
-    # Default cosine
-    num=cosine(vec1,vec2)
+    # [Pseudo: 4.a.iv ] Calcular distancia    
     if opts.distance=="correlation":
         num=correlation(vec1,vec2)
-    if opts.distance=="euclidean":
+    elif opts.distance=="euclidean":
         num=euclidean(vec1,vec2)
-    if opts.distance=="seuclidean":
+    elif opts.distance=="seuclidean":
         num=euclidean(vec1,vec2)
+    else:
+        # Default cosine    
+        num=cosine(vec1,vec2)
  
     # PARA AGREGAR UNA DISTANCIA MÁS SEGUIR
     # if opts.distance=="nombre"
@@ -85,10 +86,21 @@ def distance(model,phr1,phr2,opts={}):
     num=np.nan_to_num(num)
     return num
 
-
+# [OWL 20160202] similarity depends on distance type
 def similarity(model,phr1,phr2,opts={}):
     num = distance(model,phr1,phr2,opts)
-    return 1-num
+    res = 1-num
+    
+    # if opts.distance=="correlation":
+    #     res = 1 - ((num + 1)/2)
+    # elif opts.distance=="euclidean":        
+    #     res = 1 / (1 + (num))
+    # elif opts.distance=="seuclidean":
+    #     res = 1 / (1 + (num))
+    # else: # cosine
+    #     res = 1-num
+
+    return res
 
 
 if __name__ == "__main__":
