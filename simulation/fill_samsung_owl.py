@@ -26,15 +26,18 @@ from nltk.corpus import stopwords
 stopwds = stopwords.words('english')
 punctuation = set(string.punctuation)
 punctuation.add('´´')
+punctuation.add('``')
 punctuation.add('\'\'')
 
 from scipy.stats import spearmanr
+import copy
 
 
 verbose = lambda *a: None 
 verbose2 = lambda *a: None 
 
 global_aligns=[]
+min_threshold_correlation=0.25
 
 #def preprocessing(phr1,phr2):
 #    if opts.preprocessing=="nltk-tokenise":
@@ -104,6 +107,8 @@ def sts(model,phr1,phr2,key,aligns_model,opts={}):
         scores.extend( partial )
 
         verbose2("Align_SIM-->" + str(partial))
+    elif opts.sts_method=="none":
+        verbose2("NO local alignment")
     else:
         sys.exit("Error: invalid STS method")
 
@@ -119,7 +124,10 @@ def sts_external_alignment(phr1,phr2,key,aligns_model,w2v_model,opts={}):
     except:
         verbose(str(key) + "-->NO ALIGNMENT FOUND")
         return [0.00,0.00,0.00]
-        
+    
+    opts_ = copy.copy(opts)
+    opts_.align_threshold=0.06
+
     alignments = [lr,rl]
     # LEFT-RIGTH [LR] alignment
     score=0
@@ -133,9 +141,21 @@ def sts_external_alignment(phr1,phr2,key,aligns_model,w2v_model,opts={}):
         alignment_score=0
         alignment_score_wn=0
         num_wn_scores=0
+        aligns2check=[]
         if alignment:
             # [OWL 20160202] discard punctuation alignment
             alignment[1] = [x for x in alignment[1] if x[0] not in punctuation and x[1] not in punctuation]
+
+            #[OWL 20160202] complement alignmet
+            if opts.complement_ext_alignment:
+                if(idx_alignment==0):
+                    comp_alignment=complement_external_alignment(phr1, phr2, alignment[1], w2v_model, opts_)
+                else:
+                    comp_alignment=complement_external_alignment(phr2, phr1, alignment[1], w2v_model, opts_)
+                if comp_alignment:
+                    alignment[1].extend([[x[0],x[1]] for x in comp_alignment])
+                    alignment[0].extend([x[3] for x in comp_alignment])
+
 
             if alignment[1] and len(alignment[1])>0:
                 num_alignments+=1                
@@ -143,16 +163,27 @@ def sts_external_alignment(phr1,phr2,key,aligns_model,w2v_model,opts={}):
                     sim = score_alignment(pair, w2v_model, opts)
                     # verbose2(str(pair) +"-->" + str(sim))
                     alignment_score += sim
+                    aligns2check.append([pair[0], pair[1], sim])
                     if opts.wn_distance:
                         wn_sim = score_alignment_wn(pair,opts)
                         if wn_sim:
                             num_wn_scores+=1                            
                             alignment_score_wn += wn_sim
 
-                alignment_score=alignment_score/len(alignment[1]) # normalize
+                if opts.wn_check:
+                    penalties=sum(check_in_wordnet([aligns2check])[0])
+                    alignment_score-=penalties
+
+                # alignment_score=alignment_score/len(alignment[1]) # normalize
+                # [OWL 20160202]                
+                alignment_score=alignment_score/(len(phr1) if len(phr1)>len(phr2) else len(phr2)) # normalize
+
                 # [OWL 20160202] penalize shifts in alignment order
-                if opts.penalize_shift:
-                    alignment_score= alignment_score*(spearmanr(alignment[0])[0])
+                if opts.penalize_shift_ext:
+                    sorted_alignment=sorted(alignment[0], key=lambda v:v[0])
+                    corr=spearmanr(sorted_alignment)[0]
+                    if corr>min_threshold_correlation: # if too small it is not used
+                        alignment_score= alignment_score*(corr)
                 #---
                 scores.append(alignment_score)
 
@@ -162,7 +193,7 @@ def sts_external_alignment(phr1,phr2,key,aligns_model,w2v_model,opts={}):
                     alignment_score_wn=alignment_score_wn/num_wn_scores # normalize
                     scores.append(alignment_score_wn)
             else:
-                verbose(str(key) + "-->EMPTY ALIGNMENT [" + str(idx_alignment)+"]")
+                verbose2(str(key) + "-->EMPTY ALIGNMENT [" + str(idx_alignment)+"]")
                 scores.append(0.00)
                 if opts.wn_distance:
                     scores.append(0.00)
@@ -183,6 +214,20 @@ def sts_external_alignment(phr1,phr2,key,aligns_model,w2v_model,opts={}):
     # verbose2("Align_Ext-" + str(key) + "==>" + str(scores))
     return scores
 
+
+# [OWL 20160202] try to fill in the gaps in external alignment (unaligned words)
+def complement_external_alignment(phr1, phr2, alignment, w2v_model, opts={}):
+    aligned_1=[]
+    aligned_2=[]
+    for pair in alignment:
+        aligned_1.append(pair[0])
+        aligned_2.append(pair[1])
+
+    unaligned_1=[x for x in phr1 if x not in aligned_1]
+    unaligned_2=[x for x in phr2 if x not in aligned_2]
+
+    complement = align(w2v_model, unaligned_1, unaligned_2, opts)
+    return complement
 
 def score_alignment(aligned_pair, w2v_model, opts={}):
     score=0    
@@ -228,7 +273,7 @@ def sts_bidirectional(model,phr1,phr2,opts={}):
     # align dir 1
     aligns = align(model,phr1,phr2,opts)    
     score1 = 0.0;
-    for w1,w2,dist in aligns:
+    for w1,w2,dist,pairs in aligns:
         score1=score1+dist
         # print "w2vA-->" + repr(w1) + "--" + repr(w2) + "==" + str(dist)
     if aligns:
@@ -237,11 +282,18 @@ def sts_bidirectional(model,phr1,phr2,opts={}):
             score1 = score1 - abs(ooc * opts.ooc_penalty)
         score1 = score1 / (2*len(aligns))
     
+        # [OWL 20160202] penalize shifts in alignment order
+        if opts.penalize_shift_local:
+            sorted_alignment=sorted([x[3] for x in aligns], key=lambda v:v[0])
+            corr=spearmanr(sorted_alignment)[0]
+            if corr>min_threshold_correlation: # if too small it is not used
+                score1= score1*(corr)
+        #---    
 
     # align dir 2
     aligns2 = align(model,phr2,phr1, opts)    
     score2 = 0.0;
-    for w1,w2,dist in aligns2:
+    for w1,w2,dist,pairs in aligns2:
         score2=score2+dist        
         # print "w2vB-->" + repr(w1) + "--" + repr(w2) + "==" + str(dist)
     if aligns2: 
@@ -250,6 +302,14 @@ def sts_bidirectional(model,phr1,phr2,opts={}):
             ooc = len(phr2)-len(aligns2)
             score2 = score2 - abs(ooc * opts.ooc_penalty)
         score2 = score2 / (2*len(aligns2))
+
+        # [OWL 20160202] penalize shifts in alignment order
+        if opts.penalize_shift_local:
+            sorted_alignment=sorted([x[3] for x in aligns2], key=lambda v:v[0])
+            corr=spearmanr(sorted_alignment)[0]
+            if corr>min_threshold_correlation: # if too small it is not used
+                score2= score2*(corr)
+        #---            
 
     penalties=check_in_wordnet([aligns, aligns2])    
     total_penalty1=sum(penalties[0])
@@ -280,9 +340,12 @@ def align_localmax(model,phr1,phr2,opts):
     words1 = phr1;
     words2 = phr2;
     words2_ = [w for w in words2]
+    w2_idxs = [x for x in xrange(0,(len(words2)))]
 
-    aligns = []
+    w1_idx=-1    
+    aligns = []    
     for word1 in words1:
+        w1_idx+=1
         distances=[]
         try:
             model[word1]
@@ -295,7 +358,7 @@ def align_localmax(model,phr1,phr2,opts):
                 distances.append(0.0) # preserve indexes 
                 continue
             num=similarity(model,[word1],[word2],opts) # cosine distance for word2vec
-            distances.append(np.nan_to_num(num))
+            distances.append(np.nan_to_num(num))            
             #print "{0} {1}: {2}".format(repr(word1),repr(word2),num)
 
         if distances: # not empty            
@@ -310,9 +373,10 @@ def align_localmax(model,phr1,phr2,opts):
 
 
             if(isaligned):
-                aligns.append([word1, words2_[idx], float("{0:.4f}".format(distances[idx])) ])
+                aligns.append([word1, words2_[idx], float("{0:.4f}".format(distances[idx])), [w1_idx, w2_idxs[idx]] ])
                 # remove aligned target word
-                words2_.pop(idx)    
+                words2_.pop(idx)  
+                w2_idxs.pop(idx)
     #print "Phrase 1:", phr1
     #print "Phrase 2:", phr2
     #print "Aligns  :", aligns
@@ -378,7 +442,12 @@ if __name__ == "__main__":
                 help="Filename of alignments to use (it is a python dictionary)")
     p.add_argument("--include-wn-distance",
                 action="store_true", dest="wn_distance",default=False,
-                help="True = include WordNet distance for alignments") 
+                help="True = include WordNet distance for alignments")     
+    p.add_argument("--check-in-wordnet",
+                action="store_true", dest="wn_check",default=False,
+                help="Check aligns in wordnet, penalize antonyms and DSCs (default False)") 
+
+
 
     # ALIGNMENT ------
     p.add_argument("--stsmethod",default='bidirectional', type=str,
@@ -394,9 +463,15 @@ if __name__ == "__main__":
                 action="store", dest="ooc_penalty",
                 help="Out of Context penalization, default 1.0")
     # [OWL 20160202]
-    p.add_argument("--penalize-shift",default=False,
-                action="store_true", dest="penalize_shift",
+    p.add_argument("--penalize-shift-ext",default=False,
+                action="store_true", dest="penalize_shift_ext",
                 help="Penalize shifted order in external alignment by Spearman rank order correlation (default False) ")    
+    p.add_argument("--penalize-shift-local",default=False,
+                action="store_true", dest="penalize_shift_local",
+                help="Penalize shifted order in local alignment by Spearman rank order correlation (default False) ")        
+    p.add_argument("--complement-ext-alingment",default=False,
+                action="store_true", dest="complement_ext_alignment",
+                help="Align unaligned word in external alignment with w2vec (default False) ")            
 
     p.add_argument("--logxphrase",
                 action="store_true", dest="logxphrase",default=False,
