@@ -1,0 +1,736 @@
+MSRvid#SP251#ab	0.250	Someone is frying meat.	أحدهم يعزف البيانو.
+MSRvid#SP252#ab	3.750	A man is rapidly chopping some mushrooms using a knife.	شخص ما يقطع بعجلة الفطر بالسكين.
+MSRvid#SP253#ab	1.750	A woman is adding ingredients to a bowl.	إمرأة تكسر ثلاثة بيضات في الإناء.
+MSRvid#SP254#ab	3.500	A skateboarder does tricks on a half-pipe.	رجل يتزلج فوق نصف أنبوب.
+MSRvid#SP255#ab	3.400	A man is speaking on a stage.	رجل يتحدث في المنصة .
+MSRvid#SP256#ab	1.400	A man is playing a guitar.	رجل ذو قبعة يعزف القيثارة.
+MSRvid#SP257#ab	1.400	A man is playing on his keyboard.	رجل يعزف القيثارة.
+MSRvid#SP258#ab	1.000	A person is cutting a potato.	شخص ما يقطّع الكرّاث.
+MSRvid#SP259#ab	1.800	A man is playing drums.	رجل يعزف قيثارته.
+MSRvid#SP260#ab	4.600	A man is dancing on the ceiling of a room.	رجل يرقص رأسا على عقب على السقف.
+MSRvid#SP261#ab	0.400	Two men are dancing.	إمرأتان تتسوقان.
+MSRvid#SP262#ab	3.600	Someone is seasoning eggs.	أحدهم يتبّل بيضتان نيئتان في إناء.
+MSRvid#SP263#ab	3.250	A woman is peeling an onion.	المرأة تقطع البصل الأخضر.
+MSRvid#SP264#ab	0.778	A person is mixing a pot of rice.	شخص يقشّر حبة بطاطا.
+MSRvid#SP265#ab	1.250	A man is swinging in a rope.	قرد يتأرجح في الأشجار.
+MSRvid#SP266#ab	0.750	Someone is slicing a onion.	شخص يحمل سمكة.
+MSRvid#SP267#ab	1.500	A man is cutting tomatoes.	إمرأة تقطّع البروكولي.
+MSRvid#SP268#ab	1.000	A woman is boiling shrimp.	إمرأة تمشّط شعرها.
+MSRvid#SP269#ab	3.750	A man cuts a potato.	رجل يقطّع  حبة بطاطا.
+MSRvid#SP270#ab	3.250	A man is dancing on the road.	رجل يرقص.
+MSRvid#SP271#ab	4.000	The deer jumped over the fence.	أيل يقفز فوق سياج الإعصار.
+MSRvid#SP272#ab	3.000	A girl dances in the rain.	إمرأة ترقص تحت المطر.
+MSRvid#SP273#ab	1.667	A woman is writing a letter.	إمرأة تجلس على المكتب.
+MSRvid#SP274#ab	3.333	A gorilla is playing the drums.	القرد يلعب الطبول.
+MSRvid#SP275#ab	2.250	A man is playing a guitar.	طفلة تعزف القيثارة.
+MSRvid#SP276#ab	0.500	A woman is riding on a horse.	إمرأة تقطف الطماطم.
+MSRvid#SP277#ab	2.750	A lion cub tries to climb a fence.	 أسد يحاول تسلق الجدار.
+MSRvid#SP278#ab	2.000	A man is talking on a cell phone.	رجل يتحدث عبر مكبر الصوت.
+MSRvid#SP279#ab	0.833	A man is playing a guitar.	رجل ينظف قرصا مضغوطا.
+MSRvid#SP280#ab	3.750	The boy cut the grass by the curb with scissors.	ولد قص العشب بالمقص.
+MSRvid#SP281#ab	4.000	A woman is dicing some peeled potatoes cut into thick strips.	إمرأة تقطّع  البطاطا المقشرة إلى شرائح .
+MSRvid#SP282#ab	3.250	A man with glasses is talking.	رجل في المكتبة يتكلم.
+MSRvid#SP283#ab	2.750	A little girl peddling a scooter.	فتاة تركب عجلة.
+MSRvid#SP284#ab	1.000	A woman is cutting some flowers.	إمرأة تقطّع البروكولي.
+MSRvid#SP285#ab	3.500	A person is walking down a stone path.	رجل يمشي أسفل الرصيف.
+MSRvid#SP286#ab	3.750	Someone is pouring chicken broth into a pot.	الرجل يصب المرق في الوعاء
+MSRvid#SP287#ab	4.400	A man plays the keyboard with his nose.	الرجل يعزف البيانو بأنفه.
+MSRvid#SP288#ab	0.400	A man is playing guitar.	قط يلعب.
+MSRvid#SP289#ab	0.400	A animal is eating.	الحيوان يقفز.
+MSRvid#SP290#ab	4.200	A man is lifting weights.	رجل يرفع الحديد.
+MSRvid#SP291#ab	2.500	A man is running with a bus.	رجل يجري مع الشاحنة.
+MSRvid#SP292#ab	0.250	A man is climbing a rope.	رجل يجلس على صخرة.
+MSRvid#SP293#ab	0.250	A cat is playing the piano.	قطة تلعق كفها.
+MSRvid#SP294#ab	0.250	A woman is dancing in the rain.	إمرأة تضيف الزيت للطبق.
+MSRvid#SP295#ab	3.800	A cat cleans itself.	قطة تلعق نفسها.
+MSRvid#SP296#ab	2.600	A man is kicking a soccer ball.	رجل يقوم بعرض بكرة القدم .
+MSRvid#SP297#ab	2.600	Men are running a race.	المتسابقون يجرون في المسار.
+MSRvid#SP298#ab	2.000	A woman opens a window.	إمرأة تنظر خارج النافذة.
+MSRvid#SP299#ab	1.800	A man is cutting tomatoes into pieces.	إمرأة تقطّع البطاطا.
+MSRvid#SP300#ab	0.000	A man is playing a flute.	إمرأة تضع الكحل.
+MSRvid#SP301#ab	1.200	A woman is cutting potatoes.	إمرأة تقطّع الجزر.
+MSRvid#SP302#ab	3.800	Three men are doing same dance in the street.	ثلاث رجال بدون قمصان  يرقصون في الطريق.
+MSRvid#SP303#ab	3.600	A chicken is pecking at a dead mouse.	ديك ينقر فأرا ميتا.
+MSRvid#SP304#ab	1.800	A woman is chopping an onion.	إمرأة تقطّع الثوم بالسكين.
+MSRvid#SP305#ab	1.200	The woman is thinly slicing a cucumber.	المرأة تقطّع حبة طماطم.
+MSRvid#SP306#ab	3.200	A person is slicing a bread pieces.	رجل يقطّع الخبز.
+MSRvid#SP307#ab	2.200	A woman is cutting a squash.	إمرأة تقطع حبة فلفل كبيرة.
+MSRvid#SP308#ab	0.800	A woman is adding oil on fishes.	إمرأة تركب حصانا.
+MSRvid#SP309#ab	1.600	A woman is grating carrots.	إمرأة تطلي ضلع لحم الخنزير.
+MSRvid#SP310#ab	2.800	Someone is cleaning a animal.	إمرأة تنظف الروبيان.
+MSRvid#SP311#ab	0.583	The man is playing the guitar.	الرجل يقشر حبة بطاطا.
+MSRvid#SP312#ab	3.200	A man is talking on the phone.	رجل يتكلم.
+MSRvid#SP313#ab	0.800	A woman is smoking.	إمرأة تحضر بعض الطعام.
+MSRvid#SP314#ab	3.800	A man laying down and shooting a gun	رجل مستلق على الأرض يطلق النار من البندقية.
+MSRvid#SP315#ab	0.000	A man is being put into an abulance.	رجل يصب المعكرونة في طبق.
+MSRvid#SP316#ab	0.667	A man is diving into a swimming pool.	رجل يغني في الميكرفون.
+MSRvid#SP317#ab	5.000	A man is firing a shot gun.	رجل يطلق النار من المسدس.
+MSRvid#SP318#ab	4.333	The man is shaking hands with other men.	رجل يصافح رجلا آخر.
+MSRvid#SP319#ab	4.214	A target is being hit with gun fire.	الهدف ضرب بالرصاص.
+MSRvid#SP320#ab	1.800	A man playing the guitar.	رجل يعزف الناي.
+MSRvid#SP321#ab	0.400	A man is peeling potato.	رجل يعزف قيثارة.
+MSRvid#SP322#ab	2.000	The woman is riding a horse.	رجل يركب حصانا في الحلبة.
+MSRvid#SP323#ab	2.800	An airplane moves along a runway.	الطائرة تهبط على المدرج.
+MSRvid#SP324#ab	0.800	A woman is slipping in the water-tub.	إمرأة تستلقي في عوّامة.
+MSRvid#SP325#ab	0.800	A man is mowing a lawn.	رجل يخلط.
+MSRvid#SP326#ab	0.400	A man is dancing.	إمرأة تمارس الرياضة.
+MSRvid#SP327#ab	0.250	A woman is exercising.	رجل يرقص.
+MSRvid#SP328#ab	0.750	A woman is peeling a potato.	إمرأة تضرب رجلا.
+MSRvid#SP329#ab	0.750	A man is playing piano.	رجل ملقا على الأرض.
+MSRvid#SP330#ab	1.000	A woman is doing ballet.	إمرأة تركب حصانا.
+MSRvid#SP331#ab	0.000	A woman is applying makeup.	رجل يعزف قيثارة.
+MSRvid#SP332#ab	0.800	A woman is cutting an onion.	إمرأة تجدّف قاربا.
+MSRvid#SP333#ab	3.400	A woman is slicing a big pepper.	إمرأة تقطّع فلفلا أخضرا.
+MSRvid#SP334#ab	2.769	A woman is stirring rice in a pot.	شخص ما وضع الأرز في وعاء.
+MSRvid#SP335#ab	2.800	A boy is playing the violin onstage.	صبي يعزف على آلة.
+MSRvid#SP336#ab	3.200	The woman is measuring the other woman.	إمرأة تقيس كاحل إمرأة أخرى.
+MSRvid#SP337#ab	4.200	A man puts some cheese on a pizza.	رجل يرش الجبن المبشور على البيتزا.
+MSRvid#SP338#ab	2.400	A woman puts slabs of meat in a pan.	رجل يضع قطعا من اللحم في كيس من البلاستيك.
+MSRvid#SP339#ab	4.400	The boy played his trumpet.	صبي يعزف البوق.
+MSRvid#SP340#ab	1.800	A person is riding a horse.	رجل يركب درّاجة ناريّة.
+MSRvid#SP341#ab	0.800	A man is staring at a leaf.	رجل يقطّع حبة خضروات.
+MSRvid#SP342#ab	1.400	A woman is slicing an onion.	إمرأة تقطّع جزرة.
+MSRvid#SP343#ab	2.250	A man is slicing vegetables.	إمرأة تقطّع حبة بطاطا.
+MSRvid#SP344#ab	0.250	A cat is playing.	إمرأة تعزف المزمار.
+MSRvid#SP345#ab	3.250	A man is riding a bicycle.	رجل يركب درّاجة هوائيّة حول موقف للسيارات.
+MSRvid#SP346#ab	4.500	A band is performing on a stage.	فرقة تعزف و تغنّي على خشبة المسرح.
+MSRvid#SP347#ab	4.200	A person is picking a komodo dragon and putting it in a box.	شخص وضع تنين كومودو صغير في وعاء.
+MSRvid#SP348#ab	0.800	The woman is slicing fish cake.	المرأة تركب حصانا.
+MSRvid#SP349#ab	0.800	A man is eating bread.	رجل يعزف المزمار.
+MSRvid#SP350#ab	0.800	A woman is cooking shrimp.	إمرأة ترقص.
+MSRvid#SP351#ab	0.250	A woman is dancing.	شخص رمى قطّا في الهواء، A person throws a cat in the air and it grabs onto the ceiling.
+MSRvid#SP352#ab	3.500	A woman tosses a cat in the air, and the cat hangs off a rod on the ceiling.	شخص رمى قطّا في الهواء و تعلّق بالسقف.
+MSRvid#SP353#ab	2.750	A person drops a camera down an escelator.	رجل قذف حقيبة أسفل سلّم دوّار.
+MSRvid#SP354#ab	4.250	A big turtle is walking.	السلحفاة تمشي.
+MSRvid#SP355#ab	0.500	A man is doing exercise.	رجل يطلق النار من بندقية.
+MSRvid#SP356#ab	0.500	A man is burning a flag.	رجل يطلق النار.
+MSRvid#SP357#ab	0.000	The man is pushing the van.	المرأة تغنّي.
+MSRvid#SP358#ab	0.500	A man is eating wood.	رجل يضيف الزيت إلى السيارة.
+MSRvid#SP359#ab	0.600	A dog is speaking to the camera.	كلب يأكل بعض البطيخ.
+MSRvid#SP360#ab	2.200	A man is putting two paper towels on a paper plate.	رجل يضع ورقا على طبق.
+MSRvid#SP361#ab	3.200	A man and woman are walking.	رجل وامرأة يسيران ممسكان بعضهما البعض.
+MSRvid#SP362#ab	4.400	A man is cutting a rope with a sword.	الرجل يقطّع حبلا سميكا بسيف.
+MSRvid#SP363#ab	3.000	The man is singing and playing the guitar.	رجل يعزف القيثارة.
+MSRvid#SP364#ab	2.250	A dog is playing with a toy.	كلب يأكل دمية.
+MSRvid#SP365#ab	2.583	A man is cutting a paper.	شخص يمزق ورقا.
+MSRvid#SP366#ab	0.000	A man is playing a piano.	ولد يقشر حبة بطاطا.
+MSRvid#SP367#ab	0.000	A man is dancing.	فأر يجري.
+MSRvid#SP368#ab	1.800	Two boys are talking on the phone.	إمرأة تتحدث على الهاتف.
+MSRvid#SP369#ab	0.000	A man is playing guitar.	إمرأة تقشر درنة.
+MSRvid#SP370#ab	1.400	A woman is slicing an onion.	إمرأة تقطع اللّيمون.
+MSRvid#SP371#ab	0.000	A woman is riding a horse.	رجل يجري على حبل.
+MSRvid#SP372#ab	0.400	A man is playing soccer.	رجل يرسم بعض الوجوه.
+MSRvid#SP373#ab	0.000	A woman is peeling an orange.	رجل يعزف مزمارا.
+MSRvid#SP374#ab	0.000	A man is bowling.	هرة تمشي.
+MSRvid#SP375#ab	3.000	Someone is cracking an egg open.	رجل يكسر بيضة.
+MSRvid#SP376#ab	2.000	A man is cutting a snake to cook.	إمرأة تقطع لحما.
+MSRvid#SP377#ab	2.200	The man is playing the keyboards.	رجل يعزف قيثارة.
+MSRvid#SP378#ab	1.200	A woman is applying eye shadow.	إمراة تغسل وعاء.
+MSRvid#SP379#ab	0.000	A woman is scraping a carrot.	رجل يضرب قدورا فخارية.
+MSRvid#SP380#ab	1.000	A woman is playing the flute.	الرجل يلعب على لوح المفاتيح.
+MSRvid#SP381#ab	1.533	A man is riding on a horse.	إمرأة تركب فيلا.
+MSRvid#SP382#ab	1.667	A man and woman are Bollywood dancing.	رجل وإمرأة يرقصان تحت المطر.
+MSRvid#SP383#ab	1.000	A woman is cutting flowers.	رجل يحمل زهور عباد الشمس الضخمة.
+MSRvid#SP384#ab	0.308	A woman is dancing near a fire.	إمرأة تقطّع حبة طماطم.
+MSRvid#SP385#ab	0.000	The man danced in the diner.	القنبلة إنفجرت في الصحراء.
+MSRvid#SP386#ab	0.200	A man is playing flute.	رجل يرقص.
+MSRvid#SP387#ab	4.200	American flag is waving.	علم أمريكي يرفرف في الريح .
+MSRvid#SP388#ab	2.600	A lion is walking in an enclosed area.	أسد يتجول.
+MSRvid#SP389#ab	3.000	A tiger is walking around his cage.	نمر يمشي بدون هدف.
+MSRvid#SP390#ab	3.800	A person pours cooking oil into a pot.	شخص يصب زيت الزيتون في قدر على الغاز.
+MSRvid#SP391#ab	0.750	A woman is cutting potato.	إمرأة تركب حصانا.
+MSRvid#SP392#ab	0.250	A woman is slicing a lemon.	رجل يظهر الخبز.
+MSRvid#SP393#ab	0.750	A man is making a bed.	رجل يتحدث إلى الجمهور.
+MSRvid#SP394#ab	3.000	A parrot is talking.	ببغاء يتكلم في الميكروفون .
+MSRvid#SP395#ab	0.400	A woman is playing the flute.	إمرأة تشرّح بعض التونة.
+MSRvid#SP396#ab	0.400	A person is riding a motorcyle.	شخص يقطّّع بصلة.
+MSRvid#SP397#ab	0.400	A man is singing into a microphone.	رجل يرقص تحت المطر.
+MSRvid#SP398#ab	4.200	A man pours rice into a pot.	رجل يضع الأرز في قدر عميق.
+MSRvid#SP399#ab	3.500	The dog is barking at the toy.	الكلب ينبح على بطة لعبة إلكترونية .
+MSRvid#SP400#ab	3.500	A woman is adding an egg and stirring.	إمرأة تخلط بيضة في وعاء.
+MSRvid#SP401#ab	3.000	A woman covers a piece of meat with flour.	إمرأة تتبل قطعة من اللحم.
+MSRvid#SP402#ab	3.750	A person is slicing some garlic.	شخص يقطّع فصا من الثوم بالسّكين.
+MSRvid#SP403#ab	3.400	A white cat perched on a small wooden cabinet is looking outside the window.	القطة،  جاثمة على الطاولة، تنظر خارج النافذة.
+MSRvid#SP404#ab	3.400	A woman is exercising.	إمرأة ترفع الأوزان.
+MSRvid#SP405#ab	3.600	A man does floor exercises.	رجل يمارس الرياضة.
+MSRvid#SP406#ab	3.800	A child runs into and out of the ocean waves.	صبي صغير يسير في اتجاه أمواج المحيط و عكسها.
+MSRvid#SP407#ab	1.000	A man is slicing a potatoe.	رجل يقشر موزة.
+MSRvid#SP408#ab	1.400	A man is playing the piano.	رجل يعزف الفلوت الخشبي.
+MSRvid#SP409#ab	3.400	A guy is riding a horse.	رجل يركب الحصان في الصحراء.
+MSRvid#SP410#ab	3.600	Someone is playing piano.	شخص يعزف على لوح مفاتيح البيانو.
+MSRvid#SP411#ab	2.800	The woman is putting makeup on the man.	إمرأة ترسم وجه رجل.
+MSRvid#SP412#ab	4.000	The woman droppped eggplant into the pan.	إمرأة تضع الباذنجان المقطّع في المقلاة.
+MSRvid#SP413#ab	3.200	A dog is stealing food from a refrigerator.	 أخذ الكلب شيئا من الثلاجة.
+MSRvid#SP414#ab	3.400	A man plays a trumpet.	رجل يعزف على آلة موسيقية.
+MSRvid#SP415#ab	2.333	A person uses a blowtorch on two cameras.	شخص يحرق كميرات.
+MSRvid#SP416#ab	2.667	A woman is slicing a lemon.	إمرأة، في مطبخ، تقشر ليمونة.
+MSRvid#SP417#ab	3.000	A tiger trys to climb the wall.	أسد يحاول التسلق على الجدار.
+MSRvid#SP418#ab	4.667	A man is preparing a hanging rope.	رجل يربط عقدة.
+MSRvid#SP419#ab	3.200	A woman dances on a stage.	إمرأة ترقص.
+MSRvid#SP420#ab	1.600	A woman is slicing ginger.	إمرأة تقطّع البطاطا.
+MSRvid#SP421#ab	3.000	Men are playing soccer.	فريقان يلعبان كرة القدم.
+MSRvid#SP422#ab	0.200	The girl is riding the horse.	الفتاة ترش النباتات بالماء.
+MSRvid#SP423#ab	0.800	A man is putting a knife in a vice.	رجل يدخل في سيارة في المرآب.
+MSRvid#SP424#ab	1.200	A person is frying.	شخص يقشر حبة بطاطا.
+MSRvid#SP425#ab	0.800	A man is shooting a pistol.	إمرأة تفرم ثوما.
+MSRvid#SP426#ab	0.800	A woman is swinging her arms.	إمرأة تقطّع بصلة.
+MSRvid#SP427#ab	0.750	A man is walking outside.	رجل يرقص.
+MSRvid#SP428#ab	0.000	A woman is cooking meat.	رجل يتحدث.
+MSRvid#SP429#ab	0.250	A man dries his hands.	إمرأة تسرح شعرها.
+MSRvid#SP430#ab	3.250	A soccer player is kicking the soccer ball into the goal from a long way down the field.	ركل لاعب كرة قدم الكرة في المرمى.
+MSRvid#SP431#ab	4.000	A person is scrubbing a zucchini.	إمرأة تفرك حبة كوسا بفرشاة الخضار.
+MSRvid#SP432#ab	3.000	A puppy is trying to come out from the sink.	حاول الجرو الخروج من الحوض.
+MSRvid#SP433#ab	3.333	A girl is playing the piano.	فتاة صغيرة تعزف بيانو كبيرا على خشبة المسرح.
+MSRvid#SP434#ab	3.333	A man is drawing some figures.	رجل يرسم على لوحة رقمية ذات المحو الجاف .
+MSRvid#SP435#ab	2.000	The monkey is hanging from the trees.	تأرجح القرد من غصن إلى غصن.
+MSRvid#SP436#ab	3.000	Some children are jumping on Trampoline.	صبيان يلعبان على الترامبولين.
+MSRvid#SP437#ab	3.750	A person is folding a square paper piece.	شخص يطوي قطعة من الورق.
+MSRvid#SP438#ab	4.000	A woman with a knife is slicing a pepper.	إمرأة تقطّع الفلفل الأخضر.
+MSRvid#SP439#ab	3.000	A panda bear is chewing on a stick.	يلعب رضيع باندا بالعصا.
+MSRvid#SP440#ab	2.000	A man is adding oil to car.	رجل يضع مضادا للتجمد في سيارة.
+MSRvid#SP441#ab	3.750	The people are lifting bags.	يحمل العديد من الناس حقائب كبيرة.
+MSRvid#SP442#ab	0.000	The boy is playing the piano.	إمرأة تضع الزيت في المقلاة.
+MSRvid#SP443#ab	0.400	A man is talking on the phone.	رجل يمشي ليلا بجانب محل.
+MSRvid#SP444#ab	0.400	A man is slicing a carrot by a machine.	رجل يتسلق الحبل.
+MSRvid#SP445#ab	3.200	A boy played a keyboard.	شخص يعزف بيانو بلوح مفاتيح.
+MSRvid#SP446#ab	0.400	A cat is playing with an antenna.	صبي يلعب في الوحل.
+MSRvid#SP447#ab	2.000	A woman is slicing pumpkin.	شخص يقطّع الشمام.
+MSRvid#SP448#ab	0.000	A woman is braiding her hair.	رجل يركب دراجة نارية.
+MSRvid#SP449#ab	0.000	A man is cutting a potato.	إمرأة تتسلق الجدار الصخري.
+MSRvid#SP450#ab	0.000	A woman is feeding a baby.	رجل يضيف الماء للمقلاة.
+MSRvid#SP451#ab	0.500	A man is playing a guitar.	إمرأة تركب الخيل.
+MSRvid#SP452#ab	4.500	The people threw the dummy over the cliff edge.	بعض الناس يلقون دمية قبالة الهاوية.
+MSRvid#SP453#ab	0.500	A gun is being fired.	قشرت حبة بطاطا .
+MSRvid#SP454#ab	0.500	A woman is mixing eggs.	المرأة تأكل.
+MSRvid#SP455#ab	0.500	A woman is cutting a plastic sheet.	إمرأة تلعب القيثارة في الشوارع.
+MSRvid#SP456#ab	4.000	A woman cuts a pineapple.	إمرأة تقطّع الأناناس إلى قطع.
+MSRvid#SP457#ab	3.750	A woman is adding spices on a meat.	إمرأة تضيف المكونات إلى لحم البقر.
+MSRvid#SP458#ab	4.250	A person is adding oil in the pan.	الطباخ يضيف الزيت إلى المقلاة.
+MSRvid#SP459#ab	3.750	A cook seasons some dough.	رجل يتبل بعض العجين في مقلاة.
+MSRvid#SP460#ab	2.750	A boy is running on a beach.	اثنين من الصبية يلعبون على الشاطئ.
+MSRvid#SP461#ab	3.250	A baby monkey scratches itself.	خدش القرد بطنه.
+MSRvid#SP462#ab	3.000	The man is throwing knives at a tree.	رجل يرمي شفرات إلى هدف قريب في الخارج.
+MSRvid#SP463#ab	0.800	A boy is riding a bike on a gate.	إمرأة تركب الخيل.
+MSRvid#SP464#ab	0.400	The woman is slicing tofu.	إمرأة تضع أحمر شفاه.
+MSRvid#SP465#ab	0.400	A man is riding on a boat.	رجل يكبل في الجهاز.
+MSRvid#SP466#ab	0.400	A woman is folding paper.	إمرأة تضع ظلال العيون.
+MSRvid#SP467#ab	0.250	Someone is folding a piece of paper.	شخص يقطّع قطعا صغيرة من الزنجبيل.
+MSRvid#SP468#ab	0.250	A man is doing a card trick.	رجل يعصر ماء.
+MSRvid#SP469#ab	0.750	A man is playing the piano.	شخص ما يعزف القيثارة.
+MSRvid#SP470#ab	0.250	A man is lifting weights.	رجل يفرم  الباذنجان.
+MSRvid#SP471#ab	4.800	A man is mowing grass.	شاب يجزّ العشب.
+MSRvid#SP472#ab	0.800	A person is mixing water and flour.	شخص يطلب التوصيل على الطريق.
+MSRvid#SP473#ab	0.000	The two dogs were in the pen.	ركب راعي البقر  حصانه في الصحراء.
+MSRvid#SP474#ab	3.000	A man is riding on one wheel on a motorcycle.	الشخص يأدّي الحيل على دراجة نارية.
+MSRvid#SP475#ab	0.750	A man is serving cake.	رجل يتبل السمان.
+MSRvid#SP476#ab	3.750	A cat opens a drawer and climbs inside.	قط يفتح درجا بلاستيكيا بكفه ثم نطّ داخله.
+MSRvid#SP478#ab	0.000	A man is opening a box using a knife.	رجل يعزف القيثارة.
+MSRvid#SP480#ab	0.000	A man is eating.	إمرأة تتسلق الصخور.
+MSRvid#SP481#ab	3.500	A puppy is repeatedly rolling from side to side while on its back.	كلب يتقلب من جنب إلى جنب.
+MSRvid#SP482#ab	3.250	A young boy sings and plays a guitar.	طفل يعزف القيثارة.
+MSRvid#SP483#ab	0.400	The woman is peeling lemon.	الرجل يتأرجح على الخيط.
+MSRvid#SP484#ab	0.800	A man is playing the trumpet.	شخص ما يلعب مع ضفدع .
+MSRvid#SP485#ab	1.800	A man is standing on a roof top playing a violin.	رجل يرقصعلى السقف .
+MSRvid#SP486#ab	1.600	A dog is looking around	كلب يراقب عداد متجر.
+MSRvid#SP487#ab	1.200	A woman is slicing an onion.	رجل ظهر يقطع الجزرة بالسكين.
+MSRvid#SP488#ab	4.200	The man drilled holes into the wood.	رجل يحفر الخشب.
+MSRvid#SP489#ab	0.200	Someone is cutting a circle out of a pink sheet of paper.	شخص ما يضع صلصة الطماطم في وعاء في اللحم.
+MSRvid#SP490#ab	0.200	A man is playing flute.	رجل يلاعب كلبا مقيّدا.
+MSRvid#SP491#ab	0.500	A man is placing meat in a bag.	رجل يقود سيارة.
+MSRvid#SP492#ab	0.000	A girl is eating a cupcake.	رجل يعزف البوق.
+MSRvid#SP493#ab	4.500	A rabbit is sniffing and pawing a stuffed rabbit.	أرنب حقيقية تلعب مع أرنب لعبة.
+MSRvid#SP494#ab	0.000	A man is buttering bread.	إمرأة تركب الخيل.
+MSRvid#SP495#ab	2.500	A monkey is karate kicking a person.	قرد يمارس فنون القتال.
+MSRvid#SP496#ab	0.750	A woman is squeezing some cucumber slices.	إمرأة انغمست في الوحل الأخضر.
+MSRvid#SP498#ab	2.750	A man takes a piece of pepperoni pizza out of a pizza box and puts it on the lid after he closes the box.	الرجل أخذ قطعة من بيتزا الببروني خارج الصندوق.
+MSRvid#SP499#ab	3.400	The man added vegetables to the broth in the pot.	رجل يضيف شرائح الخضار إلى وعاء الطهي مع الماء.
+MSRvid#SP500#ab	3.400	The man ran and jumped against the wall.	رجل يقفز إلى الجدار.
+MSRvid#SP501#ab	0.400	A man is playing a cello.	رجل يرفع الأوزان الصغيرة بسرعة.
+MSRvid#SP502#ab	0.400	The man is talking.	رجل يمشي أسفل الدرج.
+MSRvid#SP503#ab	3.200	A man tries to feed a mouse to a snake.	رجل يغيظ الثعبان بالفأر.
+MSRvid#SP504#ab	2.400	The man is seasoning the sausages.	أضاف الرجل التوابل إلى الماء في إناء.
+MSRvid#SP505#ab	3.000	A clown is singing and people are dancing.	مهرج يغني.
+MSRvid#SP506#ab	0.400	A woman is feeding an aardvark.	إمرأة تفرم الثوم.
+MSRvid#SP507#ab	0.500	A man shappens a knife.	رجل يحمل إمرأة.
+MSRvid#SP508#ab	3.929	A person is rinsing a steak off with water.	رجل يشطف شريحة لحم كبيرة.
+MSRvid#SP509#ab	3.000	A boy rode his bike on top of a metal fence.	 راكب دراجة  BMX  يقود على طول الجزء العلوي من السور.
+MSRvid#SP510#ab	1.750	A man is throwing knives at a tree.	رجل يعرض ألعابا  سحرية.
+MSRvid#SP511#ab	0.000	A man is playing the drums.	إمرأة تقطع بعض الأوراق.
+MSRvid#SP512#ab	0.400	A woman is brushing her feet.	إمرأة تفرم بصلة.
+MSRvid#SP513#ab	2.200	A man is playing a ukulele.	رجل يجلس ويعزف غيتارا صغيرا.
+MSRvid#SP514#ab	2.600	Girls are walking on the stage.	نساء عارضات يسرن أسفل المنصة.
+MSRvid#SP515#ab	3.500	A woman is doing weight exercises.	إمرأة تتمرن بالحديد.
+MSRvid#SP516#ab	0.500	A man is peeling a potato.	رجل يتنزه لمسافات طويلة.
+MSRvid#SP517#ab	3.500	A large bird standing on a table picks up a plastic glass containing liquid and places it in a bowl of something.	عصفور يلتقط كأسا من البلاستيك يحتوي على سائل بمنقاره ويضع الكأس في وعاء.
+MSRvid#SP518#ab	0.000	A woman is in the rain.	سيارة تقاد على طول الطريق.
+MSRvid#SP520#ab	0.000	A woman is riding an elephant.	رجل يرفع نفسه.
+MSRvid#SP523#ab	1.200	A woman is removing skin from some meat.	إمرأة تشرح طماطما.
+MSRvid#SP524#ab	0.600	A woman is wearing headphones.	إمرأة تفرم بعض أوراق shiso.
+MSRvid#SP525#ab	0.800	A kitten is drinking milk from a bowl.	طفل صغير يشرب الماء من الكوب.
+MSRvid#SP526#ab	4.000	A kitten is eating its food from a plate.	هرة صغيرة تأكل بعض الطعام.
+MSRvid#SP527#ab	0.500	A woman is reading a lifestyle magazine.	إمرأة تشرح اللحوم إلى قطع.
+MSRvid#SP528#ab	2.500	A man is pouring chili into a bowl.	رجل يفتح علبة ويصب المحتويات في وعاء.
+MSRvid#SP529#ab	2.750	A man is stirring ingredients in a bowl.	رجل يضرب اثنين من البيض في وعاء بالشوكة.
+MSRvid#SP530#ab	3.250	The bird ate the food in the tree from a bowl.	عصفور يأكل من وعاء.
+MSRvid#SP531#ab	2.000	A group of girls are exiting a taxi.	مقطع فيديو لريهانا تغادر سيارة أجرة.
+MSRvid#SP532#ab	0.800	A man breaks cinder blocks on another man.	إمرأة تكسر بيضة في مقلاة.
+MSRvid#SP533#ab	0.000	A woman is seasoning a piece of meat.	رجل يحمّل بندقية  بالرصاص.
+MSRvid#SP534#ab	0.400	A woman is relaxing in a bath tub.	إمرأة تطعن البطاطا بالشوكة.
+MSRvid#SP535#ab	0.600	A woman is adding oil on fishes.	المرأة تقطع البطاطا.
+MSRvid#SP536#ab	0.800	A woman is writing something.	إمرأة تفرم بصلا أخضرا.
+MSRvid#SP537#ab	0.800	A man is chopping coriander leaf.	رجل يعزف قيثارة.
+MSRvid#SP538#ab	0.800	A man takes a slice of pizza.	رجل يتحدث على هاتفه المحمول.
+MSRvid#SP539#ab	0.400	A man is placing meat inside a plastic bag.	إمرأة تحمل الولب في كيس.
+MSRvid#SP540#ab	3.000	A baby eats his food.	طفل تغذى البازلاء.
+MSRvid#SP541#ab	0.400	A man is slicing a carrot by a machine.	رجل يقف تحت المطر.
+MSRvid#SP542#ab	0.000	A rabbi is talking.	رجل يمشي على حبل.
+MSRvid#SP543#ab	0.000	A man rides a horse.	إمرأة تدلك ساق الطفل.
+MSRvid#SP544#ab	0.000	A man is playing guitar.	شخص ما يتمدد.
+MSRvid#SP545#ab	0.400	A man is slicing a bun.	رجل يكسر الأواني.
+MSRvid#SP546#ab	0.000	A man  is driving a car.	إمرأة تغطس الجمبري في الخليط.
+MSRvid#SP547#ab	3.600	A dog is pawing at a fly in the carpet before it.	يلعب الكلب مع حشرة على السجادة.
+MSRvid#SP548#ab	0.231	A dog is barking.	طائرة تطير.
+MSRvid#SP549#ab	3.200	A man is playing a guitar and singing on a stage.	رجل يعزف الغيتار الكهربائي.
+MSRvid#SP550#ab	0.000	A monkey is walking on a bed.	رجل يركب الحصان.
+MSRvid#SP551#ab	0.500	A woman is cooking broccoli.	رجل يأكل طعامه.
+MSRvid#SP552#ab	0.300	A man is hitting a boy with flower vase.	رجل يقص حصيرة.
+MSRvid#SP553#ab	1.250	A boy is playing a piano.	رجل يغني ويعزف الغيتار.
+MSRvid#SP554#ab	0.000	A man is frying a tortilla.	الشخص يؤدي خدعة البطاقات.
+MSRvid#SP555#ab	2.750	A woman serving volleyballs over a net.	إمرأة تمرر الكرة الطائرة لإمرأة أخرى التي تقوم بالتقديم.
+MSRvid#SP556#ab	5.000	The person is starting a fire.	الشخص يشعل النار.
+MSRvid#SP557#ab	0.750	A man is slicing cucumber with a knife.	رجل يطهي التورتيا في المقلاة.
+MSRvid#SP558#ab	1.250	A man is playing an electronic keyboard.	فرقة تعزف الآلات.
+MSRvid#SP559#ab	0.000	The man is mixing whipping cream.	الرجل يمسك ضربان.
+MSRvid#SP560#ab	0.000	A man is playing a violin.	الطفل يضحك و يزحف.
+MSRvid#SP561#ab	0.750	A man is stirring juice.	رجل يقشر بصلة.
+MSRvid#SP562#ab	3.750	A man severs the toe of an empty leather boot using a sword.	رجل يقطع الحذاء بالسيف.
+MSRvid#SP563#ab	2.333	Someone is slicing two uncooked racks of ribs apart.	شخص ما يقطع قطعة من اللحم.
+MSRvid#SP564#ab	5.000	The person is removing the scales from the fish.	شخص يزيل ترسبات السمكة.
+MSRvid#SP565#ab	0.000	People are walking in the garden.	صبي واحد يتحدث مع رجل آخر.
+MSRvid#SP566#ab	3.200	A young child rides a horse.	ركبت الطفلة الصغيرة الحصان.
+MSRvid#SP567#ab	0.750	A person is cutting garlic into pieces with a knife.	شخص ما يضع المكونات في مقلاة عميقة .
+MSRvid#SP568#ab	0.500	A man is folding a piece of paper.	رجل يشرح وعاء من البلاستيك بحد السيف.
+MSRvid#SP569#ab	2.500	The man was pushed into the water.	رجل يدفع رجلا آخر إلى المحيط.
+MSRvid#SP570#ab	1.750	A boy is upset playing video games.	شخص يلعب الجايم بوي .
+MSRvid#SP571#ab	4.000	A man makes a call on a cell phone.	رجل يقوم بإتصال هاتفي.
+MSRvid#SP572#ab	0.000	A man is speaking on a phone.	يمضغ دب الباندا عصا.
+MSRvid#SP573#ab	1.333	A man is kicking pots of water.	رجل يحول الأطعمة.
+MSRvid#SP574#ab	4.600	A woman is applying cosmetics to her face.	إمرأة تضع الماكياج.
+MSRvid#SP575#ab	4.000	The man lifted barbells.	رجل يرفع الأثقال
+MSRvid#SP576#ab	1.200	Two little girls talk on the telephone.	هم يتحدثون مع بعضهم البعض اثنين اثنين.
+MSRvid#SP577#ab	4.200	A cat gets stuck on a moving ceiling fan.	قط يتأرجح على مروحة.
+MSRvid#SP578#ab	3.800	The cat is drinking milk.	قط أبيض يلعق و يشرب حليبا متبق في الطبق.
+MSRvid#SP579#ab	3.000	A woman feeds an animal by hand.	النساء يطعمن الحيوان.
+MSRvid#SP580#ab	0.200	A woman is riding a horse on the beach.	إمرأة تغسل وعاء.
+MSRvid#SP581#ab	3.000	A person is chopping an herb.	رجل يفرم  فرما ناعما مادة خضراء.
+MSRvid#SP582#ab	2.200	Several ferrets climb out of their cage.	قوارض ينزلون أسفل الرف.
+MSRvid#SP583#ab	1.400	A woman is collecting tap water in a mug.	صبي يملأ جرة بالماء.
+MSRvid#SP584#ab	0.000	A young woman is playing the flute.	إمرأة تغسل الجزء العلوي من المجمد.
+MSRvid#SP585#ab	2.800	A woman shoots a shotgun.	المراة تطلق النار من البندقية.
+MSRvid#SP586#ab	3.800	A person is whisking eggs in a bowl.	إمرأة تخفق بيضتان في وعاء مستعملة مضرب سلك .
+MSRvid#SP587#ab	3.800	A person is adding chili powder to chili with beans.	الرجل يضيف التوابل إلى حبوب الفاصولياء.
+MSRvid#SP588#ab	4.400	A woman rapidly fires a handgun.	إمرأة تطلق النار من المسدس.
+MSRvid#SP590#ab	3.000	Rocky and Apollo Creed are running down the beach.	الرجال يركضون على الشاطئ.
+MSRvid#SP591#ab	0.500	A man is singing while playing the guitar.	رجل يملء نفسه بالطعام.
+MSRvid#SP592#ab	2.750	The dog could not figure out how to get a stick out the doggy door.	كلب يحاول الخروج من باب الكلاب المخصص له.
+MSRvid#SP593#ab	1.750	A dog is opening a fridge.	كلب يغلق باب ثلاجة.
+MSRvid#SP594#ab	0.000	A woman is mixing eggs in the bowl.	رجل يمارس تمارين دفع البدن.
+MSRvid#SP595#ab	0.000	A boat sails along the water.	 يعزف الرجل  القيثارة.
+MSRvid#SP596#ab	1.000	A woman is holding a dancing baby up.	إمرأة تسيء لإبنها.
+MSRvid#SP597#ab	1.800	A woman is doing a joker make up on a man.	الفتاة تطبق ماكياج الوجه لرجل.
+MSRvid#SP598#ab	1.600	The lady added cheese to the sauce.	رجل يصب طبق من الجبن المبشور في وعاء من الصلصة.
+MSRvid#SP599#ab	2.333	A man is giving a lecture on a podium.	رجل يقدم محاضرة في حفل أقيم للإحتفال بلعبة الكريكيت.
+MSRvid#SP600#ab	2.000	The cat shimmied under the bed.	قط يزحف رأسا على عقب تحت الأريكة.
+MSRvid#SP602#ab	1.000	A woman is chopping garlic.	إمرأة تشرح السمك.
+MSRvid#SP603#ab	0.000	A man is cutting grass.	رجل مقنع يغني.
+MSRvid#SP604#ab	0.000	A man is cutting grass.	مهرج يغني.
+MSRvid#SP606#ab	1.500	Several kids jump up and down on a trampoline.	رجل يقوم بتقلبات الظهر على الترامبولين.
+MSRvid#SP608#ab	0.400	A man is carrying another man on his back.	رجل يلتقط صور لنملة.
+MSRvid#SP609#ab	2.800	The lady made some slices on the shrimp.	طاهي يشرح الروبيان.
+MSRvid#SP610#ab	0.167	A woman is pouring egg into a frying pan.	رجل يلاعب اثنين من الكلاب.
+MSRvid#SP611#ab	0.500	A woman is frying ground meat.	رجل يقطع جذع بفأس.
+MSRvid#SP612#ab	3.250	Meat is dropped into a pan.	إمرأة تضع اللحم في المقلاة.
+MSRvid#SP613#ab	0.000	A woman is cutting scallions.	إمرأة تقع على قلعة الرمال.
+MSRvid#SP615#ab	0.000	A machine is sharpening a pencil.	فتاة تركب دراجة هوائية.
+MSRvid#SP617#ab	0.400	A man is cleaning the windows.	رجل يقود سيارة.
+MSRvid#SP618#ab	0.000	Someone is mixing a liquid.	رجل يعزف الغيتار.
+MSRvid#SP619#ab	1.000	A person is stirring rice.	إمرأة تكسر بيضة.
+MSRvid#SP620#ab	1.250	Three boys in karate costumes are fighting.	ثلاثة رجال يمارسون حركات الكاراتيه في حقل.
+MSRvid#SP621#ab	0.250	A man puts a knife in a vice.	رجل يرقص.
+MSRvid#SP622#ab	4.250	A boy plays violin on stage.	صبي على خشبة المسرح يعزف الكمان.
+MSRvid#SP623#ab	0.118	A woman cuts a pink loaf with a knife.	رجل يعزف الغيتار.
+MSRvid#SP624#ab	1.000	A man is adding pork chops to a pan.	إمرأة تقشر البطاطا.
+MSRvid#SP625#ab	0.400	The men are fighting each other.	رسم الرجل على ورقة بيضاء.
+MSRvid#SP627#ab	0.000	A girl is reading a newspaper.	طاهي يقشر البطاطا.
+MSRvid#SP628#ab	2.500	A slow loris bites a persons fingers.	حيوان صغير يمضغ على إصبع.
+MSRvid#SP629#ab	0.750	A man is walking along a path through wilderness.	رجل يقشر بصلة.
+MSRvid#SP630#ab	3.000	The man played his guitar.	رجل يغني في حين يعزف غيتاره.
+MSRvid#SP631#ab	1.600	Swimmers are racing in a lake.	النساء السباحين يغوصون من منصة الإنطلاق.
+MSRvid#SP251#ba	0.250	Someone is playing paino. 	أحدهم يقلي لحما.
+MSRvid#SP252#ba	3.750	A person is quickly chopping mushrooms with a knife. 	الرجل يقطّع بسرعة بعض الفطر باستعمال السكين.
+MSRvid#SP253#ba	1.750	A woman is cracking three eggs into a bowl. 	أمرأة تظيف المكونات في الإناء.
+MSRvid#SP254#ba	3.500	A man skateboards on a half pipe. 	متزلج قام بحركات مخادعة فوق نصف أنبوب.
+MSRvid#SP255#ba	3.400	A man is speaking at a podium. 	رجل يتحدث على خشبة المسرح ؟
+MSRvid#SP256#ba	1.400	A man in a hat is playing a harp. 	رجل يعزف القيثارة.
+MSRvid#SP257#ba	1.400	A man is playing a guitar. 	رجل يلعب على لوحة مفاتيحه.
+MSRvid#SP258#ba	1.000	A person is slicing a shallot. 	 شخص ما يقطّع حبة بطاطا.
+MSRvid#SP259#ba	1.800	A man is playing his guitar. 	رجل يلعب الطبول.
+MSRvid#SP260#ba	4.600	A man is dancing upside-down on the ceiling. 	 رجل يرقص على صقف الغرفة.
+MSRvid#SP261#ba	0.400	Two women are shopping. 	رجلان يرقصان.
+MSRvid#SP262#ba	3.600	Someone is seasoning two raw eggs in a bowl. 	أحدهم يتبّل بيضا.
+MSRvid#SP263#ba	3.250	The woman is slicing green onions. 	إمرأة تقشر بصلة.
+MSRvid#SP264#ba	0.778	A person is peeling a potato. 	شخص يخلط وعاء من الأرز.
+MSRvid#SP265#ba	1.250	A gibbon is swinging in the trees. 	رجل يتأرجح في حبل.
+MSRvid#SP266#ba	0.750	Someone is carrying a fish. 	شخص يقطّع بصلة.
+MSRvid#SP267#ba	1.500	A woman is cutting broccoli. 	رجل يقطّع الطماطم.
+MSRvid#SP268#ba	1.000	A woman is combing her hair. 	إمرأة تغلي الروبيان.
+MSRvid#SP269#ba	3.750	A man is slicing a potato. 	رجل يقطّع حبة بطاطا.
+MSRvid#SP270#ba	3.250	A man is dancing. 	رجل يقرص في الطريق.
+MSRvid#SP271#ba	4.000	A deer jumps over a cyclone fence. 	الأيل قفز فوق السياج.
+MSRvid#SP272#ba	3.000	A woman is dancing in the rain. 	طفلة ترقص تحت المطر .
+MSRvid#SP273#ba	1.667	A woman is sitting at a desk. 	إمرأة تكتب رسالة
+MSRvid#SP274#ba	3.333	A monkey is playing drums. 	الغوريلا تلعب الطبول.
+MSRvid#SP275#ba	2.250	The girl is playing the guitar. 	رجل يعزف القيثارة .
+MSRvid#SP276#ba	0.500	A woman is picking tomatoes. 	إمرأة تركب الحصان.
+MSRvid#SP277#ba	2.750	A lion tries to climb over a wall. 	يحاول شبل الأسد تسلق السياج.
+MSRvid#SP278#ba	2.000	A guy is talking into a microphone. 	رجل يتحدث في الهاتف الخلوي .
+MSRvid#SP279#ba	0.833	A man is cleaning a cd. 	رجل يعزف القيثارة.
+MSRvid#SP280#ba	3.750	A boy cuts grass with scissors. 	قص الولد العشب عند حافة الطريق بالمقص.
+MSRvid#SP281#ba	4.000	A woman is chopping a peeled potato into slices. 	إمرأة تقطّع بعض البطاطا المقشرة إلى شرائح سميكة.
+MSRvid#SP282#ba	3.250	A man in a library is talking. 	رجل ذو نظّارة يتكلّم.
+MSRvid#SP283#ba	2.750	A girl is riding a scooter. 	فتاة صغيرة تركب عجلة.
+MSRvid#SP284#ba	1.000	A woman is cutting broccoli. 	إمرأة تقص بعض الزهور.
+MSRvid#SP285#ba	3.500	A man is walking down a sidewalk. 	شخص يمشي في طريق الحجارة.
+MSRvid#SP286#ba	3.750	The man is pouring broth into the pot. 	أحد ما يصب مرق الدجاج في وعاء.
+MSRvid#SP287#ba	4.400	The man is playing the piano with his nose. 	رجل يستعمل لوح المفاتيح بأنفه.
+MSRvid#SP288#ba	0.400	A cat is playing. 	رجل يعزف قيثارة.
+MSRvid#SP289#ba	0.400	The animal is hopping. 	حيوان يأكل.
+MSRvid#SP290#ba	4.200	A man is lifting a barbell. 	رجل يرفع الأثقال.
+MSRvid#SP291#ba	2.500	A man runs with a truck. 	رجل يجري مع الحافلة.
+MSRvid#SP292#ba	0.250	A man is sitting on a rock. 	رجل يتسلق الحبل.
+MSRvid#SP293#ba	0.250	A cat is licking its paw. 	قطة تعزف البيانو.
+MSRvid#SP294#ba	0.250	A woman is adding oil to a dish. 	إمرأة ترقص تحت المطر.
+MSRvid#SP295#ba	3.800	A cat is licking itself. 	قطة تنظف نفسها.
+MSRvid#SP296#ba	2.600	A man is performing tricks with a soccer ball. 	رجل يركل كرة القدم.
+MSRvid#SP297#ba	2.600	Racers are running down a track. 	رجال يجرون في السباق.
+MSRvid#SP298#ba	2.000	A woman is looking out a window. 	إمرأة تفتح نافذة.
+MSRvid#SP299#ba	1.800	A woman is cutting potatoes. 	رجل سقطّع الطماطم إلى قطع.
+MSRvid#SP300#ba	0.000	A woman is applying eye liner. 	رجل يعزف الناي.
+MSRvid#SP301#ba	1.200	A woman is slicing carrots. 	إمرأة تقطّع البطاطا.
+MSRvid#SP302#ba	3.800	Three shirtless men are dancing in the street. 	ثلاث رجال يقومون بنفس الرقصة في الطريق.
+MSRvid#SP303#ba	3.600	A rooster pecks at a dead mouse. 	دجاجة تنقر فأرا ميتا.
+MSRvid#SP304#ba	1.800	A woman is chopping garlic with a knife. 	إمرأة تقطّع بصلة.
+MSRvid#SP305#ba	1.200	The woman is slicing a tomato. 	المرأة تقطّع الخيارإلى شرائح رقيقة .
+MSRvid#SP306#ba	3.200	A man is slicing bread. 	شخص يقطّّع قطع خبز.
+MSRvid#SP307#ba	2.200	A woman is cutting big pepper. 	إمرأة تقطّع حبة قرع.
+MSRvid#SP308#ba	0.800	A woman is riding a horse. 	إمرأة تظيف الزيت على السمك.
+MSRvid#SP309#ba	1.600	A woman is coating a pork chop. 	إمرأة تبشر الجزر.
+MSRvid#SP310#ba	2.800	A woman is cleaning a shrimp. 	أحدهم ينظف حيوانا.
+MSRvid#SP311#ba	0.583	The man is peeling a potato. 	الرجل يعزف القيثارة.
+MSRvid#SP312#ba	3.200	A man is talking. 	رجل يتكلم في الهاتف.
+MSRvid#SP313#ba	0.800	A woman is making some food. 	إمرأة تدخن.
+MSRvid#SP314#ba	3.800	A man is laying on the ground shooting a rifle. 	رجل مستلق و يطلق النار من المسدس.
+MSRvid#SP315#ba	0.000	A man is pouring pasta onto a plate. 	رجل تم وضعه في سيارة الإسعاف.
+MSRvid#SP316#ba	0.667	A man is singing into a microphone. 	رجل يغوص في حوض السباحة .
+MSRvid#SP317#ba	5.000	A man shoots a shotgun. 	رجل يطلق النار من المسدس.
+MSRvid#SP318#ba	4.333	A man is shaking another mans hand. 	الرجل يصافح رجالا آخرين.
+MSRvid#SP319#ba	4.214	The target was being shot with bullets. 	تم ضرب هدف بإطلاق نار.
+MSRvid#SP320#ba	1.800	A man is playing a flute. 	رجل يعزف القيثارة.
+MSRvid#SP321#ba	0.400	A man is playing a guitar. 	رجل يقشر حبة بطاطا.
+MSRvid#SP322#ba	2.000	A man is riding a horse in an arena. 	المرأة تركب حصانا.
+MSRvid#SP323#ba	2.800	A plane is landing on a runway. 	تتحرك طائرة على طول مدرج.
+MSRvid#SP324#ba	0.800	A woman is lying in a raft. 	إمرأة نائمة في حوض المياه.
+MSRvid#SP325#ba	0.800	A man is mixing. 	رجل يجزّ العشب.
+MSRvid#SP326#ba	0.400	A woman is exercising. 	رجل يرقص.
+MSRvid#SP327#ba	0.250	A man is dancing. 	إمرأة تمارس الرياضة.
+MSRvid#SP328#ba	0.750	A woman is hitting a man. 	إمرأة تقشّرحبّة بطاطا.
+MSRvid#SP329#ba	0.750	A man is laying on the ground. 	رجل يعزف البيانو.
+MSRvid#SP330#ba	1.000	A woman is riding on a horse. 	إمرأة ترقص الباليه.
+MSRvid#SP331#ba	0.000	A man is playing a guitar. 	إمرأة تضع ماكياجا.
+MSRvid#SP332#ba	0.800	A woman is rowing a boat.	إمرأة تقطّع بصلة.
+MSRvid#SP333#ba	3.400	A person is cutting a green pepper. 	إمرأة تقطّع حبّة فلفل كبير.
+MSRvid#SP334#ba	2.769	Someone is putting rice in a pan. 	إمرأة تخلط الأرز في وعاء.
+MSRvid#SP335#ba	2.800	A boy is playing an instrument. 	صبي يعزف الكمان على خشبة المسرح.
+MSRvid#SP336#ba	3.200	The lady measured the other woman's ankle. 	إمرأة تقيس إمرأة أخرى.
+MSRvid#SP337#ba	4.200	A man is sprinkling shredded cheese on a pizza. 	رجل يضع الجبن على البيتزا.
+MSRvid#SP338#ba	2.400	A man puts pieces of meat into a plastic bag. 	إمرأة تضع شرائحا من اللحم في وعاء.
+MSRvid#SP339#ba	4.400	A boy is playing the trumpet. 	الصبي يعزف بوقه.
+MSRvid#SP340#ba	1.800	A man is riding a motorcycle. 	شخص يركب الحصان.
+MSRvid#SP341#ba	0.800	A man is slicing a vegetable. 	رجل يحدّق في ورقة.
+MSRvid#SP342#ba	1.400	A woman is cutting a carrot. 	إمرأة تقطّع بصلة.
+MSRvid#SP343#ba	2.250	A woman is slicing a potato. 	رجل يقطّع  الخضروات.
+MSRvid#SP344#ba	0.250	A woman is playing flute. 	قط يلعب.
+MSRvid#SP345#ba	3.250	A man is riding a bicycle around a parking lot. 	رجل يركب درّاجة هوائيّة.
+MSRvid#SP346#ba	4.500	A band is playing and singing on a stage. 	فرقة تقوم بأداء على خشبة المسرح.
+MSRvid#SP347#ba	4.200	A person is placing a baby komodo dragon into a container. 	شخص إلتقط تنين كومودو و وضعه في صتدوق.
+MSRvid#SP348#ba	0.800	The woman is riding a horse. 	المرأة تقطع كعكة السمك.
+MSRvid#SP349#ba	0.800	A man is playing flute. 	رجل يأكل الخبز.
+MSRvid#SP350#ba	0.800	A woman is dancing. 	إمرأة تطبخ الروبيان.
+MSRvid#SP351#ba	0.250	A woman is slicing ginger. 	إمرأة ترقص.
+MSRvid#SP352#ba	3.500	A person throws a cat in the air and it grabs onto the ceiling. 	إمرأة قذفت القط في الهواء، والقط معلق قبالة قضيب على السقف.
+MSRvid#SP353#ba	2.750	A man tosses a bag down an escalator. 	شخص أسقط كاميرا أسفل سلم دوّار.
+MSRvid#SP354#ba	4.250	The tortoise is walking. 	سلحفاة كبيرة تمشي.
+MSRvid#SP355#ba	0.500	A man is firing a rifle. 	رجل يمارس الرياضة.
+MSRvid#SP356#ba	0.500	A man is shooting a gun. 	رجل يحرق علما.
+MSRvid#SP357#ba	0.000	The woman is singing. 	الرجل يدفع الشاحنة.
+MSRvid#SP358#ba	0.500	A man is adding oil to car. 	رجل يأكل الخشب.
+MSRvid#SP359#ba	0.600	A dog is eating some water melon. 	كلب يتحدث إلى الكاميرا.
+MSRvid#SP360#ba	2.200	A man is putting papers on a dish. 	رجل يضع اثنين من المناشف الورقية على طبق من الورق.
+MSRvid#SP361#ba	3.200	A man and woman walking hold each other. 	رجل و إمرأة يسيران.
+MSRvid#SP362#ba	4.400	The man slced through a thick rope with a sword. 	رجل يقطع الحبل بالسيف.
+MSRvid#SP363#ba	3.000	A man is playing a guitar. 	الرجل يغنّي و يعزف على القيثارة.
+MSRvid#SP364#ba	2.250	A dog is eating a doll. 	كلب يلعب مع لعبة.
+MSRvid#SP365#ba	2.583	A person is tearing paper. 	رجل يقطع ورقة.
+MSRvid#SP366#ba	0.000	A guy is peeling a potato. 	رجل يعزف بيانو.
+MSRvid#SP367#ba	0.000	A rat is running. 	رجل يرقص.
+MSRvid#SP368#ba	1.800	A woman is talking on a telephone. 	صبيان يتحدثان على الهاتف.
+MSRvid#SP369#ba	0.000	A woman is peeling a tuber. 	رجل يعزف قيثارة.
+MSRvid#SP370#ba	1.400	A women slicing lemons. 	إمرأة تقطع البصلة.
+MSRvid#SP371#ba	0.000	A man is running on rope. 	إمرأة تركب الحصان.
+MSRvid#SP372#ba	0.400	A man is drawing some figures. 	رجل يلعب كرة القدم.
+MSRvid#SP373#ba	0.000	A man is playing a flute. 	إمرأة تقشّربرتقالة.
+MSRvid#SP374#ba	0.000	A kitten is walking. 	رجل يلعب البولينغ.
+MSRvid#SP375#ba	3.000	A man is breaking an egg. 	شخص ما يكسر بيضة .
+MSRvid#SP376#ba	2.000	A woman is cutting meat. 	رجل يقطّع ثعبانا ليطبخه.
+MSRvid#SP377#ba	2.200	A man is playing guitar. 	الرجل يلعب على لوح المفاتيح.
+MSRvid#SP378#ba	1.200	A woman is washing a bowl. 	إمرأة تضع ضلال العيون.
+MSRvid#SP379#ba	0.000	A man is striking clay pots. 	إمرأة تجرّف الجزر.
+MSRvid#SP380#ba	1.000	A man is playing a keyboard. 	إمرأة تعزف المزمار.
+MSRvid#SP381#ba	1.533	A woman is riding an elephant. 	رجل يركب على حصان.
+MSRvid#SP382#ba	1.667	A man an woman are dancing in the rain. 	رجل وإمرأة يرقصان البوليود.
+MSRvid#SP383#ba	1.000	A man is holding huge sunflowers. 	إمرأة تقص زهورا.
+MSRvid#SP384#ba	0.308	A woman is cutting a tomatoe. 	إمرأة ترقص قرب النار.
+MSRvid#SP385#ba	0.000	The bomb exploded in the desert. 	الرجل رقص في المطعم.
+MSRvid#SP386#ba	0.200	A man is dancing. 	رجل يعزف المزمار.
+MSRvid#SP387#ba	4.200	A American flag is blowing in the wind. 	علم أمريكي يلوّح.
+MSRvid#SP388#ba	2.600	A lion is walking around. 	أسد يمشي في مكان مقفل.
+MSRvid#SP389#ba	3.000	A tiger walks around aimlessly. 	نمر يتجول في قفصه.
+MSRvid#SP390#ba	3.800	A person is pouring olive oil into a pot on the stove. 	شخص يصب زيت الطبخ في قدر.
+MSRvid#SP391#ba	0.750	A woman is riding a horse. 	إمرأة تقطّع البطاطا.
+MSRvid#SP392#ba	0.250	A man is showing a bread. 	إمرأة تقطع ليمونة.
+MSRvid#SP393#ba	0.750	A man is speaking to an audience. 	رجل يصنع سريرا.
+MSRvid#SP394#ba	3.000	A parrot is talking into a microphone. 	ببغاء يتكلم.
+MSRvid#SP395#ba	0.400	A woman is slicing some tuna. 	إمرأة تعزف المزمار.
+MSRvid#SP396#ba	0.400	A person is chopping an onion. 	شخص يركب دراجة نارية.
+MSRvid#SP397#ba	0.400	A man is dancing in the rain. 	رجل يغني في الميكرفون.
+MSRvid#SP398#ba	4.200	A man is putting rice in a bowling pot. 	رجل  يصب الأرز في القدر.
+MSRvid#SP399#ba	3.500	A dog is barking at an electronic toy duck. 	الكلب ينبح على اللعبة.
+MSRvid#SP400#ba	3.500	A woman is mixing an egg in a bowl. 	إمرأة تضيف بيضة و تخلط.
+MSRvid#SP401#ba	3.000	A woman is seasoning a piece of meat. 	إمرأة تغطي قطعة من اللحم بالطحين.
+MSRvid#SP402#ba	3.750	A person is dicing a clove of garlic with a knife. 	شخص يشرّح بعض الثوم.
+MSRvid#SP403#ba	3.400	A cat, perched on a table, looks out the window. 	قطة بيضاء جاثمة  على خزانة خشبية صغيرة تنظر خارج النافذة.
+MSRvid#SP404#ba	3.400	A woman lifts weights. 	إمرأة تمارس الرياضة.
+MSRvid#SP405#ba	3.600	A man is exercising. 	رجل يمارس تمارين أرضية.
+MSRvid#SP406#ba	3.800	A young boy is running toward and from the ocean waves. 	طفل يجري داخل وخارج أمواج المحيط.
+MSRvid#SP407#ba	1.000	A man is peeling a banana. 	رجل يشرح حبة بطاطا.
+MSRvid#SP408#ba	1.400	A man is playing a wooden flute. 	رجل يعزف على البيانو.
+MSRvid#SP409#ba	3.400	A man is riding a horse in the desert. 	رجل يركب حصانا.
+MSRvid#SP410#ba	3.600	A person is playing a keyboard piano. 	شخص ما يعزف البيانو.
+MSRvid#SP411#ba	2.800	A woman is painting the face of a man. 	المرأة تضع المكياج  للرجل.
+MSRvid#SP412#ba	4.000	A woman puts chopped eggplant into a skillet. 	المرأة تضع الباذنجان في المقلاة.
+MSRvid#SP413#ba	3.200	The dog took something out of the refrigerator. 	كلب يسرق الطعام من الثلاجة.
+MSRvid#SP414#ba	3.400	A man is playing a musical instrument. 	رجل يعزف البوق.
+MSRvid#SP415#ba	2.333	A person is burning cameras. 	شخص يستخدم موقد اللحام على إثنين من الكميرات.
+MSRvid#SP416#ba	2.667	A woman, in a kitchen, peels a lemon. 	إمرأة تقطع ليمونة.
+MSRvid#SP417#ba	3.000	A lion is trying to climb up over a wall. 	نمر يحاول تسلق الحائط.
+MSRvid#SP418#ba	4.667	A man is tying a noose. 	رجل يحضر حبل تعليق.
+MSRvid#SP419#ba	3.200	A woman is dancing. 	إمرأة ترقص على المسرح.
+MSRvid#SP420#ba	1.600	A woman is cutting potatoes. 	إمرأة تقطّع زنجبيلا.
+MSRvid#SP421#ba	3.000	Two teams play soccer. 	رجال يلعبون كرة القدم.
+MSRvid#SP422#ba	0.200	The girl is spraying the plants with water. 	الفتاة تركب الحصان.
+MSRvid#SP423#ba	0.800	A man is getting into a car in a garage. 	رجل يضع سكينا في الرذيلة.
+MSRvid#SP424#ba	1.200	A person is peeling a potato. 	شخص يقلي.
+MSRvid#SP425#ba	0.800	A woman is chopping garlic. 	رجل يطلق النار من مسدس.
+MSRvid#SP426#ba	0.800	A woman is slicing an onion. 	إمراة تأرجح ذراعيها.
+MSRvid#SP427#ba	0.750	A man is dancing. 	رجل يمشي في الخارج.
+MSRvid#SP428#ba	0.000	A man is speaking. 	إمرأة تطبخ لحما.
+MSRvid#SP429#ba	0.250	A woman fixes her hair. 	رجل يجفف يديه.
+MSRvid#SP430#ba	3.250	A soccer player kicks the ball into the goal. 	يركل لاعب كرة قدم الكرة في المرمى  من مكان بعيد في الملعب.
+MSRvid#SP431#ba	4.000	A woman is scrubbing a zucchini with a vegetable brush. 	شخص يفرك حبة كوسا.
+MSRvid#SP432#ba	3.000	The puppy tried to get out of the tub. 	جرو يحاول الخروج من الحوض.
+MSRvid#SP433#ba	3.333	A little girl is playing a grand piano on stage. 	فتاة تعزف البيانو.
+MSRvid#SP434#ba	3.333	A man is drawing on a digital dry erase board. 	رجل يرسم بعض الصور.
+MSRvid#SP435#ba	2.000	The monkey swung from branch to branch. 	القرد يتدلّى من الأشجار.
+MSRvid#SP436#ba	3.000	Two boy are playing on a trampoline. 	يقفز بعض الأطفال على الترامبولين.
+MSRvid#SP437#ba	3.750	A person folds a piece of paper. 	شخص يطوي قطعة ورقة مربعة.
+MSRvid#SP438#ba	4.000	A women slicing green pepper. 	إمرأة تقطّع الفلفل بالسكين.
+MSRvid#SP439#ba	3.000	A baby panda plays with a stick. 	دب الباندا يمضغ العصا.
+MSRvid#SP440#ba	2.000	A man is putting anti-freeze into a car. 	رجل يضيف الزيت إلى السيارة.
+MSRvid#SP441#ba	3.750	Several people are carrying large bags. 	الناس يرفعون الحقائب.
+MSRvid#SP442#ba	0.000	The woman is pouring oil into the pan. 	يعزف الصبي البيانو.
+MSRvid#SP443#ba	0.400	A man is moon-walking across a store. 	رجل يتحدث في الهاتف.
+MSRvid#SP444#ba	0.400	A man is climbing a rope. 	رجل يقطّع جزرة بواسطة آلة.
+MSRvid#SP445#ba	3.200	A person is playing a piano keyboard. 	صبي لعب بلوحة المفاتيح.
+MSRvid#SP446#ba	0.400	A boy is playing in the mud. 	قط  يلعب بلاقط هوائي.
+MSRvid#SP447#ba	2.000	A person is slicing cantaloupe. 	إمرأة تقطع اليقطين.
+MSRvid#SP448#ba	0.000	A man is riding a motorcycle. 	إمرأة تجدّل شعرها.
+MSRvid#SP449#ba	0.000	A woman is climbing a rock wall. 	رجل يقطع حبة بطاطا.
+MSRvid#SP450#ba	0.000	A man is adding water to pan. 	إمرأة تغذي رضيعا.
+MSRvid#SP451#ba	0.500	A woman is riding a horse. 	رجل يعزف القيثارة.
+MSRvid#SP452#ba	4.500	Some people are throwing a dummy off a cliff. 	ألقى الناس دمية على حافة الهاوية.
+MSRvid#SP453#ba	0.500	A potato is being peeled. 	أطلق الرصاص من مسدس.
+MSRvid#SP454#ba	0.500	The woman is eating. 	إمرأة تخلط البيض.
+MSRvid#SP455#ba	0.500	A woman is playing a guitar on streets. 	إمرأة تقص ورقة من البلاستيك.
+MSRvid#SP456#ba	4.000	A woman is slicing a pineapple into pieces. 	إمرأة تقطع الأناناس.
+MSRvid#SP457#ba	3.750	A woman adds ingredients to beef. 	إمرأة تضيف التوابل على اللحم.
+MSRvid#SP458#ba	4.250	The cook pouring oil into the pan. 	شخص يضيف الزيت إلى المقلاة.
+MSRvid#SP459#ba	3.750	A man is seasoning some dough in a pan. 	طباخ يتبل بعض العجين.
+MSRvid#SP460#ba	2.750	Two boys are playing in the beach. 	صبي يجري على الشاطئ.
+MSRvid#SP461#ba	3.250	The monkey scratched his tummy. 	قرد صغير يخدش نفسه.
+MSRvid#SP462#ba	3.000	A man is throwing blades into a close target outside. 	الرجل يرمي السكاكين على شجرة.
+MSRvid#SP463#ba	0.800	A woman is riding a horse. 	ولد يقود دراجة إلى البوابة.
+MSRvid#SP464#ba	0.400	The woman is putting on lipstick. 	تشرح المرأة التوفو.
+MSRvid#SP465#ba	0.400	A man is tying in the machine. 	رجل يركب على متن قارب.
+MSRvid#SP466#ba	0.400	A woman is applying eye shadow. 	إمرأة تطوي الورق.
+MSRvid#SP467#ba	0.250	A person is slicing a small pieces of ginger. 	شخص ما يطوي قطعة من الورق.
+MSRvid#SP468#ba	0.250	A man is squeezing water. 	رجل يقوم ببطاقة خدعة.
+MSRvid#SP469#ba	0.750	Someone is playing guitar. 	رجل يعزف  البيانو.
+MSRvid#SP470#ba	0.250	A man is chopping egg plant. 	رجل يرفع الأثقال.
+MSRvid#SP471#ba	4.800	A guy is mowing the lawn. 	رجل يقص العشب.
+MSRvid#SP472#ba	0.800	A person is hitchhiking on a road. 	شخص يخلط الماء و الطحين.
+MSRvid#SP473#ba	0.000	The cowboy rode his horse in the desert. 	الكلبين كانا في القلم.
+MSRvid#SP474#ba	3.000	A person is performing tricks on a motorcycle. 	ستيك
+MSRvid#SP475#ba	0.750	A man seasoning quail. 	رجل يقدم كعكة.
+MSRvid#SP476#ba	3.750	A big cat opens a plastic drawer with his paws and then hops inside. 	قط يفتح درج ويصعد في الداخل.
+MSRvid#SP478#ba	0.000	A man is playing a guitar. 	رجل يفتح صندوقا بإستعمال سكين.
+MSRvid#SP480#ba	0.000	A woman is rock climbing. 	رجل يأكل.
+MSRvid#SP481#ba	3.500	A dog is rolling from side to side. 	جرو يكرر التقلب من جنب إلى جنب وهو على ظهره.
+MSRvid#SP482#ba	3.250	A kid plays the guitar. 	ولد صغير يغني و يعزف القيثارة.
+MSRvid#SP483#ba	0.400	The man is balancing on the wire. 	المرأة تقشر ليمونا.
+MSRvid#SP484#ba	0.800	Someone is playing with a toad. 	رجل يعزف البوق.
+MSRvid#SP485#ba	1.800	A man is on a roof dancing. 	رجل يقف على قمة سقف يعزف الكمان.
+MSRvid#SP486#ba	1.600	A dog is watching a store counter. 	كلب يبحث حوله.
+MSRvid#SP487#ba	1.200	A man is shown slicing a carrot with a knife. 	إمرأة تشرح بصلة.
+MSRvid#SP488#ba	4.200	A man drills wood. 	رجل حفر ثقوبا في الخشب.
+MSRvid#SP489#ba	0.200	Someone is pouring tomato sauce into a pot of meat. 	شخص ما قطع دائرة من ورقة وردية.
+MSRvid#SP490#ba	0.200	A man is petting a tied up dog. 	رجل يعزف المزمار.
+MSRvid#SP491#ba	0.500	A man is drivong a car. 	رجل يضع اللحم في كيس.
+MSRvid#SP492#ba	0.000	A man is playing a trumpet. 	فتاة تأكل  حبة كب كيك.
+MSRvid#SP493#ba	4.500	A live rabbit is playing with a stuffed animal bunny. 	أرنب تشم و تخدش أرنبا لعبة.
+MSRvid#SP494#ba	0.000	A woman is ridint a horse. 	رجل يدهن الخبز بالزبدة.
+MSRvid#SP495#ba	2.500	A monkey pratices martial arts. 	قرد يركل شخصا بركلة كاراتي.
+MSRvid#SP496#ba	0.750	A woman is getting doused in green slime. 	إمرأة تعصر بعض شرائح الخيار.
+MSRvid#SP498#ba	2.750	The man took a piece of pepperoni pizza out of the box. 	رجل يأخذ قطعة من بيتزا ببروني خارج صندوق البيتزا و يضعها فوق الغطاء بعد أن أغلق الصندوق.
+MSRvid#SP499#ba	3.400	A man is adding sliced vegetables to a cooking bowl with water. 	أضاف الرجل الخضروات إلى المرق في الوعاء.
+MSRvid#SP500#ba	3.400	A man jumps into a wall. 	ركض الرجل وقفز واصطدم بالجدار.
+MSRvid#SP501#ba	0.400	A man is rapidly lifting small weights. 	رجل يعزف التشيلو.
+MSRvid#SP502#ba	0.400	A man is walking down stairs. 	الرجل يتحدث.
+MSRvid#SP503#ba	3.200	A man is teasing a snake with a mouse. 	رجل يحاول إطعام الفأر إلى الثعبان.
+MSRvid#SP504#ba	2.400	The man added seasoning to water in a bowl. 	رجل يتبل النقانق.
+MSRvid#SP505#ba	3.000	A clown is singing. 	مهرج يغني و الناس يرقصون.
+MSRvid#SP506#ba	0.400	A woman is chopping up garlic. 	إمرأة تطعم خنزير الأرض.
+MSRvid#SP507#ba	0.500	A man carries a women. 	رجل يحدّ سكينا.
+MSRvid#SP508#ba	3.929	A man is rinsing a large steak. 	شخص يشطف شريحة لحم  بالماء.
+MSRvid#SP509#ba	3.000	A BMX biker rides along the top of a fence. 	ركب صبي دراجته فوق سياج معدني.
+MSRvid#SP510#ba	1.750	A man is showing magic. 	رجل يرمي السكاكين على شجرة.
+MSRvid#SP511#ba	0.000	A woman is slicing some leaves. 	رجل يضرب الطبول.
+MSRvid#SP512#ba	0.400	A woman is chopping an onion. 	إمرأة تمشط أقدامها.
+MSRvid#SP513#ba	2.200	A man is sitting and playing a small guitar. 	رجل يعزف القيثارة.
+MSRvid#SP514#ba	2.600	Women models are walking down a catwalk. 	بنات يسيرون على المسرح.
+MSRvid#SP515#ba	3.500	A woman is exercising with a barbell. 	إمرأة تمارس تمارين الوزن.
+MSRvid#SP516#ba	0.500	A man is hiking. 	رجل يقشر حبة بطاطا.
+MSRvid#SP517#ba	3.500	A bird picks up a plastic cup containing a liquid with it's beak and puts the cup into a bowl. 	عصفور يلتقط كأسا من البلاستيك  بمنقاره يحتوي على سائل ويضع الكأس في وعاء.
+MSRvid#SP518#ba	0.000	A car is driving along the road. 	إمرأة في المطر.
+MSRvid#SP520#ba	0.000	A man is lifting himself. 	إمرأة تركب فيلا.
+MSRvid#SP523#ba	1.200	A woman is slicing a tomato. 	إمرأة تزيل الجلد من بعض اللحوم.
+MSRvid#SP524#ba	0.600	A woman is chopping some shiso leaves. 	إمرأة ترتدي سماعات .
+MSRvid#SP525#ba	0.800	A small child is drinking water from a cup. 	هرة صغيرة تشرب الحليب من وعاء.
+MSRvid#SP526#ba	4.000	A kitten eats some food. 	هرة صغيرة تأكل طعامها من صحن.
+MSRvid#SP527#ba	0.500	A woman is slicing a meat into pieces. 	إمرأة تقرأ مجلة  عن أسلوب الحياة.
+MSRvid#SP528#ba	2.500	A man opens a can and pours the contents into a bowl. 	رجل يدفق الفلفل الحار في وعاء.
+MSRvid#SP529#ba	2.750	A man is beating two eggs in a bowl with a fork. 	رجل يخلط المكونات في وعاء.
+MSRvid#SP530#ba	3.250	A bird is eating from a bowl. 	أكل الطير الطعام من الوعاء على الشجرة
+MSRvid#SP531#ba	2.000	A video clip of Rihanna leaving a taxi. 	مجموعة من الفتيات تغادرن سيارة أجرة.
+MSRvid#SP532#ba	0.800	A woman breaks an egg into a pan. 	رجل يكسر الطوب على رجل آخر.
+MSRvid#SP533#ba	0.000	A man is loading a rifle with bullets. 	إمرأة تتبل قطعة من اللحم.
+MSRvid#SP534#ba	0.400	A woman is stabbing a potato with a fork. 	إمرأة تسترخي في حوض الاستحمام.
+MSRvid#SP535#ba	0.600	The woman is cutting potatoes. 	إمرأة تضيف الزيت على الأسماك.
+MSRvid#SP536#ba	0.800	A woman is chopping green onions. 	إمرأة تكتب شيئا.
+MSRvid#SP537#ba	0.800	A man is playing a guitar. 	رجل يفرم أوراق الكزبرة.
+MSRvid#SP538#ba	0.800	A man talks on his cell phone. 	رجل يأخذ شريحة من البيتزا.
+MSRvid#SP539#ba	0.400	A woman is carrying a wallaby in a bag. 	رجل يضع اللحم داخل كيس من البلاستيك.
+MSRvid#SP540#ba	3.000	A baby is being fed peas. 	طفل يأكل طعامه.
+MSRvid#SP541#ba	0.400	A man is standing in the rain. 	رجل يقطع جزرة بواسطة آلة.
+MSRvid#SP542#ba	0.000	A man is walking on a rope. 	أرنب يتحدث.
+MSRvid#SP543#ba	0.000	A woman rubs a baby's leg. 	رجل يركب الحصان.
+MSRvid#SP544#ba	0.000	Smeone is laying down. 	رجل يعزف الغيتار.
+MSRvid#SP545#ba	0.400	A man is breaking pots. 	رجل يقطع كعكة.
+MSRvid#SP546#ba	0.000	A woman dips a shrimp in batter. 	رجل يقود سيارة.
+MSRvid#SP547#ba	3.600	The dog played with a bug on the carpet. 	كلب ينش ذبابة في السجادة قبل ذلك.
+MSRvid#SP548#ba	0.231	A jet is flying. 	كلب ينبح.
+MSRvid#SP549#ba	3.200	A man is playing the electric guitar. 	رجل يعزف الغيتار ويغني على خشبة المسرح.
+MSRvid#SP550#ba	0.000	A man is riding a horse. 	قرد يمشي على سرير.
+MSRvid#SP551#ba	0.500	A man is eating his food. 	إمرأة تطبخ البروكلي.
+MSRvid#SP552#ba	0.300	A man is cutting a mat. 	رجل يضرب صبيا بإناء الزهور.
+MSRvid#SP553#ba	1.250	A man is singing and playing a guitar. 	صبي يعزف البيانو.
+MSRvid#SP554#ba	0.000	A person is performing a card trick. 	رجل يقلي التورتيا.
+MSRvid#SP555#ba	2.750	One woman hands volleyballs to another woman who serves them. 	إمرأة تقدم الكرة الطائرة على الشبكة.
+MSRvid#SP556#ba	5.000	A person makes fire. 	بدأ الشخص الحريق.
+MSRvid#SP557#ba	0.750	A man is cooking a tortilla in a skillet. 	رجل يقطع الخيار بسكين.
+MSRvid#SP558#ba	1.250	A band is playing instruments. 	رجل يلعب على لوح مفاتيح إلكتروني.
+MSRvid#SP559#ba	0.000	The man is holding a skunk. 	الرجل يخلط الكريمة المخفوقة.
+MSRvid#SP560#ba	0.000	The baby is laughing and crawling. 	رجل يعزف الكمان
+MSRvid#SP561#ba	0.750	A man is peeling an onion. 	رجل يخلط عصيرا.
+MSRvid#SP562#ba	3.750	A man is cutting a boot with a sword. 	رجل يقطع اصبع القدم من الحذاء من جلد فارغة باستخدام السيف.
+MSRvid#SP563#ba	2.333	Someone is cutting a piece of meat. 	شخص يشرح اثنين من الأضلاع غير المطبوخة على حدة.
+MSRvid#SP564#ba	5.000	A person is descaling a fish. 	الشخص يزيل الزعانف من السمكة.
+MSRvid#SP565#ba	0.000	One boy is talking with other man. 	الناس يسيرون في الحديقة.
+MSRvid#SP566#ba	3.200	The little girl rode a horse. 	طفل صغير يركب الحصان.
+MSRvid#SP567#ba	0.750	Someone is putting ingredients into a wok. 	شخص يقطع الثوم الى قطع بسكين.
+MSRvid#SP568#ba	0.500	A man is slicing a plastic container with a sword. 	رجل يطوي قطعة من الورق.
+MSRvid#SP569#ba	2.500	A man pushes another man into the ocean. 	يدفع الرجل إلى الماء.
+MSRvid#SP570#ba	1.750	Someone is playing a gameboy. 	ولد منزعج يلعب ألعاب الفيديو.
+MSRvid#SP571#ba	4.000	A man is making a phone call. 	رجل يقوم بإتصال بهاتف محمول.
+MSRvid#SP572#ba	0.000	A panda bear is chewing on a stick. 	رجل يتحدث على الهاتف.
+MSRvid#SP573#ba	1.333	A man is turning foods. 	رجل يركل أواني الماء.
+MSRvid#SP574#ba	4.600	A woman is putting on makeup. 	إمرأة تضع المساحيق على وجهها.
+MSRvid#SP575#ba	4.000	A man lifts weights. 	 رفع الرجل الحديد.
+MSRvid#SP576#ba	1.200	Two couple are talking with each other. 	فتاتان صغيرتان تتحدثان على الهاتف.
+MSRvid#SP577#ba	4.200	A cat is swinging on a fan. 	قط يعلق على مروحة سقف متحركة.
+MSRvid#SP578#ba	3.800	A white cat is licking and drinking milk kept on a plate. 	يشرب القط حليبا.
+MSRvid#SP579#ba	3.000	The women are feeding the animal. 	إمرأة تطعم حيوانا باليد.
+MSRvid#SP580#ba	0.200	A woman is washing a bowl. 	إمرأة تركب حصانا على الشاطئ.
+MSRvid#SP581#ba	3.000	A man is finely chopping a green substance. 	شخص يفرم عشبة.
+MSRvid#SP582#ba	2.200	Ferrets climb down from a shelf. 	يتسلق عدة قوارض خارج قفصهم .
+MSRvid#SP583#ba	1.400	A boy is filling a pitcher with water. 	إمرأة تجمع ماء الصنبور في قدح.
+MSRvid#SP584#ba	0.000	A woman is washing off the top of a freezer. 	إمرأة صغيرة تعزف الناي.
+MSRvid#SP585#ba	2.800	The woman is shooting a rifle. 	إمرأة تطلق النار من المسدس.
+MSRvid#SP586#ba	3.800	A woman is beating two eggs in a bowl using a wire whisk. 	شخص يخفق البيض في وعاء.
+MSRvid#SP587#ba	3.800	The man is adding seasoning to the beans. 	شخص يضيف بدرة الفلفل الحار إلى الفلفل مع  حبوب الفاصولياء.
+MSRvid#SP588#ba	4.400	A woman is shooting off a gun. 	إمرأة تطلق بسرعة النار من مسدس يد.
+MSRvid#SP590#ba	3.000	The men are jogging on the beach. 	روكي و أبولو كريد يركضون أسفل الشاطئ.
+MSRvid#SP591#ba	0.500	A man is stuffing himself full with food. 	رجل يغني بينما يعزف القيثار.
+MSRvid#SP592#ba	2.750	A dog is trying to get through his dog door. 	لم يتمكن الكلب من كيفية إخراج العصا من باب الكلاب.
+MSRvid#SP593#ba	1.750	A dog closes a refrigerator door. 	كلب يفتح الثلاجة.
+MSRvid#SP594#ba	0.000	A man is doing push ups. 	إمرأة تخلط بيضا في وعاء.
+MSRvid#SP595#ba	0.000	The man is playing the guitar. 	قارب يبحر في الماء.
+MSRvid#SP596#ba	1.000	A woman is abusing her child. 	 إمرأة ترفع رضيعا يرقص .
+MSRvid#SP597#ba	1.800	The girl applied face makeup to a man. 	إمرأة تقوم بمكياج مهرج على رجل.
+MSRvid#SP598#ba	1.600	A man pours a plate of shredded cheese into a pot of sauce. 	أضافت السيدة الجبن إلى الصلصة.
+MSRvid#SP599#ba	2.333	A man is delivering a lecture at an event celebrating the game of cricket. 	رجل يعطي محاضرة على المنصة.
+MSRvid#SP600#ba	2.000	A cat is crawling upside down under the couch. 	يهتز القط تحت السرير.
+MSRvid#SP602#ba	1.000	A woman slices a fish. 	إمرأة تقطع الثوم.
+MSRvid#SP603#ba	0.000	A masked man sings. 	رجل يقطع العشب.
+MSRvid#SP604#ba	0.000	A clown is singing. 	رجل يقطع العشب.
+MSRvid#SP606#ba	1.500	A man is doing back flips on a trampoline. 	العديد من الأطفال يقفز صعودا وهبوطا على الترامبولين.
+MSRvid#SP608#ba	0.400	A man is taking pictures of ant. 	رجل يحمل رجل آخر على ظهره.
+MSRvid#SP609#ba	2.800	A chef is slicing a shrimp. 	قدمت السيدة بعض الشرائح على الروبيان.
+MSRvid#SP610#ba	0.167	A man is petting two dogs. 	إمرأة تتدفق البيض في وعاء القلي.
+MSRvid#SP611#ba	0.500	A man is cutting a trunk with an axe. 	إمرأة تقلي اللحم المفروم.
+MSRvid#SP612#ba	3.250	A woman is putting meat in a pan. 	يتم إسقاط اللحم في وعاء.
+MSRvid#SP613#ba	0.000	A woman falls on a sand castle. 	إمرأة تقطع البصل الأخضر.
+MSRvid#SP615#ba	0.000	A girl is riding a bicycle. 	آلة تبري قلم رصاص.
+MSRvid#SP617#ba	0.400	A man is driving a car. 	رجل ينظف النوافذ.
+MSRvid#SP618#ba	0.000	A man is playing a guitar. 	شخص ما يخلط سائل.
+MSRvid#SP619#ba	1.000	A woman is cracking an egg. 	شخص يثير الأرز.
+MSRvid#SP620#ba	1.250	Three men are practicing karate moves in a field. 	ثلاثة صبية في أزياء الكاراتيه يقاتلون.
+MSRvid#SP621#ba	0.250	A man is dancing. 	رجل يضع السكين في الرذيلة.
+MSRvid#SP622#ba	4.250	A boy is onstage playing the violin. 	صبي يعزف الكمان على خشبة المسرح.
+MSRvid#SP623#ba	0.118	A man is playing a guitar. 	إمرأة تقطع رغيف وردي بسكين.
+MSRvid#SP624#ba	1.000	A woman is peeling a potato. 	رجل يضيف شرائح لحم الخنزير إلى المقلاة.
+MSRvid#SP625#ba	0.400	The man drew on the white paper. 	الرجال يقاتلون بعضهم البعض.
+MSRvid#SP627#ba	0.000	A chef is peeling a potato. 	فتاة تقرأ صحيفة.
+MSRvid#SP628#ba	2.500	A small animal is chewing on a finger. 	لوريس بطيء يلدغ أصابع شخص.
+MSRvid#SP629#ba	0.750	A man is peeling an onion. 	رجل يمشي على طول الطريق من خلال البرية.
+MSRvid#SP630#ba	3.000	A guy is singing while playing his guitar. 	يعزف الرجل غيتاره.
+MSRvid#SP631#ba	1.600	Women swimmers are diving in from the starting platform. 	يتسابق السباحون في البحيرة.

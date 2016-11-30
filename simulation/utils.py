@@ -92,9 +92,9 @@ def infer_test_file(dirname_gs,filename_sys):
 def eval_all(cmd,dirname_gs,filenames,opts={}):
     res=[]
     total=[]
-    if opts.verbose:
-        with open(opts.model,'rb') as idxf:
-            model = pickle.load(idxf)
+    #if opts.verbose:
+    #    with open(opts.model,'rb') as idxf:
+    #        model = pickle.load(idxf)
     filter_dirs=re.compile(opts.filter_test)
     with tempfile.NamedTemporaryFile() as file_gs, tempfile.NamedTemporaryFile() as file_sys:             
         for filename_sys in filenames:

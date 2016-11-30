@@ -27,6 +27,10 @@ if __name__ == "__main__":
     p.add_argument("-v", "--verbose",
                 action="store_true", dest="verbose",
                 help="Verbose mode [Off]")
+    p.add_argument("--filter",default='.',
+                action="store", dest="filter_test",type=str,
+                help="Regular expression to filter the test")
+ 
     opts = p.parse_args()
 
     if opts.verbose:
@@ -59,7 +63,7 @@ if __name__ == "__main__":
         filenames_sys.append(filename)
 
     for corpus,res in eval_all(opts.cmd,os.path.join(opts.DIR,'test'),
-                filenames_sys):
+                filenames_sys, opts=opts):
         print "{0:<40}: {1:<1.4f}".format(corpus,abs(res))
    
         

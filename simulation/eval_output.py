@@ -67,14 +67,11 @@ if __name__ == "__main__":
                 action="store_true", dest="logxphrase",default=False,
                 help="Produce Log for each phrase.. used for analyze outliers [Off]")    
 
-
-
     opts = p.parse_args()
 
     if opts.verbose:
         def verbose(*args):
             print " ".join([str(a) for a in args])
-
   
     filenames_sys=[os.path.join(opts.SYSDIR,filename) for filename 
             in os.listdir(opts.SYSDIR) if filename.endswith('.txt')]
