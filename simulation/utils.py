@@ -19,7 +19,7 @@ from nltk import pos_tag
 
 
 re_file=re.compile('.*\.input\..*\.txt$')
-re_gs=re.compile('.*\.gs\..*\.txt$')
+re_gs=re.compile('.*\.gs\..*\.(txt|ascii)$')
 
 dsc_list=["animal.n.01", "country.n.02", "vehicle.n.01", "weekday.n.01", "chromatic_color.n.01"]
 
@@ -31,7 +31,7 @@ def load_phrases_from_file(dirname,filename):
     with codecs.open(os.path.join(dirname,filename),encoding='utf-8') as data:
         for line in data:
             bits=line.strip().split('\t')
-            if len(bits)==2:
+            if len(bits)>=2 or len(bits)<=4:
                 phrases.append((bits[0],bits[1]))
     return phrases
 
