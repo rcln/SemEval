@@ -23,7 +23,7 @@ re_gs=re.compile('.*\.gs\..*\.(txt|ascii)$')
 
 dsc_list=["animal.n.01", "country.n.02", "vehicle.n.01", "weekday.n.01", "chromatic_color.n.01"]
 
-def load_phrases_from_file(dirname,filename):
+def load_phrases_from_file(dirname,filename,format='2017'):
     phrases=[]
     if not re_file.match(filename):
         return []
@@ -32,7 +32,10 @@ def load_phrases_from_file(dirname,filename):
         for line in data:
             bits=line.strip().split('\t')
             if len(bits)>=2 or len(bits)<=4:
-                phrases.append((bits[0],bits[1]))
+                if not format:
+                    phrases.append((bits[0],bits[1]))
+                elif format=="2017":
+                    phrases.append((bits[2],bits[3]))
     return phrases
 
 def load_gs_from_file(dirname,filename):
@@ -50,13 +53,13 @@ def load_gs_from_file(dirname,filename):
     return gs
 
 
-def load_all_phrases(dirname,filter="."):
+def load_all_phrases(dirname,filter=".",format=None):
     all_phrases=[]
     filter_dirs=re.compile(filter)
     for filename in os.listdir(dirname):
         if not filter_dirs.search(filename):
             continue
-        phrases=load_phrases_from_file(dirname,filename)
+        phrases=load_phrases_from_file(dirname,filename,format=format)
         if len(phrases)>0:
             all_phrases.append((filename,phrases))
     return all_phrases
