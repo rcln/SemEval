@@ -19,11 +19,14 @@ from nltk import pos_tag
 
 
 re_file=re.compile('.*\.input\..*\.txt$')
+re_file_translation=re.compile('.*\.input\..*\.translation.txt$')
 re_gs=re.compile('.*\.gs\..*\.(txt|ascii)$')
 
 dsc_list=["animal.n.01", "country.n.02", "vehicle.n.01", "weekday.n.01", "chromatic_color.n.01"]
 
-def load_phrases_from_file(dirname,filename,format='2017'):
+def load_phrases_from_file(dirname,filename,format='2017',translation=False):
+    if translation:
+        re_file=re_file_translation
     phrases=[]
     if not re_file.match(filename):
         return []
@@ -53,13 +56,13 @@ def load_gs_from_file(dirname,filename):
     return gs
 
 
-def load_all_phrases(dirname,filter=".",format=None):
+def load_all_phrases(dirname,filter=".",format=None,translation=False):
     all_phrases=[]
     filter_dirs=re.compile(filter)
     for filename in os.listdir(dirname):
         if not filter_dirs.search(filename):
             continue
-        phrases=load_phrases_from_file(dirname,filename,format=format)
+        phrases=load_phrases_from_file(dirname,filename,format=format,translation=translation)
         if len(phrases)>0:
             all_phrases.append((filename,phrases))
     return all_phrases
