@@ -25,6 +25,8 @@ re_gs=re.compile('.*\.gs\..*\.(txt|ascii)$')
 dsc_list=["animal.n.01", "country.n.02", "vehicle.n.01", "weekday.n.01", "chromatic_color.n.01"]
 
 def load_phrases_from_file(dirname,filename,format='2017',translation=False):
+    re_file=re.compile('.*\.input\..*\.txt$')
+    re_file_translation=re.compile('.*\.input\..*\.translation.txt$')
     if translation:
         re_file=re_file_translation
     phrases=[]
@@ -39,6 +41,9 @@ def load_phrases_from_file(dirname,filename,format='2017',translation=False):
                     phrases.append((bits[0],bits[1]))
                 elif format=="2017":
                     phrases.append((bits[2],bits[3]))
+                elif format=="2017_test":
+                    phrases.append((bits[0],bits[1]))
+
     return phrases
 
 def load_gs_from_file(dirname,filename):
